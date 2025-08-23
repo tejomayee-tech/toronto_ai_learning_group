@@ -54,224 +54,18 @@ Project.
 ```
 
 -----
+### Step 4: Clone Repo
 
-### Step 4: Code for `app.py` and `index.html`
+1. create an accont on github.com and create a token or passowrd (for help see: https://youtu.be/J-CSiw5CFWE?si=f2pJlK0l2zZO6YHF) 
+2. Run below command by right clicking in any folder of your computer and select open terminal here. In the command window paste the below text and hit enter.
 
-Populate your files with the following code. The `index.html` file includes the Marked.js library for secure markdown rendering.
+```bash
 
-#### `C:\secure-web-llm\model\app.py`
+git clone https://github.com/tejomayee-tech/toronto_ai_learning_group.git
 
-```python
-from flask import Flask, render_template, request, jsonify, Response, stream_with_context
-import ollama
-
-app = Flask(__name__)
-messages = [] 
-model_name = 'llama3.2' 
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/chat', methods=['POST'])
-def chat():
-    user_message = request.json.get('message')
-    if not user_message:
-        return jsonify({"error": "No message provided"}), 400
-
-    messages.append({'role': 'user', 'content': user_message})
-
-    # The generator function will yield chunks as they arrive
-    def generate_stream():
-        full_response_content = ""
-        try:
-            stream = ollama.chat(
-                model=model_name,
-                messages=messages,
-                stream=True,  # Crucially, enable streaming
-            )
-            for chunk in stream:
-                content = chunk['message']['content']
-                if content:
-                    full_response_content += content
-                    yield content  # Yield the content chunk
-        except Exception as e:
-            yield f"Error: An unexpected error occurred: {e}"
-        finally:
-            messages.append({'role': 'assistant', 'content': full_response_content})
-
-    # Return a streaming response
-    return Response(stream_with_context(generate_stream()), mimetype='text/plain')
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
 ```
 
-#### `C:\secure-web-llm\model\templates\index.html`
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ollama Chat</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .chat-container {
-            width: 100%;
-            max-width: 800px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-            overflow: hidden;
-        }
-        #chat-display {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            border-bottom: 1px solid #ddd;
-        }
-        .message {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 18px;
-            max-width: 80%;
-            word-wrap: break-word;
-        }
-        .user-message {
-            background-color: #007bff;
-            color: white;
-            margin-left: auto;
-            text-align: right;
-        }
-        .ollama-message {
-            background-color: #e9e9eb;
-            color: #333;
-            text-align: left;
-        }
-        /* Optional: Add basic styling for markdown elements */
-        .ollama-message pre {
-            background-color: #f6f8fa;
-            border-radius: 6px;
-            padding: 16px;
-            overflow-x: auto;
-        }
-        .ollama-message code {
-            font-family: 'Courier New', Courier, monospace;
-        }
-        #input-form {
-            display: flex;
-            padding: 20px;
-            background-color: #fff;
-        }
-        #user-input {
-            flex-grow: 1;
-            padding: 10px;
-            border-radius: 20px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        #send-button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        #send-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="chat-container">
-        <div id="chat-display">
-            </div>
-        <form id="input-form">
-            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
-            <button type="submit" id="send-button">Send</button>
-        </form>
-    </div>
-
-    <script>
-        const chatDisplay = document.getElementById('chat-display');
-        const inputForm = document.getElementById('input-form');
-        const userInput = document.getElementById('user-input');
-
-        function appendMessage(sender, message) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message');
-            messageDiv.classList.add(sender === 'user' ? 'user-message' : 'ollama-message');
-            
-            // This is the key line: converting markdown to HTML
-            messageDiv.innerHTML = marked.parse(message);
-            
-            chatDisplay.appendChild(messageDiv);
-            chatDisplay.scrollTop = chatDisplay.scrollHeight;
-        }
-
-        appendMessage('ollama', 'Welcome to Ollama Chat! How can I help you today?');
-
-        inputForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const message = userInput.value.trim();
-            if (!message) return;
-
-            appendMessage('user', message);
-            userInput.value = '';
-
-            userInput.disabled = true;
-            document.getElementById('send-button').disabled = true;
-            appendMessage('ollama', 'Ollama is thinking...');
-
-            try {
-                const response = await fetch('/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                
-                chatDisplay.removeChild(chatDisplay.lastChild);
-                appendMessage('ollama', data.response);
-
-            } catch (error) {
-                console.error('Error:', error);
-                chatDisplay.removeChild(chatDisplay.lastChild);
-                appendMessage('ollama', 'Sorry, something went wrong. Please try again.');
-            } finally {
-                userInput.disabled = false;
-                document.getElementById('send-button').disabled = false;
-                userInput.focus();
-            }
-        });
-    </script>
-</body>
-</html>
-```
-
------
+3. Now you have access to sharing group library. 
 
 ### Step 5: Setup the Python Virtual Environment and Packages
 
@@ -279,7 +73,7 @@ This is a critical step to manage your project's dependencies.
 
 1.  **Open your terminal** and navigate to your main project directory.
     ```bash
-    cd C:\secure-web-llm
+    cd C:\local-web-ai-working-example
     ```
 2.  **Create and activate a virtual environment**.
     ```bash
@@ -304,7 +98,7 @@ With all the files and dependencies in place, you are ready to run your applicat
     ```
 2.  **Go to your project's `model` directory.**
     ```bash
-    cd C:\secure-web-llm\model
+    cd C:\local-web-ai-working-example\model
     ```
 3.  **Run the Flask application.**
     ```bash
