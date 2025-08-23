@@ -10,7 +10,7 @@ First, you need to install and set up the Ollama server, which runs the LLMs loc
 3.  Run the installer and follow the on-screen instructions.
 
 
-#### using Ollama directly
+#### Using Ollama directly
 
 1. Open ollama from windows start menu
 2. Select a model and say hi, it will start downoading the model
@@ -68,6 +68,8 @@ git clone https://github.com/tejomayee-tech/toronto_ai_learning_group.git
 3. Now you have access to sharing group library. 
 
 ### Step 5: Setup the Python Virtual Environment and Packages
+
+> Video Guide for Setup https://drive.google.com/file/d/1A_h9nQKeZUSjljHGWI0ANeO6CQ4z7cHg/view?usp=sharing
 
 This is a critical step to manage your project's dependencies.
 
