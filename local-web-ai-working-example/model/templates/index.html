@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            overflow: hidden;
+        }
+        #chat-display {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 18px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+        .ollama-message {
+            background-color: #e9e9eb;
+            color: #333;
+            text-align: left;
+        }
+        /* Optional: Add basic styling for markdown elements */
+        .ollama-message pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 16px;
+            overflow-x: auto;
+        }
+        .ollama-message code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #input-form {
+            display: flex;
+            padding: 20px;
+            background-color: #fff;
+        }
+        #user-input {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        #send-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-display">
+            </div>
+        <form id="input-form">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const chatDisplay = document.getElementById('chat-display');
+        const inputForm = document.getElementById('input-form');
+        const userInput = document.getElementById('user-input');
+
+        function appendMessage(sender, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(sender === 'user' ? 'user-message' : 'ollama-message');
+            
+            // This is the key line: converting markdown to HTML
+            messageDiv.innerHTML = marked.parse(message);
+            
+            chatDisplay.appendChild(messageDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+        }
+
+        appendMessage('ollama', 'Welcome to Ollama Chat! How can I help you today?');
+
+        inputForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            appendMessage('user', message);
+            userInput.value = '';
+
+            userInput.disabled = true;
+            document.getElementById('send-button').disabled = true;
+            appendMessage('ollama', 'Ollama is thinking...');
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                chatDisplay.removeChild(chatDisplay.lastChild);
+                appendMessage('ollama', data.response);
+
+            } catch (error) {
+                console.error('Error:', error);
+                chatDisplay.removeChild(chatDisplay.lastChild);
+                appendMessage('ollama', 'Sorry, something went wrong. Please try again.');
+            } finally {
+                userInput.disabled = false;
+                document.getElementById('send-button').disabled = false;
+                userInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
