@@ -49,3 +49,8 @@ Here's how to do it:
 Alternatively, you can navigate to the **Libraries** filter on the left-hand side of the page and select "GGUF" from the list.
 
 Many popular models on Hugging Face, especially those from creators like TheBloke, are offered in the GGUF format, often with different quantization levels (e.g., Q4_K_M, Q8_0). These are ready to be used with tools like Ollama and `llama.cpp`.
+
+**Example command**:
+```bash
+ollama pull hf.co/asmaeag/llama-finetuned-nutrition-v2
+```
