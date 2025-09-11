@@ -1,5 +1,16 @@
 ## GUFF Formats
 
+### Pretext: What is GGML?
+
+GGML was the direct predecessor to GGUF. Its name stands for "Georgi Gerganov Machine Learning," named after its creator and the `llama.cpp` project. It was a groundbreaking tensor library that enabled running large language models on standard CPUs with great efficiency.
+
+While it was highly effective, it had some limitations:
+* **Lack of Standardization:** The format evolved quickly, and changes often broke compatibility with older models.
+* **Incomplete Metadata:** It didn't store all the necessary information in the file itself. This meant that for many models, you still needed separate JSON configuration files to run them.
+
+**GGUF** was created to solve these problems. It is a new, more robust format built on the principles of GGML. It's a single, self-contained file that includes all the model's weights, tokenizer, and metadata, making it easier to share and use. 
+GGUF is now the preferred format for local CPU/hybrid inference.
+
 ### What is GGUF format
 
 **GGUF (GPT-Generated Unified Format)** is a single-file format designed to make it easy and efficient to run large language models on consumer hardware, particularly using a CPU or a mix of CPU and GPU. It's a binary format that bundles the model's weights, its architecture, and the tokenizer into one file, so you don't have to manage multiple files. Its main strength is efficient memory usage and support for various levels of **quantization**, which reduces the model's file size.
