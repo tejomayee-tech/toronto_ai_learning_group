@@ -14,6 +14,9 @@
 | **PyTorch / TensorFlow** | **Training and Research**. The original formats used by developers for fine-tuning. | **Meta Llama 3**, **Mistral 7B**, **Gemma 2B** (in their original PyTorch format). | **Flexibility:** The standard for fine-tuning and development, offering full control. |
 | **SafeTensors** | **Secure Storage** of model weights. Great for sharing models safely on platforms like Hugging Face. | **Stable Diffusion** models, like DreamShaper and Realistic Vision. | **Safety:** Prevents malicious code from executing when you load the model. |
 | **GPTQ, AWQ, EXL2** | **Inference** with extreme efficiency, but typically **GPU-only**. | **Mixtral 8x7B GPTQ**, **Llama 2 AWQ**. | **Speed:** Best performance and lowest VRAM usage if the model fits entirely on the GPU. |
+| **MXFP4** | **Inference** on consumer hardware, a specific quantization format for MoE models. | **`oss-gpt-20b`** (natively supported by Ollama). | **Efficiency:** Highly optimized for running Mixture-of-Experts (MoE) models with reduced memory footprint. |
+
+
 
 ### Ollama for pulling GUFF models
 
