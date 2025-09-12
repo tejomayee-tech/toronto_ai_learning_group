@@ -1,5 +1,5 @@
 # Toronto AI Learning Group Repository
-Welcome to the official repository for the Toronto AI Learning Group — a collaborative space where community-led sessions, resources, and discussions are organized and shared.
+Welcome to the official repository for the Toronto AI Learning Group - a collaborative space where community-led sessions, resources, and discussions are organized and shared.
 
 # 📚 Purpose
 This repository serves as a centralized archive for all materials presented or referenced during our learning sessions. By consolidating content in one place, we aim to foster accessibility, continuity, and shared growth across our community of learners and educators.
