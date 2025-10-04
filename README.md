@@ -4,6 +4,10 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 # 📚 Purpose
 This repository serves as a centralized archive for all materials presented or referenced during our learning sessions. By consolidating content in one place, we aim to foster accessibility, continuity, and shared growth across our community of learners and educators.
 
+# Scheduling Sessions
+
+[Groups public calendar](https://calendar.google.com/calendar/u/3?cid=N2UyMjdjMGZkODBlYzY0NjA3NzM1NDYxZjRmYTAzYTUxMGZlYmZkNTY5ODE5MWE5MjIxMDRkZjBlMDVkYWVmM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
+
 # 📁 Repository Structure
 All files are curated and organized into folders based on session themes, dates, or content types. These may include:
 - 📄 PDF handouts and presentation slides
@@ -22,3 +26,4 @@ This repository reflects the collaborative spirit of our learning group. We enco
 # Happy Learning! 😊
 
  
+
