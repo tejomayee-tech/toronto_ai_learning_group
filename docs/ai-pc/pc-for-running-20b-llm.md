@@ -1,3 +1,113 @@
+# Budget Option A — Balanced Budget (recommended for stability)
+
+**Target:** save **~$900** vs recommended full build while still getting solid GPU memory + decent CPU to run 20B (4-bit) comfortably.
+
+**Estimated total:** **≈ $1,900 – $2,050**
+
+### Parts (exact/typical SKUs)
+
+* **CPU:** AMD *Ryzen 7 7700X* — 8c/16t, strong single-thread. — **$320**
+* **Motherboard:** *B650* ATX (e.g., MSI B650 Tomahawk or ASUS TUF B650-PLUS) — AM5, DDR5 support — **$160**
+* **GPU:** *AMD Radeon RX 7900 XT (20GB)* — 20 GB VRAM (sufficient for 4-bit 20B). Prefer new from ASUS/Sapphire/MSI — **$850–$950**
+* **RAM:** *64 GB (2×32 GB) DDR5-5600/6000* — DDR5-5600/6000 CL32 — **$180–$260**
+  *Note:* For strict budget you can choose **32 GB (2×16)** now and upgrade later; but 64 GB is safer.
+* **Primary NVMe:** *1 TB PCIe4 NVMe* (Samsung 990 Pro or WD SN850) — **$110–$140**
+* **PSU:** *850 W 80+ Gold* (Corsair RM850x / Seasonic Focus GX) — **$100–$150**
+* **CPU Cooler:** 240 mm AIO (NZXT Kraken X53 / Corsair H100) or quality air cooler — **$80–$120**
+* **Case:** Good airflow mid-tower (Fractal Meshify, Phanteks P400A) — **$70–$120**
+* **Misc (fans, cables, thermal paste):** **$30–$60**
+
+**Estimated subtotal:** $1,900 (with 32GB RAM) → $2,050 (with 64GB RAM).
+**Savings vs recommended (~$2,840 parts-only):** ~**$790–$940** (meets your $800–$1,200 target).
+
+### Why this works
+
+* **RX 7900 XT (20GB)** has enough VRAM to hold a 20B model quantized to 4-bit (≈10–12 GB) with room for GPU buffers.
+* **Ryzen 7 7700X** (8c/16t) is still very capable for token preprocessing and feeding GPU.
+* **64 GB RAM** ideal; 32 GB will still run 4-bit 20B but leaves less headroom for other apps — recommended to aim for 64 if budget allows.
+* **PCIe4 NVMe** ensures quick model load times without needing PCIe5.
+
+### Expected performance (very approximate)
+
+* **GPT-OSS 20B (4-bit)** on RX 7900 XT → **~3–6 tokens/sec** (depends on runtime, quantization, threading).
+* **Smaller models (7B/13B)** will be much faster (10–30 t/s).
+
+---
+
+# Budget Option B — Tighter Value Build (max savings, used GPU)
+
+**Target:** aggressive cost reduction while still enabling 4-bit 20B. Use a *used* GPU (good deal hunting required).
+
+**Estimated total:** **≈ $1,400 – $1,600**
+
+### Parts (exact/typical SKUs)
+
+* **CPU:** *Ryzen 5 7600X* (6c/12t) — **$230**
+* **Motherboard:** *B650* or B650M — **$120–$150**
+* **GPU (used):** *AMD Radeon RX 6900 XT (16GB) used* — **$450–$650** (used market)
+  *Alternative used: RX 7900 XT if you can find one for ~$700–$850 — better choice if available*
+* **RAM:** *32 GB (2×16) DDR5-5600/6000* — **$120–$160**
+* **Primary NVMe:** *1 TB PCIe4 NVMe* — **$100–$120**
+* **PSU:** *850 W 80+ Gold* — **$100**
+* **CPU Cooler:** solid air cooler (Noctua NH-U12S) or 240 AIO — **$60–$100**
+* **Case + misc:** **$80–$100**
+
+**Estimated subtotal:** **$1,400–$1,600**
+**Savings vs recommended (~$2,840):** **~$1,200–$1,440**
+
+### Tradeoffs and notes
+
+* **RX 6900 XT (16 GB)**: 16 GB VRAM is **enough for 4-bit 20B (~10–12GB)**, but leaves less VRAM room for multi-buffers or memory fragmentation. You must ensure model + runtime buffers fit. Some runtimes may need extra tuning.
+* **Ryzen 5 7600X** has fewer cores — will slightly limit preprocessing throughput; CPU may become a mild bottleneck if heavy multitasking.
+* **Used GPU risks**: warranty, unknown usage, driver quirks. Buy from reputable sellers with returns.
+
+### Expected performance (approx)
+
+* **With RX 6900 XT (16GB)**: **~2–4 tokens/sec** for 20B (4-bit), depending on runtime and optimizations. Possibly slower than RX 7900 XT.
+* **If you find a used RX 7900 XT (~$700–$850)**, expect similar performance to Balanced Budget (~3–6 t/s).
+
+---
+
+# What to upgrade later (if you start with tighter build)
+
+1. **RAM:** upgrade from 32 → 64 GB when budget allows (biggest single uplift for stability).
+2. **GPU:** replace used 6900 XT with RX 7900 XT/XTX for faster tokens/sec and more VRAM headroom.
+3. **NVMe capacity:** add a second NVMe for datasets/models to avoid juggling files.
+
+---
+
+# Software & runtime tips for both builds
+
+* Use **llama.cpp** with Vulkan backend or a runtime that supports AMD GPU acceleration (Vulkan / ROCm where available).
+* Prefer **4-bit GGUF/GPTQ** quantized models for lowest memory footprint.
+* Tune threads (CPU) and `n_batch`/`n_ctx` to balance latency vs throughput.
+* Monitor VRAM usage; if model doesn’t fit, try a 4-bit variant with GPTQ/GGUF.
+
+---
+
+# Shopping tips & cautions
+
+* **GPU prices fluctuate** — check Newegg, Amazon, local sellers, and reputable used marketplaces (e.g., eBay with buyer protection).
+* If buying used, prefer sellers with return windows and verify photos/serial if possible.
+* **RAM timing**: buy a tested DDR5 kit (same dual-rank sticks), avoid mixing kits.
+* **PSU quality** matters — don’t buy the cheapest. Good PSU protects your expensive GPU/CPU.
+
+---
+
+# Quick summary comparison
+
+| Build                               |    Total est. | Savings vs recommended |        VRAM |  RAM | Perf (20B 4-bit) |
+| ----------------------------------- | ------------: | ---------------------: | ----------: | ---: | ---------------: |
+| Balanced Budget (7900 XT + 64GB)    | $1,900–$2,050 |             ~$800–$940 |        20GB | 64GB |         ~3–6 t/s |
+| Tighter Value (used 6900 XT + 32GB) | $1,400–$1,600 |         ~$1,200–$1,440 | 16GB (used) | 32GB |         ~2–4 t/s |
+
+---
+
+## Final recommendation
+
+* If you want **reliable interactive use** and longevity, go with **Balanced Budget (Option A)** — it meets your $800–$1,200 savings target and keeps good headroom.
+* If your goal is **maximum savings now** and you’re comfortable risk-managing used parts and future upgrades, use **Option B** and plan to upgrade RAM/GPU later.
+
 
 # Why **Ryzen 9 7950X + RX 7900 XTX + 64 GB** (updated: memory, PCIe, SSD)
 
