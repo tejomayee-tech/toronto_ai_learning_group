@@ -1,8 +1,5 @@
 # Budget Option A — Balanced Budget (recommended for stability)
 
-**Target:** save **~$900** vs recommended full build while still getting solid GPU memory + decent CPU to run 20B (4-bit) comfortably.
-
-**Estimated total:** **≈ $1,900 – $2,050**
 
 ### Parts (exact/typical SKUs)
 
