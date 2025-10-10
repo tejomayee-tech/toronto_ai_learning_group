@@ -1,5 +1,6 @@
 # Budget Option A — Balanced Budget (recommended for stability)
 
+**Estimated total:** **≈ $2,000
 
 ### Parts (exact/typical SKUs)
 
