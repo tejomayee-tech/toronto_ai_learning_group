@@ -1,4 +1,20 @@
 
+
+### **Objective**
+
+To provide a clear roadmap for beginners to start their AI journey—whether through **no-code exploration** or **coding-based learning**—by focusing on practical skills, daily automation, and progressive workflow building.
+
+---
+
+### **Goal**
+
+* Enable beginners to **leverage AI effectively** in daily life and work.
+* Build confidence in **prompting, automation, and workflow design** before diving into programming.
+* Offer an alternative technical path (Python + data science libraries) for those aiming at developer or advanced technical roles.
+* Encourage **project-based learning** and portfolio creation to demonstrate practical expertise.
+
+---
+
 * **Start with No-Code Tools & Accessibility**
 
   * Modern AI tools (e.g., ChatGPT) are built for non-technical users—no coding required.
