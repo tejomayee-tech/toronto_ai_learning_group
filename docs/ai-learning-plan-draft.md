@@ -1,4 +1,6 @@
-This roadmap is designed for an absolute beginner with no prior Python knowledge, focusing on the "Modern Route" or "Everyday Explorer/Power User" approach described in the sources. This strategy emphasizes rapid, impactful learning using accessible tools and prompt engineering, allowing for real-life implementations within a 2-3 month timeframe, without requiring deep theoretical math or coding initially.
+This roadmap is designed for an absolute beginner with no prior Python knowledge, focusing on the "Modern Route" or "Everyday Explorer/Power User" approach described in the sources. This strategy emphasizes rapid, impactful learning using accessible tools and prompt engineering, allowing for real-life implementations within a 2-3 month timeframe, without requiring deep theoretical math or coding initially. User are adviced to spend additional time on areas that interests them or skip a step that doesnt interest them. 
+
+Interactive, Q&A based collaborative learning can help well with rounded progress and widen activities and spin up interesting disucssions for brainstorming and fun all at the same time.
 
 If the goal is rapid progress and achieving practical results in 2-3 months, experts suggest starting with Generative AI applications first, rather than the time-consuming traditional route (Math, Stats, foundational ML).
 
