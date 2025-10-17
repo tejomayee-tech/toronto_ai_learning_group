@@ -1,0 +1,40 @@
+site_name: AI Learning Group
+site_dir: site
+docs_dir: docs/
+theme:
+  name: material
+  palette:
+    scheme: slate # dark mode
+    primary: deep purple
+    accent: purple
+  features:
+    - navigation.instant
+    # - navigation.tabs
+    - search.suggest
+    - toc.follow
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+extra_css:
+  - css/extra.css
+plugins:
+  - search
+
+nav:
+  - Home: README.md
+  - Docs:
+    - Programming:
+      - Python:
+        - Easy Learning Sessions : easy-python-sessions/Sessions.md
+    - AI:
+      - AI Learning for Bigenners:
+        - 2025 - Easy ways to Laern AI: ai-learning-plans/An-approach-to-learn-AI-in-2025-fueled-by-real-world-problem-solving-and-vigor.md
+      - AI Workflows:
+        - n8n:
+          - Prviate-Secure Docker-Desktop n8n + local LLM: Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
+          - Prviate-Secure Docker-Compose n8n + local LLM: Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
+      - AI-PC:
+        - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
+        - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
+
