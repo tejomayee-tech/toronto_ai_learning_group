@@ -23,7 +23,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
   * **“The whole is greater than the sum of its parts.”** — *Aristotle*
   * **“Alone we can do so little; together we can do so much.”** — *Helen Keller*
 
-  * “We just need lay a brick each day without fail, wall will just be built.”
+  * “We just need to lay a brick each day, without fail, the wall will be built.”
 
 ---
 
