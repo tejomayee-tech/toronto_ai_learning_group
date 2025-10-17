@@ -23,20 +23,32 @@ plugins:
 
 nav:
   - Home: README.md
+
   - Docs:
+
     - Community & Value:
       - A Chat GTP resposne: community-values-guidelines/Prompt-answer.md
+
     - Programming:
       - Python:
         - Easy Learning Sessions : easy-python-sessions/Sessions.md
     - AI:
+
+      - AI - Fundamentals:
+        - AI Fundamentals 1 : ai-sessions/fundamentals_of_LLM/README.md
+
       - AI Learning for Bigenners:
         - 2025 - Easy ways to Laern AI: ai-learning-plans/An-approach-to-learn-AI-in-2025-fueled-by-real-world-problem-solving-and-vigor.md
         - 2025 - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md
+
+      - AI Tools Hands-on:
+        - Private Local & Free GuFF models: ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
+        - Top Local LLMs: ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs.md 
       - AI Workflows:
         - n8n:
-          - Prviate-Secure Docker-Desktop n8n + local LLM: Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
-          - Prviate-Secure Docker-Compose n8n + local LLM: Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
+          - Prviate-Secure Docker-Desktop n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
+          - Prviate-Secure Docker-Compose n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
+
       - AI-PC:
         - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
         - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md

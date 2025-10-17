@@ -1,5 +1,6 @@
 # 🤖 Fundamentals of LLM
 
+
 ## 📹Video
 
 Please find the video of the session on fundamentals of LLM(6th Sep 2025) here- https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/view?usp=drive_link.
@@ -20,5 +21,8 @@ Please find the video of the session on fundamentals of LLM(6th Sep 2025) here- 
 
 If you like this app https://huggingface.co/spaces/ShreyaL/NLP_preprocessing_playground?logs=container – Text Pre-processing Playground and find it useful while learning, please give a heart in the huggingface spaces using above link. Will be very greatful for your support.
 ##
+
+<embed src="../Fundamentals_of_LLM.pdf" width="600" height="500" type="application/pdf">
+
 
 # 🙏Thank You! 
