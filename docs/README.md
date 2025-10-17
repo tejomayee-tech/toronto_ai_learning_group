@@ -6,14 +6,30 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 ### 🎯 In one line from **ChatGPT**
 
   The culture of open sharing, learning, and collaboration is the **engine of progress in AI**. Proprietary tools are the **vehicles** that make that progress practical, accessible, and sustainable. But without the engine, the vehicle goes nowhere.
-  **promotions, tool referrals, or marketing content** mainly drive usage and sales. They don’t advance the science itself—they ride on the wave of what community-driven research has already created.
 
 
+  Sharing **promotions, referrals, or marketing content** in a group is fine. 
+  Please note that they mostly drive usage and sales and they rarely contribute to true learning or collaborative building.
+
+  Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**.
+
+---
+
+  **Objective & Focus** of the Group is **Collaborative Learning** and **Collective Growth** to foster **Collective Intelligence**. 
+
+
+  * **“None of us is as smart as all of us.”** — *Ken Blanchard*
+  * **“If everyone is moving forward together, then success takes care of itself.”** — *Henry Ford*
+  * **“The whole is greater than the sum of its parts.”** — *Aristotle*
+  * **“Alone we can do so little; together we can do so much.”** — *Helen Keller*
+
+  * “We just need lay a brick each day without fail, wall will just be built.”
+
+---
 
 ### Community Values & Guidelines
 
-  [Community Value & Learning](../docs/community-values-guidelines/Prompt-answer.md) 
-
+  [Community Value & Learning](community-values-guidelines/Prompt-answer.md) 
 
 
 ### 📚 Purpose

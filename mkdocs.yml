@@ -29,9 +29,6 @@ nav:
     - Community & Value:
       - A Chat GTP resposne: community-values-guidelines/Prompt-answer.md
 
-    - Programming:
-      - Python:
-        - Easy Learning Sessions : easy-python-sessions/Sessions.md
     - AI:
 
       - AI - Fundamentals:
@@ -52,4 +49,8 @@ nav:
       - AI-PC:
         - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
         - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
+
+    - Programming:
+      - Python:
+        - Easy Learning Sessions : easy-python-sessions/Sessions.md
 
