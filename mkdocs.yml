@@ -24,12 +24,15 @@ plugins:
 nav:
   - Home: README.md
   - Docs:
+    - Community & Value:
+      - A Chat GTP resposne: community-values-guidelines/Prompt-answer.md
     - Programming:
       - Python:
         - Easy Learning Sessions : easy-python-sessions/Sessions.md
     - AI:
       - AI Learning for Bigenners:
         - 2025 - Easy ways to Laern AI: ai-learning-plans/An-approach-to-learn-AI-in-2025-fueled-by-real-world-problem-solving-and-vigor.md
+        - 2025 - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md
       - AI Workflows:
         - n8n:
           - Prviate-Secure Docker-Desktop n8n + local LLM: Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md

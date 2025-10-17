@@ -2,4 +2,4 @@
 .obsidian
 # Ignore compiled Python files
 __pycache__/
-
+site

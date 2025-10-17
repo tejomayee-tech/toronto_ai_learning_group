@@ -9,6 +9,8 @@
     pip install mkdocs==1.5.3
     pip install mkdocs-material
     mkdocs serve -a 127.0.0.1:8000
+    mkdocs build
+    mkdocs gh-deploy
 ```
 
 ## Step-by-Step Guide to Set Up MkDocs
