@@ -1,0 +1,979 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pc-for-running-20b-llm/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>CPU GPU for heavy LLMs - AI Learning Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hardware-configuration-for-medium-to-heavy-llms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Learning Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CPU GPU for heavy LLMs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Learning Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easy-python-sessions/Sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Easy Learning Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Learning for Bigenners
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AI Learning for Bigenners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-learning-plans/An-approach-to-learn-AI-in-2025-fueled-by-real-world-problem-solving-and-vigor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025 - Easy ways to Laern AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Workflows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_1" id="__nav_2_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    n8n
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            n8n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prviate-Secure Docker-Desktop n8n + local LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prviate-Secure Docker-Compose n8n + local LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI-PC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI-PC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pc-for-running-20b-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PC for Running 20b LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CPU GPU for heavy LLMs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CPU GPU for heavy LLMs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration-for-medium-to-heavy-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Configuration for Medium to Heavy LLMs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration-for-medium-to-heavy-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Configuration for Medium to Heavy LLMs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>CPU GPU for heavy LLMs</h1>
+
+<h3 id="hardware-configuration-for-medium-to-heavy-llms">Hardware Configuration for Medium to Heavy LLMs</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">For 20B Parameter Models</th>
+<th style="text-align: left;">For 80B Parameter Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GPU (NVIDIA)</strong></td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> NVIDIA RTX 4090 (24 GB VRAM)<br><strong>Budget:</strong> NVIDIA RTX 3090 (24 GB VRAM) on the used market, or NVIDIA RTX 4080 (16 GB VRAM) for a new card.</td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> NVIDIA RTX 5090 (32 GB VRAM)<br><strong>Budget:</strong> Dual NVIDIA RTX 3090s (24 GB VRAM each) or a professional card like the NVIDIA RTX A6000 (48 GB VRAM) if available.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GPU (AMD)</strong></td>
+<td style="text-align: left;"><strong>Best Value:</strong> AMD Radeon RX 7900 XTX (24 GB VRAM)<br><strong>Budget:</strong> AMD Radeon RX 7900 XT (20 GB VRAM)</td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> AMD Instinct MI300X (192 GB VRAM)<br><strong>Budget:</strong> Dual AMD Radeon RX 7900 XTX (24 GB VRAM each)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GPU Interconnect</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">High-speed links like <strong>NVLink</strong> (for NVIDIA) or a motherboard with <strong>PCIe 4.0/5.0</strong> for efficient communication between GPUs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU (Central Processing Unit)</strong></td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> AMD Ryzen 9 9950X3D or Intel Core i9-14900K.<br><strong>Budget:</strong> AMD Ryzen 7 7800X3D or Intel Core i7-14700K.</td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> AMD Ryzen 9 9950X3D or Intel Core i9-14900K. The new AMD Ryzen AI 9 395+ processors also offer excellent performance-per-watt for AI tasks.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>System RAM</strong></td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> 64 GB+ of DDR5 RAM (e.g., 6000MHz+)<br><strong>Budget:</strong> 32 GB of DDR5 RAM (e.g., 5600MHz)</td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> 128 GB+ of DDR5 ECC RAM<br><strong>Budget:</strong> 64 GB of DDR5 RAM (e.g., 5600MHz)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Storage (NVMe SSD)</strong></td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> A PCIe 5.0 NVMe SSD (e.g., Crucial T705) with sequential read/write speeds of up to 14,000 MB/s.<br><strong>Budget:</strong> A high-end <strong>PCIe 4.0 NVMe</strong> SSD (e.g., Samsung 990 Pro or WD Black SN850X) with speeds of \~7,000 MB/s.</td>
+<td style="text-align: left;"><strong>Higher Cost:</strong> Multiple high-capacity <strong>PCIe 5.0 NVMe</strong> SSDs in a RAID configuration for maximum throughput.<br><strong>Budget:</strong> A high-capacity PCIe 4.0 NVMe SSD (e.g., Samsung 990 Pro 4TB) with a capacity of 4 TB+.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Power Supply</strong></td>
+<td style="text-align: left;">A high-wattage PSU (850W+) is recommended.</td>
+<td style="text-align: left;">A high-wattage PSU (1000W+) is essential for multi-GPU setups.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooling</strong></td>
+<td style="text-align: left;">Robust cooling for the GPU and CPU is important to prevent performance throttling.</td>
+<td style="text-align: left;">Robust cooling for the GPU and CPU is essential to handle the heat from a multi-GPU setup.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Interconnect</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Primary Use Case in AI/LLMs</th>
+<th style="text-align: left;">Key Advantage</th>
+<th style="text-align: left;">Supported GPUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>NVLink</strong></td>
+<td style="text-align: left;">A high-bandwidth, low-latency GPU-to-GPU interconnect developed by NVIDIA. It allows GPUs to directly share memory and data.</td>
+<td style="text-align: left;">Training large models (e.g., LLMs) on multiple GPUs and high-performance computing.</td>
+<td style="text-align: left;">Extremely fast direct GPU-to-GPU communication for memory pooling and data sharing.</td>
+<td style="text-align: left;">NVIDIA GPUs (specifically data center and high-end workstation models like A100, H100, and some RTX cards)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PCIe (PCI Express)</strong></td>
+<td style="text-align: left;">A high-speed serial computer expansion bus standard. It is the primary way GPUs connect to a motherboard.</td>
+<td style="text-align: left;">Connecting a single GPU to a CPU for both training and inference. Used for multi-GPU setups where the model is too large for one GPU but communication overhead is not a critical bottleneck.</td>
+<td style="text-align: left;">Ubiquitous, industry standard, and widely compatible with all consumer and professional GPUs.</td>
+<td style="text-align: left;">Both NVIDIA and AMD GPUs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Infinity Fabric</strong></td>
+<td style="text-align: left;">A cache-coherent interconnect protocol developed by AMD. It provides high-speed communication between different components, including multiple GPUs and CPU dies.</td>
+<td style="text-align: left;">Multi-GPU setups for AI workloads on AMD hardware. It allows for efficient data and memory sharing between compatible GPUs.</td>
+<td style="text-align: left;">High-speed, low-latency communication specifically designed for AMD's hardware ecosystem.</td>
+<td style="text-align: left;">AMD GPUs (Radeon Instinct and some Radeon Pro series)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OCuLink</strong></td>
+<td style="text-align: left;">An external physical connector for a PCIe channel. It enables a high-speed, direct PCIe connection to an external device, such as an eGPU enclosure.</td>
+<td style="text-align: left;">Connecting external GPUs to devices that are not standard desktop PCs (e.g., mini PCs, laptops) for high-performance AI inference or gaming.</td>
+<td style="text-align: left;">Provides a pure, low-latency PCIe connection externally, often outperforming alternatives like Thunderbolt for raw bandwidth.</td>
+<td style="text-align: left;">Both NVIDIA and AMD GPUs via eGPU docks</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

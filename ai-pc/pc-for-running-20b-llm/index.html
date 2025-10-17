@@ -1,0 +1,1379 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/">
+      
+      
+        <link rel="next" href="../hardware-for-running-heavy-llms/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>PC for Running 20b LLM - AI Learning Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#benefits-of-running-gpt-oss20b-locally" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Learning Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PC for Running 20b LLM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Learning Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easy-python-sessions/Sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Easy Learning Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Learning for Bigenners
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            AI Learning for Bigenners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-learning-plans/An-approach-to-learn-AI-in-2025-fueled-by-real-world-problem-solving-and-vigor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025 - Easy ways to Laern AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Workflows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_1" id="__nav_2_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    n8n
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            n8n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prviate-Secure Docker-Desktop n8n + local LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prviate-Secure Docker-Compose n8n + local LLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI-PC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI-PC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PC for Running 20b LLM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    PC for Running 20b LLM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-full-data-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 1. Full Data Privacy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-latency-responsiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 2. Latency &amp; Responsiveness
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zero-ongoing-api-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      💸 3. Zero Ongoing API Costs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-full-control-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ 4. Full Control &amp; Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bigger-model-better-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 5. Bigger Model = Better Reasoning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enterprise-research-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 6. Enterprise &amp; Research Use
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware-for-running-heavy-llms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CPU GPU for heavy LLMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-full-data-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 1. Full Data Privacy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-latency-responsiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ 2. Latency &amp; Responsiveness
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zero-ongoing-api-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      💸 3. Zero Ongoing API Costs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-full-control-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ 4. Full Control &amp; Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bigger-model-better-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 5. Bigger Model = Better Reasoning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enterprise-research-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 6. Enterprise &amp; Research Use
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="benefits-of-running-gpt-oss20b-locally">🚀 Benefits of Running GPT-OSS:20B Locally</h1>
+<h3 id="1-full-data-privacy">🔒 1. <strong>Full Data Privacy</strong></h3>
+<ul>
+<li>Everything stays on your machine. No queries, prompts, or datasets ever leave your PC.</li>
+<li>Ideal if you’re working with <strong>sensitive business docs, medical/legal notes, financial records</strong>, or even personal journals.</li>
+</ul>
+<hr />
+<h3 id="2-latency-responsiveness">⚡ 2. <strong>Latency &amp; Responsiveness</strong></h3>
+<ul>
+<li>No internet round-trip.</li>
+<li>Local inference = instant responses (tokens stream as soon as GPU/CPU generates them).</li>
+<li>Perfect for <strong>offline use</strong>, travel, or areas with poor connectivity.</li>
+</ul>
+<hr />
+<h3 id="3-zero-ongoing-api-costs">💸 3. <strong>Zero Ongoing API Costs</strong></h3>
+<ul>
+<li>Once you’ve bought the hardware, inference is free.</li>
+<li>Running GPT-OSS:20B locally avoids <strong>per-token API charges</strong> from cloud providers.</li>
+<li>Useful if you need <strong>large batch processing</strong> (e.g., analyzing 10,000 PDFs, summarizing datasets).</li>
+</ul>
+<hr />
+<h3 id="4-full-control-customization">🛠️ 4. <strong>Full Control &amp; Customization</strong></h3>
+<ul>
+<li>You can fine-tune or LoRA-train models on your own datasets.</li>
+<li>Ability to swap between <strong>different quantizations (4-bit, 8-bit, FP16)</strong> to optimize speed vs quality.</li>
+<li>Run <strong>specialized forks</strong> of GPT-OSS:20B tuned for coding, reasoning, or dialogue.</li>
+</ul>
+<hr />
+<h3 id="5-bigger-model-better-reasoning">🧠 5. <strong>Bigger Model = Better Reasoning</strong></h3>
+<ul>
+<li>
+<p>GPT-OSS:20B (20 billion parameters) is much stronger than 7B or 13B models:</p>
+</li>
+<li>
+<p>More coherent multi-turn conversations.</p>
+</li>
+<li>Better code generation &amp; debugging.</li>
+<li>More accurate reasoning over long documents.</li>
+<li>Handles <strong>longer context windows</strong> (if supported by quantization/runtime).</li>
+</ul>
+<hr />
+<h3 id="6-enterprise-research-use">📈 6. <strong>Enterprise &amp; Research Use</strong></h3>
+<ul>
+<li>You can deploy it as an <strong>internal assistant</strong> in small companies without exposing data to OpenAI/Anthropic/Google.</li>
+<li>Academics and students can use it for <strong>NLP research, AI experiments, or prototyping</strong> without cloud restrictions.</li>
+</ul>
+<hr />
+<h1 id="what-can-you-achieve-with-gpt-oss20b-locally">🎯 What Can You Achieve With GPT-OSS:20B Locally?</h1>
+<p>Here are some <strong>practical, concrete goals</strong> you could accomplish:</p>
+<h3 id="productivity-knowledge-work">🔹 Productivity &amp; Knowledge Work</h3>
+<ul>
+<li>Summarize large PDFs, books, or technical documents.</li>
+<li>Draft reports, proposals, or knowledge-base articles.</li>
+<li>Answer research queries from your local corpus (RAG setup).</li>
+</ul>
+<h3 id="programming-devops">🔹 Programming &amp; DevOps</h3>
+<ul>
+<li>Code generation, debugging, and explanations.</li>
+<li>Local copilots for VS Code, JetBrains, etc.</li>
+<li>Infrastructure automation with natural language commands (shell + Ansible + Dockerfile generation).</li>
+</ul>
+<h3 id="research-experimentation">🔹 Research &amp; Experimentation</h3>
+<ul>
+<li>Fine-tune models on niche data (medical, law, customer service).</li>
+<li>Evaluate and benchmark new quantization methods.</li>
+<li>Compare with other OSS models (Llama 2, Mistral, Mixtral).</li>
+</ul>
+<h3 id="private-ai-agents">🔹 Private AI Agents</h3>
+<ul>
+<li>Build local chatbots, assistants, or role-playing AIs without external API calls.</li>
+<li>Integrate with local tools (e.g., calendar, email, files) <strong>without data leaving your machine</strong>.</li>
+</ul>
+<h3 id="creative-work">🔹 Creative Work</h3>
+<ul>
+<li>Generate stories, scripts, and world-building content.</li>
+<li>Brainstorm new ideas privately (no IP leaks).</li>
+<li>Assist with language learning or translation.</li>
+</ul>
+<hr />
+<h1 id="pros-of-local-gpt-oss20b-vs-cloud-api">🟢 Pros of Local GPT-OSS:20B vs Cloud API</h1>
+<ul>
+<li>✅ Privacy (your data never leaves your machine).</li>
+<li>✅ No API fees.</li>
+<li>✅ Always available, even offline.</li>
+<li>✅ Full customization (quantization, finetuning, RAG integration).</li>
+<li>✅ Model weights are open — no black-box restrictions.</li>
+</ul>
+<h1 id="cons">🔴 Cons</h1>
+<ul>
+<li>❌ Requires high-end hardware (VRAM + RAM).</li>
+<li>❌ Slower than GPT-4-level APIs — 20B ≈ GPT-3.5 quality, not SOTA.</li>
+<li>❌ Energy use (desktop GPUs draw 300–400W).</li>
+<li>❌ Setup requires technical comfort (install runtimes, drivers, quantized weights).</li>
+</ul>
+<hr />
+<p>✨ <strong>Bottom line:</strong>
+Running <strong>GPT-OSS:20B locally</strong> is about <strong>independence, privacy, cost savings, and control</strong>. It won’t beat GPT-4 or Claude 3.5 in raw quality, but it gives you a <strong>serious personal/private AI lab</strong> that you can shape to your own needs.</p>
+<h1 id="budget-option-a-balanced-budget-recommended-for-stability">Budget Option A — Balanced Budget (recommended for stability)</h1>
+<p><strong>Estimated total:</strong> ≈ $2,000</p>
+<h3 id="parts-exacttypical-skus">Parts (exact/typical SKUs)</h3>
+<ul>
+<li><strong>CPU:</strong> AMD <em>Ryzen 7 7700X</em> — 8c/16t, strong single-thread. — <strong>$320</strong></li>
+<li><strong>Motherboard:</strong> <em>B650</em> ATX (e.g., MSI B650 Tomahawk or ASUS TUF B650-PLUS) — AM5, DDR5 support — <strong>$160</strong></li>
+<li><strong>GPU:</strong> <em>AMD Radeon RX 7900 XT (20GB)</em> — 20 GB VRAM (sufficient for 4-bit 20B). Prefer new from ASUS/Sapphire/MSI — <strong>$850–$950</strong></li>
+<li><strong>RAM:</strong> <em>64 GB (2×32 GB) DDR5-5600/6000</em> — DDR5-5600/6000 CL32 — <strong>$180–$260</strong>
+  <em>Note:</em> For strict budget you can choose <strong>32 GB (2×16)</strong> now and upgrade later; but 64 GB is safer.</li>
+<li><strong>Primary NVMe:</strong> <em>1 TB PCIe4 NVMe</em> (Samsung 990 Pro or WD SN850) — <strong>$110–$140</strong></li>
+<li><strong>PSU:</strong> <em>850 W 80+ Gold</em> (Corsair RM850x / Seasonic Focus GX) — <strong>$100–$150</strong></li>
+<li><strong>CPU Cooler:</strong> 240 mm AIO (NZXT Kraken X53 / Corsair H100) or quality air cooler — <strong>$80–$120</strong></li>
+<li><strong>Case:</strong> Good airflow mid-tower (Fractal Meshify, Phanteks P400A) — <strong>$70–$120</strong></li>
+<li><strong>Misc (fans, cables, thermal paste):</strong> <strong>$30–$60</strong></li>
+</ul>
+<p><strong>Estimated subtotal:</strong> $1,900 (with 32GB RAM) → $2,050 (with 64GB RAM).
+<strong>Savings vs recommended (~$2,840 parts-only):</strong> ~<strong>$790–$940</strong> (meets your $800–$1,200 target).</p>
+<h3 id="why-this-works">Why this works</h3>
+<ul>
+<li><strong>RX 7900 XT (20GB)</strong> has enough VRAM to hold a 20B model quantized to 4-bit (≈10–12 GB) with room for GPU buffers.</li>
+<li><strong>Ryzen 7 7700X</strong> (8c/16t) is still very capable for token preprocessing and feeding GPU.</li>
+<li><strong>64 GB RAM</strong> ideal; 32 GB will still run 4-bit 20B but leaves less headroom for other apps — recommended to aim for 64 if budget allows.</li>
+<li><strong>PCIe4 NVMe</strong> ensures quick model load times without needing PCIe5.</li>
+</ul>
+<h3 id="expected-performance-very-approximate">Expected performance (very approximate)</h3>
+<ul>
+<li><strong>GPT-OSS 20B (4-bit)</strong> on RX 7900 XT → <strong>~3–6 tokens/sec</strong> (depends on runtime, quantization, threading).</li>
+<li><strong>Smaller models (7B/13B)</strong> will be much faster (10–30 t/s).</li>
+</ul>
+<hr />
+<h1 id="budget-option-b-tighter-value-build-max-savings-used-gpu">Budget Option B — Tighter Value Build (max savings, used GPU)</h1>
+<p><strong>Target:</strong> aggressive cost reduction while still enabling 4-bit 20B. Use a <em>used</em> GPU (good deal hunting required).</p>
+<p><strong>Estimated total:</strong> <strong>≈ $1,400 – $1,600</strong></p>
+<h3 id="parts-exacttypical-skus_1">Parts (exact/typical SKUs)</h3>
+<ul>
+<li><strong>CPU:</strong> <em>Ryzen 5 7600X</em> (6c/12t) — <strong>$230</strong></li>
+<li><strong>Motherboard:</strong> <em>B650</em> or B650M — <strong>$120–$150</strong></li>
+<li><strong>GPU (used):</strong> <em>AMD Radeon RX 6900 XT (16GB) used</em> — <strong>$450–$650</strong> (used market)
+  <em>Alternative used: RX 7900 XT if you can find one for ~$700–$850 — better choice if available</em></li>
+<li><strong>RAM:</strong> <em>32 GB (2×16) DDR5-5600/6000</em> — <strong>$120–$160</strong></li>
+<li><strong>Primary NVMe:</strong> <em>1 TB PCIe4 NVMe</em> — <strong>$100–$120</strong></li>
+<li><strong>PSU:</strong> <em>850 W 80+ Gold</em> — <strong>$100</strong></li>
+<li><strong>CPU Cooler:</strong> solid air cooler (Noctua NH-U12S) or 240 AIO — <strong>$60–$100</strong></li>
+<li><strong>Case + misc:</strong> <strong>$80–$100</strong></li>
+</ul>
+<p><strong>Estimated subtotal:</strong> <strong>$1,400–$1,600</strong>
+<strong>Savings vs recommended (~$2,840):</strong> <strong>~$1,200–$1,440</strong></p>
+<h3 id="tradeoffs-and-notes">Tradeoffs and notes</h3>
+<ul>
+<li><strong>RX 6900 XT (16 GB)</strong>: 16 GB VRAM is <strong>enough for 4-bit 20B (~10–12GB)</strong>, but leaves less VRAM room for multi-buffers or memory fragmentation. You must ensure model + runtime buffers fit. Some runtimes may need extra tuning.</li>
+<li><strong>Ryzen 5 7600X</strong> has fewer cores — will slightly limit preprocessing throughput; CPU may become a mild bottleneck if heavy multitasking.</li>
+<li><strong>Used GPU risks</strong>: warranty, unknown usage, driver quirks. Buy from reputable sellers with returns.</li>
+</ul>
+<h3 id="expected-performance-approx">Expected performance (approx)</h3>
+<ul>
+<li><strong>With RX 6900 XT (16GB)</strong>: <strong>~2–4 tokens/sec</strong> for 20B (4-bit), depending on runtime and optimizations. Possibly slower than RX 7900 XT.</li>
+<li><strong>If you find a used RX 7900 XT (~$700–$850)</strong>, expect similar performance to Balanced Budget (~3–6 t/s).</li>
+</ul>
+<hr />
+<h1 id="what-to-upgrade-later-if-you-start-with-tighter-build">What to upgrade later (if you start with tighter build)</h1>
+<ol>
+<li><strong>RAM:</strong> upgrade from 32 → 64 GB when budget allows (biggest single uplift for stability).</li>
+<li><strong>GPU:</strong> replace used 6900 XT with RX 7900 XT/XTX for faster tokens/sec and more VRAM headroom.</li>
+<li><strong>NVMe capacity:</strong> add a second NVMe for datasets/models to avoid juggling files.</li>
+</ol>
+<hr />
+<h1 id="software-runtime-tips-for-both-builds">Software &amp; runtime tips for both builds</h1>
+<ul>
+<li>Use <strong>llama.cpp</strong> with Vulkan backend or a runtime that supports AMD GPU acceleration (Vulkan / ROCm where available).</li>
+<li>Prefer <strong>4-bit GGUF/GPTQ</strong> quantized models for lowest memory footprint.</li>
+<li>Tune threads (CPU) and <code>n_batch</code>/<code>n_ctx</code> to balance latency vs throughput.</li>
+<li>Monitor VRAM usage; if model doesn’t fit, try a 4-bit variant with GPTQ/GGUF.</li>
+</ul>
+<hr />
+<h1 id="shopping-tips-cautions">Shopping tips &amp; cautions</h1>
+<ul>
+<li><strong>GPU prices fluctuate</strong> — check Newegg, Amazon, local sellers, and reputable used marketplaces (e.g., eBay with buyer protection).</li>
+<li>If buying used, prefer sellers with return windows and verify photos/serial if possible.</li>
+<li><strong>RAM timing</strong>: buy a tested DDR5 kit (same dual-rank sticks), avoid mixing kits.</li>
+<li><strong>PSU quality</strong> matters — don’t buy the cheapest. Good PSU protects your expensive GPU/CPU.</li>
+</ul>
+<hr />
+<h1 id="quick-summary-comparison">Quick summary comparison</h1>
+<table>
+<thead>
+<tr>
+<th>Build</th>
+<th style="text-align: right;">Total est.</th>
+<th style="text-align: right;">Savings vs recommended</th>
+<th style="text-align: right;">VRAM</th>
+<th style="text-align: right;">RAM</th>
+<th style="text-align: right;">Perf (20B 4-bit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balanced Budget (7900 XT + 64GB)</td>
+<td style="text-align: right;">$1,900–$2,050</td>
+<td style="text-align: right;">~$800–$940</td>
+<td style="text-align: right;">20GB</td>
+<td style="text-align: right;">64GB</td>
+<td style="text-align: right;">~3–6 t/s</td>
+</tr>
+<tr>
+<td>Tighter Value (used 6900 XT + 32GB)</td>
+<td style="text-align: right;">$1,400–$1,600</td>
+<td style="text-align: right;">~$1,200–$1,440</td>
+<td style="text-align: right;">16GB (used)</td>
+<td style="text-align: right;">32GB</td>
+<td style="text-align: right;">~2–4 t/s</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-recommendation">Final recommendation</h2>
+<ul>
+<li>If you want <strong>reliable interactive use</strong> and longevity, go with <strong>Balanced Budget (Option A)</strong> — it meets your $800–$1,200 savings target and keeps good headroom.</li>
+<li>If your goal is <strong>maximum savings now</strong> and you’re comfortable risk-managing used parts and future upgrades, use <strong>Option B</strong> and plan to upgrade RAM/GPU later.</li>
+</ul>
+<h1 id="why-ryzen-9-7950x-rx-7900-xtx-64-gb-updated-memory-pcie-ssd">Why <strong>Ryzen 9 7950X + RX 7900 XTX + 64 GB</strong> (updated: memory, PCIe, SSD)</h1>
+<h3 id="quick-summary-of-the-new-details">Quick summary of the new details</h3>
+<ul>
+<li><strong>RAM type:</strong> DDR5 is recommended for Ryzen 9 7950X (speed and Infinity Fabric behavior).</li>
+<li><strong>RAM speed:</strong> Aim for <strong>DDR5-6000 MT/s</strong> (or 5600–6400 MT/s) CL30–36 for best latency/throughput balance on Zen4.</li>
+<li><strong>PCIe:</strong> <strong>PCIe 4.0 x16</strong> is sufficient for a GPU like RX 7900 XTX; <strong>PCIe 5.0</strong> is beneficial for NVMe SSDs and future GPUs but not required for GPU performance today.</li>
+<li><strong>NVMe SSD:</strong> Use <strong>PCIe 4.0 NVMe</strong> with sustained sequential reads ~5–7 GB/s (5000–7000 MB/s). If you want the fastest possible model load times and you have a PCIe5 motherboard, <strong>PCIe 5.0 NVMe</strong> drives (read ~10–12+ GB/s) are an extra boost for model I/O.</li>
+</ul>
+<hr />
+<h1 id="why-these-choices-matter-technical-view">Why these choices matter (technical view)</h1>
+<h2 id="ddr5-vs-ddr4-and-speed">DDR5 vs DDR4 (and speed)</h2>
+<ul>
+<li>
+<p><strong>Ryzen 9 7950X (Zen4)</strong>:</p>
+</li>
+<li>
+<p>Designed for <strong>DDR5</strong>. DDR5 gives higher bandwidth which helps when the CPU is moving large model chunks and when the system uses RAM as staging for GPU transfers.</p>
+</li>
+<li><strong>Recommended speed:</strong> DDR5-6000 MT/s is a well-known sweet spot for Ryzen 7000-series — it often allows Infinity Fabric to run 1:1 (better latency) and yields the best practical throughput. DDR5-5600 → good, DDR5-6400 → sometimes faster but may need manual tuning/timings.</li>
+<li><strong>Timings:</strong> lower CAS latency helps, but MT/s matters more for AI workloads (bandwidth-bound). Typical good kit: <strong>6000 MT/s CL30–36</strong>.</li>
+<li>
+<p><strong>If you choose Ryzen 5000 (5900X)</strong>:</p>
+</li>
+<li>
+<p><strong>DDR4-3600 CL16</strong> is ideal. DDR5 is not supported by that platform.</p>
+</li>
+<li>
+<p><strong>Why not DDR4 on 7950X?</strong></p>
+</li>
+<li>
+<p>7950X motherboards support DDR5 only; DDR4 is incompatible. For other CPUs, DDR4 is fine but lower bandwidth.</p>
+</li>
+</ul>
+<h2 id="capacity-64-gb-vs-32-gb">Capacity (64 GB vs 32 GB)</h2>
+<ul>
+<li>
+<p><strong>64 GB</strong> gives headroom for:</p>
+</li>
+<li>
+<p>FP16/8-bit weights and runtime buffers</p>
+</li>
+<li>caching multiple models, datasets, or running containers/IDE alongside inference</li>
+<li>avoiding swap (swap kills throughput)</li>
+<li><strong>32 GB</strong> may be okay for 4-bit 20B but is tight and risky.</li>
+</ul>
+<h2 id="pcie-40-vs-pcie-50">PCIe 4.0 vs PCIe 5.0</h2>
+<ul>
+<li><strong>GPU:</strong> RX 7900 XTX runs perfectly on <strong>PCIe 4.0 x16</strong>. Moving to PCIe 5.0 gives little-to-no real-world inference speedup today because the GPU computation is the bottleneck, not PCIe link bandwidth for steady-state inference.</li>
+<li><strong>NVMe SSDs:</strong> Where PCIe5 shines — <strong>PCIe 5.0 NVMe</strong> offers ~10–14 GB/s sequential reads and speeds up model load times and swap-backed workloads significantly. If you often load many model checkpoints or large datasets, PCIe5 NVMe helps.</li>
+<li><strong>Practical:</strong> Buy a good PCIe4 NVMe unless you specifically want the fastest possible model load times and have a PCIe5 board.</li>
+</ul>
+<h2 id="nvme-ssd-readwrite-what-to-pick">NVMe SSD Read/Write (what to pick)</h2>
+<ul>
+<li>
+<p><strong>Good target for model work:</strong></p>
+</li>
+<li>
+<p><strong>PCIe4 NVMe:</strong> Sequential read <strong>5,000–7,000 MB/s</strong>; write similar for high-end drives. Examples: Samsung 990 Pro, WD Black SN850 – fast and reliable.</p>
+</li>
+<li><strong>PCIe5 NVMe:</strong> Sequential read <strong>10,000–14,000 MB/s</strong>; cutting-edge (requires PCIe5 motherboard).</li>
+<li><strong>Why sequential read matters:</strong> Model files are large sequential reads when loading weights; higher read speeds reduce model startup time and any disk-backed paging overhead.</li>
+<li><strong>IOPS &amp; endurance:</strong> For cache-heavy usage, consider high IOPS and higher TBW (endurance) ratings if you will swap or write a lot.</li>
+</ul>
+<hr />
+<h1 id="updated-comparison-table-includes-ddr-pcie-ssd-speeds">Updated comparison table (includes DDR, PCIe, SSD speeds)</h1>
+<table>
+<thead>
+<tr>
+<th>Build</th>
+<th style="text-align: right;">CPU</th>
+<th style="text-align: right;">GPU</th>
+<th style="text-align: right;">RAM (type &amp; speed)</th>
+<th style="text-align: right;">RAM capacity</th>
+<th style="text-align: right;">PCIe</th>
+<th style="text-align: right;">NVMe suggestion (read/write)</th>
+<th>Notes &amp; expected t/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recommended</strong></td>
+<td style="text-align: right;">Ryzen 9 7950X (16c/32t)</td>
+<td style="text-align: right;">RX 7900 XTX (24 GB)</td>
+<td style="text-align: right;"><strong>DDR5-6000 MT/s (CL30-36)</strong></td>
+<td style="text-align: right;"><strong>64 GB</strong></td>
+<td style="text-align: right;">PCIe 4.0 x16 (PCIe5 ready mobo optional)</td>
+<td style="text-align: right;"><strong>PCIe4 NVMe: 5–7 GB/s</strong> (PCIe5: 10–14 GB/s)</td>
+<td>Best balance; smooth FP16/INT8 20B inference (~6–12 t/s)</td>
+</tr>
+<tr>
+<td><strong>High-end pro</strong></td>
+<td style="text-align: right;">Threadripper 3965WX</td>
+<td style="text-align: right;">Radeon PRO W6800 (32GB)</td>
+<td style="text-align: right;">DDR4/DDR5 ECC (platform dependent)</td>
+<td style="text-align: right;">128 GB+</td>
+<td style="text-align: right;">PCIe4/PCIe5 server board</td>
+<td style="text-align: right;">NVMe PCIe4/5: 7–12+ GB/s</td>
+<td>Multi-model / heavy fine-tuning (10–20 t/s)</td>
+</tr>
+<tr>
+<td><strong>Mid / cost-aware</strong></td>
+<td style="text-align: right;">Ryzen 9 5900X (12c/24t)</td>
+<td style="text-align: right;">RX 7900 XT/XTX</td>
+<td style="text-align: right;"><strong>DDR4-3600</strong> (if 5900X) or DDR5 on other CPUs</td>
+<td style="text-align: right;">32–64 GB (64 preferred)</td>
+<td style="text-align: right;">PCIe 4.0</td>
+<td style="text-align: right;">PCIe4 NVMe: 5–7 GB/s</td>
+<td>Good value; upgrade RAM to 64GB for FP16 20B (~4–9 t/s)</td>
+</tr>
+<tr>
+<td><strong>Budget</strong></td>
+<td style="text-align: right;">Ryzen 7 7700X / 5800X3D</td>
+<td style="text-align: right;">RX 7900 XT or used 6900 XT</td>
+<td style="text-align: right;">DDR5-5200–5600 (for 7700X) or DDR4-3600</td>
+<td style="text-align: right;">32 GB</td>
+<td style="text-align: right;">PCIe4</td>
+<td style="text-align: right;">PCIe4 NVMe: ~5 GB/s</td>
+<td>Can run quantized 20B (4-bit), slower (~3–6 t/s)</td>
+</tr>
+<tr>
+<td><strong>Laptop / small</strong></td>
+<td style="text-align: right;">Ryzen 9 8945HS</td>
+<td style="text-align: right;">Radeon 780M (iGPU)</td>
+<td style="text-align: right;">DDR5 LPDDR5x (integrated)</td>
+<td style="text-align: right;">32 GB</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">NVMe PCIe4: 5 GB/s</td>
+<td>Can run 4-bit 20B but mostly CPU-bound (&lt;1–2 t/s)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="concrete-component-recommendations">Concrete component recommendations</h1>
+<ul>
+<li>
+<p><strong>RAM (Ryzen 7950X combo)</strong>:</p>
+</li>
+<li>
+<p>Buy <strong>2×32 GB DDR5-6000 CL30</strong> (dual-channel) or <strong>4×16 GB</strong> if motherboard supports quad. Good kits: reputable brands (G.Skill Trident Z5, Corsair Dominator DDR5).</p>
+</li>
+<li>On Ryzen 7000, DDR5-6000 often hits a good Infinity Fabric 1:1 ratio.</li>
+<li>
+<p><strong>SSD</strong>:</p>
+</li>
+<li>
+<p><strong>Primary NVMe (OS + models):</strong> 1–2 TB PCIe 4.0 NVMe (Samsung 990 Pro, WD SN850) — read ~7000 MB/s.</p>
+</li>
+<li><strong>Optional ultra-fast scratch:</strong> If you have PCIe5 board, consider a PCIe5 drive for super-fast model loads.</li>
+<li>
+<p><strong>Motherboard</strong>:</p>
+</li>
+<li>
+<p>X670E/B650E for Ryzen 7000 – choose one with multiple M.2 NVMe slots and PCIe 4.0/5.0 support if future-proofing.</p>
+</li>
+<li>
+<p><strong>PSU &amp; Cooling</strong>:</p>
+</li>
+<li>
+<p>PSU: 850–1000 W high-quality Gold/Plat</p>
+</li>
+<li>Cooling: 240–360 mm AIO for 7950X sustained loads</li>
+</ul>
+<hr />
+<h1 id="practical-tuning-tips">Practical tuning tips</h1>
+<ul>
+<li><strong>Memory config:</strong> Use dual-channel kits (2 sticks) for simplicity; 64 GB as 2×32 GB is ideal. Populate recommended slots per manual.</li>
+<li><strong>RAM speed tuning:</strong> Set XMP/EXPO to kit speed (6000) and verify FCLK (Infinity Fabric) settings — many motherboards support 1:1 at 6000.</li>
+<li><strong>SSD configuration:</strong> Put models on the fastest NVMe drive. If using swap, use a fast NVMe with high TBW.</li>
+<li><strong>PCIe lanes:</strong> Make sure the GPU gets full x16 lanes (most desktop boards give this to GPU slot).</li>
+</ul>
+<hr />
+<h1 id="short-checklist-when-buyingbuilding-for-gpt-oss-20b">Short checklist when buying/building for GPT-OSS 20B</h1>
+<ol>
+<li><strong>CPU:</strong> Ryzen 9 7950X or equivalent desktop-class CPU (&gt;=12 cores recommended).</li>
+<li><strong>GPU:</strong> Discrete GPU with <strong>≥24 GB VRAM</strong> (RX 7900 XTX or equivalent).</li>
+<li><strong>RAM:</strong> <strong>64 GB DDR5</strong> (DDR5-6000 kit recommended).</li>
+<li><strong>Storage:</strong> <strong>PCIe4 NVMe</strong> (1–2 TB) — PCIe5 optional for fastest loads.</li>
+<li><strong>Motherboard:</strong> X670E/B650E with multiple M.2 slots.</li>
+<li><strong>PSU/Cooling:</strong> 850–1000W PSU, quality AIO cooler.</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
