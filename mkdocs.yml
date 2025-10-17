@@ -3,19 +3,34 @@ site_dir: site
 docs_dir: docs/
 theme:
   name: material
+
   palette:
-    scheme: slate # dark mode
-    primary: deep purple
-    accent: purple
+    scheme: default #slate #> dark mode
+    primary: indigo
+    accent: blue
+
   features:
-    - navigation.instant
-    # - navigation.tabs
-    - search.suggest
-    - toc.follow
+      # Keeps the table of contents visible while scrolling
+      - toc.follow
+      # Enables the "Back to top" button
+      - content.action.top
+      # Adds a copy button to code blocks (great motivation for users to try code!)
+      - content.code.copy
+      # Shows the hierarchy of the current page in the header
+      - navigation.path
+      # Expands all navigation sections by default
+      #- navigation.expand
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+
 markdown_extensions:
   - footnotes
   - admonition
   - pymdownx.details
+  - pymdownx.tabbed
 extra_css:
   - css/extra.css
 plugins:
