@@ -14,7 +14,7 @@ To provide a clear roadmap for beginners to start their AI journey—whether thr
 * Encourage **project-based learning** and portfolio creation to demonstrate practical expertise.
 
 ---
-<video width="640" height="360" controls poster="../thumbnail.png">
+<video width="720" height="360" controls poster="../thumbnail.png">
   <source src="../How_to_Learn_AI_in_2025.mp4" type="video/mp4">
 </video>
 

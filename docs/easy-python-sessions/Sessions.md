@@ -11,8 +11,8 @@
 
 <iframe 
     src="https://drive.google.com/file/d/1fiACuNGjsrH4PKFC1LgpCnWlSHUvsEf1/preview" 
-    width="640" 
-    height="480" 
+    width="720" 
+    height="360" 
     allow="autoplay" 
     frameborder="0" 
     allowfullscreen
@@ -29,8 +29,8 @@
 
 <iframe 
     src="https://drive.google.com/file/d/1xGpsNOB-p7RlC8Oj_qXRolHEOfenI3a4/preview" 
-    width="640" 
-    height="480" 
+    width="720" 
+    height="360" 
     allow="autoplay" 
     frameborder="0" 
     allowfullscreen
