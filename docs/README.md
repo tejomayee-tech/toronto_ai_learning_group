@@ -12,7 +12,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
 ### Community Values & Guidelines
 
-  [Community Value & Learning](docs/community-values-guidelines/Prompt-answer.md) 
+  [Community Value & Learning](../docs/community-values-guidelines/Prompt-answer.md) 
 
 
 
@@ -26,7 +26,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
   [Groups Open Sessoin Calendar](https://teamup.com/ksxott7u7sbhts6s9e)
 
-  [Groups Google calendar for Reminders](https://calendar.google.com/calendar/u/3?cid=N2UyMjdjMGZkODBlYzY0NjA3NzM1NDYxZjRmYTAzYTUxMGZlYmZkNTY5ODE5MWE5MjIxMDRkZjBlMDVkYWVmM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
+  [Groups Google Calendar for Reminders](https://calendar.google.com/calendar/u/3?cid=N2UyMjdjMGZkODBlYzY0NjA3NzM1NDYxZjRmYTAzYTUxMGZlYmZkNTY5ODE5MWE5MjIxMDRkZjBlMDVkYWVmM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
 
 
 
