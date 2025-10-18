@@ -1,17 +1,19 @@
-# Toronto AI Learning Group Repository
+# AI Learning Group 
 Welcome to the official repository for the Toronto AI Learning Group - a collaborative space where community-led sessions, resources, and discussions are organized and shared.
 
 ---
 
 ### 🎯 In one line from **ChatGPT**
 
-  The culture of open sharing, learning, and collaboration is the **engine of progress in AI**. Proprietary tools are the **vehicles** that make that progress practical, accessible, and sustainable. But without the engine, the vehicle goes nowhere.
+    The culture of open sharing, learning, and collaboration is the **engine of progress in AI**.  Frameworks like **TensorFlow, PyTorch, Hugging Face Transformers, scikit-learn** and even Linux/Ubuntu itself are open-source. Without them, no AI researcher or startup could move quickly.
 
+    Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**. Its always to good have someone to talk to, feels like home. Isn't Learning in a group super fun..? 
 
-  Sharing **promotions, referrals, or marketing content** in a group is fine. 
-  Please note that they mostly drive usage and sales and they rarely contribute to true learning or collaborative building.
+    Sharing **promotions, referrals, or marketing content** in a group is fine. Please note that they mostly drive usage and sales and they rarely contribute to true learning or collaborative building.   
 
-  Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**. Its always to good have someone to talk to, feels like home. Isn't Learning in a group super fun..? 
+    Proprietary tools are the **vehicles** that make that progress practical, accessible, and sustainable. But without the engine, the vehicle goes nowhere. 
+
+ 
 
 ---
 
