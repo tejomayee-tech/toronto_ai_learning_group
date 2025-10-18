@@ -1248,12 +1248,55 @@
     allowfullscreen
 ></iframe>
 
+<hr />
+<!-- Popup Styles -->
+<style>
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+  }
+  .popup img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    box-shadow: 0 0 15px #000;
+    border-radius: 6px;
+  }
+</style>
+
+<!-- Popup HTML -->
+<div id="popup" class="popup" onclick="this.style.display='none'">
+  <img id="popup-img" src="" alt="Popup image">
+</div>
+
+<!-- Script to attach popup behavior -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img");
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.style.display = "block";
+      });
+    });
+  });
+</script>
+
+<hr />
 <h3 id="steps">steps</h3>
 <ol>
 <li>
 <p>Download and install <a href="https://www.docker.com/products/docker-desktop/">docker desktop</a></p>
-<p><strong>Note</strong>: Its better install with recommended options like wsl</p>
-<p><img src="../images/001.png" alt="Image 1" width="400"></p>
+<p><strong>Note</strong>: Its better install with recommended options like wsl<br />
+<img src="../images/001.png" alt="Image 1" width="400"></p>
 <p><img src="../images/004.png" alt="Image 2" width="400"></p>
 <p><strong>Info</strong>: If you installed with default options, the below wsl window will open, you can close it safely.</p>
 <p><img src="../images/005.png" alt="Image 3" width="400"></p>
@@ -1303,14 +1346,16 @@
 <p><img src="../images/027.png" alt="Image 23" width="400"></p>
 </li>
 <li>
-<p>Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.<strong>NOTE</strong> you might need to reopen to see LLM sometimes.</p>
+<p>Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.<br />
+<strong>NOTE</strong> you might need to reopen to see LLM sometimes.</p>
 <p><img src="../images/028.png" alt="Image 24" width="400"></p>
 <p><img src="../images/032.png" alt="Image 25" width="400"></p>
 <p><img src="../images/033.png" alt="Image 26" width="400"></p>
 </li>
 <li>
 <p>Click on memory of the AI agent and add simple memory node.</p>
-<p><img src="../images/034.png" alt="Image 27" width="400"> </p>
+<p><img src="../images/034.png" alt="Image 27" width="400">
+```</p>
 </li>
 </ol>
 
