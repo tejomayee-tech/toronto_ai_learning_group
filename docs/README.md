@@ -5,7 +5,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
 ### 🎯 In one line from **ChatGPT**
 
-  The culture of open sharing, learning, and collaboration is the **engine of progress in AI**.  Frameworks like **TensorFlow, PyTorch, Hugging Face Transformers, scikit-learn** and even Linux/Ubuntu itself are open-source. Without them, no AI researcher or startup could move quickly.
+  The culture of open sharing, learning, and collaboration is the **engine of progress in AI**.  Frameworks like **TensorFlow, PyTorch, Hugging Face Transformers, scikit-learn** and even **Linux/Ubuntu** that powered most AI systems itself are open-source. Without them, no AI researcher or startup could move quickly.
 
   Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**. Its always to good have someone to talk to, feels like home. Isn't Learning in a group super fun..? 
 
@@ -28,7 +28,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
 ---
 
-### Community Values & Guidelines
+### 🤝 Community Values & Guidelines
 
   [Community Value & Learning](community-values-guidelines/Prompt-answer.md) 
 
