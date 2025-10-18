@@ -11,12 +11,56 @@
     allowfullscreen
 ></iframe>
 
+---
+
+<!-- Popup Styles -->
+<style>
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+  }
+  .popup img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    box-shadow: 0 0 15px #000;
+    border-radius: 6px;
+  }
+</style>
+
+<!-- Popup HTML -->
+<div id="popup" class="popup" onclick="this.style.display='none'">
+  <img id="popup-img" src="" alt="Popup image">
+</div>
+
+<!-- Script to attach popup behavior -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img");
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.style.display = "block";
+      });
+    });
+  });
+</script>
+
+---
+
 ### steps
 
 1. Download and install [docker desktop](https://www.docker.com/products/docker-desktop/)
 
-    **Note**: Its better install with recommended options like wsl
- 
+    **Note**: Its better install with recommended options like wsl  
     <img src="../images/001.png" alt="Image 1" width="400">
 
     <img src="../images/004.png" alt="Image 2" width="400">
@@ -81,7 +125,8 @@
 
     <img src="../images/027.png" alt="Image 23" width="400">
 
-10. Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.**NOTE** you might need to reopen to see LLM sometimes.
+10. Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.  
+    **NOTE** you might need to reopen to see LLM sometimes.
 
     <img src="../images/028.png" alt="Image 24" width="400">
 
@@ -91,4 +136,5 @@
 
 11. Click on memory of the AI agent and add simple memory node.
 
-    <img src="../images/034.png" alt="Image 27" width="400"> 
+    <img src="../images/034.png" alt="Image 27" width="400">
+```
