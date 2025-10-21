@@ -1203,62 +1203,86 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Model Name (Repository)</th>
-<th style="text-align: left;">Family/Developer</th>
-<th style="text-align: left;">Parameter Size</th>
-<th style="text-align: left;">License</th>
-<th style="text-align: left;">Key Capabilities (Good At)</th>
-<th style="text-align: left;">Validation</th>
+<th>Model Name (Repository)</th>
+<th>Family/Developer</th>
+<th>Parameter Size</th>
+<th>License</th>
+<th>Key Capabilities (Good At)</th>
+<th>Validation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a href="https://huggingface.co/google/gemma-3-270m#description"><strong>Gemma 3 - 270M</strong></a></td>
-<td style="text-align: left;">Google / Gemma</td>
-<td style="text-align: left;"><strong>270 Million</strong></td>
-<td style="text-align: left;">Gemma License</td>
-<td style="text-align: left;">Question answering, summarization, and reasoning.</td>
-<td style="text-align: left;">Confirmed. Excellent performance for its compact size, especially in common NLP tasks.</td>
+<td><a href="https://huggingface.co/google/gemma-3-270m#description"><strong>Gemma 3 - 270M</strong></a></td>
+<td>Google / Gemma</td>
+<td>270 Million</td>
+<td>Gemma License</td>
+<td>Question answering, summarization, and reasoning.</td>
+<td>Confirmed. Excellent performance for its compact size, especially in common NLP tasks.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://huggingface.co/Qwen/Qwen3-0.6B"><strong>Qwen3 - 0.6B</strong></a></td>
-<td style="text-align: left;">Alibaba / Qwen</td>
-<td style="text-align: left;"><strong>0.6 Billion (600M)</strong></td>
-<td style="text-align: left;">Tongyi Qianwen License</td>
-<td style="text-align: left;">Switch between “thinking mode” for complex reasoning, math, and coding, and “non-thinking mode” for fast, general-purpose dialogue.</td>
-<td style="text-align: left;">Confirmed. Designed for fast general-purpose dialogue and complex problem-solving in a compact model.</td>
+<td><strong>Gemma 2 – 2B</strong></td>
+<td>Google / Gemma</td>
+<td>2 Billion</td>
+<td>Gemma License</td>
+<td>Instruction following, summarization, reasoning, and creative writing. Performs well in lightweight RAG and structured response generation.</td>
+<td>Confirmed. Solid performance for its size; optimized for low-resource environments and conversational use cases.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B"><strong>SmolLM3 - 3B</strong></a></td>
-<td style="text-align: left;">HuggingFaceTB</td>
-<td style="text-align: left;"><strong>3 Billion</strong></td>
-<td style="text-align: left;">Apache 2.0</td>
-<td style="text-align: left;">Thinking more for complex problem solving, agentic usage with tool calling, making it versatile for real-world applications.</td>
-<td style="text-align: left;">Confirmed. The model is specifically tuned for agentic workflows and complex problem-solving.</td>
+<td><a href="https://ollama.com/library/gemma:7b"><strong>Gemma – 7B</strong></a> gemma:7b</td>
+<td>Google / Gemma</td>
+<td>7 Billion</td>
+<td>Gemma License</td>
+<td>Advanced reasoning, dialogue understanding, summarization, and multi-turn conversation. Performs strongly in multilingual and coding benchmarks.</td>
+<td>Confirmed. Delivers near-state-of-the-art performance among open models in its class; excellent balance of accuracy and efficiency.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"><strong>Qwen3 - 4B-Instruct-2507</strong></a></td>
-<td style="text-align: left;">Alibaba / Qwen</td>
-<td style="text-align: left;"><strong>4 Billion</strong></td>
-<td style="text-align: left;">Tongyi Qianwen License</td>
-<td style="text-align: left;">Logical reasoning, text comprehension, mathematics, science, coding, and tool usage.</td>
-<td style="text-align: left;">Confirmed. This is an instruction-tuned variant optimized for a wide range of academic, reasoning, and coding benchmarks.</td>
+<td><a href="https://ollama.com/library/gemma2:9b"><strong>Gemma 2 – 9B</strong></a> gemma2:9b</td>
+<td>Google / Gemma</td>
+<td>7 Billion</td>
+<td>Gemma License</td>
+<td>Enhanced long-context reasoning, mathematical problem solving, code generation, and complex dialogue understanding. Excellent for applied RAG and instruction-tuned workflows.</td>
+<td>Confirmed. High-performance open model achieving strong reasoning and compositional generalization across benchmarks, competitive with much larger LLMs.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://huggingface.co/google/gemma-3-4b-it"><strong>Gemma 3 - 4B-IT</strong></a></td>
-<td style="text-align: left;">Google / Gemma</td>
-<td style="text-align: left;"><strong>4 Billion</strong></td>
-<td style="text-align: left;">Gemma License</td>
-<td style="text-align: left;">Fine-tuning on text classification, image classification, &amp; specialized tasks.</td>
-<td style="text-align: left;">Confirmed. The Instruction-Tuned (<code>-it</code>) variant is optimized for instruction-following and serves as a strong base for further fine-tuning on specialized tasks.</td>
+<td><a href="https://huggingface.co/Qwen/Qwen3-0.6B"><strong>Qwen3 - 0.6B</strong></a></td>
+<td>Alibaba / Qwen</td>
+<td>0.6 Billion (600M)</td>
+<td>Tongyi Qianwen License</td>
+<td>Switch between “thinking mode” for complex reasoning, math, and coding, and “non-thinking mode” for fast, general-purpose dialogue.</td>
+<td>Confirmed. Designed for fast general-purpose dialogue and complex problem-solving in a compact model.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://ollama.com/library/granite4"><strong>Granite 4 (tiny)</strong></a> granite4:tiny-h</td>
-<td style="text-align: left;">IBM / Granite 4.0</td>
-<td style="text-align: left;"><strong>7 Billion</strong></td>
-<td style="text-align: left;">Apache 2.0</td>
-<td style="text-align: left;">Question answering, summarization, classification, code answering, function calling, RAG, and multilingual support.</td>
-<td style="text-align: left;">Confirmed. The Granite 4.0-Micro is a 3B model under Apache 2.0, optimized for enterprise tasks like RAG, function calling, and multilingual support.</td>
+<td><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B"><strong>SmolLM3 - 3B</strong></a></td>
+<td>HuggingFaceTB</td>
+<td>3 Billion</td>
+<td>Apache 2.0</td>
+<td>Thinking more for complex problem solving, agentic usage with tool calling, making it versatile for real-world applications.</td>
+<td>Confirmed. Specifically tuned for agentic workflows and complex problem-solving.</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"><strong>Qwen3 - 4B-Instruct-2507</strong></a></td>
+<td>Alibaba / Qwen</td>
+<td>4 Billion</td>
+<td>Tongyi Qianwen License</td>
+<td>Logical reasoning, text comprehension, mathematics, science, coding, and tool usage.</td>
+<td>Confirmed. Instruction-tuned variant optimized for a wide range of academic, reasoning, and coding benchmarks.</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/google/gemma-3-4b-it"><strong>Gemma 3 - 4B-IT</strong></a></td>
+<td>Google / Gemma</td>
+<td>4 Billion</td>
+<td>Gemma License</td>
+<td>Fine-tuning on text classification, image classification, &amp; specialized tasks.</td>
+<td>Confirmed. The Instruction-Tuned (-it) variant is optimized for instruction-following and serves as a strong base for further fine-tuning on specialized tasks.</td>
+</tr>
+<tr>
+<td><a href="https://ollama.com/library/granite4"><strong>Granite 4 (tiny)</strong></a> granite4:tiny-h</td>
+<td>IBM / Granite 4.0</td>
+<td>7 Billion</td>
+<td>Apache 2.0</td>
+<td>Question answering, summarization, classification, code answering, function calling, RAG, and multilingual support.</td>
+<td>Confirmed. Granite 4.0-Micro (≈3B) optimized for enterprise tasks like RAG, function calling, and multilingual workflows.</td>
 </tr>
 </tbody>
 </table>
