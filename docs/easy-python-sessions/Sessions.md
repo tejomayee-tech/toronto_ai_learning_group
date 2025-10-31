@@ -50,4 +50,18 @@
     allowfullscreen
 ></iframe>
 
+
+#### Session 5
+
+1. String Operations
+
+<iframe 
+    src="https://drive.google.com/file/d/AcDewLqkIWp7Q9ZyJlzBgWKM5rMCMz3c/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ---
