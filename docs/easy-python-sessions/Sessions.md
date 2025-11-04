@@ -2,6 +2,20 @@
 
 ---
 
+
+### Session 1
+
+1. Development environment setup
+
+<iframe 
+    src="https://drive.google.com/file/d/1PjB_PobXHoJjACO6Rc6V2QfBCkJ9Hzsc/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ### Session 2
 
 1. Data Types
@@ -51,7 +65,7 @@
 ></iframe>
 
 
-#### Session 5
+### Session 5
 
 1. String Operations
 
