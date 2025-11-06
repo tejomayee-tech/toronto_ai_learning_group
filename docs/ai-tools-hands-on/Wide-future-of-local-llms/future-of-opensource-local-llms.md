@@ -36,4 +36,4 @@ Here is a summary of the key benefits for learning and development:
 
 In short, you get an **affordable, private, and secure sandbox** to master AI automation and LLM integration with an intuitive, powerful tool.
 
-Interesting? Are you hooked? Refer to [Setting up n8n locally configured to run with privately running llms](../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Git-hub-Sersion-Step-by-step-guide-to-setup-n8n-locally-with-llm.md)
+Interesting? Are you hooked? Refer to [Setting up n8n locally configured to run with privately running llms](../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md)
