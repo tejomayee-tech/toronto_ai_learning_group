@@ -2,7 +2,21 @@
 
 ---
 
-### Session 2
+
+### Session 0
+
+1. Development environment setup
+
+<iframe 
+    src="https://drive.google.com/file/d/1PjB_PobXHoJjACO6Rc6V2QfBCkJ9Hzsc/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+### Session 1
 
 1. Data Types
 1. Operators
@@ -20,7 +34,7 @@
 
 ---
 
-### Session 3
+### Session 2
 
 1. Integers
 1. For Loop, positive and reverse
@@ -36,13 +50,27 @@
     allowfullscreen
 ></iframe>
  
-### Session 4
+### Session 3
 
 1. While Loop
 1. Strings
 
 <iframe 
     src="https://drive.google.com/file/d/1ma6zNcyA1yLk11mWkbJuo4gJ9idd8nNb/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+
+### Session 4
+
+1. String Operations
+
+<iframe 
+    src="https://drive.google.com/file/d/1AcDewLqkIWp7Q9ZyJlzBgWKM5rMCMz3c/preview" 
     width="720" 
     height="360" 
     allow="autoplay" 
