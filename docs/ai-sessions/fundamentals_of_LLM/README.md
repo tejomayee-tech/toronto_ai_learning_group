@@ -3,7 +3,17 @@
 
 ## 📹Video
 
-Please find the video of the session on fundamentals of LLM(6th Sep 2025) here- https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/view?usp=drive_link.
+<!-- Please find the video of the session on fundamentals of LLM(6th Sep 2025) here- https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/view?usp=drive_link. -->
+
+<iframe 
+    src="https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ##
 
 # 🗂️ Curated Lists
