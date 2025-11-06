@@ -48,4 +48,9 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
   Sessions are added on a rolling basis by contributors and facilitators. If you would like to contribute materials or suggest improvements to the structure, feel free to open an issue or submit a pull request.
 
 
+### ⚖️ Rule of Thumb
+
+* **Beginners → 70% foundation (open, self-built), 30% convenience (proprietary tools).**
+* As you advance, you’ll naturally shift — using open tools for innovation, proprietary tools for scale.
+
 ### Happy Learning! 😊
