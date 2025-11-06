@@ -54,6 +54,8 @@ nav:
   - AI Tools Hands-on:
     - Private Local & Free GuFF models: ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
     - Top Local LLMs: ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs.md 
+    - 2025 - Future of Local LLMs: ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms.md
+    
   - AI Workflows:
     - n8n:
       - Prviate-Secure Docker-Desktop n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
