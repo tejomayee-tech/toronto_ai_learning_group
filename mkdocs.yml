@@ -42,7 +42,7 @@ nav:
   - Home: README.md
 
   - Community & Value:
-    - A Chat GTP resposne: community-values-guidelines/Community-main.md
+    - Community Main: community-values-guidelines/Community-main.md
 
   - AI - Fundamentals:
     - AI Fundamentals 1 : ai-sessions/fundamentals_of_LLM/README.md
