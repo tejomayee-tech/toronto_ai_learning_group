@@ -30,7 +30,7 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
 ### 🤝 Community Ethos
 
-  [Community Value & Learning](community-values-guidelines/Prompt-answer.md) 
+  [Community Values & Learning Together](community-values-guidelines/Community-main.md) 
 
   [Group Repository](https://github.com/tejomayee-tech/toronto_ai_learning_group) reflects the collaborative spirit of our learning group. We encourage respectful dialogue, curiosity-driven exploration, and inclusive participation.
 
