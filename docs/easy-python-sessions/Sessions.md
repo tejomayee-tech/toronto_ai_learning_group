@@ -78,4 +78,18 @@
     allowfullscreen
 ></iframe>
 
+
+### Session 5
+
+1. Data Structures simplified
+
+<iframe 
+    src="https://drive.google.com/file/d/1G8idi1qa8Y9s5_-Wm4ZemWo3jSUfJoIZ/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ---
