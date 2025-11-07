@@ -2,6 +2,14 @@
 
 ---
 
+### Why should you learn programming with AI
+
+| Category                             | Skill Depth        | Job Security | Pay Ceiling | Replaceability | Growth Path                |
+| ------------------------------------ | ------------------ | ------------ | ----------- | -------------- | -------------------------- |
+| **Python AI Programmer**             | High (coding + AI) | ⭐⭐⭐⭐         | ⭐⭐⭐⭐⭐       | 🔻 Low         | Technical leadership / R&D |
+| **AI Power User (No-code)**          | Medium             | ⭐⭐⭐          | ⭐⭐–⭐⭐⭐      | ⚠️ Medium      | Product / ops hybrid roles |
+| **General AI User (Non-programmer)** | Low                | ⭐⭐           | ⭐⭐          | ⚠️ High        | Limited unless specialized |
+
 
 ### Session 0
 
