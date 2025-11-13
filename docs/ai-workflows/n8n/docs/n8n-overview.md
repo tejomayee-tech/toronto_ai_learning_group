@@ -1,3 +1,15 @@
+# n8n Overview
+
+
+<iframe 
+    src="https://drive.google.com/file/d/1h1bNmpt1OhB5Vzt3I-5HgCEDS0Fpmj-3/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ## 1. Core Advantages and Foundation of n8n
 
 n8n is widely recognized as a **no-code AI automation tool** that makes building AI agents surprisingly intuitive. It is a node-based automation platform that connects easily with **more than 500 different applications**.
