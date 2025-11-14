@@ -101,3 +101,19 @@
 ></iframe>
 
 ---
+
+### Session 6
+
+1. For Loop Q&A, Examples, difference w.r.t While
+1. Definitions Introcution
+
+<iframe 
+    src="https://drive.google.com/file/d/1VZq3pO0wVyrNSOBV0c4vxmF3BUoLDP3A/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+---
