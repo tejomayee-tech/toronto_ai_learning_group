@@ -1385,6 +1385,68 @@
 </tr>
 </tbody>
 </table>
+<h1 id="mini-pc-quick-comparison-gmktec-k12-vs-geekom-a9-max-vs-alternatives">Mini-PC quick comparison (GMKtec K12 vs GEEKOM A9 Max vs alternatives)</h1>
+<table>
+<thead>
+<tr>
+<th>Model (link source)</th>
+<th style="text-align: right;">CPU / APU</th>
+<th style="text-align: right;">Max RAM (user upgrade)</th>
+<th>OCuLink / eGPU or full PCIe x16</th>
+<th>Storage / M.2</th>
+<th>Good for 20B / 30B locally?</th>
+<th>Practical path to 120B later</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GMKtec K12</strong> (Amazon / GMKtec product page). ([Amazon Canada][1])</td>
+<td style="text-align: right;">AMD Ryzen 7 H-255 (8c/16t) with Radeon 780M iGPU. ([GMKtec][2])</td>
+<td style="text-align: right;"><strong>Up to 128 GB DDR5</strong> (2× SO-DIMM marketed; many listings show shipped configs with 64GB). ([GMKtec][2])</td>
+<td><strong>Yes — OCuLink</strong> (PCIe 4.0×4 uplink) for eGPU. Several reviews / listings confirm. ([Amazon Canada][1])</td>
+<td><strong>3× M.2 2280</strong> (mix of PCIe4x2 and one PCIe4x4 per spec), plenty of NVMe options. ([GMKtec][2])</td>
+<td><strong>Yes</strong> — good for 20B/30B if you configure to 64–128GB RAM and/or attach an external GPU for inference. ([Wccftech][3])</td>
+<td><strong>Limited</strong> — OCuLink helps attach a big GPU, but x4 link &amp; mini-PC power/cooling limit scale. For multi-GPU NVLink clusters (best for 120B) you’ll likely need a workstation/server. ([Wccftech][3])</td>
+</tr>
+<tr>
+<td><strong>GEEKOM A9 Max</strong> (GEEKOM product pages / reviews). ([GEEKOM][4])</td>
+<td style="text-align: right;">AMD Ryzen AI 9 HX370 (Strix Point) APU with Radeon 890M + on-chip NPU. ([GEEKOM][4])</td>
+<td style="text-align: right;"><strong>Up to 128 GB DDR5</strong> (2× SO-DIMM). ([GEEKOM][4])</td>
+<td><strong>No OCuLink</strong> on A9 Max (USB4 / Thunderbolt-style ports instead). Not ideal if you strictly need OCuLink; you can still use USB4/TB eGPU docks but bandwidth differs. ([Windows Central][5])</td>
+<td>2× M.2 NVMe (some SKUs 2TB), good throughput. ([GEEKOM][6])</td>
+<td><strong>Yes</strong> — very good for 20B/30B locally because of strong APU + NPU and up to 128GB RAM. ([Windows Central][5])</td>
+<td><strong>Moderate</strong> — no native OCuLink; you can use USB4 eGPU but x4 PCIe native (OCuLink) is preferable for large external GPUs. Eventually likely outgrown for 120B. ([Windows Central][5])</td>
+</tr>
+<tr>
+<td><strong>MINISFORUM UM890 Pro</strong> (Minisforum product pages). ([official store][7])</td>
+<td style="text-align: right;">AMD Ryzen 9 8945HS (Radeon 780M), high TDP modes to ~70W. ([Minisforum][8])</td>
+<td style="text-align: right;"><strong>Advertised up to ~96–128GB</strong> depending on variant/listing (dual SO-DIMM; some pages say 96GB max). Check exact SKU BIOS limits. ([Ca.minisforum][9])</td>
+<td><strong>Yes — OCuLink supported</strong> on UM890 Pro; Minisforum sells a matching eGPU dock (DEG1). That gives a practical eGPU path. ([official store][7])</td>
+<td>Typically 2× M.2 and active DDR/SSD cooler; good NVMe support. ([Minisforum][8])</td>
+<td><strong>Yes — excellent</strong> for 20B/30B: powerful CPU/APU, OCuLink eGPU path, good cooling. ([Minisforum][8])</td>
+<td><strong>Better than most</strong> mini-PCs thanks to OCuLink + robust cooling — still limited by x4 uplink &amp; single-machine constraints; multi-GPU NVLink cluster still a later step. ([Minisforum][10])</td>
+</tr>
+<tr>
+<td><strong>AceMagic / Acemagic F5A</strong> (TechRadar / product news). ([TechRadar][11])</td>
+<td style="text-align: right;">Ryzen AI 9 HX 370 (similar HX370 APU spec to A9 Max). ([TechRadar][11])</td>
+<td style="text-align: right;"><strong>Up to 128 GB DDR5</strong> (advertised). ([TechRadar][11])</td>
+<td><strong>Yes — includes OCuLink</strong> in spec (advertised). That makes it a direct competitor for OCuLink + large RAM. ([TechRadar][11])</td>
+<td>Advertised PCIe4 NVMe support / similar storage claims to A9. ([TechRadar][11])</td>
+<td><strong>Yes</strong> — appears as a very strong alternative: HX370 APU + OCuLink + 128GB option makes it suitable for 20–30B workloads. ([TechRadar][11])</td>
+<td><strong>Good path</strong> — OCuLink + 128GB capability; still constrained by single-node limitations for 120B (but better bridge than A9 because it advertises OCuLink). ([TechRadar][11])</td>
+</tr>
+<tr>
+<td><strong>ZOTAC Magnus / ZBOX (small form-factor with discrete full GPU)</strong> (Zotac product pages / reviews). ([ZOTAC][12])</td>
+<td style="text-align: right;">Varies by model — some Magnus models ship with <strong>desktop-class discrete GPUs</strong> (e.g., RTX 5060 Ti) or are barebones for adding discrete cards. ([ZOTAC][13])</td>
+<td style="text-align: right;">RAM depends on model; many are configurable to high RAM (32–128GB in SFF / depends on model). Check each Magnus SKU. ([PC Gamer][14])</td>
+<td><strong>Some Magnus/ZBOX variants include a real discrete GPU internally</strong> (not eGPU), effectively giving you native GPU power (not via OCuLink). Not all models have full-length internal PCIe x16 slots due to chassis size — check SKU. ([PC Gamer][14])</td>
+<td>Usually support NVMe (1–2 M.2) and sometimes user-replaceable GPU depending on design. ([PC Gamer][14])</td>
+<td><strong>Excellent</strong> for 20B/30B if you pick a Magnus model that includes a discrete desktop GPU (more VRAM / more direct PCIe bandwidth than an eGPU x4 link). ([PC Gamer][14])</td>
+<td><strong>Best single-box option</strong> to get heavy GPU VRAM (if model includes desktop GPU). If you can get a Magnus with a 48–80GB GPU inside (rare/expensive), that’s a stronger step toward 120B than an x4 eGPU link. For multi-GPU NVLink you’ll still eventually need a workstation. ([Tom's Hardware][15])</td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 
