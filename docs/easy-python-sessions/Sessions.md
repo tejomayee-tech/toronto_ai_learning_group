@@ -2,7 +2,7 @@
 
 ---
 
-### Why should you learn programming with AI
+### Why should you learn programming with AI according to ChatGPT
 
 | Category                             | Skill Depth        | Job Security | Pay Ceiling | Replaceability | Growth Path                |
 | ------------------------------------ | ------------------ | ------------ | ----------- | -------------- | -------------------------- |
@@ -93,6 +93,22 @@
 
 <iframe 
     src="https://drive.google.com/file/d/1G8idi1qa8Y9s5_-Wm4ZemWo3jSUfJoIZ/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+---
+
+### Session 6
+
+1. For Loop Q&A, Examples, difference w.r.t While
+1. Definitions Introcution
+
+<iframe 
+    src="https://drive.google.com/file/d/1VZq3pO0wVyrNSOBV0c4vxmF3BUoLDP3A/preview" 
     width="720" 
     height="360" 
     allow="autoplay" 
