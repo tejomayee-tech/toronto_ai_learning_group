@@ -2,7 +2,7 @@
 
 ---
 
-### Why should you learn programming with AI according to ChatGPT
+> Why learning programming basic and coding with AI is useful according to ChatGPT
 
 | Category                             | Skill Depth        | Job Security | Pay Ceiling | Replaceability | Growth Path                |
 | ------------------------------------ | ------------------ | ------------ | ----------- | -------------- | -------------------------- |
