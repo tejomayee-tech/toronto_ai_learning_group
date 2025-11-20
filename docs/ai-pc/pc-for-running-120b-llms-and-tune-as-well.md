@@ -1,7 +1,10 @@
 
-# DELL Precision T7875 can absolutely support 2× RTX 5090 GPUs**
+# DELL Precision T7875 can absolutely support 2× NVIDIA RTX 5090 GPUs**
 
-Product Link: [Dell Precision T7875](https://www.dell.com/en-ca/shop/cty/pdp/spd/precision-t7875-workstation)
+Product Links: 
+
+1. [Dell Precision T7875](https://www.dell.com/en-ca/shop/cty/pdp/spd/precision-t7875-workstation)
+1. [NVIDIA RTX 5090 GPU](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/)
 
 The configuration itself is enterprise-grade workstation class and it can handle:
 
@@ -67,14 +70,13 @@ This CPU is perfect for multi-GPU model training/inference because it can feed t
 
 # 💾 **Memory Support**
 
-Your spec:
 **128 GB DDR5 ECC RDIMM (8 × 16GB)**
 
 This workstation supports up to:
 
 ### **Up to 2 TB ECC RDIMM**
 
-You can upgrade later if you want to train LLMs up to the 70B range.
+Can be upgraded later if needed for training LLMs up to the 70B range.
 
 ---
 
@@ -130,3 +132,6 @@ Dell T7xxx and T5xxx series are known for being compatible with:
 * RTX 5090 (same size/power profiles—just new generation)
 
 
+![Dell-T7-Series](DELL-Precision-T7875.png)
+
+![NVIDIA RTX 5090](NVIDIA-RTX-5090.png)
