@@ -1,5 +1,6 @@
+# PC Build to run 120B LLMs
 
-# DELL Precision T7875 can absolutely support 2× NVIDIA RTX 5090 GPUs**
+## DELL Precision T7875 with 2× NVIDIA RTX 5090 GPUs** 
 
 Product Links: 
 
