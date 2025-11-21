@@ -117,3 +117,20 @@
 ></iframe>
 
 ---
+
+### Session 7
+
+1. Q&A
+1. Definitions contd.
+1. Classes
+
+<iframe 
+    src="https://drive.google.com/file/d/1hdUqH3N-J3oMlpR65ZQGBkP9DH6LM8PA/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+---
