@@ -1,6 +1,6 @@
 # Learning Community : The Foundation
 
-While A lone lerner might master the technical surface (syntax and algorithms), the true transformation happens in a community. This collaborative space, though hard-won, is the most rewarding environment because it turns tough problems into fun challenges, instills shared values, champions open collaboration, and forges responsible, ethical professionals.
+While A lone learner might master the technical surface (syntax and algorithms), the true transformation happens in a community. This collaborative space, though hard-won, is the most rewarding environment because it turns tough problems into fun challenges, instills shared values, champions open collaboration, and forges responsible, ethical professionals.
 
 
 ### **Collaborative Learning** and **Collective Growth**
@@ -16,7 +16,7 @@ Developer communities are the unseen architecture that shapes ethical values, ch
 
 ### The Ecosystem of Sharing: Knowledge Multiplied
 
-The principle of **sharing** is the essential engine of the community, driving progress and collective intelligence. **Accelerated Learning** occurs instantly as newcomers benefit from the community’s accumulated wisdom and established best practices. Who would appreciate a gourp of people to reach out to when you are stuck and need help.  **Problem Solving** breakthroughs frequently come from tapping into the collective intelligence to navigate seemingly insurmountable roadblocks. **Mentorship** naturally forms as experienced members organically guide new engineers, nurturing essential growth and the folks in community learn and grow it give them an opputunity to help new comers learn. This cooperative environment is reinforced by the **Celebration of Success**, which encourages continued effort and builds a strong sense of belonging.
+The principle of **sharing** is the essential engine of the community, driving progress and collective intelligence. **Accelerated Learning** occurs instantly as newcomers benefit from the community’s accumulated wisdom and established best practices. Who would appreciate a group of people to reach out to when you are stuck and need help.  **Problem Solving** breakthroughs frequently come from tapping into the collective intelligence to navigate seemingly insurmountable roadblocks. **Mentorship** naturally forms as experienced members organically guide new engineers, nurturing essential growth and the folks in the community learn and grow, it gives them an opportunity to help newcomers learn. This cooperative environment is reinforced by the Celebration of Success, which encourages continued effort and builds a strong sense of belonging.
 
 ### Beyond the Syntax: Fostering Core Values
 
