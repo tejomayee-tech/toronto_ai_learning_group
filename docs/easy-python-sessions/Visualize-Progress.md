@@ -1,9 +1,9 @@
 ## Easy Learn Python Programming Basics
 
 
-### Progress visualization 
+### Progress visualisation 
 
-> **NOTE:** Given you have generated and practiced with exercises using AI as discussed  
+> **NOTE:** Given you have generated and practised with exercises using AI as discussed  
 
 <iframe 
     src="https://drive.google.com/file/d/1RcdkPyncBUX4XaLJ82ERgj_JlPMfeWlu/preview" 
