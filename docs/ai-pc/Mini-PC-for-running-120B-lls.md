@@ -1,6 +1,6 @@
 # MINI PC FOR 120B models
 
-[GMKtec EVO-X2 AI Mini PC AMD Ryzen Al Max+ 395] (https://www.amazon.ca/GMKtec-EVO-X2-Computers-LPDDR5X-8000MHz/dp/B0F53QXNGH)
+[GMKtec EVO-X2 AI Mini PC AMD Ryzen Al Max+ 395](https://www.amazon.com/GMKtec-ryzen_ai_mini_pc_evo_x2/dp/B0F53MLYQ6?th=1)
 
 ![product image](Mini-PC-GMKTec-EVO-X2-AI.jpg)
 
