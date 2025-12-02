@@ -125,7 +125,7 @@
 
     <img src="../images/027.png" alt="Image 23" width="400">
 
-10. Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.  
+10. Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown (for docker compose : In n8n, set the Ollama credentials base URL to http://ollama:11434 (not localhost or 127.0.0.1)), no api key needed as it local LLM, connection will be tested and click close and select the LLM.  
     **NOTE** you might need to reopen to see LLM sometimes.
 
     <img src="../images/028.png" alt="Image 24" width="400">
