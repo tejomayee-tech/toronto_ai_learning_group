@@ -65,7 +65,8 @@ nav:
   - AI-PC:
     - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
     - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
-    - PC for 120b LLMs: ai-pc/pc-for-running-120b-llms-and-tune-as-well.md
+    - Desktop PC for 120b LLMs: ai-pc/pc-for-running-120b-llms-and-tune-as-well.md
+    - Mini PC for 120b LLMs: ai-pc/Mini-PC-for-running-120B-lls.md
 
   - Programming:
     - Python:
