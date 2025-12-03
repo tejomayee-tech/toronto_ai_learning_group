@@ -17,7 +17,7 @@ class my_math:
         """Adds two numbers."""
         return first_number / second_number
 
-    def print_some_numer(self):
+    def print_some_number(self):
         print(100)
 
 # sum = add(5,10)
@@ -31,4 +31,4 @@ math_class = my_math()
 sum = math_class.add(5,10)
 print(sum)
 
-math_class.print_some_numer()
+math_class.print_some_number()

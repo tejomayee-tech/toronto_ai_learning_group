@@ -25,11 +25,11 @@
     
     <img src="images/005.png" alt="Image 3" width="400">
 
-2. After installion is complete, restart might be needed, then lookup "Docker Desktop" in windows start meny and open it.
+2. After installation is complete, restart might be needed, then lookup "Docker Desktop" in windows start menu and open it.
 
     <img src="images/006.png" alt="Image 4" width="400">
 
-3. CLick Search on top and type n8n in seach window, and then click pull for n8n image
+3. CLick Search on top and type n8n in search window, and then click pull for n8n image
 
     <img src="images/008.png" alt="Image 5" width="400">
 
@@ -81,7 +81,7 @@
 
     <img src="images/027.png" alt="Image 23" width="400">
 
-10. Now lets click on chat model node of the agent and search for Ollama chat model , selct it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.**NOTE** you might need to reopen to see LLM sometimes.
+10. Now lets click on chat model node of the agent and search for Ollama chat model , select it, in config screen, click add credential and enter docker url shown, no api key needed as it local LLM, connection will be tested and click close and select the LLM.**NOTE** you might need to reopen to see LLM sometimes.
 
     <img src="images/028.png" alt="Image 24" width="400">
 
