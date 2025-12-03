@@ -6,5 +6,5 @@ a rumor, or even a falsehood, notes Dictionary.com and Merriam-Webster."""
 
 
 sentenses = paragraph.split(".")
-for sentense in sentenses:
-    print(sentense.lstrip()+".")
+for sentence in sentenses:
+    print(sentence.lstrip()+".")

@@ -5,14 +5,14 @@
 
 # print(Choice)
 
-sentense = "how are you."
+sentence = "how are you."
 
-def interations(start,stop,step):
+def iterations(start,stop,step):
     #                   Start      Stop           Step 
     for index in range (start,     stop,          step    ):
         print(index)
 
-interations(10,20,4)
-interations(1000,3000,100)
-interations(100000,200000,1000)
+iterations(10,20,4)
+iterations(1000,3000,100)
+iterations(100000,200000,1000)
 

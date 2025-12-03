@@ -29,7 +29,7 @@
 
 # 👍Request for Like
 
-If you like this app https://huggingface.co/spaces/ShreyaL/NLP_preprocessing_playground?logs=container – Text Pre-processing Playground and find it useful while learning, please give a heart in the huggingface spaces using above link. Will be very greatful for your support.
+If you like this app https://huggingface.co/spaces/ShreyaL/NLP_preprocessing_playground?logs=container – Text Pre-processing Playground and find it useful while learning, please give a heart in the huggingface spaces using above link. Will be very grateful for your support.
 ##
 
 <embed src="../Fundamentals_of_LLM.pdf" width="600" height="500" type="application/pdf">

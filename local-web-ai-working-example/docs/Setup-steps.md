@@ -13,7 +13,7 @@ First, you need to install and set up the Ollama server, which runs the LLMs loc
 #### Using Ollama directly
 
 1. Open ollama from windows start menu
-2. Select a model and say hi, it will start downoading the model
+2. Select a model and say hi, it will start downloading the model
 3. Once download is complete you can start taking to it
 
 >**Note:** This interface is provided by ollama, we can run more controlled and we based AI assistant app with further steps below. It show how easy it becomes with just a tiny bit of effort.
@@ -56,7 +56,7 @@ Project.
 -----
 ### Step 4: Clone Repo
 
-1. create an accont on github.com and create a token or passowrd (for help see: https://youtu.be/J-CSiw5CFWE?si=f2pJlK0l2zZO6YHF) 
+1. create an account on github.com and create a token or password (for help see: https://youtu.be/J-CSiw5CFWE?si=f2pJlK0l2zZO6YHF) 
 2. Run below command by right clicking in any folder of your computer and select open terminal here. In the command window paste the below text and hit enter.
 
 ```bash
