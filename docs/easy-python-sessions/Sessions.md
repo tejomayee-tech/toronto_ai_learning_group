@@ -134,3 +134,18 @@
 ></iframe>
 
 ---
+
+### Session 8
+
+1. Classes & Definitions Dive-in with another example
+
+<iframe 
+    src="https://drive.google.com/file/d/1L39ckbMwrnuLB5hmFgcsK6GvoM6yPhNX/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+---
