@@ -126,6 +126,7 @@ cd ../build/bin
 
 This completes the full setup and build process, resolving all the prerequisite issues encountered.
 
+![snapshot](working-setup.png)
 
 
 # Reuse LM studio model donwloads
