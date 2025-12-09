@@ -47,6 +47,10 @@ nav:
   - AI - Fundamentals:
     - AI Fundamentals 1 : ai-sessions/fundamentals_of_LLM/README.md
 
+  - AI - Prompts:
+    - Zero Shot Prompts : ai-tools-hands-on/Prompts/Zero-shot-prompting.md
+
+
   - AI Learning for Bigenners:
     - How you can learn AI today - The Easy Way: ai-learning-plans/How-To-Learn-AI-Today.md
     - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md

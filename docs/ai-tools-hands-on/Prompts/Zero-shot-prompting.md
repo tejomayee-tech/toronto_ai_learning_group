@@ -1,4 +1,6 @@
-Zero-shot prompting is a technique used with large language models (LLMs) where you instruct the model to perform a task **without providing any prior examples** of that task being done.
+# Zero-shot prompting 
+
+It's is a technique used with large language models (LLMs) where you instruct the model to perform a task **without providing any prior examples** of that task being done.
 
 Essentially, you rely solely on the model's pre-trained knowledge and general understanding to complete the request, leveraging the vast information it absorbed during training. It's the simplest form of prompting and the foundation for more advanced techniques like few-shot prompting.
 
