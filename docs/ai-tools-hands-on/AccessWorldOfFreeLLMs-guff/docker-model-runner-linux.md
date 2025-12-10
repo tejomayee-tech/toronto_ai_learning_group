@@ -40,11 +40,54 @@ This environment is ideal for using the GUI, Kubernetes, and the integrated Mode
     ```bash
     sudo systemctl stop docker docker.socket containerd
     ```
-2.  **Switch the CLI to Docker Desktop:** The `desktop-linux` context points to the VM-based engine.
+
+2. Start Docker Desktop via the GUI (Recommended for first launch)
+
+The first time you launch it, the GUI is usually required to **accept the Docker Subscription Service Agreement**. Without accepting this, the backend engine often will not start.
+
+-  Open your **Applications** menu (or press the Super/Windows key).
+-  Search for **"Docker Desktop"** and click the icon to launch the application.
+-  The application will guide you through the initial setup, including accepting the terms.
+
+3. Start Docker Desktop via the Command Line
+
+Once installed, the Docker Desktop application registers a user-specific systemd service that you can start from the terminal.
+
+Run the following command in your terminal:
+
+```bash
+systemctl --user start docker-desktop
+```
+
+This command runs the Docker Desktop application in the background.
+
+After you have started Docker Desktop:
+
+4.  **Wait a few moments** for the application to initialize its engine and set up the necessary files (it can take up to a minute).
+
+5.  **Verify the context now exists:**
+
+    ```bash
+    docker context ls
+    ```
+
+    You should see `desktop-linux` listed, possibly with an asterisk (`*`) next to it if the application set it as the current context automatically.
+
+6.  **Switch to the Docker Desktop context (if needed):**
+
     ```bash
     docker context use desktop-linux
     ```
-3.  **Verify:** Check the currently active context.
+
+    This command should now succeed, as the required files will have been created by the running Docker Desktop application.
+
+
+
+7.  **Switch the CLI to Docker Desktop:** The `desktop-linux` context points to the VM-based engine.
+    ```bash
+    docker context use desktop-linux
+    ```
+8.  **Verify:** Check the currently active context.
     ```bash
     docker context ls
     ```
