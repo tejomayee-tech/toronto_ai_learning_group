@@ -1,5 +1,45 @@
 # **Docker Model Runner (DMR)** 
 
+## For Docker Engine installed on Linux:
+
+### 1\. Install the Docker Model Plugin
+
+    The `docker-model-plugin` is available in Docker's official APT repository for Linux.
+
+    1.  **Update your package list:**
+        ```bash
+        sudo apt-get update
+        ```
+    2.  **Install the plugin:**
+        ```bash
+        sudo apt-get install docker-model-plugin -y
+        ```
+    3.  **Verify the installation:**
+        ```bash
+        docker model version
+        ```
+        If successful, this command will display the version information for the Docker Model Runner, and the `docker model` command is now available for use.
+
+### 2\. Run Your Model
+
+    With the plugin installed, you can now use your original command to pull and run the Llama 2 model. The `docker model run` command handles the pull and start process automatically.
+
+    ```bash
+    docker model run ai/llama2:7b-chat
+    ```
+
+#### What this command does:
+
+  * **Pulls the Model:** It downloads the `llama2:7b-chat` model artifact from the `ai/` namespace on Docker Hub.
+  * **Starts the Inference Server:** It launches a model engine (typically backed by `llama.cpp`) to serve the model.
+  * **Launches Interactive Chat:** It opens an interactive chat session in your terminal where you can start interacting with the model. (Type `/bye` to exit the chat).
+
+Alternatively, if you only want to pull the model and check the status:
+
+  * **To pull only:** `docker model pull ai/llama2:7b-chat`
+  * **To list models:** `docker model list`
+
+
 ## 🚀 The Docker Coexistence Guide with Model Runner
 
 You might have **standalone Docker Engine (Host Engine)** already installed, **Docker Desktop**, and the **Docker Model Runner (DMR)** can also run in parallel.
@@ -43,25 +83,25 @@ This environment is ideal for using the GUI, Kubernetes, and the integrated Mode
 
 2. Start Docker Desktop via the GUI (Recommended for first launch)
 
-The first time you launch it, the GUI is usually required to **accept the Docker Subscription Service Agreement**. Without accepting this, the backend engine often will not start.
+    The first time you launch it, the GUI is usually required to **accept the Docker Subscription Service Agreement**. Without accepting this, the backend engine often will not start.
 
--  Open your **Applications** menu (or press the Super/Windows key).
--  Search for **"Docker Desktop"** and click the icon to launch the application.
--  The application will guide you through the initial setup, including accepting the terms.
+    -  Open your **Applications** menu (or press the Super/Windows key).
+    -  Search for **"Docker Desktop"** and click the icon to launch the application.
+    -  The application will guide you through the initial setup, including accepting the terms.
 
 3. Start Docker Desktop via the Command Line
 
-Once installed, the Docker Desktop application registers a user-specific systemd service that you can start from the terminal.
+    Once installed, the Docker Desktop application registers a user-specific systemd service that you can start from the terminal.
 
-Run the following command in your terminal:
+    Run the following command in your terminal:
 
-```bash
-systemctl --user start docker-desktop
-```
+    ```bash
+    systemctl --user start docker-desktop
+    ```
 
-This command runs the Docker Desktop application in the background.
+    This command runs the Docker Desktop application in the background.
 
-After you have started Docker Desktop:
+    After you have started Docker Desktop:
 
 4.  **Wait a few moments** for the application to initialize its engine and set up the necessary files (it can take up to a minute).
 
