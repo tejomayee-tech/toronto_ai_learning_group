@@ -282,4 +282,114 @@ This setup allows you to keep your traditional Docker development flow separate 
 
 -----
 
-Would you like a brief guide on how to integrate a locally run model into a containerized application using Docker Compose?
+## Reverting back to Docker Engine:
+
+
+This part assumes you have the **native Docker Engine** already installed and running (e.g., the `docker.io` package). The goal is to remove Docker Desktop and point your CLI back to the native engine.
+
+### Step 1: Uninstall Docker Desktop
+
+Use your package manager to remove the Docker Desktop package. This step removes the application files but often leaves configuration and data behind.
+
+```bash
+# 1. Stop the Docker Desktop service
+systemctl --user stop docker-desktop
+
+# 2. Uninstall the package
+sudo apt purge docker-desktop
+```
+
+### Step 2: Restore the Docker Context
+
+After the uninstall, your Docker CLI may still be configured to look for the **`desktop-linux`** context, which is now gone. You must explicitly switch it back to the local Engine's **`default`** context.
+
+#### A. Switch Context
+
+If the `docker` command is still available (which is the goal), run:
+
+```bash
+docker context use default
+```
+
+#### B. Handle Broken CLI (The Fix for the `No such file or directory` Error)
+
+If you encounter the error `bash: /usr/local/bin/docker: No such file or directory`, it means the link for the `docker` command was broken.
+
+1.  **Use the full path to the executable to reset the context:**
+
+    ```bash
+    /usr/bin/docker context use default
+    ```
+
+    *(We use `/usr/bin/docker` because that is the common location for the native Docker Engine CLI on Ubuntu.)*
+
+2.  **Fix the broken command link (Optional, but highly recommended):**
+
+    ```bash
+    # Remove the broken symlink from the higher-priority directory
+    sudo rm -f /usr/local/bin/docker
+
+    # Re-verify the simple command works
+    docker version
+    ```
+
+### Step 3: Clean Up Leftover Configuration Files
+
+Docker Desktop leaves metadata and configuration files in your user directory. Cleaning these up ensures a completely fresh start for your native Docker Engine.
+
+1.  **Remove the non-existent Docker Desktop context:**
+
+    ```bash
+    docker context rm desktop-linux
+    ```
+
+    *(If the context file is already gone, this command will simply report that it was not found, which is fine.)*
+
+2.  **Remove Docker Desktop's configuration directory:**
+
+    ```bash
+    rm -r $HOME/.docker/desktop
+    ```
+
+3.  **Edit the main Docker configuration file:**
+    The file `$HOME/.docker/config.json` might still contain references to `credsStore` or the old `currentContext`.
+
+    *Open the file with a text editor:*
+
+    ```bash
+    nano $HOME/.docker/config.json
+    ```
+
+    *Ensure the file looks clean, or at least has the context pointing to default:*
+
+    ```json
+    {
+      // Optional: Remove "credsStore" if it was set to "desktop"
+      // "credsStore": "desktop", 
+      
+      // Ensure the current context is "default"
+      "currentContext": "default" 
+      
+      // Other settings (like "auths") can remain
+    }
+    ```
+
+    Save and close the file.
+
+### Step 4: Verification
+
+Confirm the switch was successful by checking the active context and running a test container.
+
+```bash
+# Verify the context is set to default
+docker context ls
+```
+
+*Expected result: An asterisk (`*`) next to `default`, pointing to `unix:///var/run/docker.sock`.*
+
+```bash
+# Run the test container against the native Engine
+docker run hello-world
+```
+
+*Expected result: A successful message about the image running locally.*
