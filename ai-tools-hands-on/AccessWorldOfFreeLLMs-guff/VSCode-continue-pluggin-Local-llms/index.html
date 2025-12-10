@@ -16,7 +16,7 @@
     
     
       
-        <title>Docker Model Runner (DMR) - AI Learning Group</title>
+        <title>VSCode Continue Plugin - Local LLMs - AI Learning Group</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-model-runner-dmr" class="md-skip">
+        <a href="#vscode-continue-plugin-local-llms" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Model Runner (DMR)
+              VSCode Continue Plugin - Local LLMs
             
           </span>
         </div>
@@ -1255,45 +1255,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#for-docker-engine-installed-on-linux" class="md-nav__link">
+  <a href="#using-ollama-service-local-models-with-the-continue-vs-code-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      For Docker Engine installed on Linux:
+      Using Ollama Service local models with the Continue VS Code extension
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="For Docker Engine installed on Linux:">
+    <nav class="md-nav" aria-label="Using Ollama Service local models with the Continue VS Code extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-install-the-docker-model-plugin" class="md-nav__link">
+  <a href="#1-start-the-ollama-server" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Install the Docker Model Plugin
+      1. Start the Ollama Server
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-run-your-model" class="md-nav__link">
+  <a href="#2-open-the-continue-configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Run Your Model
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Run Your Model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-this-command-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      What this command does:
+      2. Open the Continue Configuration File
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#3-insert-the-ollama-model-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Insert the Ollama Model Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-select-the-new-model-in-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Select the New Model in Continue
+    </span>
+  </a>
   
 </li>
         
@@ -1303,70 +1306,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-docker-coexistence-guide-with-model-runner" class="md-nav__link">
+  <a href="#using-lm-studio-local-models-with-the-continue-vs-code-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 The Docker Coexistence Guide with Model Runner
+      Using LM Studio local models with the Continue VS Code extension
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 The Docker Coexistence Guide with Model Runner">
+    <nav class="md-nav" aria-label="Using LM Studio local models with the Continue VS Code extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#i-setup-install-and-enable-components" class="md-nav__link">
+  <a href="#connecting-to-lm-studio-via-openai-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      I. Setup: Install and Enable Components
+      🛠️ Connecting to LM Studio via OpenAI Provider
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ii-managing-the-host-docker-engine-service-the-golden-rule" class="md-nav__link">
+  <a href="#key-differences-from-your-ollama-config" class="md-nav__link">
     <span class="md-ellipsis">
-      II. Managing the Host Docker Engine Service (The Golden Rule)
+      📝 Key Differences from Your Ollama Config
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#iii-switching-between-engine-environments-with-docker-contexts" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      III. Switching Between Engine Environments with Docker Contexts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III. Switching Between Engine Environments with Docker Contexts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-to-work-in-docker-desktop-and-use-model-runner" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. To Work in Docker Desktop (and use Model Runner)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-to-work-in-the-standalone-host-engine" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. To Work in the Standalone Host Engine
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iv-running-models-with-docker-model-runner-dmr" class="md-nav__link">
-    <span class="md-ellipsis">
-      IV. Running Models with Docker Model Runner (DMR)
+      ➡️ Next Steps
     </span>
   </a>
   
@@ -1392,358 +1362,154 @@
                   
 
 
-<h1 id="docker-model-runner-dmr"><strong>Docker Model Runner (DMR)</strong></h1>
-<h2 id="for-docker-engine-installed-on-linux">For Docker Engine installed on Linux:</h2>
-<h3 id="1-install-the-docker-model-plugin">1. Install the Docker Model Plugin</h3>
-<pre><code>The `docker-model-plugin` is available in Docker's official APT repository for Linux.
-
-1.  **Update your package list:**
-    ```bash
-    sudo apt-get update
-    ```
-2.  **Install the plugin:**
-    ```bash
-    sudo apt-get install docker-model-plugin -y
-    ```
-3.  **Verify the installation:**
-    ```bash
-    docker model version
-    ```
-    If successful, this command will display the version information for the Docker Model Runner, and the `docker model` command is now available for use.
-</code></pre>
-<h3 id="2-run-your-model">2. Run Your Model</h3>
-<pre><code>With the plugin installed, you can now use your original command to pull and run the Llama 2 model. The `docker model run` command handles the pull and start process automatically.
-
-```bash
-docker model run ai/llama2:7b-chat
-```
-</code></pre>
-<h4 id="what-this-command-does">What this command does:</h4>
+<h1 id="vscode-continue-plugin-local-llms">VSCode Continue Plugin - Local LLMs</h1>
+<h2 id="using-ollama-service-local-models-with-the-continue-vs-code-extension">Using <strong>Ollama Service</strong> local models with the <strong>Continue VS Code extension</strong></h2>
+<h4 id="1-start-the-ollama-server">1. Start the Ollama Server</h4>
+<p>Before configuring Continue, ensure the Ollama server is running on your machine.</p>
 <ul>
-<li><strong>Pulls the Model:</strong> It downloads the <code>llama2:7b-chat</code> model artifact from the <code>ai/</code> namespace on Docker Hub.</li>
-<li><strong>Starts the Inference Server:</strong> It launches a model engine (typically backed by <code>llama.cpp</code>) to serve the model.</li>
-<li><strong>Launches Interactive Chat:</strong> It opens an interactive chat session in your terminal where you can start interacting with the model. (Type <code>/bye</code> to exit the chat).</li>
+<li><strong>Open your terminal</strong> and run the command: <code>ollama serve</code> (or ensure the Ollama desktop application is running in the background, as it typically starts the server automatically).</li>
 </ul>
-<p>Alternatively, if you only want to pull the model and check the status:</p>
-<ul>
-<li><strong>To pull only:</strong> <code>docker model pull ai/llama2:7b-chat</code></li>
-<li><strong>To list models:</strong> <code>docker model list</code></li>
-</ul>
-<h2 id="the-docker-coexistence-guide-with-model-runner">🚀 The Docker Coexistence Guide with Model Runner</h2>
-<p>You might have <strong>standalone Docker Engine (Host Engine)</strong> already installed, <strong>Docker Desktop</strong>, and the <strong>Docker Model Runner (DMR)</strong> can also run in parallel.</p>
-<p>The core concept is to use <strong>Docker Contexts</strong> to switch the target of your <code>docker</code> CLI, and <strong>Systemd</strong> commands to manage the Host Engine service.</p>
-<h3 id="i-setup-install-and-enable-components">I. Setup: Install and Enable Components</h3>
+<h4 id="2-open-the-continue-configuration-file">2. Open the Continue Configuration File</h4>
+<p>The easiest way to access the correct file is through the Continue sidebar in VS Code:</p>
 <ol>
-<li><strong>Install Docker Desktop:</strong> Follow the official instructions to install Docker Desktop.</li>
-<li><strong>Enable Model Runner (DMR):</strong><ul>
-<li>Launch <strong>Docker Desktop</strong>.</li>
-<li>Go to <strong>Settings</strong> $\rightarrow$ <strong>AI</strong> (or <strong>Features in development</strong>).</li>
-<li>Check <strong>Enable Docker Model Runner</strong>.</li>
-<li>Click <strong>Apply &amp; Restart</strong>.</li>
+<li><strong>Open VS Code</strong> and navigate to the <strong>Continue Sidebar</strong> (usually the spiral/infinity icon in the Activity Bar).</li>
+<li>In the Continue panel, look for the <strong>Agent Selector</strong> dropdown (it might say "Default Assistant" or your current model name).</li>
+<li>Click the Agent Selector, and then click the <strong>gear icon ($\text{⚙️}$)</strong> next to the <strong>"Local Config"</strong> option.<ul>
+<li><em>This action will open the correct <code>config.yaml</code> file.</em></li>
 </ul>
 </li>
 </ol>
-<h3 id="ii-managing-the-host-docker-engine-service-the-golden-rule">II. Managing the Host Docker Engine Service (The Golden Rule)</h3>
-<p>When you install Docker Engine on Ubuntu, it typically sets itself up as a <strong>systemd service</strong> that starts automatically at boot (<code>docker.service</code>, <code>docker.socket</code>, and <code>containerd.service</code>).</p>
-<p>To prevent conflicts with Docker Desktop's engine, you should manage this service.</p>
+<h4 id="3-insert-the-ollama-model-configuration">3. Insert the Ollama Model Configuration</h4>
+<p>Once <code>config.yaml</code> is open, you will find a section for defining models.</p>
+<ol>
+<li>
+<p><strong>Locate the <code>models:</code> section.</strong> It should look like this:</p>
+<p><code>yaml
+models:</code></p>
+</li>
+<li>
+<p><strong>Paste your provided configuration</strong> directly under the <code>models:</code> key, ensuring proper YAML indentation (two spaces for each level):</p>
+<p><code>yaml
+models:
+  # --- ADD THIS AUTODETECT ENTRY ---
+  - name: Ollama Autodetect Models # This is the display name in VS Code
+    provider: ollama
+    model: AUTODETECT             # This tells Continue to scan Ollama
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+      - edit
+      - apply</code></p>
+</li>
+<li>
+<p><strong>Save the <code>config.yaml</code> file.</strong></p>
+</li>
+</ol>
+<h4 id="4-select-the-new-model-in-continue">4. Select the New Model in Continue</h4>
+<p>The Continue extension should automatically detect the changes and refresh the model list.</p>
+<ol>
+<li>Go back to the <strong>Continue Sidebar</strong> in VS Code.</li>
+<li>Click the <strong>Agent Selector</strong> dropdown again.</li>
+<li>You should now see the new entry: <strong>"Ollama Autodetect Models"</strong> (or whatever you set for the <code>name:</code> field).</li>
+<li><strong>Select this new entry.</strong></li>
+</ol>
+<hr />
+<h2 id="using-lm-studio-local-models-with-the-continue-vs-code-extension">Using <strong>LM Studio</strong> local models with the <strong>Continue VS Code extension</strong></h2>
+<p>Unfortunately, <strong>Continue does not have a direct, built-in <code>provider: lmstudio</code></strong> option like it does for <code>provider: ollama</code>.</p>
+<p>However, you can often connect to LM Studio by treating it as a <strong>standard OpenAI-compatible API server</strong> if you run it in that mode.</p>
+<p>Here is the most common way to configure your <code>config.json</code> (or <code>~/.continue/config.json</code>) file to connect to LM Studio:</p>
+<h3 id="connecting-to-lm-studio-via-openai-provider">🛠️ Connecting to LM Studio via OpenAI Provider</h3>
+<p>LM Studio's local server runs an API that is designed to be compatible with the OpenAI API format. You will use the <code>openai</code> provider and point the <code>apiBase</code> to your LM Studio server's address.</p>
+<ol>
+<li>
+<p><strong>Start the Server in LM Studio:</strong></p>
+<ul>
+<li>Open LM Studio.</li>
+<li>Go to the <strong>"Local Server"</strong> tab (usually the 4th icon down).</li>
+<li>Select the model you want to use.</li>
+<li>Make sure the <strong>"OpenAI Compatible Server"</strong> option is enabled (or that the server is generally running on the expected port).</li>
+<li>By default, the server usually runs on <strong><code>http://localhost:1234</code></strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Add the Configuration to your <code>config.json</code>:</strong></p>
+<ul>
+<li>Modify the <code>models:</code> section of your Continue config file (usually called <code>config.json</code> or <code>config.yaml</code> depending on your setup) to include this entry:</li>
+</ul>
+</li>
+</ol>
+<!-- end list -->
+
+<pre><code class="language-yaml"># ----------------------------------------
+# REQUIRED HEADER
+# ----------------------------------------
+name: Local Config
+version: 1.0.0
+schema: v1
+
+# ----------------------------------------
+# MODELS SECTION
+# ----------------------------------------
+models:
+  # LM Studio Qwen3-Coder-30B Configuration
+  - name: LM Studio Qwen3 Coder 30B          # Descriptive display name
+    provider: openai                         # Use 'openai' provider for LM Studio API
+    model: qwen/qwen3-coder-30b              # The model identifier for Qwen3-Coder-30B
+    apiBase: http://localhost:1234/v1        # Default LM Studio server address + /v1 path
+    apiKey: not-needed
+    roles:
+      - chat
+      - edit
+      - apply
+
+  # --- Include your Ollama Autodetect entry here if you are using it as well ---
+  # - name: Ollama Autodetect Models 
+  #   provider: ollama
+  #   model: AUTODETECT             
+  #   apiBase: http://localhost:11434
+  #   roles:
+  #     - chat
+  #     - edit
+  #     - apply
+</code></pre>
+<h3 id="key-differences-from-your-ollama-config">📝 Key Differences from Your Ollama Config</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Goal</th>
-<th style="text-align: left;">Command</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Your Ollama Config</th>
+<th style="text-align: left;">LM Studio (via OpenAI) Config</th>
+<th style="text-align: left;">Reason</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Stop Temporarily</strong> (For the current session)</td>
-<td style="text-align: left;"><code>sudo systemctl stop docker docker.socket containerd</code></td>
-<td style="text-align: left;">Shuts down the Host Engine immediately. This is the command you run daily before using Docker Desktop.</td>
+<td style="text-align: left;"><strong>Provider</strong></td>
+<td style="text-align: left;"><code>ollama</code></td>
+<td style="text-align: left;"><code>openai</code></td>
+<td style="text-align: left;">Continue uses the <code>openai</code> provider to connect to any OpenAI-compatible API, which includes LM Studio.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Disable Permanently</strong> (Prevent autostart on boot)</td>
-<td style="text-align: left;"><code>sudo systemctl disable docker.service docker.socket containerd.service</code></td>
-<td style="text-align: left;">Prevents the Host Engine from starting automatically when you reboot your machine.</td>
+<td style="text-align: left;"><strong>API Base</strong></td>
+<td style="text-align: left;"><code>http://localhost:11434</code></td>
+<td style="text-align: left;"><code>http://localhost:1234/v1</code></td>
+<td style="text-align: left;">This is the default port for the LM Studio server, and the <code>/v1</code> path is often required for OpenAI compatibility.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Enable Permanently</strong> (Restore autostart)</td>
-<td style="text-align: left;"><code>sudo systemctl enable docker.service docker.socket containerd.service</code></td>
-<td style="text-align: left;">Re-enables the Host Engine to start automatically when you reboot.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Start/Restart</strong> (To use the Host Engine)</td>
-<td style="text-align: left;"><code>sudo systemctl start docker</code></td>
-<td style="text-align: left;">Starts the Host Engine service (if it was disabled or stopped).</td>
+<td style="text-align: left;"><strong>Model</strong></td>
+<td style="text-align: left;"><code>AUTODETECT</code></td>
+<td style="text-align: left;">Specific Name</td>
+<td style="text-align: left;">LM Studio doesn't have an autodetect feature in Continue; you must define each model you want to use.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="iii-switching-between-engine-environments-with-docker-contexts">III. Switching Between Engine Environments with Docker Contexts</h3>
-<p>The <code>docker</code> CLI uses a <strong>context</strong> to determine which Docker Engine daemon it should communicate with.</p>
-<h4 id="1-to-work-in-docker-desktop-and-use-model-runner">1. To Work in <strong>Docker Desktop</strong> (and use Model Runner)</h4>
-<p>This environment is ideal for using the GUI, Kubernetes, and the integrated Model Runner features.</p>
-<ol>
-<li>
-<p><strong>Stop the Host Engine (Crucial):</strong> If it's running, shut down the standalone service.
-    <code>bash
-    sudo systemctl stop docker docker.socket containerd</code></p>
-</li>
-<li>
-<p>Start Docker Desktop via the GUI (Recommended for first launch)</p>
-<p>The first time you launch it, the GUI is usually required to <strong>accept the Docker Subscription Service Agreement</strong>. Without accepting this, the backend engine often will not start.</p>
-<ul>
-<li>Open your <strong>Applications</strong> menu (or press the Super/Windows key).</li>
-<li>Search for <strong>"Docker Desktop"</strong> and click the icon to launch the application.</li>
-<li>The application will guide you through the initial setup, including accepting the terms.</li>
-</ul>
-</li>
-<li>
-<p>Start Docker Desktop via the Command Line</p>
-<p>Once installed, the Docker Desktop application registers a user-specific systemd service that you can start from the terminal.</p>
-<p>Run the following command in your terminal:</p>
-<p><code>bash
-systemctl --user start docker-desktop</code></p>
-<p>This command runs the Docker Desktop application in the background.</p>
-<p>After you have started Docker Desktop:</p>
-</li>
-<li>
-<p><strong>Wait a few moments</strong> for the application to initialize its engine and set up the necessary files (it can take up to a minute).</p>
-</li>
-<li>
-<p><strong>Verify the context now exists:</strong></p>
-<p><code>bash
-docker context ls</code></p>
-<p>You should see <code>desktop-linux</code> listed, possibly with an asterisk (<code>*</code>) next to it if the application set it as the current context automatically.</p>
-</li>
-<li>
-<p><strong>Switch to the Docker Desktop context (if needed):</strong></p>
-<p><code>bash
-docker context use desktop-linux</code></p>
-<p>This command should now succeed, as the required files will have been created by the running Docker Desktop application.</p>
-</li>
-<li>
-<p><strong>Switch the CLI to Docker Desktop:</strong> The <code>desktop-linux</code> context points to the VM-based engine.
-    <code>bash
-    docker context use desktop-linux</code></p>
-</li>
-<li><strong>Verify:</strong> Check the currently active context.
-    <code>bash
-    docker context ls</code>
-    <em>(The <code>desktop-linux</code> entry should have the <code>*</code>.)</em></li>
-</ol>
-<h4 id="2-to-work-in-the-standalone-host-engine">2. To Work in the <strong>Standalone Host Engine</strong></h4>
-<p>This environment is useful if you need to run containers directly on your host or troubleshoot the base installation.</p>
-<ol>
-<li><strong>Stop Docker Desktop:</strong> Quit the application from the tray icon or command line.
-    <code>bash
-    systemctl --user stop docker-desktop</code></li>
-<li><strong>Ensure Host Engine is Running:</strong> Start the service if it was stopped or disabled.
-    <code>bash
-    sudo systemctl start docker</code></li>
-<li><strong>Switch the CLI to the Host Engine:</strong> The <code>default</code> context points to the host's daemon.
-    <code>bash
-    docker context use default</code></li>
-<li><strong>Verify:</strong> Check the currently active context.
-    <code>bash
-    docker context ls</code>
-    <em>(The <code>default</code> entry should have the <code>*</code>.)</em></li>
-</ol>
-<h3 id="iv-running-models-with-docker-model-runner-dmr">IV. Running Models with Docker Model Runner (DMR)</h3>
-<p>The Model Runner service is tightly integrated with the Docker Desktop environment.</p>
-<ol>
-<li><strong>Ensure you are in the <code>desktop-linux</code> context.</strong></li>
-<li><strong>Pull a Model:</strong>
-    <code>bash
-    docker model pull ai/llama2:7b-chat</code></li>
-<li><strong>Run a Model (Interactive Chat):</strong>
-    <code>bash
-    docker model run ai/llama2:7b-chat</code></li>
-<li><strong>Check Status:</strong> The Model Runner service itself runs outside the main Docker Desktop VM but is managed by it.
-    <code>bash
-    docker model status</code></li>
-</ol>
-<h1 id="_1"></h1>
-<p>Yes, you can run and manage all three: your <strong>standalone Docker Engine</strong>, <strong>Docker Desktop</strong>, and <strong>Docker Model Runner</strong> on Ubuntu.</p>
-<p><strong>Docker Model Runner (DMR)</strong> is a feature of Docker Desktop (and also available as a plugin for Docker Engine CE) that allows you to run local AI models (like LLMs) using familiar <code>docker model</code> CLI commands.</p>
-<p>Here is the regenerated guide, including the Model Runner steps and how it interacts with the two Docker environments.</p>
 <hr />
-<h2 id="the-docker-coexistence-guide-with-model-runner_1">🚀 The Docker Coexistence Guide with Model Runner</h2>
-<p>The core concept for managing these environments is <strong>Context Switching</strong> using the <code>docker context</code> command.</p>
-<h3 id="i-setup-enable-model-runner">I. Setup: Enable Model Runner</h3>
-<p>Docker Model Runner (DMR) is typically enabled through the Docker Desktop application settings.</p>
+<h3 id="next-steps">➡️ Next Steps</h3>
 <ol>
-<li><strong>Install Docker Desktop:</strong> Complete the installation as you have done.</li>
-<li><strong>Enable DMR:</strong><ul>
-<li>Launch <strong>Docker Desktop</strong> (from the Applications Menu).</li>
-<li>Go to <strong>Settings</strong> (gear icon) $\rightarrow$ <strong>AI</strong> (or <strong>Features in development</strong> in older versions).</li>
-<li>Ensure <strong>Enable Docker Model Runner</strong> is checked.</li>
-<li><strong>Recommended:</strong> Select <strong>Enable host-side TCP support</strong> (default port 12434) if you plan to access the model API from applications <em>outside</em> of a container (e.g., a local web app).</li>
-<li>Click <strong>Apply &amp; Restart</strong>.</li>
-</ul>
-</li>
+<li><strong>Confirm the Port:</strong> Double-check in the <strong>LM Studio Local Server tab</strong> what port it is running on. If it's not <code>1234</code>, change the <code>apiBase</code> in the config accordingly.</li>
+<li><strong>Restart VS Code:</strong> After saving your Continue config, you may need to reload your VS Code window for the changes to take effect.</li>
+<li><strong>Select the Model:</strong> The new name ("LM Studio Model...") should now appear in the model selection dropdown within the Continue pane in VS Code.</li>
 </ol>
-<p>Once enabled, the <code>docker model</code> CLI command becomes available for both the Docker Desktop and the standalone Engine (though the Model Runner service itself runs outside the Docker Desktop VM).</p>
-<h3 id="ii-the-golden-rule-stop-the-host-engine">II. The Golden Rule: Stop the Host Engine</h3>
-<p>To prevent conflicts (especially on ports) and resource contention, you should <strong>stop</strong> your standalone Docker Engine service when you are using Docker Desktop and its related tools like Model Runner.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Scenario</th>
-<th style="text-align: left;">Action</th>
-<th style="text-align: left;">Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Using Docker Desktop/Model Runner</strong></td>
-<td style="text-align: left;"><strong>Stop</strong> the Host Engine</td>
-<td style="text-align: left;"><code>sudo systemctl stop docker docker.socket containerd</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Using Standalone Host Engine</strong></td>
-<td style="text-align: left;"><strong>Stop</strong> Docker Desktop</td>
-<td style="text-align: left;"><code>systemctl --user stop docker-desktop</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="iii-switching-between-engine-environments">III. Switching Between Engine Environments</h3>
-<p>The <code>docker context</code> command is your control panel for directing the <code>docker</code> CLI.</p>
-<h4 id="1-to-use-docker-desktop-and-model-runner">1. To Use <strong>Docker Desktop</strong> (and Model Runner)</h4>
-<p>This is the context you use for GUI management, Kubernetes, and local AI model running.</p>
-<pre><code class="language-bash"># 1. Ensure the Host Engine is stopped
-sudo systemctl stop docker
-
-# 2. Start Docker Desktop and switch the CLI context
-docker context use desktop-linux
-</code></pre>
-<ul>
-<li><strong>Result:</strong> The <code>docker</code> commands now target the Docker Engine inside the Docker Desktop VM. The <code>docker model</code> commands will use the Model Runner service managed by Docker Desktop.</li>
-</ul>
-<h4 id="2-to-use-the-standalone-host-engine">2. To Use the <strong>Standalone Host Engine</strong></h4>
-<p>This is the context you use for traditional container workloads running directly on your Ubuntu host.</p>
-<pre><code class="language-bash"># 1. Stop Docker Desktop (quitting the application is sufficient)
-systemctl --user stop docker-desktop
-
-# 2. Switch the CLI to the Host Engine
-docker context use default
-
-# 3. Ensure the Host Engine is running
-sudo systemctl start docker
-</code></pre>
-<ul>
-<li><strong>Result:</strong> The <code>docker</code> commands now target your system's <code>/var/run/docker.sock</code>. Note that if you use Model Runner via Docker Engine CE instead of Desktop, the <code>default</code> context is where you would access it, but managing both is less common.</li>
-</ul>
-<h3 id="iv-running-models-with-docker-model-runner-dmr_1">IV. Running Models with Docker Model Runner (DMR)</h3>
-<p>DMR uses the <strong><code>docker model</code></strong> CLI command and typically runs the inference server natively on the host machine for optimal performance.</p>
-<ol>
-<li>
-<p><strong>Verify DMR is Active:</strong> Ensure you are using the <code>desktop-linux</code> context and Docker Desktop is running.</p>
-<p>```bash
-docker model status</p>
-<h1 id="output-should-confirm-docker-model-runner-is-running">Output should confirm: Docker Model Runner is running.</h1>
-<p>```</p>
-</li>
-<li>
-<p><strong>Pull a Model:</strong> Models are pulled from Docker Hub (or other OCI registries) using the <code>docker model pull</code> command.</p>
-<p><code>bash
-docker model pull ai/smollm2:latest</code></p>
-</li>
-<li>
-<p><strong>Run a Model (Interactive Chat):</strong> This will start an interactive chat session in your terminal, similar to using a local LLM application.</p>
-<p><code>bash
-docker model run ai/smollm2:latest</code></p>
-</li>
-<li>
-<p><strong>Run a Model (One-Shot Prompt):</strong> You can also send a single prompt from the command line.</p>
-<p><code>bash
-docker model run ai/smollm2:latest "Explain the difference between a container and an image."</code></p>
-</li>
-<li>
-<p><strong>Access Model API from a Container:</strong> Your application running in a container can access the model using the internal DNS name: <code>http://model-runner.docker.internal/</code>.</p>
-<ul>
-<li>For example, a <code>docker run</code> command for an app would target an API endpoint like: <code>http://model-runner.docker.internal/engines/v1/chat/completions</code>.</li>
-</ul>
-</li>
-</ol>
-<p>This setup allows you to keep your traditional Docker development flow separate from your new GenAI/LLM local model experimentation, all managed through the same <code>docker</code> command line tool.</p>
-<hr />
-<h2 id="reverting-back-to-docker-engine">Reverting back to Docker Engine:</h2>
-<p>This part assumes you have the <strong>native Docker Engine</strong> already installed and running (e.g., the <code>docker.io</code> package). The goal is to remove Docker Desktop and point your CLI back to the native engine.</p>
-<h3 id="step-1-uninstall-docker-desktop">Step 1: Uninstall Docker Desktop</h3>
-<p>Use your package manager to remove the Docker Desktop package. This step removes the application files but often leaves configuration and data behind.</p>
-<pre><code class="language-bash"># 1. Stop the Docker Desktop service
-systemctl --user stop docker-desktop
-
-# 2. Uninstall the package
-sudo apt purge docker-desktop
-</code></pre>
-<h3 id="step-2-restore-the-docker-context">Step 2: Restore the Docker Context</h3>
-<p>After the uninstall, your Docker CLI may still be configured to look for the <strong><code>desktop-linux</code></strong> context, which is now gone. You must explicitly switch it back to the local Engine's <strong><code>default</code></strong> context.</p>
-<h4 id="a-switch-context">A. Switch Context</h4>
-<p>If the <code>docker</code> command is still available (which is the goal), run:</p>
-<pre><code class="language-bash">docker context use default
-</code></pre>
-<h4 id="b-handle-broken-cli-the-fix-for-the-no-such-file-or-directory-error">B. Handle Broken CLI (The Fix for the <code>No such file or directory</code> Error)</h4>
-<p>If you encounter the error <code>bash: /usr/local/bin/docker: No such file or directory</code>, it means the link for the <code>docker</code> command was broken.</p>
-<ol>
-<li>
-<p><strong>Use the full path to the executable to reset the context:</strong></p>
-<p><code>bash
-/usr/bin/docker context use default</code></p>
-<p><em>(We use <code>/usr/bin/docker</code> because that is the common location for the native Docker Engine CLI on Ubuntu.)</em></p>
-</li>
-<li>
-<p><strong>Fix the broken command link (Optional, but highly recommended):</strong></p>
-<p>```bash</p>
-<h1 id="remove-the-broken-symlink-from-the-higher-priority-directory">Remove the broken symlink from the higher-priority directory</h1>
-<p>sudo rm -f /usr/local/bin/docker</p>
-<h1 id="re-verify-the-simple-command-works">Re-verify the simple command works</h1>
-<p>docker version
-```</p>
-</li>
-</ol>
-<h3 id="step-3-clean-up-leftover-configuration-files">Step 3: Clean Up Leftover Configuration Files</h3>
-<p>Docker Desktop leaves metadata and configuration files in your user directory. Cleaning these up ensures a completely fresh start for your native Docker Engine.</p>
-<ol>
-<li>
-<p><strong>Remove the non-existent Docker Desktop context:</strong></p>
-<p><code>bash
-docker context rm desktop-linux</code></p>
-<p><em>(If the context file is already gone, this command will simply report that it was not found, which is fine.)</em></p>
-</li>
-<li>
-<p><strong>Remove Docker Desktop's configuration directory:</strong></p>
-<p><code>bash
-rm -r $HOME/.docker/desktop</code></p>
-</li>
-<li>
-<p><strong>Edit the main Docker configuration file:</strong>
-    The file <code>$HOME/.docker/config.json</code> might still contain references to <code>credsStore</code> or the old <code>currentContext</code>.</p>
-<p><em>Open the file with a text editor:</em></p>
-<p><code>bash
-nano $HOME/.docker/config.json</code></p>
-<p><em>Ensure the file looks clean, or at least has the context pointing to default:</em></p>
-<p>```json
-{
-  // Optional: Remove "credsStore" if it was set to "desktop"
-  // "credsStore": "desktop", </p>
-<p>// Ensure the current context is "default"
-  "currentContext": "default" </p>
-<p>// Other settings (like "auths") can remain
-}
-```</p>
-<p>Save and close the file.</p>
-</li>
-</ol>
-<h3 id="step-4-verification">Step 4: Verification</h3>
-<p>Confirm the switch was successful by checking the active context and running a test container.</p>
-<pre><code class="language-bash"># Verify the context is set to default
-docker context ls
-</code></pre>
-<p><em>Expected result: An asterisk (<code>*</code>) next to <code>default</code>, pointing to <code>unix:///var/run/docker.sock</code>.</em></p>
-<pre><code class="language-bash"># Run the test container against the native Engine
-docker run hello-world
-</code></pre>
-<p><em>Expected result: A successful message about the image running locally.</em></p>
 
 
 

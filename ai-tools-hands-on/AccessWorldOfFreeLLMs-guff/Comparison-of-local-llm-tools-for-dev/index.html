@@ -16,7 +16,7 @@
     
     
       
-        <title>Docker Model Runner (DMR) - AI Learning Group</title>
+        <title>Comparison of local llm tools for dev - AI Learning Group</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-model-runner-dmr" class="md-skip">
+        <a href="#local-ai-model-runner-comparison-table" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Model Runner (DMR)
+              Comparison of local llm tools for dev
             
           </span>
         </div>
@@ -1245,8 +1245,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1255,45 +1253,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#for-docker-engine-installed-on-linux" class="md-nav__link">
+  <a href="#local-ai-model-runner-comparison-table" class="md-nav__link">
     <span class="md-ellipsis">
-      For Docker Engine installed on Linux:
+      💻 Local AI Model Runner Comparison Table
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="For Docker Engine installed on Linux:">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-depth-usability-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 In-Depth Usability Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 In-Depth Usability Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-install-the-docker-model-plugin" class="md-nav__link">
+  <a href="#1-ide-integration-vs-code-jetbrains-etc" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Install the Docker Model Plugin
+      1. IDE Integration (VS Code, JetBrains, etc.)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-run-your-model" class="md-nav__link">
+  <a href="#2-python-programming-interactions" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Run Your Model
+      2. Python Programming Interactions
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. Run Your Model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-this-command-does" class="md-nav__link">
-    <span class="md-ellipsis">
-      What this command does:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1303,70 +1295,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-docker-coexistence-guide-with-model-runner" class="md-nav__link">
+  <a href="#example-using-a-standard-python-openai-client" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 The Docker Coexistence Guide with Model Runner
+      Example using a standard Python OpenAI client
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 The Docker Coexistence Guide with Model Runner">
+    <nav class="md-nav" aria-label="Example using a standard Python OpenAI client">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#i-setup-install-and-enable-components" class="md-nav__link">
+  <a href="#summary-recommendation" class="md-nav__link">
     <span class="md-ellipsis">
-      I. Setup: Install and Enable Components
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ii-managing-the-host-docker-engine-service-the-golden-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      II. Managing the Host Docker Engine Service (The Golden Rule)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iii-switching-between-engine-environments-with-docker-contexts" class="md-nav__link">
-    <span class="md-ellipsis">
-      III. Switching Between Engine Environments with Docker Contexts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III. Switching Between Engine Environments with Docker Contexts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-to-work-in-docker-desktop-and-use-model-runner" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. To Work in Docker Desktop (and use Model Runner)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-to-work-in-the-standalone-host-engine" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. To Work in the Standalone Host Engine
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iv-running-models-with-docker-model-runner-dmr" class="md-nav__link">
-    <span class="md-ellipsis">
-      IV. Running Models with Docker Model Runner (DMR)
+      Summary Recommendation
     </span>
   </a>
   
@@ -1392,358 +1333,89 @@
                   
 
 
-<h1 id="docker-model-runner-dmr"><strong>Docker Model Runner (DMR)</strong></h1>
-<h2 id="for-docker-engine-installed-on-linux">For Docker Engine installed on Linux:</h2>
-<h3 id="1-install-the-docker-model-plugin">1. Install the Docker Model Plugin</h3>
-<pre><code>The `docker-model-plugin` is available in Docker's official APT repository for Linux.
-
-1.  **Update your package list:**
-    ```bash
-    sudo apt-get update
-    ```
-2.  **Install the plugin:**
-    ```bash
-    sudo apt-get install docker-model-plugin -y
-    ```
-3.  **Verify the installation:**
-    ```bash
-    docker model version
-    ```
-    If successful, this command will display the version information for the Docker Model Runner, and the `docker model` command is now available for use.
-</code></pre>
-<h3 id="2-run-your-model">2. Run Your Model</h3>
-<pre><code>With the plugin installed, you can now use your original command to pull and run the Llama 2 model. The `docker model run` command handles the pull and start process automatically.
-
-```bash
-docker model run ai/llama2:7b-chat
-```
-</code></pre>
-<h4 id="what-this-command-does">What this command does:</h4>
-<ul>
-<li><strong>Pulls the Model:</strong> It downloads the <code>llama2:7b-chat</code> model artifact from the <code>ai/</code> namespace on Docker Hub.</li>
-<li><strong>Starts the Inference Server:</strong> It launches a model engine (typically backed by <code>llama.cpp</code>) to serve the model.</li>
-<li><strong>Launches Interactive Chat:</strong> It opens an interactive chat session in your terminal where you can start interacting with the model. (Type <code>/bye</code> to exit the chat).</li>
-</ul>
-<p>Alternatively, if you only want to pull the model and check the status:</p>
-<ul>
-<li><strong>To pull only:</strong> <code>docker model pull ai/llama2:7b-chat</code></li>
-<li><strong>To list models:</strong> <code>docker model list</code></li>
-</ul>
-<h2 id="the-docker-coexistence-guide-with-model-runner">🚀 The Docker Coexistence Guide with Model Runner</h2>
-<p>You might have <strong>standalone Docker Engine (Host Engine)</strong> already installed, <strong>Docker Desktop</strong>, and the <strong>Docker Model Runner (DMR)</strong> can also run in parallel.</p>
-<p>The core concept is to use <strong>Docker Contexts</strong> to switch the target of your <code>docker</code> CLI, and <strong>Systemd</strong> commands to manage the Host Engine service.</p>
-<h3 id="i-setup-install-and-enable-components">I. Setup: Install and Enable Components</h3>
-<ol>
-<li><strong>Install Docker Desktop:</strong> Follow the official instructions to install Docker Desktop.</li>
-<li><strong>Enable Model Runner (DMR):</strong><ul>
-<li>Launch <strong>Docker Desktop</strong>.</li>
-<li>Go to <strong>Settings</strong> $\rightarrow$ <strong>AI</strong> (or <strong>Features in development</strong>).</li>
-<li>Check <strong>Enable Docker Model Runner</strong>.</li>
-<li>Click <strong>Apply &amp; Restart</strong>.</li>
-</ul>
-</li>
-</ol>
-<h3 id="ii-managing-the-host-docker-engine-service-the-golden-rule">II. Managing the Host Docker Engine Service (The Golden Rule)</h3>
-<p>When you install Docker Engine on Ubuntu, it typically sets itself up as a <strong>systemd service</strong> that starts automatically at boot (<code>docker.service</code>, <code>docker.socket</code>, and <code>containerd.service</code>).</p>
-<p>To prevent conflicts with Docker Desktop's engine, you should manage this service.</p>
+<h2 id="local-ai-model-runner-comparison-table">💻 Local AI Model Runner Comparison Table</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Goal</th>
-<th style="text-align: left;">Command</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Tool</th>
+<th style="text-align: left;">Primary Focus / Format</th>
+<th style="text-align: left;">IDE &amp; Python Usability</th>
+<th style="text-align: left;">Pros (✅)</th>
+<th style="text-align: left;">Cons (❌)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Stop Temporarily</strong> (For the current session)</td>
-<td style="text-align: left;"><code>sudo systemctl stop docker docker.socket containerd</code></td>
-<td style="text-align: left;">Shuts down the Host Engine immediately. This is the command you run daily before using Docker Desktop.</td>
+<td style="text-align: left;"><strong>Ollama</strong></td>
+<td style="text-align: left;"><strong>Developer CLI &amp; API Server</strong> (GGUF)</td>
+<td style="text-align: left;"><strong>Excellent.</strong> Built-in <strong>OpenAI-compatible REST API</strong> ($/v1/chat/completions$, etc.) for easy drop-in use with Python libraries like <strong><code>langchain</code></strong> and <strong><code>litellm</code></strong>. Strong IDE support via extensions like <strong>Continue</strong>, <strong>CodeGPT</strong>, etc.</td>
+<td style="text-align: left;">✅ <strong>Easiest for Developers:</strong> Simple CLI for model management.</td>
+<td style="text-align: left;">❌ Higher overhead than pure Llama.cpp.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Disable Permanently</strong> (Prevent autostart on boot)</td>
-<td style="text-align: left;"><code>sudo systemctl disable docker.service docker.socket containerd.service</code></td>
-<td style="text-align: left;">Prevents the Host Engine from starting automatically when you reboot your machine.</td>
+<td style="text-align: left;"><strong>LM Studio</strong></td>
+<td style="text-align: left;"><strong>GUI Desktop App &amp; API Server</strong> (GGUF, other formats)</td>
+<td style="text-align: left;"><strong>Good.</strong> Offers an <strong>OpenAI-compatible API server</strong> (usually on port 1234) that works well with Python clients and IDE extensions. GUI makes API management easy.</td>
+<td style="text-align: left;">✅ <strong>Best for Beginners:</strong> Intuitive GUI, one-click model download/run.</td>
+<td style="text-align: left;">❌ More resource-intensive than CLI-only tools.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Enable Permanently</strong> (Restore autostart)</td>
-<td style="text-align: left;"><code>sudo systemctl enable docker.service docker.socket containerd.service</code></td>
-<td style="text-align: left;">Re-enables the Host Engine to start automatically when you reboot.</td>
+<td style="text-align: left;"><strong>Llama.cpp</strong></td>
+<td style="text-align: left;"><strong>Inference Engine Core &amp; Minimal Server</strong> (GGUF)</td>
+<td style="text-align: left;"><strong>High Control.</strong> Primarily a C++ library and CLI. The built-in <strong><code>llama-server</code></strong> provides a REST API, but it's more basic and requires manual configuration. Often used as the backend for other tools (like Ollama and LM Studio).</td>
+<td style="text-align: left;">✅ <strong>Maximum Performance:</strong> Best-in-class performance on CPU and low-end hardware.</td>
+<td style="text-align: left;">❌ <strong>Steepest Learning Curve:</strong> CLI-driven, requires manual GGUF file management.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Start/Restart</strong> (To use the Host Engine)</td>
-<td style="text-align: left;"><code>sudo systemctl start docker</code></td>
-<td style="text-align: left;">Starts the Host Engine service (if it was disabled or stopped).</td>
+<td style="text-align: left;"><strong>vLLM</strong></td>
+<td style="text-align: left;"><strong>Production-Grade API Server</strong> (Hugging Face formats)</td>
+<td style="text-align: left;"><strong>Excellent for High-Performance Python Backends.</strong> Provides a highly performant Python server using its innovative <strong>PagedAttention</strong> technique. Used via a Python library or its high-throughput REST API.</td>
+<td style="text-align: left;">✅ <strong>Highest Performance/Throughput:</strong> Designed for high-concurrency production serving (e.g., serving a whole team).</td>
+<td style="text-align: left;">❌ <strong>High Hardware Requirement:</strong> Requires high-end GPUs (e.g., NVIDIA) and complex setup (often with Docker).</td>
 </tr>
 </tbody>
 </table>
-<h3 id="iii-switching-between-engine-environments-with-docker-contexts">III. Switching Between Engine Environments with Docker Contexts</h3>
-<p>The <code>docker</code> CLI uses a <strong>context</strong> to determine which Docker Engine daemon it should communicate with.</p>
-<h4 id="1-to-work-in-docker-desktop-and-use-model-runner">1. To Work in <strong>Docker Desktop</strong> (and use Model Runner)</h4>
-<p>This environment is ideal for using the GUI, Kubernetes, and the integrated Model Runner features.</p>
-<ol>
-<li>
-<p><strong>Stop the Host Engine (Crucial):</strong> If it's running, shut down the standalone service.
-    <code>bash
-    sudo systemctl stop docker docker.socket containerd</code></p>
-</li>
-<li>
-<p>Start Docker Desktop via the GUI (Recommended for first launch)</p>
-<p>The first time you launch it, the GUI is usually required to <strong>accept the Docker Subscription Service Agreement</strong>. Without accepting this, the backend engine often will not start.</p>
-<ul>
-<li>Open your <strong>Applications</strong> menu (or press the Super/Windows key).</li>
-<li>Search for <strong>"Docker Desktop"</strong> and click the icon to launch the application.</li>
-<li>The application will guide you through the initial setup, including accepting the terms.</li>
-</ul>
-</li>
-<li>
-<p>Start Docker Desktop via the Command Line</p>
-<p>Once installed, the Docker Desktop application registers a user-specific systemd service that you can start from the terminal.</p>
-<p>Run the following command in your terminal:</p>
-<p><code>bash
-systemctl --user start docker-desktop</code></p>
-<p>This command runs the Docker Desktop application in the background.</p>
-<p>After you have started Docker Desktop:</p>
-</li>
-<li>
-<p><strong>Wait a few moments</strong> for the application to initialize its engine and set up the necessary files (it can take up to a minute).</p>
-</li>
-<li>
-<p><strong>Verify the context now exists:</strong></p>
-<p><code>bash
-docker context ls</code></p>
-<p>You should see <code>desktop-linux</code> listed, possibly with an asterisk (<code>*</code>) next to it if the application set it as the current context automatically.</p>
-</li>
-<li>
-<p><strong>Switch to the Docker Desktop context (if needed):</strong></p>
-<p><code>bash
-docker context use desktop-linux</code></p>
-<p>This command should now succeed, as the required files will have been created by the running Docker Desktop application.</p>
-</li>
-<li>
-<p><strong>Switch the CLI to Docker Desktop:</strong> The <code>desktop-linux</code> context points to the VM-based engine.
-    <code>bash
-    docker context use desktop-linux</code></p>
-</li>
-<li><strong>Verify:</strong> Check the currently active context.
-    <code>bash
-    docker context ls</code>
-    <em>(The <code>desktop-linux</code> entry should have the <code>*</code>.)</em></li>
-</ol>
-<h4 id="2-to-work-in-the-standalone-host-engine">2. To Work in the <strong>Standalone Host Engine</strong></h4>
-<p>This environment is useful if you need to run containers directly on your host or troubleshoot the base installation.</p>
-<ol>
-<li><strong>Stop Docker Desktop:</strong> Quit the application from the tray icon or command line.
-    <code>bash
-    systemctl --user stop docker-desktop</code></li>
-<li><strong>Ensure Host Engine is Running:</strong> Start the service if it was stopped or disabled.
-    <code>bash
-    sudo systemctl start docker</code></li>
-<li><strong>Switch the CLI to the Host Engine:</strong> The <code>default</code> context points to the host's daemon.
-    <code>bash
-    docker context use default</code></li>
-<li><strong>Verify:</strong> Check the currently active context.
-    <code>bash
-    docker context ls</code>
-    <em>(The <code>default</code> entry should have the <code>*</code>.)</em></li>
-</ol>
-<h3 id="iv-running-models-with-docker-model-runner-dmr">IV. Running Models with Docker Model Runner (DMR)</h3>
-<p>The Model Runner service is tightly integrated with the Docker Desktop environment.</p>
-<ol>
-<li><strong>Ensure you are in the <code>desktop-linux</code> context.</strong></li>
-<li><strong>Pull a Model:</strong>
-    <code>bash
-    docker model pull ai/llama2:7b-chat</code></li>
-<li><strong>Run a Model (Interactive Chat):</strong>
-    <code>bash
-    docker model run ai/llama2:7b-chat</code></li>
-<li><strong>Check Status:</strong> The Model Runner service itself runs outside the main Docker Desktop VM but is managed by it.
-    <code>bash
-    docker model status</code></li>
-</ol>
-<h1 id="_1"></h1>
-<p>Yes, you can run and manage all three: your <strong>standalone Docker Engine</strong>, <strong>Docker Desktop</strong>, and <strong>Docker Model Runner</strong> on Ubuntu.</p>
-<p><strong>Docker Model Runner (DMR)</strong> is a feature of Docker Desktop (and also available as a plugin for Docker Engine CE) that allows you to run local AI models (like LLMs) using familiar <code>docker model</code> CLI commands.</p>
-<p>Here is the regenerated guide, including the Model Runner steps and how it interacts with the two Docker environments.</p>
 <hr />
-<h2 id="the-docker-coexistence-guide-with-model-runner_1">🚀 The Docker Coexistence Guide with Model Runner</h2>
-<p>The core concept for managing these environments is <strong>Context Switching</strong> using the <code>docker context</code> command.</p>
-<h3 id="i-setup-enable-model-runner">I. Setup: Enable Model Runner</h3>
-<p>Docker Model Runner (DMR) is typically enabled through the Docker Desktop application settings.</p>
-<ol>
-<li><strong>Install Docker Desktop:</strong> Complete the installation as you have done.</li>
-<li><strong>Enable DMR:</strong><ul>
-<li>Launch <strong>Docker Desktop</strong> (from the Applications Menu).</li>
-<li>Go to <strong>Settings</strong> (gear icon) $\rightarrow$ <strong>AI</strong> (or <strong>Features in development</strong> in older versions).</li>
-<li>Ensure <strong>Enable Docker Model Runner</strong> is checked.</li>
-<li><strong>Recommended:</strong> Select <strong>Enable host-side TCP support</strong> (default port 12434) if you plan to access the model API from applications <em>outside</em> of a container (e.g., a local web app).</li>
-<li>Click <strong>Apply &amp; Restart</strong>.</li>
-</ul>
-</li>
-</ol>
-<p>Once enabled, the <code>docker model</code> CLI command becomes available for both the Docker Desktop and the standalone Engine (though the Model Runner service itself runs outside the Docker Desktop VM).</p>
-<h3 id="ii-the-golden-rule-stop-the-host-engine">II. The Golden Rule: Stop the Host Engine</h3>
-<p>To prevent conflicts (especially on ports) and resource contention, you should <strong>stop</strong> your standalone Docker Engine service when you are using Docker Desktop and its related tools like Model Runner.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Scenario</th>
-<th style="text-align: left;">Action</th>
-<th style="text-align: left;">Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Using Docker Desktop/Model Runner</strong></td>
-<td style="text-align: left;"><strong>Stop</strong> the Host Engine</td>
-<td style="text-align: left;"><code>sudo systemctl stop docker docker.socket containerd</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Using Standalone Host Engine</strong></td>
-<td style="text-align: left;"><strong>Stop</strong> Docker Desktop</td>
-<td style="text-align: left;"><code>systemctl --user stop docker-desktop</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="iii-switching-between-engine-environments">III. Switching Between Engine Environments</h3>
-<p>The <code>docker context</code> command is your control panel for directing the <code>docker</code> CLI.</p>
-<h4 id="1-to-use-docker-desktop-and-model-runner">1. To Use <strong>Docker Desktop</strong> (and Model Runner)</h4>
-<p>This is the context you use for GUI management, Kubernetes, and local AI model running.</p>
-<pre><code class="language-bash"># 1. Ensure the Host Engine is stopped
-sudo systemctl stop docker
-
-# 2. Start Docker Desktop and switch the CLI context
-docker context use desktop-linux
-</code></pre>
+<h2 id="in-depth-usability-analysis">💡 In-Depth Usability Analysis</h2>
+<h3 id="1-ide-integration-vs-code-jetbrains-etc">1. IDE Integration (VS Code, JetBrains, etc.)</h3>
+<p>For using local models as an <strong>AI Coding Assistant</strong> directly within your IDE:</p>
 <ul>
-<li><strong>Result:</strong> The <code>docker</code> commands now target the Docker Engine inside the Docker Desktop VM. The <code>docker model</code> commands will use the Model Runner service managed by Docker Desktop.</li>
+<li><strong>🏆 Winner: Ollama &amp; LM Studio</strong></li>
+<li><strong>How it works:</strong> Both run as a persistent, lightweight server on your local machine. IDE extensions (like <strong>Continue</strong>, CodeGPT, etc.) simply point to the server's <strong>OpenAI-compatible API endpoint</strong> (<code>http://localhost:11434/v1</code> for Ollama, <code>http://localhost:1234/v1</code> for LM Studio).</li>
+<li><strong>vLLM</strong> can also be used, but its complexity makes it less common for a single-user IDE setup; it's overkill unless you are a developer serving a whole team.</li>
+<li><strong>Llama.cpp</strong>'s bare-bones server can work, but the setup is more manual and less plug-and-play than Ollama or LM Studio.</li>
 </ul>
-<h4 id="2-to-use-the-standalone-host-engine">2. To Use the <strong>Standalone Host Engine</strong></h4>
-<p>This is the context you use for traditional container workloads running directly on your Ubuntu host.</p>
-<pre><code class="language-bash"># 1. Stop Docker Desktop (quitting the application is sufficient)
-systemctl --user stop docker-desktop
-
-# 2. Switch the CLI to the Host Engine
-docker context use default
-
-# 3. Ensure the Host Engine is running
-sudo systemctl start docker
-</code></pre>
+<h3 id="2-python-programming-interactions">2. Python Programming Interactions</h3>
+<p>For integrating the model into a Python application (e.g., using <strong>LangChain, LlamaIndex, or building a RAG pipeline</strong>):</p>
 <ul>
-<li><strong>Result:</strong> The <code>docker</code> commands now target your system's <code>/var/run/docker.sock</code>. Note that if you use Model Runner via Docker Engine CE instead of Desktop, the <code>default</code> context is where you would access it, but managing both is less common.</li>
-</ul>
-<h3 id="iv-running-models-with-docker-model-runner-dmr_1">IV. Running Models with Docker Model Runner (DMR)</h3>
-<p>DMR uses the <strong><code>docker model</code></strong> CLI command and typically runs the inference server natively on the host machine for optimal performance.</p>
-<ol>
 <li>
-<p><strong>Verify DMR is Active:</strong> Ensure you are using the <code>desktop-linux</code> context and Docker Desktop is running.</p>
-<p>```bash
-docker model status</p>
-<h1 id="output-should-confirm-docker-model-runner-is-running">Output should confirm: Docker Model Runner is running.</h1>
-<p>```</p>
+<p><strong>🏆 Winner: Ollama</strong></p>
 </li>
 <li>
-<p><strong>Pull a Model:</strong> Models are pulled from Docker Hub (or other OCI registries) using the <code>docker model pull</code> command.</p>
-<p><code>bash
-docker model pull ai/smollm2:latest</code></p>
-</li>
-<li>
-<p><strong>Run a Model (Interactive Chat):</strong> This will start an interactive chat session in your terminal, similar to using a local LLM application.</p>
-<p><code>bash
-docker model run ai/smollm2:latest</code></p>
-</li>
-<li>
-<p><strong>Run a Model (One-Shot Prompt):</strong> You can also send a single prompt from the command line.</p>
-<p><code>bash
-docker model run ai/smollm2:latest "Explain the difference between a container and an image."</code></p>
-</li>
-<li>
-<p><strong>Access Model API from a Container:</strong> Your application running in a container can access the model using the internal DNS name: <code>http://model-runner.docker.internal/</code>.</p>
-<ul>
-<li>For example, a <code>docker run</code> command for an app would target an API endpoint like: <code>http://model-runner.docker.internal/engines/v1/chat/completions</code>.</li>
-</ul>
-</li>
-</ol>
-<p>This setup allows you to keep your traditional Docker development flow separate from your new GenAI/LLM local model experimentation, all managed through the same <code>docker</code> command line tool.</p>
-<hr />
-<h2 id="reverting-back-to-docker-engine">Reverting back to Docker Engine:</h2>
-<p>This part assumes you have the <strong>native Docker Engine</strong> already installed and running (e.g., the <code>docker.io</code> package). The goal is to remove Docker Desktop and point your CLI back to the native engine.</p>
-<h3 id="step-1-uninstall-docker-desktop">Step 1: Uninstall Docker Desktop</h3>
-<p>Use your package manager to remove the Docker Desktop package. This step removes the application files but often leaves configuration and data behind.</p>
-<pre><code class="language-bash"># 1. Stop the Docker Desktop service
-systemctl --user stop docker-desktop
-
-# 2. Uninstall the package
-sudo apt purge docker-desktop
-</code></pre>
-<h3 id="step-2-restore-the-docker-context">Step 2: Restore the Docker Context</h3>
-<p>After the uninstall, your Docker CLI may still be configured to look for the <strong><code>desktop-linux</code></strong> context, which is now gone. You must explicitly switch it back to the local Engine's <strong><code>default</code></strong> context.</p>
-<h4 id="a-switch-context">A. Switch Context</h4>
-<p>If the <code>docker</code> command is still available (which is the goal), run:</p>
-<pre><code class="language-bash">docker context use default
-</code></pre>
-<h4 id="b-handle-broken-cli-the-fix-for-the-no-such-file-or-directory-error">B. Handle Broken CLI (The Fix for the <code>No such file or directory</code> Error)</h4>
-<p>If you encounter the error <code>bash: /usr/local/bin/docker: No such file or directory</code>, it means the link for the <code>docker</code> command was broken.</p>
-<ol>
-<li>
-<p><strong>Use the full path to the executable to reset the context:</strong></p>
-<p><code>bash
-/usr/bin/docker context use default</code></p>
-<p><em>(We use <code>/usr/bin/docker</code> because that is the common location for the native Docker Engine CLI on Ubuntu.)</em></p>
-</li>
-<li>
-<p><strong>Fix the broken command link (Optional, but highly recommended):</strong></p>
-<p>```bash</p>
-<h1 id="remove-the-broken-symlink-from-the-higher-priority-directory">Remove the broken symlink from the higher-priority directory</h1>
-<p>sudo rm -f /usr/local/bin/docker</p>
-<h1 id="re-verify-the-simple-command-works">Re-verify the simple command works</h1>
-<p>docker version
+<p><strong>How it works:</strong> The OpenAI-compatible API is the standard for most modern Python LLM frameworks. You can instantiate an LLM client in Python and simply change the <code>base_url</code> to your local host:</p>
+<p>```python</p>
+<h1 id="example-using-a-standard-python-openai-client">Example using a standard Python OpenAI client</h1>
+<p>from openai import OpenAI
+client = OpenAI(
+    base_url="http://localhost:11434/v1", # Ollama's API
+    api_key="not-needed"
+)
 ```</p>
 </li>
-</ol>
-<h3 id="step-3-clean-up-leftover-configuration-files">Step 3: Clean Up Leftover Configuration Files</h3>
-<p>Docker Desktop leaves metadata and configuration files in your user directory. Cleaning these up ensures a completely fresh start for your native Docker Engine.</p>
-<ol>
 <li>
-<p><strong>Remove the non-existent Docker Desktop context:</strong></p>
-<p><code>bash
-docker context rm desktop-linux</code></p>
-<p><em>(If the context file is already gone, this command will simply report that it was not found, which is fine.)</em></p>
+<p><strong>vLLM</strong> is the winner if your primary goal is <strong>high-throughput batch processing</strong> where you need to run thousands of requests quickly on powerful GPUs. It's often integrated as a Python library or service for backend web APIs.</p>
 </li>
 <li>
-<p><strong>Remove Docker Desktop's configuration directory:</strong></p>
-<p><code>bash
-rm -r $HOME/.docker/desktop</code></p>
+<p><strong>Llama.cpp</strong> has a dedicated <strong><code>llama-cpp-python</code></strong> binding, which allows for direct, low-level Python interaction with the core engine without needing to run an external server, giving maximum flexibility and low latency in a dedicated Python environment.</p>
 </li>
-<li>
-<p><strong>Edit the main Docker configuration file:</strong>
-    The file <code>$HOME/.docker/config.json</code> might still contain references to <code>credsStore</code> or the old <code>currentContext</code>.</p>
-<p><em>Open the file with a text editor:</em></p>
-<p><code>bash
-nano $HOME/.docker/config.json</code></p>
-<p><em>Ensure the file looks clean, or at least has the context pointing to default:</em></p>
-<p>```json
-{
-  // Optional: Remove "credsStore" if it was set to "desktop"
-  // "credsStore": "desktop", </p>
-<p>// Ensure the current context is "default"
-  "currentContext": "default" </p>
-<p>// Other settings (like "auths") can remain
-}
-```</p>
-<p>Save and close the file.</p>
-</li>
-</ol>
-<h3 id="step-4-verification">Step 4: Verification</h3>
-<p>Confirm the switch was successful by checking the active context and running a test container.</p>
-<pre><code class="language-bash"># Verify the context is set to default
-docker context ls
-</code></pre>
-<p><em>Expected result: An asterisk (<code>*</code>) next to <code>default</code>, pointing to <code>unix:///var/run/docker.sock</code>.</em></p>
-<pre><code class="language-bash"># Run the test container against the native Engine
-docker run hello-world
-</code></pre>
-<p><em>Expected result: A successful message about the image running locally.</em></p>
+</ul>
+<h3 id="summary-recommendation">Summary Recommendation</h3>
+<ul>
+<li><strong>For Development &amp; IDE Use (The "Plug-and-Play" choice):</strong> <strong>Ollama</strong> is the industry standard for developers due to its easy CLI, API integration, and great IDE support.</li>
+<li><strong>For Beginners &amp; Model Discovery (The "Graphical" choice):</strong> <strong>LM Studio</strong> is best for exploring, downloading, and chatting with models before committing to a development tool.</li>
+<li><strong>For High-Performance Backend Serving (The "Scaling" choice):</strong> <strong>vLLM</strong> is unmatched for production environments with high traffic and powerful, expensive GPUs.</li>
+<li><strong>For Maximum Control &amp; Edge Devices (The "Optimized" choice):</strong> <strong>Llama.cpp</strong> is the underlying engine that offers the most flexibility and best performance on constrained hardware, but it requires the most technical setup.</li>
+</ul>
 
 
 
