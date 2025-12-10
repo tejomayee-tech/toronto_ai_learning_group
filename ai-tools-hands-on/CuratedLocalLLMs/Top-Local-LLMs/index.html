@@ -831,6 +831,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#top-llms-for-local-use-ggufollama-focused" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Top LLMs for Local Use (GGUF/Ollama Focused)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Top LLMs for Local Use (GGUF/Ollama Focused)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-guide-to-local-runtime-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Quick Guide to Local Runtime Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-gguf-size-its-compatibility-with-your-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model's GGUF size &amp; its compatibility with your machine's
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gguf-model-size-and-hardware-compatibility-q4_k_m-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      💾 GGUF Model Size and Hardware Compatibility (Q4_K_M Quantization)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 GGUF Model Size and Hardware Compatibility (Q4_K_M Quantization)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-quantization-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Quantization Trade-Off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1317,6 +1374,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#top-llms-for-local-use-ggufollama-focused" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Top LLMs for Local Use (GGUF/Ollama Focused)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Top LLMs for Local Use (GGUF/Ollama Focused)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-guide-to-local-runtime-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Quick Guide to Local Runtime Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-gguf-size-its-compatibility-with-your-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model's GGUF size &amp; its compatibility with your machine's
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gguf-model-size-and-hardware-compatibility-q4_k_m-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      💾 GGUF Model Size and Hardware Compatibility (Q4_K_M Quantization)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💾 GGUF Model Size and Hardware Compatibility (Q4_K_M Quantization)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-quantization-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Quantization Trade-Off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1335,97 +1449,242 @@
   <h1>Top Local LLMs</h1>
 
 <h2 id="top-free-small-language-models-slm-comparison">Top Free Small Language Models (SLM) Comparison</h2>
+<p>The landscape of local LLMs has evolved rapidly, with newer models like the latest iterations of <strong>Gemma</strong>, <strong>Qwen</strong>, and the open-weight release of <strong>GPT-OSS</strong> models offering compelling trade-offs between size, performance, and hardware requirements. The GGUF format, specifically with K-Quantizations, remains the standard for efficient CPU/GPU inference.</p>
+<p>Here is a comprehensive, updated table focusing on top-performing small to mid-size LLMs suitable for local deployment (under 10B parameters, or notable larger efficient models).</p>
+<h2 id="top-llms-for-local-use-ggufollama-focused">🚀 Top LLMs for Local Use (GGUF/Ollama Focused)</h2>
 <table>
 <thead>
 <tr>
-<th>Model Name (Repository)</th>
-<th>Family/Developer</th>
-<th>Parameter Size</th>
-<th>License</th>
-<th>Key Capabilities (Good At)</th>
-<th>Validation</th>
+<th style="text-align: left;">Model Name (Hugging Face Repo)</th>
+<th style="text-align: left;">P. Size (Active)</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Key Capabilities (Local Focus)</th>
+<th style="text-align: left;">Primary Local Runtime Tool(s)</th>
+<th style="text-align: left;">Tool Type (Format Focus)</th>
+<th style="text-align: left;">Validation &amp; Use Case Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://huggingface.co/google/gemma-3-270m#description"><strong>Gemma 3 - 270M</strong></a></td>
-<td>Google / Gemma</td>
-<td>270 Million</td>
-<td>Gemma License</td>
-<td>Question answering, summarization, and reasoning.</td>
-<td>Confirmed. Excellent performance for its compact size, especially in common NLP tasks.</td>
+<td style="text-align: left;"><strong>Gemma 3 - 270M</strong></td>
+<td style="text-align: left;">270 Million</td>
+<td style="text-align: left;">Gemma</td>
+<td style="text-align: left;"><strong>Ultra-Compact, Edge AI.</strong> Fastest inference on all hardware (including mobile/Raspberry Pi). Basic chat/summarization.</td>
+<td style="text-align: left;"><strong>Ollama</strong>, LM Studio, $\text{llama.cpp}$</td>
+<td style="text-align: left;">GGUF (CPU/iGPU)</td>
+<td style="text-align: left;">Best for extreme low-resource environments and fast, simple tasks.</td>
 </tr>
 <tr>
-<td><strong>Gemma 2 – 2B</strong></td>
-<td>Google / Gemma</td>
-<td>2 Billion</td>
-<td>Gemma License</td>
-<td>Instruction following, summarization, reasoning, and creative writing. Performs well in lightweight RAG and structured response generation.</td>
-<td>Confirmed. Solid performance for its size; optimized for low-resource environments and conversational use cases.</td>
+<td style="text-align: left;"><strong>Phi-3 Mini (Instruct)</strong></td>
+<td style="text-align: left;">3.8 Billion</td>
+<td style="text-align: left;">MIT</td>
+<td style="text-align: left;"><strong>7B-Class Reasoning on 4B Hardware.</strong> Excellent logic, math, and instruction-following on limited memory.</td>
+<td style="text-align: left;"><strong>LM Studio</strong>, Ollama, $\text{llama.cpp}$</td>
+<td style="text-align: left;">GGUF (CPU/iGPU)</td>
+<td style="text-align: left;">Exceptional performance per parameter. The top choice for CPU-only and on-device privacy.</td>
 </tr>
 <tr>
-<td><a href="https://ollama.com/library/mistral"><strong>Mistral 7B</strong></a> mistral</td>
-<td>Mistral AI</td>
-<td>7 Billion</td>
-<td>Apache 2.0</td>
-<td>Instruction following, summarization, multilingual chat, and <strong>tool calling</strong>.</td>
-<td>Confirmed. Compact and efficient with solid multi-turn dialogue and tool integration support.</td>
+<td style="text-align: left;"><strong>Qwen3 - 4B-Instruct-2507</strong></td>
+<td style="text-align: left;">4 Billion</td>
+<td style="text-align: left;">Tongyi Qianwen</td>
+<td style="text-align: left;"><strong>Multilingual, Long Context (256K).</strong> Strong logic, coding, and <strong>Thinking Mode</strong> for complex tasks.</td>
+<td style="text-align: left;"><strong>Ollama</strong>, LM Studio, $\text{vLLM}$</td>
+<td style="text-align: left;">GGUF/HF (CPU/GPU)</td>
+<td style="text-align: left;">High quality, extremely versatile, and runs efficiently on consumer GPUs.</td>
 </tr>
 <tr>
-<td><a href="https://ollama.com/library/gemma:7b"><strong>Gemma – 7B</strong></a> gemma:7b</td>
-<td>Google / Gemma</td>
-<td>7 Billion</td>
-<td>Gemma License</td>
-<td>Advanced reasoning, dialogue understanding, summarization, and multi-turn conversation. Performs strongly in multilingual and coding benchmarks.</td>
-<td>Confirmed. Delivers near-state-of-the-art performance among open models in its class; excellent balance of accuracy and efficiency.</td>
+<td style="text-align: left;"><strong>Mistral 7B (Instruct)</strong></td>
+<td style="text-align: left;">7 Billion</td>
+<td style="text-align: left;">Apache 2.0</td>
+<td style="text-align: left;"><strong>Speed, Coherence, Tool Calling.</strong> The established benchmark for compact performance. Perfect for API serving.</td>
+<td style="text-align: left;"><strong>Ollama</strong>, $\text{llama.cpp}$, LM Studio, $\text{vLLM}$</td>
+<td style="text-align: left;">GGUF/HF (CPU/GPU)</td>
+<td style="text-align: left;">Fast single-user experience via GGUF; high-throughput server via $\text{vLLM}$.</td>
 </tr>
 <tr>
-<td><a href="https://ollama.com/library/gemma2:9b"><strong>Gemma 2 – 9B</strong></a> gemma2:9b</td>
-<td>Google / Gemma</td>
-<td>7 Billion</td>
-<td>Gemma License</td>
-<td>Enhanced long-context reasoning, mathematical problem solving, code generation, and complex dialogue understanding. Excellent for applied RAG and instruction-tuned workflows.</td>
-<td>Confirmed. High-performance open model achieving strong reasoning and compositional generalization across benchmarks, competitive with much larger LLMs.</td>
+<td style="text-align: left;"><strong>Llama 3.1 – 8B (Instruct)</strong></td>
+<td style="text-align: left;">8 Billion</td>
+<td style="text-align: left;">Llama</td>
+<td style="text-align: left;"><strong>SOTA Generalist in its Class.</strong> Top-tier reasoning, code generation, and massive community support for resources.</td>
+<td style="text-align: left;"><strong>Ollama</strong>, $\text{vLLM}$, LM Studio, TGI</td>
+<td style="text-align: left;">GGUF/HF (CPU/GPU)</td>
+<td style="text-align: left;">The best balance of quality and resource usage for general-purpose local AI.</td>
 </tr>
 <tr>
-<td><a href="https://huggingface.co/Qwen/Qwen3-0.6B"><strong>Qwen3 - 0.6B</strong></a></td>
-<td>Alibaba / Qwen</td>
-<td>0.6 Billion (600M)</td>
-<td>Tongyi Qianwen License</td>
-<td>Switch between “thinking mode” for complex reasoning, math, and coding, and “non-thinking mode” for fast, general-purpose dialogue.</td>
-<td>Confirmed. Designed for fast general-purpose dialogue and complex problem-solving in a compact model.</td>
+<td style="text-align: left;"><strong>Gemma 2 – 9B</strong></td>
+<td style="text-align: left;">9 Billion</td>
+<td style="text-align: left;">Gemma</td>
+<td style="text-align: left;"><strong>New Efficiency King, Long Context.</strong> Optimized architecture for speed. Strong math, code, and deep RAG workflows.</td>
+<td style="text-align: left;"><strong>Ollama</strong>, LM Studio, $\text{llama.cpp}$</td>
+<td style="text-align: left;">GGUF (CPU/iGPU)</td>
+<td style="text-align: left;">Excellent speed/watt, making it ideal for always-on background tasks.</td>
 </tr>
 <tr>
-<td><a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B"><strong>SmolLM3 - 3B</strong></a></td>
-<td>HuggingFaceTB</td>
-<td>3 Billion</td>
-<td>Apache 2.0</td>
-<td>Thinking more for complex problem solving, agentic usage with tool calling, making it versatile for real-world applications.</td>
-<td>Confirmed. Specifically tuned for agentic workflows and complex problem-solving.</td>
+<td style="text-align: left;"><strong>GPT-OSS 20B (MoE)</strong></td>
+<td style="text-align: left;">21B Total ($\approx$3.6B Active)</td>
+<td style="text-align: left;">Apache 2.0</td>
+<td style="text-align: left;"><strong>MoE Efficiency &amp; Enterprise Reasoning.</strong> High-quality tool-use, code, and configurable reasoning effort (CoT).</td>
+<td style="text-align: left;"><strong>vLLM</strong>, Ollama, LM Studio</td>
+<td style="text-align: left;">GGUF/HF (GPU/CPU)</td>
+<td style="text-align: left;">MoE architecture allows high performance to be achieved with lower <em>active</em> memory usage.</td>
 </tr>
 <tr>
-<td><a href="https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"><strong>Qwen3 - 4B-Instruct-2507</strong></a></td>
-<td>Alibaba / Qwen</td>
-<td>4 Billion</td>
-<td>Tongyi Qianwen License</td>
-<td>Logical reasoning, text comprehension, mathematics, science, coding, and tool usage.</td>
-<td>Confirmed. Instruction-tuned variant optimized for a wide range of academic, reasoning, and coding benchmarks.</td>
+<td style="text-align: left;"><strong>Mixtral 8x22B (MoE)</strong></td>
+<td style="text-align: left;">141B Total ($\approx$39B Active)</td>
+<td style="text-align: left;">Apache 2.0</td>
+<td style="text-align: left;"><strong>High-End Open Source SOTA.</strong> Best reasoning and quality available on high-end consumer GPUs (multi-GPU or 48GB+ VRAM).</td>
+<td style="text-align: left;"><strong>vLLM</strong>, $\text{llama.cpp}$, TGI</td>
+<td style="text-align: left;">GGUF/HF (GPU)</td>
+<td style="text-align: left;">Requires substantial VRAM, but delivers near-GPT-4 level quality locally.</td>
 </tr>
 <tr>
-<td><a href="https://huggingface.co/google/gemma-3-4b-it"><strong>Gemma 3 - 4B-IT</strong></a></td>
-<td>Google / Gemma</td>
-<td>4 Billion</td>
-<td>Gemma License</td>
-<td>Fine-tuning on text classification, image classification, &amp; specialized tasks.</td>
-<td>Confirmed. The Instruction-Tuned (-it) variant is optimized for instruction-following and serves as a strong base for further fine-tuning on specialized tasks.</td>
+<td style="text-align: left;"><strong>Codestral-22B</strong></td>
+<td style="text-align: left;">22 Billion</td>
+<td style="text-align: left;">M-Code</td>
+<td style="text-align: left;"><strong>Dedicated High-Performance Coder.</strong> Specialized for long-context (32K) code, repo-level understanding, and code generation.</td>
+<td style="text-align: left;"><strong>vLLM</strong>, Ollama, TGI</td>
+<td style="text-align: left;">HF (GPU)</td>
+<td style="text-align: left;">Top-tier local coding assistant; runs well on single high-end GPU (e.g., RTX 4090).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="quick-guide-to-local-runtime-tools">📚 Quick Guide to Local Runtime Tools</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tool Name</th>
+<th style="text-align: left;">Key Functionality</th>
+<th style="text-align: left;">Primary Format</th>
+<th style="text-align: left;">Ideal User/Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Ollama</strong></td>
+<td style="text-align: left;">Single command to pull, run, and serve models (OpenAI-compatible API).</td>
+<td style="text-align: left;">GGUF</td>
+<td style="text-align: left;"><strong>Beginners &amp; Developers.</strong> Easiest setup for Linux/macOS/Windows terminal and API integration.</td>
 </tr>
 <tr>
-<td><a href="https://ollama.com/library/granite4"><strong>Granite 4 (tiny)</strong></a> granite4:tiny-h</td>
-<td>IBM / Granite 4.0</td>
-<td>7 Billion</td>
-<td>Apache 2.0</td>
-<td>Question answering, summarization, classification, code answering, function calling, RAG, and multilingual support.</td>
-<td>Confirmed. Granite 4.0-Micro (≈3B) optimized for enterprise tasks like RAG, function calling, and multilingual workflows.</td>
+<td style="text-align: left;"><strong>LM Studio</strong></td>
+<td style="text-align: left;">All-in-one desktop GUI for model discovery, download, chat, and API serving.</td>
+<td style="text-align: left;">GGUF</td>
+<td style="text-align: left;"><strong>Beginners &amp; Desktop Users.</strong> Graphical interface for exploring and managing models without the command line.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$\text{llama.cpp}$</strong></td>
+<td style="text-align: left;">Core inference engine (C++). Provides best-in-class performance for CPU-based GGUF inference.</td>
+<td style="text-align: left;">GGUF</td>
+<td style="text-align: left;"><strong>Experts &amp; Embedded Users.</strong> Maximum performance optimization, minimal overhead, and portability.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$\text{vLLM}$</strong></td>
+<td style="text-align: left;">High-performance inference engine for maximizing GPU throughput (using PagedAttention).</td>
+<td style="text-align: left;">FP16, AWQ, GPTQ</td>
+<td style="text-align: left;"><strong>High-Throughput Serving.</strong> Running local API for multiple concurrent users or heavy agentic workflows.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TGI</strong></td>
+<td style="text-align: left;">Hugging Face's Dockerized Text Generation Inference server. Optimized for latency and scalability.</td>
+<td style="text-align: left;">HF Formats</td>
+<td style="text-align: left;"><strong>Production Deployment.</strong> Robust, enterprise-grade serving with Docker/Kubernetes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>text-generation-webui</strong></td>
+<td style="text-align: left;">Browser-based interface (GUI) supporting multiple backends ($\text{llama.cpp}$, $\text{vLLM}$).</td>
+<td style="text-align: left;">GGUF, HF</td>
+<td style="text-align: left;"><strong>Enthusiasts.</strong> Feature-rich interface for testing, character creation, and RAG.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="models-gguf-size-its-compatibility-with-your-machines">Model's GGUF size &amp; its compatibility with your machine's</h2>
+<p>The rule of thumb for best performance (fastest speed) is to choose a GGUF file size that is <strong>1-2 GB smaller than your GPU's total VRAM</strong>, to leave space for the KV Cache and system overhead.</p>
+<p>Here is a summary table with typical file sizes for the popular <strong>$\text{Q4_K_M}$</strong> quantization (which offers a great balance of quality and size) for key models, along with the estimated minimum VRAM and total memory required.</p>
+<h2 id="gguf-model-size-and-hardware-compatibility-q4_k_m-quantization">💾 GGUF Model Size and Hardware Compatibility (Q4_K_M Quantization)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model Name</th>
+<th style="text-align: left;">Parameter Size (Active)</th>
+<th style="text-align: left;"><strong>GGUF File Size ($\text{Q4_K_M}$)</strong></th>
+<th style="text-align: left;"><strong>Estimated Min VRAM/RAM</strong></th>
+<th style="text-align: left;"><strong>Recommended Hardware Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Phi-3 Mini (Instruct)</strong></td>
+<td style="text-align: left;">3.8 Billion</td>
+<td style="text-align: left;">$\approx$ 2.4 GB</td>
+<td style="text-align: left;">6 GB Total (4 GB VRAM)</td>
+<td style="text-align: left;"><strong>Mac/Laptop CPU/iGPU.</strong> Excellent on-device performance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mistral 7B (Instruct)</strong></td>
+<td style="text-align: left;">7 Billion</td>
+<td style="text-align: left;">$\approx$ 4.9 GB</td>
+<td style="text-align: left;">8 GB VRAM</td>
+<td style="text-align: left;"><strong>Entry-Level GPU.</strong> Fast inference on most consumer gaming GPUs (e.g., 8GB cards).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Llama 3.1 – 8B (Instruct)</strong></td>
+<td style="text-align: left;">8 Billion</td>
+<td style="text-align: left;">$\approx$ 4.9 GB</td>
+<td style="text-align: left;">8 GB VRAM</td>
+<td style="text-align: left;"><strong>Mid-Range GPU.</strong> High-quality output on standard gaming PCs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Llama 3.1 – 70B (Instruct)</strong></td>
+<td style="text-align: left;">70 Billion</td>
+<td style="text-align: left;">$\approx$ 38 GB</td>
+<td style="text-align: left;">48 GB VRAM</td>
+<td style="text-align: left;"><strong>High-End Workstation/Server.</strong> Requires multiple GPUs (e.g., 2 x 24GB cards).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mixtral 8x22B (MoE)</strong></td>
+<td style="text-align: left;">141B Total ($\approx$39B Active)</td>
+<td style="text-align: left;">$\approx$ 86 GB</td>
+<td style="text-align: left;">128 GB Total (76 GB VRAM)</td>
+<td style="text-align: left;"><strong>High-End Server.</strong> Requires multiple high-VRAM GPUs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="understanding-the-quantization-trade-off">Understanding the Quantization Trade-Off</h3>
+<p>Quantization reduces the bit-precision of the model's weights, which is what reduces the file size and memory footprint. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantization Type</th>
+<th style="text-align: left;">Bits per Weight</th>
+<th style="text-align: left;">File Size &amp; Quality</th>
+<th style="text-align: left;">Ideal Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>$\text{F16}$ (Full Precision)</strong></td>
+<td style="text-align: left;">16-bit</td>
+<td style="text-align: left;"><strong>Largest Size (Highest Quality)</strong></td>
+<td style="text-align: left;">Fine-tuning, production serving with $\text{vLLM}$ and large VRAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$\text{Q8_0}$</strong></td>
+<td style="text-align: left;">8-bit</td>
+<td style="text-align: left;">Large Size (Near-Lossless Quality)</td>
+<td style="text-align: left;">Max quality inference; requires substantial VRAM (e.g., 12GB+ for 8B model).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$\text{Q4_K_M}$</strong></td>
+<td style="text-align: left;">$\approx$ 4.8-bit</td>
+<td style="text-align: left;"><strong>Smallest Recommended Size (Good Quality)</strong></td>
+<td style="text-align: left;"><strong>Recommended Default.</strong> Best balance of speed, quality, and consumer hardware compatibility.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$\text{Q2_K}$</strong></td>
+<td style="text-align: left;">$\approx$ 2.5-bit</td>
+<td style="text-align: left;">Very Small Size (Lowest Quality)</td>
+<td style="text-align: left;">Extreme memory constraints, mobile devices, or simply testing model architecture.</td>
 </tr>
 </tbody>
 </table>
