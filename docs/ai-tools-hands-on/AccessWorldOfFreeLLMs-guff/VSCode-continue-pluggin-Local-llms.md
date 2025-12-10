@@ -83,21 +83,38 @@ LM Studio's local server runs an API that is designed to be compatible with the 
 
 <!-- end list -->
 
-```json
-{
-  // ... other config settings
-  "models": [
-    {
-      "name": "LM Studio Model (e.g., Llama 3 8B)", // Give it a descriptive name
-      "provider": "openai",                     // Use the OpenAI provider
-      "model": "YOUR_MODEL_NAME_HERE",          // You can put the name of the model you are serving in LM Studio (e.g., 'llama-3-8b-instruct')
-      "apiBase": "http://localhost:1234/v1",    // This is the default LM Studio server address + /v1 path
-      "apiKey": "not-needed"                    // LM Studio typically doesn't require a key
-    },
-    // ... your Ollama config would go here if you also use it
-  ]
-  // ...
-}
+```yaml
+# ----------------------------------------
+# REQUIRED HEADER
+# ----------------------------------------
+name: Local Config
+version: 1.0.0
+schema: v1
+
+# ----------------------------------------
+# MODELS SECTION
+# ----------------------------------------
+models:
+  # LM Studio Qwen3-Coder-30B Configuration
+  - name: LM Studio Qwen3 Coder 30B          # Descriptive display name
+    provider: openai                         # Use 'openai' provider for LM Studio API
+    model: qwen/qwen3-coder-30b              # The model identifier for Qwen3-Coder-30B
+    apiBase: http://localhost:1234/v1        # Default LM Studio server address + /v1 path
+    apiKey: not-needed
+    roles:
+      - chat
+      - edit
+      - apply
+
+  # --- Include your Ollama Autodetect entry here if you are using it as well ---
+  # - name: Ollama Autodetect Models 
+  #   provider: ollama
+  #   model: AUTODETECT             
+  #   apiBase: http://localhost:11434
+  #   roles:
+  #     - chat
+  #     - edit
+  #     - apply
 ```
 
 ### 📝 Key Differences from Your Ollama Config
