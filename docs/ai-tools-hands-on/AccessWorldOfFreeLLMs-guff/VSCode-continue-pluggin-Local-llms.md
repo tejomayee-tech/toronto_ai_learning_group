@@ -31,16 +31,27 @@ Once `config.yaml` is open, you will find a section for defining models.
 2.  **Paste your provided configuration** directly under the `models:` key, ensuring proper YAML indentation (two spaces for each level):
 
     ```yaml
+    name: Local Assistant
+    version: 0.0.1
+    schema: v1
+
     models:
-      # --- ADD THIS AUTODETECT ENTRY ---
-      - name: Ollama Autodetect Models # This is the display name in VS Code
+      # This is the Ollama Autodetect entry you were trying to add.
+      - name: Ollama Autodetect Models
         provider: ollama
-        model: AUTODETECT             # This tells Continue to scan Ollama
+        model: AUTODETECT
         apiBase: http://localhost:11434
         roles:
           - chat
           - edit
           - apply
+          - autocomplete
+
+    # You can add other configurations here if needed, like:
+    # context: 
+    #   - provider: codebase
+    #   - provider: diff
+    #   - provider: problems
     ```
 
 3.  **Save the `config.yaml` file.**
