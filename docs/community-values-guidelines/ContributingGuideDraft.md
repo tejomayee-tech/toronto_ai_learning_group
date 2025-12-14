@@ -3,20 +3,13 @@
 ### *Learn by Doing. Grow Together.*
 
 Welcome! 👋
-This community is for **curious minds at every level** — from absolute beginners to those already using tools like **Claude, GPT (Copilot), or local open models**.
-
-Our mission is simple:
-
-> **Make AI practical, approachable, and empowering — together.**
-
-Anyone (including non-programmers) can learn AI by following a clear, hands-on path. No hype. Just real learning that compounds over time.
-
+This community is for **curious minds at every level** — from absolute beginners to those already using AI tools already.
 
 ## 🌱 Our Philosophy: Small Steps, Big Growth
 
 ### 🔹 The 1% Rule — Show Up Consistently
 
-You don’t need to move fast — you need to move **regularly**.
+You don’t need to move fast — you need to make progress **regularly**.
 
 * Spend a little time each week reading, experimenting, or prompting
 * Solve small, real problems — that’s where learning sticks
