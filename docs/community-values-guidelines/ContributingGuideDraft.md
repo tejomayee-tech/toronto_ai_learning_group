@@ -7,22 +7,17 @@ This community is for **curious minds at every level** — from absolute beginne
 
 ## 🌱 Our Philosophy: Small Steps, Big Growth
 
-### 🔹 The 1% Rule — Show Up Consistently
+### 🔹 The 1% Rule — Knowledge Compounds
 
 You don’t need to move fast — you need to make progress **regularly**.
 
 * Spend a little time each week reading, experimenting, or prompting
 * Solve small, real problems — that’s where learning sticks
-
-**Consistency beats intensity. Always.**
-
-
-### 🔹 Knowledge Compounds
-
-AI learning isn’t linear — it **builds on itself**.
-
+* AI learning isn’t linear — it **builds on itself**.
 * Each model you try makes the next easier
 * Each workflow unlocks new ideas
+
+**Consistency beats intensity. Always.**
 
 ---
 
@@ -32,12 +27,9 @@ AI learning isn’t linear — it **builds on itself**.
 
 ### 1️⃣ Get Set Up
 
-* Share your **GitHub ID** with the group admin
+* Share your **GitHub ID** to join groups public repository in any sub-group you are in.
 * You’ll be added as a collaborator to the community repo
-
-For larger changes:
-
-* Fork → create a branch → submit a Pull Request (PR)
+* You can add issues to get help and contributors will help you with the needful.
 
 ---
 
@@ -55,8 +47,8 @@ Always ask:
 
 ### 3️⃣ Stay in the Loop
 
-* Check the **public group calendar** weekly
-* Join learning sessions, discussions, and build-alongs
+* Check the **public group calendar** by accessung it from your phone and adding it help you get notifications.
+* Dont Join learning sessions, discussions, Schedule sessions to ask what you need help on or build-alongs.
 
 ---
 
@@ -74,10 +66,7 @@ A positive community accelerates learning for everyone.
 
 1. Share your **GitHub ID**
 2. Check the **community calendar**
-3. Try one tutorial — then improve it, even slightly
 
-> **You don’t need permission to learn.
-> You don’t need perfection to contribute.
 > Just start. We’ll climb together.** 🌱
 
 
@@ -88,8 +77,6 @@ What you learn today might save someone else weeks tomorrow.
 * Share notes, links, prompts, or small discoveries
 * Don’t wait until you’re an “expert” — beginners help beginners best
 * Teaching is one of the fastest ways to learn
-
-**We grow faster when we grow together.**
 
 ---
 
