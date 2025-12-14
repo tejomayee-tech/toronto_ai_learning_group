@@ -21,7 +21,7 @@ You don’t need to move fast — you need to make progress **regularly**.
 
 ---
 
-## 🤝 How to Contribute
+## 🤝 How do we contribute to ourselves as group. 
 
 *Simple, practical, and beginner-friendly*
 
@@ -30,6 +30,8 @@ You don’t need to move fast — you need to make progress **regularly**.
 * Share your **GitHub ID** to join groups public repository in any sub-group you are in.
 * You’ll be added as a collaborator to the community repo
 * You can add issues to get help and contributors will help you with the needful.
+* Got a new topic, lets have a sub-group to have dicsusions, deep dives and hands-on implementations
+> Just start. We’ll climb together.** 🌱
 
 ---
 
@@ -61,14 +63,6 @@ Always ask:
 A positive community accelerates learning for everyone.
 
 ---
-
-## ✅ Ready to Start?
-
-1. Share your **GitHub ID**
-2. Check the **community calendar**
-
-> Just start. We’ll climb together.** 🌱
-
 
 ### 🔹 Share to Elevate
 
