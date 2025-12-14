@@ -129,7 +129,7 @@ This completes the full setup and build process, resolving all the prerequisite 
 ![snapshot](working-setup.png)
 
 
-# Reuse LM studio model donwloads
+# Reuse LM studio model downloads
 
 **GGUF** (GGML Universal File Format) is the model file format used by both **LM Studio** and **`llama.cpp`**, which is why they are often referred to as "interoperable."
 
