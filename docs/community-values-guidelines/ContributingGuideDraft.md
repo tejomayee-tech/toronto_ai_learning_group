@@ -28,7 +28,7 @@ You don’t need to move fast — you need to make progress **regularly**.
 ### 1️⃣ Get Set Up
 
 * Share your **GitHub ID** to join groups public repository in any sub-group you are in.
-* You’ll be added as a collaborator to the community repo
+* Become a collaborator to the gourps public community repository
 * You can add issues to get help and contributors will help you with the needful.
 * Got a new topic, lets have a sub-group to have dicsusions, deep dives and hands-on implementations
 > Just start. We’ll climb together.** 🌱
