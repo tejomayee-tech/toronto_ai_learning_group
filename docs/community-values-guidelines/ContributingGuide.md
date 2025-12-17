@@ -78,11 +78,11 @@ What you learn today might save someone else weeks tomorrow.
 
 *A clear path from curiosity to capability*
 
-| Stage            | Focus                          | Goal                                                           |
-| ---------------- | ------------------------------ | -------------------------------------------------------------- |
-| **1. Explore**   | AI basics, LLMs, prompting     | Understand *what* AI models do and how to use them effectively |
-| **2. Implement** | Workflows, tools, local models | Learn *how* to run models and build simple systems             |
-| **3. Build**     | Agents, RAG, tuning & training | Start creating powerful, real-world AI applications            |
+| Stage            | Focus                                        | Goal                                                           |
+| ---------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| 1. Explore       | AI basics, LLMs, prompting                   | Understand *what* AI models do and how to use them effectively |
+| 2. Implement     | Workflows, tools, Programming,  local models | Learn *how* to run models and build simple systems, workflows  |
+| 3. Build         | Agents, RAG, tuning & training               | Start creating powerful, real-world AI applications            |
 
 You can enter at any step — and climb at your own pace.
 
