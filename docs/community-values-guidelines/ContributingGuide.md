@@ -70,6 +70,7 @@ What you learn today might save someone else weeks tomorrow.
 
 * Share notes, links, prompts, or small discoveries
 * Don’t wait until you’re an “expert” — beginners help beginners best
+* Present on what you learn, it'll help you solidify your understanding and remember better.
 * Teaching is one of the fastest ways to learn
 
 ---
