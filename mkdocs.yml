@@ -43,13 +43,14 @@ nav:
 
   - Community & Value:
     - Community Main: community-values-guidelines/Community-main.md
+    - Contributing: community-values-guidelines/ContributingGuide.md
 
   - AI - Fundamentals:
-    - AI Fundamentals 1 : ai-sessions/fundamentals_of_LLM/README.md
+    - AI Fundamentals 1: ai-sessions/fundamentals_of_LLM/README.md
 
   - AI - Prompts:
-    - Zero Shot Prompts : ai-tools-hands-on/Prompts/Zero-shot-prompting.md
-    - Save Prompt Cost : ai-tools-hands-on/Prompts/Effective-prompts-save-premium-requests-n-cost.md
+    - Zero Shot Prompts: ai-tools-hands-on/Prompts/Zero-shot-prompting.md
+    - Save Prompt Cost: ai-tools-hands-on/Prompts/Effective-prompts-save-premium-requests-n-cost.md
 
 
   - AI Learning for Bigenners:
@@ -75,5 +76,4 @@ nav:
 
   - Programming:
     - Python:
-      - Easy Learning Sessions : easy-python-sessions/Sessions.md
-      - Visualize Progress : easy-python-sessions/Visualize-Progress.md
+      - Easy Learning Sessions: easy-python-sessions/Python-Basics-Sessions.md

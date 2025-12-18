@@ -28,7 +28,7 @@ You don’t need to move fast — you need to make progress **regularly**.
 ### 1️⃣ Get Set Up
 
 * Share your **GitHub ID** to join groups public repository in any sub-group you are in.
-* You’ll be added as a collaborator to the community repo
+* Become a collaborator to the gourps public community repository
 * You can add issues to get help and contributors will help you with the needful.
 * Got a new topic, lets have a sub-group to have dicsusions, deep dives and hands-on implementations
 > Just start. We’ll climb together.** 🌱
@@ -50,7 +50,7 @@ Always ask:
 ### 3️⃣ Stay in the Loop
 
 * Check the **public group calendar** by accessung it from your phone and adding it help you get notifications.
-* Don't join learning sessions, discussions, scheduled sessions to ask what you need help on or build-alongs.
+* Join learning sessions, discussions, schedule sessions to ask what you need help on or build-alongs.
 
 ---
 
@@ -70,6 +70,7 @@ What you learn today might save someone else weeks tomorrow.
 
 * Share notes, links, prompts, or small discoveries
 * Don’t wait until you’re an “expert” — beginners help beginners best
+* Present on what you learn, it'll help you solidify your understanding and remember better.
 * Teaching is one of the fastest ways to learn
 
 ---
@@ -78,11 +79,11 @@ What you learn today might save someone else weeks tomorrow.
 
 *A clear path from curiosity to capability*
 
-| Stage            | Focus                          | Goal                                                           |
-| ---------------- | ------------------------------ | -------------------------------------------------------------- |
-| **1. Explore**   | AI basics, LLMs, prompting     | Understand *what* AI models do and how to use them effectively |
-| **2. Implement** | Workflows, tools, local models | Learn *how* to run models and build simple systems             |
-| **3. Build**     | Agents, RAG, tuning & training | Start creating powerful, real-world AI applications            |
+| Stage            | Focus                                        | Goal                                                           |
+| ---------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| 1. Explore       | AI basics, LLMs, prompting                   | Understand *what* AI models do and how to use them effectively |
+| 2. Implement     | Workflows, tools, Programming,  local models | Learn *how* to run models and build simple systems, workflows  |
+| 3. Build         | Agents, RAG, tuning & training               | Start creating powerful, real-world AI applications            |
 
 You can enter at any step — and climb at your own pace.
 

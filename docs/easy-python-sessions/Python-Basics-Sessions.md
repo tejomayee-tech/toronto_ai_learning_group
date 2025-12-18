@@ -2,15 +2,6 @@
 
 ---
 
-> Why learning programming basic and coding with AI is useful according to ChatGPT
-
-| Category                             | Skill Depth        | Job Security | Pay Ceiling | Replaceability | Growth Path                |
-| ------------------------------------ | ------------------ | ------------ | ----------- | -------------- | -------------------------- |
-| **Python AI Programmer**             | High (coding + AI) | ⭐⭐⭐⭐         | ⭐⭐⭐⭐⭐       | 🔻 Low         | Technical leadership / R&D |
-| **AI Power User (No-code)**          | Medium             | ⭐⭐⭐          | ⭐⭐–⭐⭐⭐      | ⚠️ Medium      | Product / ops hybrid roles |
-| **General AI User (Non-programmer)** | Low                | ⭐⭐           | ⭐⭐          | ⚠️ High        | Limited unless specialized |
-
-
 ### Session 0
 
 1. Development environment setup
@@ -40,7 +31,6 @@
     allowfullscreen
 ></iframe>
 
----
 
 ### Session 2
 
@@ -100,7 +90,6 @@
     allowfullscreen
 ></iframe>
 
----
 
 ### Session 6
 
@@ -116,7 +105,6 @@
     allowfullscreen
 ></iframe>
 
----
 
 ### Session 7
 
@@ -133,7 +121,6 @@
     allowfullscreen
 ></iframe>
 
----
 
 ### Session 8
 
@@ -149,3 +136,16 @@
 ></iframe>
 
 ---
+
+### Progress visualisation 
+
+> **NOTE:** Given you have generated and practised with exercises using AI as discussed  
+
+<iframe 
+    src="https://drive.google.com/file/d/1RcdkPyncBUX4XaLJ82ERgj_JlPMfeWlu/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
