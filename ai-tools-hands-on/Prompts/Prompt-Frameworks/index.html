@@ -16,7 +16,7 @@
     
     
       
-        <title>Lunix Swap File management - AI Learning Group</title>
+        <title>Prompt Frameworks - AI Learning Group</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#comprehensive-swap-management-guide" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lunix Swap File management
+              Prompt Frameworks
             
           </span>
         </div>
@@ -226,7 +221,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Prompts/Zero-shot-prompting/" class="md-tabs__link">
+        <a href="../Zero-shot-prompting/" class="md-tabs__link">
           
   
   AI - Prompts
@@ -262,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-tabs__link">
+        <a href="../../AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-tabs__link">
           
   
   AI Tools Hands-on
@@ -596,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Prompts/Zero-shot-prompting/" class="md-nav__link">
+      <a href="../Zero-shot-prompting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Prompts/Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
+      <a href="../Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
+      <a href="../../AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1246,65 +1241,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#comprehensive-swap-management-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comprehensive Swap Management Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Comprehensive Swap Management Guide">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#part-1-expand-swap-space-to-40gbyou-currently-have-an-8textgb-swap-file-we-will-add-a-new-32textgb-swap-file-resulting-in-40textgb-total-swap-which-is-a-massive-safety-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part 1: Expand Swap Space to 40GBYou currently have an 8\text{GB} swap file. We will add a new 32\text{GB} swap file, resulting in 40\text{GB} total swap, which is a massive safety net.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#part-2-optimize-swappiness-the-crucial-fixthis-is-the-most-important-step-for-the-llm-it-stops-the-kernel-from-moving-your-models-60textgb-data-to-the-ssd-even-when-ram-appears-free-we-set-the-system-to-be-very-reluctant-to-use-swap-swappiness10" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part 2: Optimize Swappiness (The Crucial Fix)This is the most important step for the LLM. It stops the kernel from moving your model's 60\text{GB}+ data to the SSD, even when RAM appears free. We set the system to be very reluctant to use swap (swappiness=10).
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#part-3-clear-and-refresh-swapto-ensure-the-new-settings-are-working-perfectly-move-any-existing-swapped-data-like-parts-of-your-llm-back-into-the-faster-ram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part 3: Clear and Refresh SwapTo ensure the new settings are working perfectly, move any existing swapped data (like parts of your LLM) back into the faster RAM.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#part-4-monitor-ssd-healthuse-the-smartctl-utility-to-confirm-that-your-tuning-is-successful-by-checking-that-the-total-writes-to-your-ssd-remain-minimal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Part 4: Monitor SSD HealthUse the smartctl utility to confirm that your tuning is successful by checking that the total writes to your SSD remain minimal.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1318,153 +1254,60 @@
                   
 
 
-  <h1>Lunix Swap File management</h1>
+  <h1>Prompt Frameworks</h1>
 
-<h2 id="comprehensive-swap-management-guide">Comprehensive Swap Management Guide</h2>
-<blockquote>
-<p><strong>Note:</strong> Though this document uses one Mini PC as base example, it can be used for any computer running Linux/Ubuntu.</p>
-</blockquote>
-<p>Created using <strong>K11 GMKtec Mini PC (Ryzen 9, Radeon 780 GPU, 64GB DDR5, 1TB SSD)</strong> This guide is suggests optimizing &amp; running the large <strong>GPT-OSS:120B</strong> model. </p>
-<p>While this Mini PC is able to run such large models with some delay, the goal is to establish a 40 GB memory buffer using swap while configuring the kernel to use it only when strictly necessary, preventing performance degradation and minimizing SSD wear.</p>
-<h3 id="part-1-expand-swap-space-to-40gbyou-currently-have-an-8textgb-swap-file-we-will-add-a-new-32textgb-swap-file-resulting-in-40textgb-total-swap-which-is-a-massive-safety-net">Part 1: Expand Swap Space to 40GBYou currently have an 8\text{GB} swap file. We will add a new 32\text{GB} swap file, resulting in 40\text{GB} total swap, which is a massive safety net.</h3>
+<p><strong>Markdown Table – Prompt‑Framework Overview</strong></p>
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>Action</th>
-<th>Command</th>
-<th>Explanation</th>
+<th>Framework</th>
+<th>Expanded Acronym</th>
+<th>Purpose &amp; Use Cases</th>
+<th>Key Values &amp; Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1.</strong></td>
-<td><strong>Create 32\text{GB} File</strong></td>
-<td><code>sudo fallocate -l 32G /swapfile</code></td>
-<td>Creates the large file that will serve as the new swap area.</td>
+<td><strong>PAIR</strong></td>
+<td>"Purpose, Audience, Instructions, Resources"</td>
+<td>General Purpose: Best for creating content, emails, or reports where the <strong>who</strong> and <strong>why</strong> are critical.</td>
+<td>Focuses on the intent and the target reader to ensure the tone is appropriate.</td>
 </tr>
 <tr>
-<td><strong>2.</strong></td>
-<td><strong>Set Permissions</strong></td>
-<td><code>sudo chmod 600 /swapfile</code></td>
-<td>Secures the file so only the system can access it.</td>
+<td><strong>FABRIC</strong></td>
+<td>"Format, Audience, Background, Role, Instructions, Contexts"</td>
+<td>Complex Projects: Ideal for deep research, technical writing, or strategic planning.</td>
+<td>Emphasizes <strong>Context</strong> and <strong>Background</strong> to prevent the AI from making unwarranted assumptions.</td>
 </tr>
 <tr>
-<td><strong>3.</strong></td>
-<td><strong>Format as Swap</strong></td>
-<td><code>sudo mkswap /swapfile</code></td>
-<td>Marks the file as ready for use as swap space.</td>
+<td><strong>APRICOT</strong></td>
+<td>"Audience, Purpose, Role, Instructions, Context, Output, Tone"</td>
+<td>Creative &amp; Marketing: Great for brand‑voice consistency and specific content types (blogs, ads).</td>
+<td>Highlights <strong>Tone</strong> and <strong>Output</strong>, ensuring the final result <strong>sounds</strong> right and fits a specific format.</td>
 </tr>
 <tr>
-<td><strong>4.</strong></td>
-<td><strong>Activate Swap</strong></td>
-<td><code>sudo swapon /swapfile</code></td>
-<td>Immediately turns on the new 32\text{GB} swap area.</td>
+<td><strong>CRISPE</strong></td>
+<td>"Context, Role, Instruction, Scheme, Params, Evaluate"</td>
+<td>Technical/Data Tasks: Best for coding, data analysis, or structured outputs like JSON/Markdown.</td>
+<td>Unique for its <strong>Scheme</strong> (structure) and <strong>Evaluate</strong> (asking the AI to check its own work).</td>
 </tr>
 <tr>
-<td><strong>5.</strong></td>
-<td><strong>Verify Total Size</strong></td>
-<td><code>free -h</code></td>
-<td>Checks that the <strong>Swap</strong> row now shows approximately 40\text{GB}.</td>
+<td><strong>CO‑STAR</strong></td>
+<td>"Context, Objective, Style, Tone, Audience, Response"</td>
+<td>Business Communication: Highly effective for professional tasks and multi‑step reasoning.</td>
+<td>Focuses on the <strong>Objective</strong> (the “what”) and the <strong>Response</strong> format to guarantee utility.</td>
 </tr>
 <tr>
-<td><strong>6.</strong></td>
-<td><strong>Make Persistent</strong></td>
-<td><code>echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="part-2-optimize-swappiness-the-crucial-fixthis-is-the-most-important-step-for-the-llm-it-stops-the-kernel-from-moving-your-models-60textgb-data-to-the-ssd-even-when-ram-appears-free-we-set-the-system-to-be-very-reluctant-to-use-swap-swappiness10">Part 2: Optimize Swappiness (The Crucial Fix)This is the most important step for the LLM. It stops the kernel from moving your model's 60\text{GB}+ data to the SSD, even when RAM appears free. We set the system to be <strong>very reluctant to use swap</strong> (<code>swappiness=10</code>).</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Action</th>
-<th>Command</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1.</strong></td>
-<td><strong>Set Value (Temporary)</strong></td>
-<td><code>sudo sysctl vm.swappiness=10</code></td>
-<td>Applies the setting immediately to prioritize your 64\text{GB} RAM.</td>
+<td><strong>CREATE</strong></td>
+<td>"Character, Request, Examples, Adjustments, Type, Extras"</td>
+<td>Iterative Writing: Useful for refining drafts or generating creative stories.</td>
+<td>Strong emphasis on <strong>Examples</strong> (few‑shot prompting) to guide the AI by style.</td>
 </tr>
 <tr>
-<td><strong>2.</strong></td>
-<td><strong>Make Permanent</strong></td>
-<td><code>sudo nano /etc/sysctl.conf</code></td>
-<td>Opens the configuration file to save the setting.</td>
-</tr>
-<tr>
-<td><strong>3.</strong></td>
-<td><strong>Add/Edit Line</strong></td>
-<td>Add the line: <code>vm.swappiness = 10</code></td>
-<td>This ensures the setting survives reboot.</td>
-</tr>
-<tr>
-<td><strong>4.</strong></td>
-<td><strong>Apply Permanent Change</strong></td>
-<td><code>sudo sysctl -p</code></td>
-<td>Loads the new setting without requiring a reboot.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="part-3-clear-and-refresh-swapto-ensure-the-new-settings-are-working-perfectly-move-any-existing-swapped-data-like-parts-of-your-llm-back-into-the-faster-ram">Part 3: Clear and Refresh SwapTo ensure the new settings are working perfectly, move any existing swapped data (like parts of your LLM) back into the faster RAM.</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Action</th>
-<th>Command</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1.</strong></td>
-<td><strong>Disable All Swap</strong></td>
-<td><code>sudo swapoff -a</code></td>
-<td>Moves all data from your 40\text{GB} swap back into RAM.</td>
-</tr>
-<tr>
-<td><strong>2.</strong></td>
-<td><strong>Re-enable All Swap</strong></td>
-<td><code>sudo swapon -a</code></td>
-<td>Turns both 8\text{GB} and 32\text{GB} swap files back on, now using the <strong><code>swappiness=10</code></strong> rule.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="part-4-monitor-ssd-healthuse-the-smartctl-utility-to-confirm-that-your-tuning-is-successful-by-checking-that-the-total-writes-to-your-ssd-remain-minimal">Part 4: Monitor SSD HealthUse the <strong><code>smartctl</code></strong> utility to confirm that your tuning is successful by checking that the total writes to your SSD remain minimal.</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Action</th>
-<th>Command</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1.</strong></td>
-<td><strong>Install Tool</strong></td>
-<td><code>sudo apt install smartmontools</code></td>
-<td>Installs the utility needed to read drive health data.</td>
-</tr>
-<tr>
-<td><strong>2.</strong></td>
-<td><strong>Identify Drive</strong></td>
-<td><code>lsblk</code></td>
-<td>Look for your SSD's name (e.g., <code>/dev/nvme0n1</code>).</td>
-</tr>
-<tr>
-<td><strong>3.</strong></td>
-<td><strong>Check Health</strong></td>
-<td><code>sudo smartctl -a /dev/nvme0n1</code></td>
-<td>Provides a full health report. Look for <strong>Data Units Written</strong> to track wear.</td>
+<td><strong>ERA</strong></td>
+<td>"Expectation, Role, Action"</td>
+<td>Quick Tasks: Perfect for short, rapid‑fire prompts where you need speed over depth.</td>
+<td>Simple and minimalist; concentrates on <strong>Action</strong> to get immediate results.</td>
 </tr>
 </tbody>
 </table>
