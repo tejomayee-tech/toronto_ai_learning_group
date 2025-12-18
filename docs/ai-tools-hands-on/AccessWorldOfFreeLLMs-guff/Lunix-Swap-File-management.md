@@ -2,7 +2,7 @@
 
 > **Note:** Though this document uses one Mini PC as base example, it can be used for any computer running Linux/Ubuntu.
 
-Created using **K11 GMKtec Mini PC (Ryzen 9, Radeon 780 GPU, 64GB DDR5, 1TB SSD)** This guide is suggestes optimizing & running the large **GPT-OSS:120B** model. 
+Created using **K11 GMKtec Mini PC (Ryzen 9, Radeon 780 GPU, 64GB DDR5, 1TB SSD)** This guide is suggests optimizing & running the large **GPT-OSS:120B** model. 
 
 While this Mini PC is able to run such large models with some delay, the goal is to establish a 40 GB memory buffer using swap while configuring the kernel to use it only when strictly necessary, preventing performance degradation and minimizing SSD wear.
 

@@ -50,7 +50,7 @@ Always ask:
 ### 3️⃣ Stay in the Loop
 
 * Check the **public group calendar** by accessung it from your phone and adding it help you get notifications.
-* Join learning sessions, discussions, Schedule sessions to ask what you need help on or build-alongs.
+* Join learning sessions, discussions, schedule sessions to ask what you need help on or build-alongs.
 
 ---
 

@@ -10,8 +10,8 @@ class Student:
     def calculate_average(self):
         total_marks = sum(self.marks)
         count = len(self.marks)
-        avarage = total_marks/count
-        return avarage
+        average = total_marks/count
+        return average
     
     def grade_student(self):
         avg = self.calculate_average()
@@ -23,13 +23,13 @@ class Student:
         #     print(f"marks {mark}")
 
         if avg > 70 and avg < 80:
-            print(f"{self.name} is awared grade B")
+            print(f"{self.name} is awarded grade B")
         elif avg > 81 and avg <= 90:
-            print(f"{self.name} is awared grade A")
+            print(f"{self.name} is awarded grade A")
         elif avg >= 91:
-            print(f"{self.name} is awared grade E")
+            print(f"{self.name} is awarded grade E")
         else:
-            print(f"{self.name} is awared grade C")
+            print(f"{self.name} is awarded grade C")
 
 
 Student_v = Student("vijay")
