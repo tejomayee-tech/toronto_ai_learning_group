@@ -21,11 +21,33 @@ You don’t need to move fast — you need to make progress **regularly**.
 
 ---
 
-## 🤝 How do we contribute to ourselves as group. 
+## 🤝 How do we contribute to ourselves, each other as group. 
+
+### 1️⃣ Ask, Inspire to think, Encourage participation
+
+* No question is too basic — ask freely
+* Use whatsApp chat or GitHub Issues to reach out on topics of interest or implementation
+* Support others’ PRs and ideas
+
+A positive community accelerates learning for everyone.
+
+
+### 2️⃣ Share to Elevate
+
+**In Learning we teach and in teaching we learn**
+The **"Protégé Effect"** — a psychological phenomenon where the act of preparing to teach others helps a person organize their own thoughts and deepen their understanding of a subject.
+
+What we learn today might be forgotten tomorrow. By doing a session on for other in group, we help ourselves more than helping others.
+
+* Share notes, links, prompts, or small discoveries
+* Don’t wait until you’re an “expert” — beginners help beginners best
+* Present on what you learn, it'll help you solidify your understanding and remember better.
+* Teaching is one of the fastest ways to learn
 
 *Simple, practical, and beginner-friendly*
 
-### 1️⃣ Get Set Up
+
+### 3️⃣ Get Set Up
 
 * Share your **GitHub ID** to join groups public repository in any sub-group you are in.
 * Become a collaborator to the gourps public community repository
@@ -33,9 +55,8 @@ You don’t need to move fast — you need to make progress **regularly**.
 * Got a new topic, lets have a sub-group to have dicsusions, deep dives and hands-on implementations
 > Just start. We’ll climb together.** 🌱
 
----
 
-### 2️⃣ Leave Things Better Than You Found Them
+### 4️⃣ Leave Things Better Than You Found Them
 
 * Improve clarity in tutorials
 * Add explanations for confusing steps
@@ -45,33 +66,12 @@ Always ask:
 
 > *“Would this help a new joiner?”*
 
----
 
-### 3️⃣ Stay in the Loop
+### 5️⃣ Stay in the Loop
 
 * Check the **public group calendar** by accessung it from your phone and adding it help you get notifications.
 * Join learning sessions, discussions, schedule sessions to ask what you need help on or build-alongs.
 
----
-
-### 4️⃣ Ask, Share, Encourage
-
-* No question is too basic — ask freely
-* Use chat or GitHub Issues for help
-* Support others’ PRs and ideas
-
-A positive community accelerates learning for everyone.
-
----
-
-### 🔹 Share to Elevate
-
-What you learn today might save someone else weeks tomorrow.
-
-* Share notes, links, prompts, or small discoveries
-* Don’t wait until you’re an “expert” — beginners help beginners best
-* Present on what you learn, it'll help you solidify your understanding and remember better.
-* Teaching is one of the fastest ways to learn
 
 ---
 
