@@ -83,14 +83,3 @@ Always ask:
 | **3. Build** | Agents, RAG, tuning & training | Create powerful, real-world AI applications |
 
 You can enter at any step — and climb at your own pace.
-
----
-
-### Key Changes Made:
-
-* **Redundancy:** Removed the double "already" in the intro.
-* **Spelling:** Fixed "whatsApp" (WhatsApp), "gourps" (group's), "dicsusions" (discussions), and "accessung" (accessing).
-* **Grammar:** Changed "sessions on for other" to "sessions for others" and "adding it help you" to "adding it helps you."
-* **Clarity:** Refined the "How do we contribute" heading to be more professional.
-
-**Would you like me to suggest some catchy names for your sub-groups based on the "Learning Ladder" stages?**
