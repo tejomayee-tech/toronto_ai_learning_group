@@ -41,6 +41,9 @@ plugins:
 nav:
   - Home: README.md
 
+  - Contributing:
+    - General :  community-values-guidelines/ContributingGuide.md
+
   - Community & Value:
     - Community Main: community-values-guidelines/Community-main.md
     - Contributing: community-values-guidelines/ContributingGuide.md
