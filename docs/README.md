@@ -3,19 +3,6 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
 ---
 
-### 🎯 In one line from **ChatGPT**
-
-  The culture of open sharing, learning, and collaboration is the **engine of progress in AI**.  Frameworks like **TensorFlow, PyTorch, Hugging Face Transformers, scikit-learn** and even **Linux/Ubuntu** that powered most AI systems itself are open-source. Without them, no AI researcher or startup could move quickly.
-
-  Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**. Its always to good have someone to talk to, feels like home. Isn't Learning in a group super fun..? 
-
-  Sharing **promotions, referrals, or marketing content** in a group is fine. Please note that they mostly drive usage and sales and they rarely contribute to true learning or collaborative building.   
-
-  Proprietary tools are the **vehicles** that make that progress practical, accessible, and sustainable. But without the engine, the vehicle goes nowhere. 
-
- 
----
-
   **Objective & Focus** of the Group is **Collaborative Learning** and **Collective Growth** to foster **Collective Intelligence**. 
 
 
@@ -48,6 +35,17 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
   Sessions are added on a rolling basis by contributors and facilitators. If you would like to contribute materials or suggest improvements to the structure, feel free to open an issue or submit a pull request.
 
 
+### 🎯 In one line from **ChatGPT**
+
+  The culture of open sharing, learning, and collaboration is the **engine of progress in AI**.  Frameworks like **TensorFlow, PyTorch, Hugging Face Transformers, scikit-learn** and even **Linux/Ubuntu** that powered most AI systems itself are open-source. Without them, no AI researcher or startup could move quickly.
+
+  Real growth comes from **sharing inspiring learning content, connecting ideas, building practical use cases, and diving deep with curiosity and creativity**. Its always to good have someone to talk to, feels like home. Isn't Learning in a group super fun..? 
+
+  Sharing **promotions, referrals, or marketing content** in a group is fine. Please note that they mostly drive usage and sales and they rarely contribute to true learning or collaborative building.   
+
+  Proprietary tools are the **vehicles** that make that progress practical, accessible, and sustainable. But without the engine, the vehicle goes nowhere. 
+
+ 
 ### ⚖️ Rule of Thumb
 
 * **Beginners → 70% foundation (open, self-built), 30% convenience (proprietary tools).**
