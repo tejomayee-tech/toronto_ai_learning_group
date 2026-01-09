@@ -135,6 +135,20 @@
     allowfullscreen
 ></iframe>
 
+### Session 9
+
+1. pip install with requirements.txt
+1. Imports & Libraries
+
+<iframe 
+    src="https://drive.google.com/file/d/1h3aAX2oxodmYEG1lPAL1lMK0Q_FTbDCR/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
 ---
 
 ### Progress visualisation 
