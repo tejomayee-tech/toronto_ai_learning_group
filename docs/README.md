@@ -5,25 +5,39 @@ Welcome to the official repository for the Toronto AI Learning Group - a collabo
 
   **Objective & Focus** of the Group is **Collaborative Learning** and **Collective Growth** to foster **Collective Intelligence**. 
 
+  > **"If you want to go fast, you might go alone. If you want to go far, we have to go together."** 
 
   * **“None of us is as smart as all of us.”** — *Ken Blanchard*
   * **“If everyone is moving forward together, then success takes care of itself.”** — *Henry Ford*
   * **“The whole is greater than the sum of its parts.”** — *Aristotle*
   * **“Alone we can do so little; together we can do so much.”** — *Helen Keller*
 
-  * “We just need to lay a brick each day, without fail, the wall will be built.”
+  > *“We just need to lay a brick each day, without fail, the wall will be built.”*
 
 ---
 
+### 📚 Purpose
+
+  Learn in collaboration than in isolation. Ask, Learn, Teach, Build togehter.
+  Motivate each, new learning can really go really far and advanced when we have company and team to work with.
+
 ### 🤝 Community Ethos
+
+  Keep up the collaborative spirit of our learning group. 
+  We encourage respectful dialogue, curiosity-driven exploration, and inclusive participation.
 
   [Community Values & Learning Together](community-values-guidelines/Community-main.md) 
 
-  [Group Repository](https://github.com/tejomayee-tech/toronto_ai_learning_group) reflects the collaborative spirit of our learning group. We encourage respectful dialogue, curiosity-driven exploration, and inclusive participation.
+  [Contributing Guide](community-values-guidelines/ContributingGuide.md)
 
-### 📚 Purpose
+  [Community WhatsApp Group](https://chat.whatsapp.com/HHAhadA4sIx7LPQ9jt2ZSQ)
 
-  This repository serves as a centralized archive for all materials presented or referenced during our learning sessions. By consolidating content in one place, we aim to foster accessibility, continuity, and shared growth across our community of learners and educators.
+  [Community Discord Channel](https://discord.gg/GYuc6adH)
+
+  [Group Repository](https://github.com/tejomayee-tech/toronto_ai_learning_group)  
+
+
+  The [repository](https://github.com/tejomayee-tech/toronto_ai_learning_group) is public and serves as a centralized archive for all materials presented or referenced during our learning sessions. By consolidating content in one place, we aim to foster accessibility, continuity, and shared growth across our community of learners and educators.
 
 
 ### 🗓️ Scheduling Sessions
