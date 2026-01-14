@@ -29,7 +29,7 @@ Ollama has evolved from a hidden "engine" into a full desktop app with its own c
 * **Step 2: Open the App:** Once installed, launch "Ollama" from your Start Menu. A clean chat window will appear.
 * **Step 3: Pick Your Model:** In the chat window, click the **Model Selection** dropdown at the top.
 * **Step 4: Search for Gemma:** Type **"Gemma 3"** in the search box within the app.
-* *Recommendation:* Choose **Gemma 3 4B**. It is the perfect balance of "smart" and "fast" for your 16GB RAM.
+* *Recommendation:* Choose **Gemma 3 4B** to start with. Bigger models need higher RAM capacity
 
 
 * **Step 5: Automatic Pull:** Click **Download**. The app will show a progress bar. Once it hits 100%, the chat box will activate.
@@ -43,9 +43,9 @@ LM Studio is for users who want to see exactly how their computer is performing.
 
 * **Step 1: Install:** Download from [lmstudio.ai](https://lmstudio.ai). Run the installer and open the app.
 * **Step 2: Find Gemma:** Click the **Magnifying Glass** icon on the left sidebar. In the search bar at the top, type **"Gemma 3"**.
-* **Step 3: Choose the "Safe" Version:** You will see a list of results. Look for the version that has a **Green Checkmark** or says **"Likely to Fit."** * For 16GB RAM, look for a file ending in **"Q4_K_M"** or **"Q6_K"**. Click the **Download** button on the right.
+* **Step 3: Choose the "Safe" Version:** You will see a list of results. Look for the version that has a **Green Checkmark** or says **"Likely to Fit."** * Look for a file ending in **"Q4_K_M"** or **"Q6_K"**. Click the **Download** button on the right.
 * **Step 4: Load to RAM:** Click the **Speech Bubble** (Chat) icon on the left. Click the "Select a model to load" bar at the top and select the Gemma file you just downloaded.
-* **Step 5: Watch the Meters:** On the right side of the screen, LM Studio shows you exactly how much of your 16GB RAM and GPU memory is being used.
+* **Step 5: Watch the Meters:** On the right side of the screen, LM Studio shows you exactly how much of your RAM and GPU memory is being used.
 
 ---
 
@@ -66,6 +66,6 @@ GPT4All is built for speed and privacy. It is the best choice if you have a lapt
 | --- | --- | --- | --- |
 | **Interface** | Minimalist & Clean | Detailed & Technical | Simple & Cozy |
 | **Model Choice** | Automated | Manual (You pick the file) | Curated (They pick for you) |
-| **16GB RAM Performance** | Excellent (Fast) | Good (Configurable) | Best (Low resource use) |
+| **Performance** | Excellent (Fast) | Good (Configurable) | Best (Low resource use) |
 | **Best For...** | Daily Quick Chats | Enthusiasts / Tinkerers | Absolute Beginners |
 
