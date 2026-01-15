@@ -1,5 +1,20 @@
 # LLMs for common laptop H/W config
 
+
+
+## Continue config for LM Studio
+```yaml
+
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: "LM Studio"
+    provider: "lmstudio"
+    apiBase: "http://localhost:1234/v1"
+    model: "local-model"
+```
+
 ## 💻 1. Recommended Models for i5/16GB RAM (GGUF)
 
 These models offer the best combination of intelligence and efficiency, running comfortably on your system using the **Q4\_K\_M** or **Q5\_K\_M** quantization formats (which LM Studio supports):
@@ -56,3 +71,4 @@ After downloading your chosen GGUF file (e.g., `Qwen2.5-Coder-7B-Instruct-Q4_K_M
 * *Why:* This is a safe and high-quality context size. While models like Llama 3.1 support up to 128K, using a context that large consumes too much of your limited 16GB RAM and will drastically slow down generation.
 
 With these models and these four optimization steps, you will be running state-of-the-art LLMs locally, achieving very respectable token-per-second generation speeds on your laptop.
+
