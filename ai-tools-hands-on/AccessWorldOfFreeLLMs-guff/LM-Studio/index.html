@@ -1199,7 +1199,7 @@
             
   
   <span class="md-ellipsis">
-    Python
+    Python Easy Learn
   </span>
   
 
@@ -1209,7 +1209,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_1">
             <span class="md-nav__icon md-icon"></span>
-            Python
+            Python Easy Learn
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1224,7 +1224,28 @@
         
   
   <span class="md-ellipsis">
-    Easy Learning Sessions
+    Python Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/Python-Libraries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Libraries
   </span>
   
 
@@ -1274,6 +1295,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continue-config-for-lm-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continue config for LM Studio
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#1-recommended-models-for-i516gb-ram-gguf" class="md-nav__link">
@@ -1360,6 +1390,17 @@
 
 
 <h1 id="llms-for-common-laptop-hw-config">LLMs for common laptop H/W config</h1>
+<h2 id="continue-config-for-lm-studio">Continue config for LM Studio</h2>
+<pre><code class="language-yaml">
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: &quot;LM Studio&quot;
+    provider: &quot;lmstudio&quot;
+    apiBase: &quot;http://localhost:1234/v1&quot;
+    model: &quot;local-model&quot;
+</code></pre>
 <h2 id="1-recommended-models-for-i516gb-ram-gguf">💻 1. Recommended Models for i5/16GB RAM (GGUF)</h2>
 <p>These models offer the best combination of intelligence and efficiency, running comfortably on your system using the <strong>Q4_K_M</strong> or <strong>Q5_K_M</strong> quantization formats (which LM Studio supports):</p>
 <table>

@@ -1199,7 +1199,7 @@
             
   
   <span class="md-ellipsis">
-    Python
+    Python Easy Learn
   </span>
   
 
@@ -1209,7 +1209,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_1">
             <span class="md-nav__icon md-icon"></span>
-            Python
+            Python Easy Learn
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1224,7 +1224,28 @@
         
   
   <span class="md-ellipsis">
-    Easy Learning Sessions
+    Python Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/Python-Libraries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Libraries
   </span>
   
 
@@ -1314,6 +1335,117 @@
   <a href="#part-4-monitor-ssd-healthuse-the-smartctl-utility-to-confirm-that-your-tuning-is-successful-by-checking-that-the-total-writes-to-your-ssd-remain-minimal" class="md-nav__link">
     <span class="md-ellipsis">
       Part 4: Monitor SSD HealthUse the smartctl utility to confirm that your tuning is successful by checking that the total writes to your SSD remain minimal.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-swap-file-increase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Swap File Increase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Swap File Increase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-check-your-current-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Check your current Swap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-increase-the-swap-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Increase the Swap File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-the-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify the Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-making-it-permanent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important: Making it Permanent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjust-the-swappiness-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust the "swappiness" value
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjust the "swappiness" value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-current-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your current value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-change-it-temporarily-test-it-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Change it Temporarily (Test it out)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-change-it-permanently" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Change it Permanently
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Trade-off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-10-is-the-sweet-spot-for-64gb-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why "10" is the sweet spot for 64GB RAM
     </span>
   </a>
   
@@ -1489,6 +1621,136 @@
 </tr>
 </tbody>
 </table>
+<h2 id="linux-swap-file-increase">Linux Swap File Increase</h2>
+<p>To increase the swap memory on Zorin OS, the easiest method is to resize the existing <strong>swap file</strong>. Most modern Zorin installations (Zorin 15, 16, and 17) use a file located at <code>/swapfile</code> rather than a dedicated partition.</p>
+<h3 id="step-1-check-your-current-swap">Step 1: Check your current Swap</h3>
+<p>Open the <strong>Terminal</strong> (Ctrl+Alt+T) and run:</p>
+<pre><code class="language-bash">swapon --show
+
+</code></pre>
+<ul>
+<li>If the <strong>TYPE</strong> is <code>file</code>, follow the steps below.</li>
+<li>If the <strong>TYPE</strong> is <code>partition</code>, you would typically need to use a tool like <strong>GParted</strong> to resize it, which is more complex. I recommend simply adding a swap file in addition to your partition if you need a quick fix.</li>
+</ul>
+<hr />
+<h3 id="step-2-increase-the-swap-file">Step 2: Increase the Swap File</h3>
+<p>This process involves turning off the current swap, deleting it, and recreating a larger one.</p>
+<ol>
+<li><strong>Turn off the swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo swapoff /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Create a new swap file:</strong> Decide on the size. For example, to set it to <strong>8GB</strong>, use <code>8G</code>. (Common advice is to match your RAM or double it if you have less than 4GB).</li>
+</ol>
+<pre><code class="language-bash">sudo fallocate -l 8G /swapfile
+
+</code></pre>
+<p><em>Note: If <code>fallocate</code> fails, you can use: <code>sudo dd if=/dev/zero of=/swapfile bs=1M count=8192*</code>
+3. </em><em>Set the correct permissions:</em>*</p>
+<pre><code class="language-bash">sudo chmod 600 /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Format the file as swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo mkswap /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Enable the swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo swapon /swapfile
+
+</code></pre>
+<hr />
+<h3 id="step-3-verify-the-change">Step 3: Verify the Change</h3>
+<p>Check the new size to ensure it is active:</p>
+<pre><code class="language-bash">free -h
+
+</code></pre>
+<p>You should see the "Swap" row reflecting your new size (e.g., 8.0Gi).</p>
+<h3 id="important-making-it-permanent">Important: Making it Permanent</h3>
+<p>Since Zorin usually already has an entry for <code>/swapfile</code> in its configuration, it should persist after a reboot. You can double-check this by running:</p>
+<pre><code class="language-bash">cat /etc/fstab
+
+</code></pre>
+<p>Look for a line that says: <code>/swapfile none swap sw 0 0</code>. If it's there, you are all set!</p>
+<h2 id="adjust-the-swappiness-value">Adjust the <strong>"swappiness"</strong> value</h2>
+<h3 id="1-check-your-current-value">1. Check your current value</h3>
+<p>Open your terminal and run:</p>
+<pre><code class="language-bash">cat /proc/sys/vm/swappiness
+
+</code></pre>
+<ul>
+<li><strong>Default (60):</strong> The system starts swapping when RAM is about 40% full.</li>
+<li><strong>Higher (100):</strong> Aggressively moves inactive data to swap.</li>
+<li><strong>Lower (1-10):</strong> Only uses swap when RAM is nearly maxed out.</li>
+</ul>
+<h3 id="2-change-it-temporarily-test-it-out">2. Change it Temporarily (Test it out)</h3>
+<p>To see if a lower value helps your LM Studio performance without rebooting, run:</p>
+<pre><code class="language-bash">sudo sysctl vm.swappiness=10
+
+</code></pre>
+<p><em>I recommend </em><em>10</em><em> for your 64GB setup. This ensures the system uses almost all your physical RAM before touching the slower SSD swap.</em></p>
+<hr />
+<h3 id="3-change-it-permanently">3. Change it Permanently</h3>
+<p>Once you've tested it and are happy, make it stick across reboots:</p>
+<ol>
+<li>Open the system config file:</li>
+</ol>
+<pre><code class="language-bash">sudo nano /etc/sysctl.conf
+
+</code></pre>
+<ol>
+<li>Scroll to the very bottom and add this line:</li>
+</ol>
+<pre><code class="language-text">vm.swappiness=10
+
+</code></pre>
+<ol>
+<li>Press <strong>Ctrl+O</strong>, <strong>Enter</strong>, then <strong>Ctrl+X</strong> to save and exit.</li>
+<li>Apply the change immediately:</li>
+</ol>
+<pre><code class="language-bash">sudo sysctl -p
+
+</code></pre>
+<hr />
+<h3 id="understanding-the-trade-off">Understanding the Trade-off</h3>
+<table>
+<thead>
+<tr>
+<th>Swappiness Value</th>
+<th>Behavior on your K11</th>
+<th>Best For...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vm.swappiness=100</strong></td>
+<td>Uses swap almost immediately to keep RAM "empty."</td>
+<td>Systems with very slow RAM or tiny RAM.</td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=60</strong></td>
+<td>Balance; swaps out "cold" background apps (like a browser tab you haven't clicked in an hour).</td>
+<td>General office/web use.</td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=10</strong></td>
+<td><strong>(Recommended)</strong> Keeps everything in RAM until it's ~90% full.</td>
+<td><strong>High-RAM AI workloads (LM Studio).</strong></td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=1</strong></td>
+<td>Avoids swap until the very last possible megabyte.</td>
+<td>Extreme performance tuning; prevents any SSD wear.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-10-is-the-sweet-spot-for-64gb-ram">Why "10" is the sweet spot for 64GB RAM</h3>
+<p>With a 30B model (17GB) and your OS overhead, you're using maybe 22-25GB of your 64GB. At a swappiness of 60, Linux might try to move some of that 17GB model into swap <em>just in case</em>, which can cause a slight stutter. At 10, it will keep the entire model in the fast DDR5 RAM of your K11, providing the fastest possible inference.</p>
 
 
 
