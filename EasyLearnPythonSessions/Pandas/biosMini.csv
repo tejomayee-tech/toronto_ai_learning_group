@@ -1,0 +1,6 @@
+athlete_id,name,born_date,born_city,born_region,born_country,NOC,height_cm,weight_kg,died_date
+1,Arnaud Boetsch,1969-04-01,Meulan,Yvelines,FRA,France,183.0,76.0,1960-10-02
+2,Jean Borotra,1984-08-13,Biarritz,Pyrénées-Atlantiques,FRA,France,183.0,76.0,2004-07-17
+3,Jacques Brugnon,1895-05-11,Paris VIIIe,Paris,FRA,France,168.0,64.0,1978-03-20
+4,Henri Leconte,1963-07-04,Lillers,Pas-de-Calais,FRA,France,184.0,78.0,1981-10-20
+5,Christophe Legoût,1973-08-06,Montbéliard,Doubs,FRA,France,177.0,75.0,1978-09-24

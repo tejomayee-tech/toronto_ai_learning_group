@@ -1,0 +1,11 @@
+Transaction_ID,Date,Merchant,Category,Amount,Currency,Status,Card_Last_4
+TXN_1001,2026-01-05,Whole Foods,Groceries,85.40,USD,Posted,4421
+TXN_1002,2026-01-05,Shell Oil,Transport,45.00,USD,Posted,4421
+TXN_1003,2026-01-06,Amazon,Shopping,129.99,USD,Pending,8892
+TXN_1004,2026-01-07,Netflix,Entertainment,15.99,USD,Posted,4421
+TXN_1005,2026-01-08,Starbucks,Dining,6.50,USD,Posted,4421
+TXN_1006,2026-01-10,Apple Store,Electronics,1200.00,USD,Posted,8892
+TXN_1007,2026-01-12,Blue Bottle Coffee,Dining,5.25,USD,Posted,4421
+TXN_1008,2026-01-13,Uber,Transport,22.40,USD,Pending,4421
+TXN_1009,2026-01-14,Target,Shopping,54.20,USD,Posted,8892
+TXN_1010,2026-01-15,City Utilities,Bills,110.00,USD,Pending,4421
