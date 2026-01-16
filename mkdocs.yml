@@ -76,5 +76,6 @@ nav:
     - Mini PC for 120b LLMs: ai-pc/Mini-PC-for-running-120B-lls.md
 
   - Programming:
-    - Python:
-      - Easy Learning Sessions: easy-python-sessions/Python-Basics-Sessions.md
+    - Python Easy Learn:
+      - Python Basics: easy-python-sessions/Python-Basics-Sessions.md
+      - Python Libraries : easy-python-sessions/Python-Libraries.md
