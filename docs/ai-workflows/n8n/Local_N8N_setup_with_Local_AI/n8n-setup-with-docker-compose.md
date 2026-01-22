@@ -66,11 +66,13 @@ By default, running Docker commands requires `sudo`. To run Docker commands with
 
 3.  **Activate the changes:** You must **log out and log back in** (or simply restart your terminal session) for the group membership change to take effect.
 
-4.  **Verify the installation:** After logging back in, run a test command. If it works without `sudo`, the setup is correct.
+4.  **Verify the installation:** After logging back in, run a test command. It works without `sudo` now.
 
     ```bash
     docker run hello-world
     ```
+
+    > Note: Even if it doesnt work without sudo, user can still use sudo to run commands, e.g. `sudo docker run hello-world`
 
 ##### 3\. Install Docker Compose
 
