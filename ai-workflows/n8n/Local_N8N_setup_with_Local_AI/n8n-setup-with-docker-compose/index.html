@@ -1918,9 +1918,12 @@ sudo usermod -aG docker $USER</code></p>
 <p><strong>Activate the changes:</strong> You must <strong>log out and log back in</strong> (or simply restart your terminal session) for the group membership change to take effect.</p>
 </li>
 <li>
-<p><strong>Verify the installation:</strong> After logging back in, run a test command. If it works without <code>sudo</code>, the setup is correct.</p>
+<p><strong>Verify the installation:</strong> After logging back in, run a test command. It works without <code>sudo</code> now.</p>
 <p><code>bash
 docker run hello-world</code></p>
+<blockquote>
+<p>Note: Even if it doesnt work without sudo, user can still use sudo to run commands, e.g. <code>sudo docker run hello-world</code></p>
+</blockquote>
 </li>
 </ol>
 <h5 id="3-install-docker-compose">3. Install Docker Compose</h5>
