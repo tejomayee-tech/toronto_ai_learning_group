@@ -126,5 +126,3 @@ If you want to use Python to build this mental safeguard, here are three project
 The goal isn't to stop using AI, but to move toward **Critical Co-existence**. By coding your own tools, you build a "mental firewall" that keeps your usage intentional and your expectations realistic.
 
 > **Insight:** If you know how the sausage is made, you're less likely to think it's a gourmet steak—and you'll definitely know when it's gone bad.
-
-**Would you like me to walk you through a simple Python script to build a basic Sentiment Analyzer so you can see this "math-logic" in action?**
