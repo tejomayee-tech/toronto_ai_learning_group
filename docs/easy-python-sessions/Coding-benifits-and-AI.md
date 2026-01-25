@@ -85,7 +85,7 @@ References:
 
 ## Why learning programming with AI?
 
-Moving from a **passive consumer** to an **active architect** of AI is one of the most effective ways to demystify the "magic" and protect your mental well-being in an automated world.
+Moving from a **passive consumer** to an **active builder/coder** of AI is one of the most effective ways to demystify the "magic" and protect your mental well-being in an automated world.
 
 When you treat AI as a "black box," it’s easy to either over-rely on it (expecting perfection) or develop "AI anxiety" (fearing a sentient takeover). Building projects yourself grounds the technology in reality.
 
