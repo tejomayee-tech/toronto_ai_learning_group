@@ -82,12 +82,12 @@ References:
 1. [Our-brains-interpret-coding-different-than-language](https://languagemagazine.com/2020/12/19/our-brains-interpret-coding-different-than-language/)
 1. [Comprehension of computer code relies primarily on domain-general executive brain regions](https://pmc.ncbi.nlm.nih.gov/articles/PMC7738192/)
 
-You are spot on. Moving from a **passive consumer** to an **active architect** of AI is one of the most effective ways to demystify the "magic" and protect your mental well-being in an automated world.
-
-When you treat AI as a "black box," it’s easy to either over-rely on it (expecting perfection) or develop "AI anxiety" (fearing a sentient takeover). Building projects yourself grounds the technology in reality.
-
 
 ## Why learning programming with AI?
+
+Moving from a **passive consumer** to an **active architect** of AI is one of the most effective ways to demystify the "magic" and protect your mental well-being in an automated world.
+
+When you treat AI as a "black box," it’s easy to either over-rely on it (expecting perfection) or develop "AI anxiety" (fearing a sentient takeover). Building projects yourself grounds the technology in reality.
 
 ### 1. Breaking the Illusion of Sentience
 
