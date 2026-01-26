@@ -1,4 +1,4 @@
-## Easy Learn Python for Bigenners and Non-Programmers
+## Easy Learn Python for Beginners and Non-Programmers
 
 ---
 

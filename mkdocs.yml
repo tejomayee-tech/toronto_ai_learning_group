@@ -1,6 +1,7 @@
 site_name: AI Learning Group
 site_dir: site
-docs_dir: docs/
+docs_dir: docs/ 
+
 theme:
   name: material
 
@@ -33,10 +34,15 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.tabbed
+  - pymdownx.pathconverter
+  - attr_list
 extra_css:
   - css/extra.css
 plugins:
   - search
+  - mkdocs-pdf
+  - mkdocs-jupyter:
+      execute: true
 
 nav:
   - Home: README.md
@@ -46,7 +52,7 @@ nav:
     - Contributing: community-values-guidelines/ContributingGuide.md
 
   - AI - Fundamentals:
-    - AI Fundamentals 1: ai-sessions/fundamentals_of_LLM/README.md
+    - AI Fundamentals 1: ai-sessions/fundamentals_of_LLM/fundamentsla_LLM.md
 
   - AI - Prompts:
     - Zero Shot Prompts: ai-tools-hands-on/Prompts/Zero-shot-prompting.md
@@ -58,7 +64,7 @@ nav:
     - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md
 
   - AI Tools Hands-on:
-    - Bigenners - Local AI : ai-tools-hands-on/Beginners-guide-to-Local_AI.md
+    - Beginners - Local AI : ai-tools-hands-on/Beginners-guide-to-Local_AI.md
     - Private Local & Free GuFF models: ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
     - Top Local LLMs: ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs.md 
     - 2025 - Future of Local LLMs: ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms.md
@@ -79,3 +85,5 @@ nav:
     - Python Easy Learn:
       - Python Basics: easy-python-sessions/Python-Basics-Sessions.md
       - Python Libraries : easy-python-sessions/Python-Libraries.md
+      - Numpy : easy-python-sessions\numpy\numpy_intro_community.ipynb
+      

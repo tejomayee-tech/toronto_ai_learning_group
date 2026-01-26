@@ -4,3 +4,5 @@ pandas
 matplotlib
 ttkbootstrap
 numpy
+mkdocs-pdf
+mkdocs-jupyter
