@@ -1,5 +1,39 @@
 # Manage Ollama Service
 
+## 🚀 Ollama installation
+
+### 1. Run the Official Install Script
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+
+```
+
+### 2. Verify the New Version
+
+Check that the installation succeeded and that you are no longer on 0.14.2.
+
+```bash
+ollama --version
+
+```
+
+---
+
+## Part 3: Post-Install Verification
+
+To ensure everything is running smoothly, check the service status:
+
+```bash
+systemctl status ollama
+
+```
+
+You should see **active (running)** in green text.
+
+## 🛑 Stop Ollama
+
+
 You can use `systemctl` commands, which manage system services on Ubuntu.
 
 ### 1\. Stop the Currently Running Service
@@ -141,4 +175,61 @@ Since you have full control over starting and stopping Ollama, using the `system
 
 In summary, for **model file sharing** use **Symbolic Links** (with a helper script). For **running a server** with your preferred models, you can choose to run **LM Studio's server** *or* **Ollama's server** and use your applications against the one that is currently running.
 
-Would you like me to find a specific, up-to-date Python script or utility for creating the symbolic links between the Ollama and LM Studio model directories on Linux?
+
+## 🗑️ Clean Uninstallation
+
+Since you were running an older version, a clean wipe ensures no "zombie" binaries or old service configurations interfere with the new installation.
+
+### 1. Stop and Disable the Service
+
+This stops the current background process and prevents it from starting on reboot.
+
+```bash
+sudo systemctl stop ollama
+sudo systemctl disable ollama
+sudo rm /etc/systemd/system/ollama.service
+
+```
+
+### 2. Remove the Binary
+
+Locate and delete the executable.
+
+```bash
+sudo rm $(which ollama)
+
+```
+
+### 3. Wipe Data and User (The "Clean Slate" Step)
+
+Ollama stores massive model files in `/usr/share/ollama`. We also need to remove the dedicated system user.
+
+```bash
+sudo rm -rf /usr/share/ollama
+sudo userdel ollama
+
+```
+
+> **Note on Groups:** If you see an error like `group ollama not removed because it has other members`, it means your own user account is likely still linked to it. You can ignore this or run `sudo groupdel ollama` to finish it off.
+
+### 4. Optional: Clear Personal Configs
+
+If you want to delete your personal chat history and local settings, remove the hidden directory in your home folder:
+
+```bash
+rm -rf ~/.ollama
+
+```
+
+---
+
+
+### Summary of Commands
+
+| Action | Command |
+| --- | --- |
+| **Uninstall** | Stop service  Delete binary  Wipe `/usr/share/ollama` |
+| **Reinstall** | `curl -fsSL https://ollama.com/install.sh |
+| **Check Version** | `ollama --version` |
+
+---

@@ -5,8 +5,8 @@
 ### 🛡️ Privacy & Security
 
 * **Total Privacy:** Your data never leaves your PC; no tech giants see or store your prompts.
-* **No Training:** Your chats aren't used to train future models.
-* **Device Security:** Your files stay protected by your own Windows security and encryption.
+* **No Training:** Your chats aren't used for training.
+* **Device Security:** Your files stay protected by your own Operating System security and encryption.
 
 ### 🏠 Local Control
 
@@ -17,7 +17,7 @@
 ### 💰 Savings & Compliance
 
 * **Zero Cost:** No subscriptions or per-message fees.
-* **Easy Compliance:** Simplifies HIPAA/legal privacy rules since data stays local.
+* **Easy Compliance:** Simplifies legal privacy rules since data stays local.
 * **No Limits:** Download and use models without hitting usage caps.
 
 
