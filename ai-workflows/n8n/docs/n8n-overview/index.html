@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +782,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1436,6 +1436,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1618,15 +1639,8 @@
                   
 
 
-<h1 id="n8n-overview">n8n Overview</h1>
-<iframe 
-    src="https://drive.google.com/file/d/1h1bNmpt1OhB5Vzt3I-5HgCEDS0Fpmj-3/preview" 
-    width="720" 
-    height="360" 
-    allow="autoplay" 
-    frameborder="0" 
-    allowfullscreen
-></iframe>
+<div><h1 id="n8n-overview">n8n Overview</h1>
+<iframe src="https://drive.google.com/file/d/1h1bNmpt1OhB5Vzt3I-5HgCEDS0Fpmj-3/preview" width="720" height="360" allow="autoplay" frameborder="0" allowfullscreen></iframe>
 
 <h2 id="1-core-advantages-and-foundation-of-n8n">1. Core Advantages and Foundation of n8n</h2>
 <p>n8n is widely recognized as a <strong>no-code AI automation tool</strong> that makes building AI agents surprisingly intuitive. It is a node-based automation platform that connects easily with <strong>more than 500 different applications</strong>.</p>
@@ -1687,7 +1701,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h2 id="2-capabilities-achievable-with-n8n">2. Capabilities Achievable with n8n</h2>
 <p>The core of n8n's power lies in the <strong>AI Agent node</strong>, which connects to a Language Model (the brain), adds <strong>memory</strong> (conversation history), and allows the attachment of <strong>tools</strong> (external actions or other workflows). This enables the creation of dynamic, flexible agents that can reason and decide which tools to use.</p>
 <h3 id="a-ai-agent-and-personal-productivity">A. AI Agent and Personal Productivity</h3>
@@ -1720,7 +1734,7 @@
 <li><strong>IT Automation:</strong> An AI agent can be configured to monitor, troubleshoot, and fix issues in a home lab or network (e.g., UniFi, Proxmox, Plex, NAS) by accessing them via CLI or API (using SSH or HTTP Request tools).</li>
 <li><strong>Human in the Loop:</strong> Crucially, n8n enables <strong>Human in the Loop (HITL)</strong> functionality where the AI agent requests explicit approval (via Telegram/chat app) before running any commands that could modify the system (like running a <code>docker kill</code> command), ensuring human oversight for critical fixes.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="3-n8n-with-local-llm-gemma-mistral-or-cloud-ai-gemini-chatgpt">3. n8n with Local LLM (Gemma, Mistral) or Cloud AI (Gemini, ChatGPT)</h2>
 <p>n8n agents can leverage both powerful cloud APIs and private, cost-effective local LLMs.</p>
 <h3 id="cloud-ai-integration-chatgpt-gemini-api-key">Cloud AI Integration (ChatGPT / Gemini API Key)</h3>
@@ -1741,7 +1755,7 @@
 <li><strong>Privacy and Cost:</strong> The primary drivers for using local LLMs are <strong>100% privacy and security</strong> (critical for handling sensitive data/IP) and <strong>cost-effectiveness</strong> (eliminating subscription costs).</li>
 <li><strong>RAG Memory Scalability:</strong> When building serious agents, particularly RAG systems, it is highly recommended <strong>not</strong> to use n8n's default in-memory vector store or windowed buffer memory, as they do not scale. Instead, external solutions like <strong>Superbase (Postgres with PG Vector extension)</strong> should be used for scalable chat memory and RAG embeddings.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="4-community-and-template-resources">4. Community and Template Resources</h2>
 <p>The n8n ecosystem is highly supportive, prioritizing sharing and quick starts:</p>
 <ul>
@@ -1749,7 +1763,7 @@
 <li><strong>Free Blueprints:</strong> Many blueprints and workflows demonstrated by experts, including AI agent use cases, are provided absolutely free (often as downloadable JSON files) in video descriptions or community platforms.</li>
 <li><strong>Communities:</strong> Users can join dedicated online communities (like the free school community or Automator Think Tank) for learning, accessing templates, receiving setup guides, and connecting with others building AI automation businesses.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="deep-learning-video-overview-inspiration-for-local-ai-exploration">Deep Learning Video Overview: Inspiration for Local AI Exploration</h2>
 <p>The sources clearly illustrate that n8n is the operational command center for your digital workforce, capable of managing fixed automations and dynamic, thinking AI agents.</p>
 <p><strong>The Inspiration:</strong> You are no longer bound by third-party costs or data governance rules. By using n8n with local LLM infrastructure, you can create a truly <strong>private and powerful "digital employee"</strong>.</p>
@@ -1759,7 +1773,7 @@
 <li><strong>Autonomous Control:</strong> Your n8n agents can assume complex roles—from an outbound voice caller scheduling appointments to a creative agent generating and posting tailored media (images/videos). They can even manage your entire IT environment, troubleshooting and applying fixes only after receiving <strong>human approval</strong> (Human in the Loop).</li>
 </ol>
 <p><strong>Inspiration Analogy:</strong></p>
-<p>Think of n8n as the <strong>Control Tower</strong> for your AI infrastructure. Cloud APIs (like ChatGPT/Gemini) are like commercial jets: powerful and easy to use, but they fly on public routes and charge per trip. Local LLMs (like Gemma, Mistral, or a 20B open-source model via Ollama) are like your <strong>private drone fleet</strong>: they require initial setup and investment (the right hardware), but once deployed, they run on your private property, follow your custom rules, cost virtually nothing to operate, and ensure that <strong>your sensitive cargo never leaves your secure airspace.</strong> This allows you to build solutions that are not just automated, but truly customized, secure, and infinitely scalable.</p>
+<p>Think of n8n as the <strong>Control Tower</strong> for your AI infrastructure. Cloud APIs (like ChatGPT/Gemini) are like commercial jets: powerful and easy to use, but they fly on public routes and charge per trip. Local LLMs (like Gemma, Mistral, or a 20B open-source model via Ollama) are like your <strong>private drone fleet</strong>: they require initial setup and investment (the right hardware), but once deployed, they run on your private property, follow your custom rules, cost virtually nothing to operate, and ensure that <strong>your sensitive cargo never leaves your secure airspace.</strong> This allows you to build solutions that are not just automated, but truly customized, secure, and infinitely scalable.</p></div>
 
 
 

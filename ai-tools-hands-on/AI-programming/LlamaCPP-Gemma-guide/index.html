@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1395,7 +1416,7 @@
                   
 
 
-<h1 id="llama-cpp-gemma-setup">Llama CPP - Gemma - Setup</h1>
+<div><h1 id="llama-cpp-gemma-setup">Llama CPP - Gemma - Setup</h1>
 <h2 id="project-setup-local-rag-with-gemma-gguf">🛠️ Project Setup: Local RAG with Gemma (GGUF)</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <ol>
@@ -1430,12 +1451,12 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
 
 # --- Configuration ---
-MODEL_PATH = &quot;gemma-2b.gguf&quot; # Make sure this matches your downloaded file name
-KNOWLEDGE_FILE = &quot;data/corporate_policy.txt&quot;
-VECTOR_DB_DIR = &quot;./chroma_db&quot;
+MODEL_PATH = "gemma-2b.gguf" # Make sure this matches your downloaded file name
+KNOWLEDGE_FILE = "data/corporate_policy.txt"
+VECTOR_DB_DIR = "./chroma_db"
 
 # 1. Load the Model (llama-cpp-python)
-print(&quot;--- 1. Loading Gemma 2B (GGUF) via llama-cpp-python ---&quot;)
+print("--- 1. Loading Gemma 2B (GGUF) via llama-cpp-python ---")
 try:
     # Instantiate the Llama object. n_gpu_layers=0 forces CPU inference.
     # Set model_kwargs to use Gemma's specific chat format.
@@ -1444,19 +1465,19 @@ try:
         n_ctx=4096,           # Context window
         n_threads=8,          # CPU threads to use
         n_gpu_layers=0,       # Set to -1 to use GPU if available and installed correctly
-        chat_format=&quot;gemma&quot;,  # Important for correct instruction formatting
+        chat_format="gemma",  # Important for correct instruction formatting
         verbose=False
     )
-    print(&quot;Model loaded successfully.&quot;)
+    print("Model loaded successfully.")
 except FileNotFoundError:
-    print(f&quot;ERROR: Model file not found at {MODEL_PATH}. Please download it first.&quot;)
+    print(f"ERROR: Model file not found at {MODEL_PATH}. Please download it first.")
     exit()
 
 # 2. Ingest Data (Load, Split, Embed)
-print(&quot;--- 2. Ingesting Corporate Policy Data ---&quot;)
+print("--- 2. Ingesting Corporate Policy Data ---")
 os.makedirs(os.path.dirname(KNOWLEDGE_FILE), exist_ok=True)
 if not os.path.exists(KNOWLEDGE_FILE):
-    print(f&quot;Creating sample data file: {KNOWLEDGE_FILE}&quot;)
+    print(f"Creating sample data file: {KNOWLEDGE_FILE}")
     # (The sample data creation is skipped here, assume the file exists from Step 2)
 
 # Load the document
@@ -1471,20 +1492,20 @@ text_splitter = RecursiveCharacterTextSplitter(
 texts = text_splitter.split_documents(documents)
 
 # Create an embedding model (This will be used to generate vector representations)
-print(&quot;Loading Embedding Model...&quot;)
+print("Loading Embedding Model...")
 # Using a small, efficient model for local embeddings
-embeddings = HuggingFaceEmbeddings(model_name=&quot;all-MiniLM-L6-v2&quot;)
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # Create and persist the vector store (ChromaDB)
 # This step embeds the text chunks and stores them locally
-print(f&quot;Creating Vector Store in {VECTOR_DB_DIR}...&quot;)
+print(f"Creating Vector Store in {VECTOR_DB_DIR}...")
 vectorstore = Chroma.from_documents(
     documents=texts,
     embedding=embeddings,
     persist_directory=VECTOR_DB_DIR
 )
 vectorstore.persist() # Save the database to disk
-print(&quot;Vector Store created and persisted.&quot;)
+print("Vector Store created and persisted.")
 
 # 3. Create the Retrieval Chain
 # We wrap the llama-cpp-python LLM using LangChain's wrapper
@@ -1496,7 +1517,7 @@ langchain_llm = LlamaCpp(
     n_gpu_layers=0,
     temperature=0.1,
     verbose=False,
-    model_kwargs={&quot;chat_format&quot;: &quot;gemma&quot;}
+    model_kwargs={"chat_format": "gemma"}
 )
 
 # Create the RetrievalQA chain
@@ -1507,25 +1528,25 @@ langchain_llm = LlamaCpp(
 # 4. Sends the prompt to the LLM
 rag_chain = RetrievalQA.from_chain_type(
     llm=langchain_llm,
-    chain_type=&quot;stuff&quot;, # 'stuff' puts all context into one large prompt
-    retriever=vectorstore.as_retriever(search_kwargs={&quot;k&quot;: 2}), # retrieve top 2 chunks
+    chain_type="stuff", # 'stuff' puts all context into one large prompt
+    retriever=vectorstore.as_retriever(search_kwargs={"k": 2}), # retrieve top 2 chunks
     return_source_documents=False # set to True to see the source text
 )
 
 # 4. Run the End-to-End Query
-print(&quot;\n--- 3. Running Retrieval-Augmented Query ---&quot;)
+print("\n--- 3. Running Retrieval-Augmented Query ---")
 
-question_1 = &quot;When am I required to be in the office and what is the maximum food budget?&quot;
-question_2 = &quot;What is the policy for submitting an urgent vacation request?&quot;
+question_1 = "When am I required to be in the office and what is the maximum food budget?"
+question_2 = "What is the policy for submitting an urgent vacation request?"
 
-print(f&quot;\nQUERY 1: {question_1}&quot;)
-result_1 = rag_chain.invoke({&quot;query&quot;: question_1})
-print(&quot;RESPONSE 1:&quot;)
+print(f"\nQUERY 1: {question_1}")
+result_1 = rag_chain.invoke({"query": question_1})
+print("RESPONSE 1:")
 print(result_1['result'].strip())
 
-print(f&quot;\nQUERY 2: {question_2}&quot;)
-result_2 = rag_chain.invoke({&quot;query&quot;: question_2})
-print(&quot;RESPONSE 2:&quot;)
+print(f"\nQUERY 2: {question_2}")
+result_2 = rag_chain.invoke({"query": question_2})
+print("RESPONSE 2:")
 print(result_2['result'].strip())
 </code></pre>
 <h3 id="step-step-4-execute-the-code">Step ▶️ Step 4: Execute the Code</h3>
@@ -1551,7 +1572,7 @@ RESPONSE 2:
 Last-minute vacation requests (less than 7 days in advance) require explicit approval from the departmental Vice President. All requests should be submitted through the internal HR portal at least 14 days in advance.
 </code></pre>
 <p>This guide demonstrates a complete, Python-native workflow that uses your local GGUF model (<code>Gemma</code>) for a real-world task (<code>RAG</code>) without relying on external model servers.</p>
-<p>Would you like to explore how to stream the LLM response instead of waiting for the full output?</p>
+<p>Would you like to explore how to stream the LLM response instead of waiting for the full output?</p></div>
 
 
 

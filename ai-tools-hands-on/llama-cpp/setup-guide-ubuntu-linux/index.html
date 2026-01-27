@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1428,7 +1449,7 @@
                   
 
 
-<h1 id="complete-llamacpp-setup-build-guide-for-ubuntu">🚀 Complete llama.cpp Setup &amp; Build Guide for Ubuntu</h1>
+<div><h1 id="complete-llamacpp-setup-build-guide-for-ubuntu">🚀 Complete llama.cpp Setup &amp; Build Guide for Ubuntu</h1>
 <p>This guide assumes you are starting with a fresh Ubuntu installation and need to use <strong>Homebrew (Linuxbrew)</strong> to manage development dependencies like <code>cmake</code> and <code>gcc</code>.</p>
 <h2 id="step-1-install-system-prerequisites-ubuntus-package-manager">Step 1: Install System Prerequisites (Ubuntu's Package Manager)</h2>
 <p>First, install the fundamental tools needed for all development tasks, including Git and the core compilation toolchain (<code>build-essential</code>).</p>
@@ -1442,14 +1463,14 @@ sudo apt install build-essential procps curl file git
 <p>Because you opted to use Homebrew, we'll install and configure it to manage the specific development packages required by <code>llama.cpp</code>.</p>
 <h3 id="a-run-the-homebrew-installation-script">A. Run the Homebrew Installation Script</h3>
 <p>Run the official Homebrew installation script. You will be prompted to press <code>ENTER</code> to continue and enter your password for <code>sudo</code> access.</p>
-<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+<pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 </code></pre>
 <h3 id="b-configure-homebrew-in-your-path">B. Configure Homebrew in Your PATH</h3>
 <p>After the installation succeeds, you <strong>must</strong> run the following three commands to make the <code>brew</code> command and all packages it installs available in your terminal. This is the fix for the <strong><code>... is not in your PATH</code></strong> warning.</p>
-<pre><code class="language-bash">echo 'eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;' &gt;&gt; ~/.bashrc
-eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;
+<pre><code class="language-bash">echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' &gt;&gt; ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-3-install-core-dependencies-homebrew">Step 3: Install Core Dependencies (Homebrew)</h2>
 <p>Now that Homebrew is active, we use it to install the <strong>C++ compiler (GCC)</strong>, the <strong>build system (CMake)</strong>, and the <strong>model download client library (cURL)</strong>. These packages were the source of your initial errors (<code>Could NOT find CMake</code>, <code>Could NOT find CURL</code>).</p>
 <pre><code class="language-bash"># 1. Install the latest GCC compiler (required for C/C++ compilation)
@@ -1461,7 +1482,7 @@ brew install cmake
 # 3. Install cURL development libraries (fixes the 'Could NOT find CURL' error)
 brew install curl
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-4-clone-the-llamacpp-repository">Step 4: Clone the <code>llama.cpp</code> Repository</h2>
 <p>Use Git to download the source code for the project.</p>
 <pre><code class="language-bash"># Clone the repository
@@ -1470,7 +1491,7 @@ git clone https://github.com/ggerganov/llama.cpp.git
 # Navigate into the project directory
 cd llama.cpp
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-5-build-llamacpp-with-cmake">Step 5: Build <code>llama.cpp</code> with CMake</h2>
 <p>The CMake process is split into two parts: configuration and compilation. We use a dedicated <code>build</code> subdirectory to keep the source directory clean.</p>
 <ol>
@@ -1510,11 +1531,11 @@ curl -L 'https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/m
 <pre><code class="language-bash">cd ../build/bin
 
 # Replace mistral-7b.gguf with the actual filename if you downloaded a different one
-./llama-cli -m ../../models/mistral-7b.gguf -p &quot;What is the capital of India?&quot;
-./llama-cli -m ../../models/mistral-7b.gguf -p &quot;What is the capital of Canada?&quot;
+./llama-cli -m ../../models/mistral-7b.gguf -p "What is the capital of India?"
+./llama-cli -m ../../models/mistral-7b.gguf -p "What is the capital of Canada?"
 </code></pre>
 <p>This completes the full setup and build process, resolving all the prerequisite issues encountered.</p>
-<p><img alt="snapshot" src="../working-setup.png" /></p>
+<p><img alt="snapshot" src="../working-setup.png"></p>
 <h1 id="reuse-lm-studio-model-downloads">Reuse LM studio model downloads</h1>
 <p><strong>GGUF</strong> (GGML Universal File Format) is the model file format used by both <strong>LM Studio</strong> and <strong><code>llama.cpp</code></strong>, which is why they are often referred to as "interoperable."</p>
 <p>All you need to do is locate the folder where LM Studio stores its models and copy or point <code>llama.cpp</code> to the specific <code>.gguf</code> file you want to use.</p>
@@ -1548,7 +1569,7 @@ cp /home/user1/.cache/lm-studio/models/SomeUser/ModelName/my_lm_studio_model.ggu
 cd /path/to/your/llama.cpp/build/bin
 
 # 2. Run the model
-./llama-cli -m ../../models/my_lm_studio_model.gguf -p &quot;What are the three most important facts about the Roman Empire?&quot;
+./llama-cli -m ../../models/my_lm_studio_model.gguf -p "What are the three most important facts about the Roman Empire?"
 </code></pre>
 <p>This command loads the model and uses it to process the prompt, confirming that the files are fully interchangeable between LM Studio and the raw <code>llama.cpp</code> binary.</p>
 <h2 id="use-a-symbolic-link-symlink-instead-of-copying-the-model-file">use a <strong>symbolic link</strong> (symlink) instead of copying the model file</h2>
@@ -1579,14 +1600,14 @@ ln -s '/home/user1/.cache/lm-studio/models/TheBloke/Llama-3-8B-Instruct-GGUF/lla
 <p>Now, you can use the short, simple link name (<code>llama-3.gguf</code>) in your <code>llama-cli</code> command. The paths you need to use remain the same, as the link acts just like the file itself.</p>
 <p>Assuming you are in the <code>build/bin/</code> directory:</p>
 <pre><code class="language-bash"># Use the link name, which is inside the ../../models folder
-./llama-cli -m ../../models/llama-3.gguf -p &quot;Write a short poem about coding.&quot;
+./llama-cli -m ../../models/llama-3.gguf -p "Write a short poem about coding."
 </code></pre>
 <p>This command will successfully load the model from the linked file, without taking up double the disk space.</p>
 <h1 id="build-your-interface-on-the-top">Build your interface on the top</h1>
 <p>You can build a sophisticated <strong>ttkbootstrap</strong> (Tkinter) application to interact with <code>llama.cpp</code> and implement all those features.</p>
 <p>The key to success is using the dedicated <strong><code>llama-server</code></strong> (or the Python binding) to handle the long-running model process, combined with <strong>Python's threading</strong> or <strong>asynchronous I/O</strong> (like <code>asyncio</code>) in your GUI application to keep the UI responsive.</p>
 <p>Here is the breakdown of the recommended architecture and how to achieve each feature:</p>
-<hr />
+<hr>
 <h2 id="1-recommended-architecture-llama-cpp-python">1. Recommended Architecture: <code>llama-cpp-python</code></h2>
 <p>Instead of running the command-line binary (<code>llama-cli</code> or <code>llama-server</code>) as a separate subprocess, the most robust and performant approach for Python is to use the official <strong><code>llama-cpp-python</code></strong> library.</p>
 <p>This package is a <strong>Python binding</strong> (wrapper) for the <code>llama.cpp</code> C++ library, which allows you to load and run GGUF models directly within your Python code.</p>
@@ -1611,7 +1632,7 @@ ln -s '/home/user1/.cache/lm-studio/models/TheBloke/Llama-3-8B-Instruct-GGUF/lla
 ```</p>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="2-implementing-core-features-in-your-ttkbootstrap-app">2. Implementing Core Features in Your ttkbootstrap App</h2>
 <h3 id="run-commands-in-the-background-update-ui">✅ Run Commands in the Background &amp; Update UI</h3>
 <p>Since model generation is a long-running, blocking task, you <strong>must</strong> run it in a separate thread to prevent your Tkinter UI from freezing (hanging).</p>
@@ -1680,7 +1701,7 @@ ln -s '/home/user1/.cache/lm-studio/models/TheBloke/Llama-3-8B-Instruct-GGUF/lla
 <td style="text-align: left;">The retrieved text chunks are combined with the original user query into a single, massive prompt, which is then sent to your main GGUF model (<code>mistral-7b.gguf</code>) for context-aware answering.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 
 

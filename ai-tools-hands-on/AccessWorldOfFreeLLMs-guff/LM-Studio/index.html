@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1389,17 +1410,17 @@
                   
 
 
-<h1 id="llms-for-common-laptop-hw-config">LLMs for common laptop H/W config</h1>
+<div><h1 id="llms-for-common-laptop-hw-config">LLMs for common laptop H/W config</h1>
 <h2 id="continue-config-for-lm-studio">Continue config for LM Studio</h2>
 <pre><code class="language-yaml">
 name: Local Config
 version: 1.0.0
 schema: v1
 models:
-  - name: &quot;LM Studio&quot;
-    provider: &quot;lmstudio&quot;
-    apiBase: &quot;http://localhost:1234/v1&quot;
-    model: &quot;local-model&quot;
+  - name: "LM Studio"
+    provider: "lmstudio"
+    apiBase: "http://localhost:1234/v1"
+    model: "local-model"
 </code></pre>
 <h2 id="1-recommended-models-for-i516gb-ram-gguf">💻 1. Recommended Models for i5/16GB RAM (GGUF)</h2>
 <p>These models offer the best combination of intelligence and efficiency, running comfortably on your system using the <strong>Q4_K_M</strong> or <strong>Q5_K_M</strong> quantization formats (which LM Studio supports):</p>
@@ -1457,7 +1478,7 @@ models:
 <blockquote>
 <p><strong>Note:</strong> The "Estimated Max RAM Usage" accounts for the model file size plus the system overhead (LM Studio, OS, and the model's working memory, or KV Cache). All are well within your 16GB limit.</p>
 </blockquote>
-<hr />
+<hr>
 <h2 id="2-hardware-profile-and-performance-targets">🖥️ 2. Hardware Profile and Performance Targets</h2>
 <p>Your Dell Latitude 7490 with an 8th-gen i5 and 16GB of RAM is optimized for <strong>CPU Inference</strong>.</p>
 <table>
@@ -1490,7 +1511,7 @@ models:
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h2 id="3-step-by-step-lm-studio-optimization-for-your-setup">⚙️ 3. Step-by-Step LM Studio Optimization for Your Setup</h2>
 <p>After downloading your chosen GGUF file (e.g., <code>Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf</code>), apply these settings in the <strong>Chat Tab</strong> on the <strong>right-hand sidebar</strong> to ensure the best performance on your i5 CPU:</p>
 <h3 id="step-1-maximize-cpu-cores-crucial-for-speed">Step 1: Maximize CPU Cores (Crucial for Speed)</h3>
@@ -1517,7 +1538,7 @@ models:
 <li><strong>Action:</strong> Start with <strong>4096</strong> or <strong>8192</strong>.</li>
 <li><em>Why:</em> This is a safe and high-quality context size. While models like Llama 3.1 support up to 128K, using a context that large consumes too much of your limited 16GB RAM and will drastically slow down generation.</li>
 </ul>
-<p>With these models and these four optimization steps, you will be running state-of-the-art LLMs locally, achieving very respectable token-per-second generation speeds on your laptop.</p>
+<p>With these models and these four optimization steps, you will be running state-of-the-art LLMs locally, achieving very respectable token-per-second generation speeds on your laptop.</p></div>
 
 
 

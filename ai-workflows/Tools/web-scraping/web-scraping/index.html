@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1303,7 +1324,7 @@
                   
 
 
-<h1 id="what-is-web-scraping">🌐 What <em>Is</em> Web Scraping?</h1>
+<div><h1 id="what-is-web-scraping">🌐 What <em>Is</em> Web Scraping?</h1>
 <p>Web scraping is the process of writing a program that <strong>downloads a web page</strong> and <strong>extracts specific information</strong> from it — like titles, prices, headlines, names, etc.</p>
 <p>It’s commonly used for things like:</p>
 <ul>
@@ -1315,32 +1336,32 @@
 </ul>
 <p><strong>Always scrape respectfully:</strong>
 Check the website’s rules (<code>robots.txt</code>) and never try to bypass logins or security.</p>
-<hr />
+<hr>
 <h1 id="simple-web-scraping-example">Simple Web Scraping Example</h1>
 <p>Let’s scrape the <strong>titles of articles</strong> from a basic HTML page.</p>
 <h3 id="requirements">Requirements</h3>
 <pre><code class="language-bash">pip install requests beautifulsoup4
 </code></pre>
-<hr />
+<hr>
 <h1 id="beginner-friendly-python-code"><strong>BEGINNER-FRIENDLY PYTHON CODE</strong></h1>
 <pre><code class="language-python">import requests
 from bs4 import BeautifulSoup
 
 # 1. Download the page
-url = &quot;https://example.com&quot;
+url = "https://example.com"
 response = requests.get(url)
 
 # 2. Parse the HTML text
-soup = BeautifulSoup(response.text, &quot;html.parser&quot;)
+soup = BeautifulSoup(response.text, "html.parser")
 
 # 3. Find something simple — like &lt;h1&gt; or &lt;h2&gt; tags
-titles = soup.find_all(&quot;h2&quot;)
+titles = soup.find_all("h2")
 
 # 4. Print the results
 for t in titles:
     print(t.get_text())
 </code></pre>
-<hr />
+<hr>
 <h1 id="what-this-does">What This Does</h1>
 <ul>
 <li>Connects to <code>example.com</code></li>
@@ -1348,14 +1369,14 @@ for t in titles:
 <li>Collects <strong>all <code>&lt;h2&gt;</code> elements</strong> (super common for section headings)</li>
 <li>Prints them out cleanly</li>
 </ul>
-<hr />
+<hr>
 <h1 id="even-simpler-version-1-liner-extraction">🪄 Even Simpler Version (1-liner extraction)</h1>
 <pre><code class="language-python">from bs4 import BeautifulSoup
 import requests
 
-print([h2.text for h2 in BeautifulSoup(requests.get(&quot;https://example.com&quot;).text, &quot;html.parser&quot;).find_all(&quot;h2&quot;)])
+print([h2.text for h2 in BeautifulSoup(requests.get("https://example.com").text, "html.parser").find_all("h2")])
 </code></pre>
-<hr />
+<hr></div>
 
 
 

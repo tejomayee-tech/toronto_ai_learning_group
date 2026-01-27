@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +977,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1458,6 +1458,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1670,8 +1691,8 @@
 
   <h1>Save Prompt Cost</h1>
 
-<h2 id="a-step-by-step-guide-to-llm-context-engineering-and-cost-optimization">🚀 A Step-by-Step Guide to LLM Context Engineering and Cost Optimization</h2>
-<hr />
+<div><h2 id="a-step-by-step-guide-to-llm-context-engineering-and-cost-optimization">🚀 A Step-by-Step Guide to LLM Context Engineering and Cost Optimization</h2>
+<hr>
 <h3 id="step-1-master-foundational-prompt-engineering-techniques">Step 1: Master Foundational Prompt Engineering Techniques</h3>
 <p>This step focuses on crafting the <strong>instruction</strong> itself to elicit high-quality responses from the LLM.</p>
 <h4 id="examples-of-basic-techniques">💡 Examples of Basic Techniques</h4>
@@ -1729,7 +1750,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="step-2-shift-focus-to-context-engineering">Step 2: Shift Focus to Context Engineering</h3>
 <p><strong>Context Engineering</strong> is the advanced practice of designing the entire input environment—the data, memory, and structure—that the LLM uses to reason, ensuring stability and accuracy.</p>
 <h4 id="context-vs-prompt-engineering">🔄 Context vs. Prompt Engineering</h4>
@@ -1757,7 +1778,7 @@
 </ul>
 </li>
 </ol>
-<hr />
+<hr>
 <h3 id="step-3-optimize-context-for-cost-and-latency-prompt-compression">Step 3: Optimize Context for Cost and Latency (Prompt Compression)</h3>
 <p>Since LLMs are priced per token, long contexts are expensive and slow. <strong>Compression</strong> reduces the token count while preserving the core meaning.</p>
 <h4 id="the-cost-problem">📏 The Cost Problem</h4>
@@ -1793,18 +1814,18 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h3 id="step-4-use-python-context-managers-for-resource-control">Step 4: Use Python Context Managers for Resource Control</h3>
 <p>To ensure your RAG pipelines and context setup are reliable, use Python's <strong>Context Managers</strong> (the <code>with</code> statement) to handle resources like files and database connections cleanly.</p>
 <h4 id="resource-management-example-file-handling">💾 Resource Management Example: File Handling</h4>
 <p>The <code>with open(...)</code> statement guarantees the file is closed, preventing resource leaks.</p>
 <pre><code class="language-python"># Without a Context Manager (risks file remaining open if error occurs)
-file = open(&quot;data.txt&quot;, &quot;r&quot;)
+file = open("data.txt", "r")
 data = file.read()
 file.close() # May not run if an exception is raised
 
 # With a Context Manager (guarantees file closure)
-with open(&quot;data.txt&quot;, &quot;r&quot;) as file:
+with open("data.txt", "r") as file:
     data = file.read()
 # The file is automatically closed here, even if an error occurs inside the 'with' block.
 </code></pre>
@@ -1815,23 +1836,23 @@ import time
 
 @contextmanager
 def timer(name):
-    &quot;&quot;&quot;A context manager to time a block of code.&quot;&quot;&quot;
+    """A context manager to time a block of code."""
     start = time.time()
-    print(f&quot;[{name}] Starting...&quot;)
+    print(f"[{name}] Starting...")
     try:
         yield # Code inside the 'with' block runs here
     finally:
         end = time.time()
-        print(f&quot;[{name}] Finished in {end - start:.4f} seconds.&quot;)
+        print(f"[{name}] Finished in {end - start:.4f} seconds.")
 
 # Example Usage in an LLM pipeline
-with timer(&quot;RAG Retrieval&quot;):
+with timer("RAG Retrieval"):
     # This block simulates fetching data from a vector database
     retrieved_chunk = fetch_from_database(query)
 
-print(&quot;LLM generation continues...&quot;)
+print("LLM generation continues...")
 </code></pre>
-<p>This ensures the timing is always recorded, making your pipeline development and monitoring much more robust.</p>
+<p>This ensures the timing is always recorded, making your pipeline development and monitoring much more robust.</p></div>
 
 
 

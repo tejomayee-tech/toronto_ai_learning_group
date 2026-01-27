@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1428,7 +1449,7 @@
                   
 
 
-<h1 id="manage-ollama-service">Manage Ollama Service</h1>
+<div><h1 id="manage-ollama-service">Manage Ollama Service</h1>
 <h2 id="ollama-installation">🚀 Ollama installation</h2>
 <h3 id="1-run-the-official-install-script">1. Run the Official Install Script</h3>
 <pre><code class="language-bash">curl -fsSL https://ollama.com/install.sh | sh
@@ -1439,7 +1460,7 @@
 <pre><code class="language-bash">ollama --version
 
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-3-post-install-verification">Part 3: Post-Install Verification</h2>
 <p>To ensure everything is running smoothly, check the service status:</p>
 <pre><code class="language-bash">systemctl status ollama
@@ -1461,7 +1482,7 @@
 <pre><code class="language-bash">sudo systemctl status ollama.service
 </code></pre>
 <p>Look for <strong>"Active: inactive (dead)"</strong> and <strong>"Loaded: ...; disabled;"</strong> in the output.</p>
-<hr />
+<hr>
 <h2 id="start-ollama-on-demand">▶️ Start Ollama On Demand</h2>
 <p>When you need to use Ollama (e.g., for LM Studio or a CLI session), you have a couple of options:</p>
 <h3 id="option-1-start-as-a-system-service-recommended">Option 1: Start as a System Service (Recommended)</h3>
@@ -1474,7 +1495,7 @@
 <pre><code class="language-bash">ollama serve
 </code></pre>
 <p>To stop it when running in the foreground, you typically press <strong>Ctrl + C</strong>.</p>
-<hr />
+<hr>
 <h1 id="use-symbolic-links">Use Symbolic links</h1>
 <p>While LM Studio and Ollama are two different tools, they both deal with LLMs, and you can definitely <strong>integrate them to share models and functionality</strong>. The integration falls into two main categories:</p>
 <ol>
@@ -1482,7 +1503,7 @@
 <li><strong>API Serving (The Easy Way):</strong> Using the model server in LM Studio to expose models to Ollama (or vice versa, though less common).</li>
 </ol>
 <p>Here is the most common and effective way to connect them, especially since you prefer to control the services manually.</p>
-<hr />
+<hr>
 <h2 id="method-1-sharing-models-via-symbolic-links-linux-solution">🔗 Method 1: Sharing Models via Symbolic Links (Linux Solution)</h2>
 <p>This method allows models you download with Ollama to be used directly by LM Studio, avoiding the need to download the same large files twice. This is an advanced technique common among Linux users.</p>
 <h3 id="the-problem">The Problem</h3>
@@ -1527,7 +1548,7 @@ sudo systemctl stop ollama.service</code></p>
 </blockquote>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="method-2-use-lm-studio-as-an-openai-compatible-server">🔌 Method 2: Use LM Studio as an OpenAI-Compatible Server</h2>
 <p>This method is simpler and uses the API capability of <strong>LM Studio</strong> to expose models to other applications, like Ollama (though Ollama usually acts as the server). This is great if you want to use the models you downloaded in LM Studio with the Ollama command-line tools.</p>
 <h3 id="1-start-a-server-in-lm-studio">1. Start a Server in LM Studio</h3>
@@ -1583,7 +1604,7 @@ sudo userdel ollama
 <pre><code class="language-bash">rm -rf ~/.ollama
 
 </code></pre>
-<hr />
+<hr>
 <h3 id="summary-of-commands">Summary of Commands</h3>
 <table>
 <thead>
@@ -1607,7 +1628,7 @@ sudo userdel ollama
 </tr>
 </tbody>
 </table>
-<hr />
+<hr></div>
 
 
 

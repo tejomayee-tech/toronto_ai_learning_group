@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1473,7 +1494,7 @@
 
   <h1>Lunix Swap File management</h1>
 
-<h2 id="comprehensive-swap-management-guide">Comprehensive Swap Management Guide</h2>
+<div><h2 id="comprehensive-swap-management-guide">Comprehensive Swap Management Guide</h2>
 <blockquote>
 <p><strong>Note:</strong> Though this document uses one Mini PC as base example, it can be used for any computer running Linux/Ubuntu.</p>
 </blockquote>
@@ -1632,7 +1653,7 @@
 <li>If the <strong>TYPE</strong> is <code>file</code>, follow the steps below.</li>
 <li>If the <strong>TYPE</strong> is <code>partition</code>, you would typically need to use a tool like <strong>GParted</strong> to resize it, which is more complex. I recommend simply adding a swap file in addition to your partition if you need a quick fix.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="step-2-increase-the-swap-file">Step 2: Increase the Swap File</h3>
 <p>This process involves turning off the current swap, deleting it, and recreating a larger one.</p>
 <ol>
@@ -1664,7 +1685,7 @@
 <pre><code class="language-bash">sudo swapon /swapfile
 
 </code></pre>
-<hr />
+<hr>
 <h3 id="step-3-verify-the-change">Step 3: Verify the Change</h3>
 <p>Check the new size to ensure it is active:</p>
 <pre><code class="language-bash">free -h
@@ -1694,7 +1715,7 @@
 
 </code></pre>
 <p><em>I recommend </em><em>10</em><em> for your 64GB setup. This ensures the system uses almost all your physical RAM before touching the slower SSD swap.</em></p>
-<hr />
+<hr>
 <h3 id="3-change-it-permanently">3. Change it Permanently</h3>
 <p>Once you've tested it and are happy, make it stick across reboots:</p>
 <ol>
@@ -1716,7 +1737,7 @@
 <pre><code class="language-bash">sudo sysctl -p
 
 </code></pre>
-<hr />
+<hr>
 <h3 id="understanding-the-trade-off">Understanding the Trade-off</h3>
 <table>
 <thead>
@@ -1750,7 +1771,7 @@
 </tbody>
 </table>
 <h3 id="why-10-is-the-sweet-spot-for-64gb-ram">Why "10" is the sweet spot for 64GB RAM</h3>
-<p>With a 30B model (17GB) and your OS overhead, you're using maybe 22-25GB of your 64GB. At a swappiness of 60, Linux might try to move some of that 17GB model into swap <em>just in case</em>, which can cause a slight stutter. At 10, it will keep the entire model in the fast DDR5 RAM of your K11, providing the fastest possible inference.</p>
+<p>With a 30B model (17GB) and your OS overhead, you're using maybe 22-25GB of your 64GB. At a swappiness of 60, Linux might try to move some of that 17GB model into swap <em>just in case</em>, which can cause a slight stutter. At 10, it will keep the entire model in the fast DDR5 RAM of your K11, providing the fastest possible inference.</p></div>
 
 
 

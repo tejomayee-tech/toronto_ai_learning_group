@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1474,9 +1495,9 @@
                   
 
 
-<p>This guide is tailored for a clean Windows environment where <strong>Docker is not installed at all</strong>. It focuses purely on installing and using <strong>Docker Desktop</strong>, which is the required platform to run the integrated <strong>Docker Model Runner (DMR)</strong> on Windows.</p>
+<div><p>This guide is tailored for a clean Windows environment where <strong>Docker is not installed at all</strong>. It focuses purely on installing and using <strong>Docker Desktop</strong>, which is the required platform to run the integrated <strong>Docker Model Runner (DMR)</strong> on Windows.</p>
 <p>When you install Docker Desktop, it installs its own dedicated Docker Engine, so you don't need a separate installation.</p>
-<hr />
+<hr>
 <h2 id="docker-desktop-model-runner-quick-start-guide-windows">🖥️ Docker Desktop &amp; Model Runner: Quick Start Guide (Windows)</h2>
 <h3 id="i-prerequisites-system-setup">I. Prerequisites &amp; System Setup</h3>
 <p>Docker Desktop relies on Windows virtualization features. Before you start, ensure your system is ready:</p>
@@ -1542,11 +1563,11 @@ docker model run ai/llama2:7b-chat</p>
 </li>
 </ol>
 <p><strong>You are now successfully running AI models locally on Windows using Docker Desktop and Model Runner, without having any prior standalone Docker installation!</strong></p>
-<hr />
+<hr>
 <p>That's the ultimate goal of the Model Runner—to provide a simple API for your applications!</p>
 <p>Docker Model Runner (DMR) exposes an <strong>OpenAI-compatible API</strong>. This is the key feature, as it means you can use existing code, libraries (like the Python OpenAI SDK), and tools built for OpenAI to interact with your local models.</p>
 <p>Here is the simple guide on how to access the model API from your browser or application, which requires enabling <strong>Host-Side TCP Support</strong>.</p>
-<hr />
+<hr>
 <h2 id="accessing-the-model-runner-api">🌐 Accessing the Model Runner API</h2>
 <p>You have two main ways to access the running model, depending on whether the request originates from a <strong>container</strong> or your <strong>Windows host machine</strong>.</p>
 <h3 id="1-access-from-your-windows-host-browser-postman-python-script">1. Access from your Windows Host (Browser, Postman, Python Script)</h3>
@@ -1613,12 +1634,12 @@ services:
   frontend-app:
     image: my-app-image:latest
     ports:
-      - &quot;80:8000&quot;
+      - "80:8000"
     environment:
       # Use the special hostname for the model runner
       OPENAI_BASE_URL: http://model-runner.docker.internal/engines/llama.cpp/v1
 </code></pre>
-<p>By enabling the TCP host support and knowing these two hostnames, you can easily integrate your local models into any development project!</p>
+<p>By enabling the TCP host support and knowing these two hostnames, you can easily integrate your local models into any development project!</p></div>
 
 
 

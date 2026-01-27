@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +782,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1555,6 +1555,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1860,13 +1881,13 @@
 
   <h1>Private-Secure Docker-Compose n8n + local LLM</h1>
 
-<h2 id="n8n-one-step-deploy-on-docker-with-docker-compose">n8n one step deploy on docker with docker-compose</h2>
+<div><h2 id="n8n-one-step-deploy-on-docker-with-docker-compose">n8n one step deploy on docker with docker-compose</h2>
 <h3 id="required-tools">🛠️ Required Tools</h3>
 <ol>
 <li><strong>Docker Engine:</strong> The core virtualization platform that manages and runs the containers.</li>
 <li><strong>Docker Compose:</strong> A tool for defining and running multi-container Docker applications (like the one you provided) using the YAML file format.</li>
 </ol>
-<hr />
+<hr>
 <h4 id="step-by-step-setup-on-ubuntu">⚙️ Step-by-Step Setup on Ubuntu</h4>
 <h5 id="1-install-docker-engine">1. Install Docker Engine</h5>
 <p>You should install Docker from the official Docker repository to ensure you get the latest version.</p>
@@ -2008,7 +2029,7 @@ services:
     container_name: n8n
     restart: unless-stopped
     ports:
-      - &quot;5678:5678&quot;
+      - "5678:5678"
     volumes:
       - n8n_data:/home/node/.n8n
     environment:
@@ -2026,7 +2047,7 @@ services:
     container_name: ollama
     restart: unless-stopped
     ports:
-      - &quot;11434:11434&quot;  # Expose Ollama on the default port
+      - "11434:11434"  # Expose Ollama on the default port
     volumes:
       - ollama_data:/root/.ollama
 
@@ -2056,7 +2077,7 @@ root@b65cb311556b:/# ollama pull llama3.2
 </code></pre>
 <p>Several other GGUF models support tool use and function calling, which are essential for building agents that can interact with external APIs and services. The ability to use tools is a rapidly evolving area in the world of open-source LLMs.</p>
 <h3 id="step5-login-and-create-workflows">Step5: Login and create workflows</h3>
-<p>Follow the steps from Step 5 onwards in <a href="../Step-by-step-guide-to-setup-n8n-locally-with-llm/">docker-desktop-based-setup</a></p>
+<p>Follow the steps from Step 5 onwards in <a href="../Step-by-step-guide-to-setup-n8n-locally-with-llm/">docker-desktop-based-setup</a></p></div>
 
 
 

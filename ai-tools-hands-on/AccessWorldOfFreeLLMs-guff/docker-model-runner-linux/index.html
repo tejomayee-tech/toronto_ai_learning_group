@@ -208,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-tabs__link">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-sessions/fundamentals_of_LLM/" class="md-nav__link">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
         
   
   <span class="md-ellipsis">
-    Bigenners - Local AI
+    Beginners - Local AI
   </span>
   
 
@@ -1255,6 +1255,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1434,7 +1455,7 @@
                   
 
 
-<h1 id="docker-model-runner-dmr"><strong>Docker Model Runner (DMR)</strong></h1>
+<div><h1 id="docker-model-runner-dmr"><strong>Docker Model Runner (DMR)</strong></h1>
 <h2 id="for-docker-engine-installed-on-linux">For Docker Engine installed on Linux:</h2>
 <h3 id="1-install-the-docker-model-plugin">1. Install the Docker Model Plugin</h3>
 <pre><code>The `docker-model-plugin` is available in Docker's official APT repository for Linux.
@@ -1607,7 +1628,7 @@ docker context use desktop-linux</code></p>
 <p>Yes, you can run and manage all three: your <strong>standalone Docker Engine</strong>, <strong>Docker Desktop</strong>, and <strong>Docker Model Runner</strong> on Ubuntu.</p>
 <p><strong>Docker Model Runner (DMR)</strong> is a feature of Docker Desktop (and also available as a plugin for Docker Engine CE) that allows you to run local AI models (like LLMs) using familiar <code>docker model</code> CLI commands.</p>
 <p>Here is the regenerated guide, including the Model Runner steps and how it interacts with the two Docker environments.</p>
-<hr />
+<hr>
 <h2 id="the-docker-coexistence-guide-with-model-runner_1">🚀 The Docker Coexistence Guide with Model Runner</h2>
 <p>The core concept for managing these environments is <strong>Context Switching</strong> using the <code>docker context</code> command.</p>
 <h3 id="i-setup-enable-model-runner">I. Setup: Enable Model Runner</h3>
@@ -1707,7 +1728,7 @@ docker model run ai/smollm2:latest "Explain the difference between a container a
 </li>
 </ol>
 <p>This setup allows you to keep your traditional Docker development flow separate from your new GenAI/LLM local model experimentation, all managed through the same <code>docker</code> command line tool.</p>
-<hr />
+<hr>
 <h2 id="reverting-back-to-docker-engine">Reverting back to Docker Engine:</h2>
 <p>This part assumes you have the <strong>native Docker Engine</strong> already installed and running (e.g., the <code>docker.io</code> package). The goal is to remove Docker Desktop and point your CLI back to the native engine.</p>
 <h3 id="step-1-uninstall-docker-desktop">Step 1: Uninstall Docker Desktop</h3>
@@ -1785,7 +1806,7 @@ docker context ls
 <pre><code class="language-bash"># Run the test container against the native Engine
 docker run hello-world
 </code></pre>
-<p><em>Expected result: A successful message about the image running locally.</em></p>
+<p><em>Expected result: A successful message about the image running locally.</em></p></div>
 
 
 
