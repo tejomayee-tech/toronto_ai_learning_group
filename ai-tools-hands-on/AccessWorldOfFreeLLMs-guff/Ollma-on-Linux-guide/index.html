@@ -1297,6 +1297,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ollama-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Ollama installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Ollama installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-run-the-official-install-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Run the Official Install Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verify-the-new-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verify the New Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-post-install-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Post-Install Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛑 Stop Ollama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛑 Stop Ollama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1-stop-the-currently-running-service" class="md-nav__link">
     <span class="md-ellipsis">
       1. Stop the Currently Running Service
@@ -1304,8 +1356,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-disable-auto-start-on-boot" class="md-nav__link">
     <span class="md-ellipsis">
       2. Disable Auto-Start on Boot
@@ -1313,13 +1365,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#3-verify-the-status-optional" class="md-nav__link">
     <span class="md-ellipsis">
       3. Verify the Status (Optional)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1372,6 +1429,24 @@
 
 
 <h1 id="manage-ollama-service">Manage Ollama Service</h1>
+<h2 id="ollama-installation">🚀 Ollama installation</h2>
+<h3 id="1-run-the-official-install-script">1. Run the Official Install Script</h3>
+<pre><code class="language-bash">curl -fsSL https://ollama.com/install.sh | sh
+
+</code></pre>
+<h3 id="2-verify-the-new-version">2. Verify the New Version</h3>
+<p>Check that the installation succeeded and that you are no longer on 0.14.2.</p>
+<pre><code class="language-bash">ollama --version
+
+</code></pre>
+<hr />
+<h2 id="part-3-post-install-verification">Part 3: Post-Install Verification</h2>
+<p>To ensure everything is running smoothly, check the service status:</p>
+<pre><code class="language-bash">systemctl status ollama
+
+</code></pre>
+<p>You should see <strong>active (running)</strong> in green text.</p>
+<h2 id="stop-ollama">🛑 Stop Ollama</h2>
 <p>You can use <code>systemctl</code> commands, which manage system services on Ubuntu.</p>
 <h3 id="1-stop-the-currently-running-service">1. Stop the Currently Running Service</h3>
 <p>This command immediately stops the Ollama server process.</p>
@@ -1480,7 +1555,59 @@ sudo systemctl stop ollama.service</code></p>
     sudo systemctl start ollama.service</code></li>
 </ol>
 <p>In summary, for <strong>model file sharing</strong> use <strong>Symbolic Links</strong> (with a helper script). For <strong>running a server</strong> with your preferred models, you can choose to run <strong>LM Studio's server</strong> <em>or</em> <strong>Ollama's server</strong> and use your applications against the one that is currently running.</p>
-<p>Would you like me to find a specific, up-to-date Python script or utility for creating the symbolic links between the Ollama and LM Studio model directories on Linux?</p>
+<h2 id="clean-uninstallation">🗑️ Clean Uninstallation</h2>
+<p>Since you were running an older version, a clean wipe ensures no "zombie" binaries or old service configurations interfere with the new installation.</p>
+<h3 id="1-stop-and-disable-the-service">1. Stop and Disable the Service</h3>
+<p>This stops the current background process and prevents it from starting on reboot.</p>
+<pre><code class="language-bash">sudo systemctl stop ollama
+sudo systemctl disable ollama
+sudo rm /etc/systemd/system/ollama.service
+
+</code></pre>
+<h3 id="2-remove-the-binary">2. Remove the Binary</h3>
+<p>Locate and delete the executable.</p>
+<pre><code class="language-bash">sudo rm $(which ollama)
+
+</code></pre>
+<h3 id="3-wipe-data-and-user-the-clean-slate-step">3. Wipe Data and User (The "Clean Slate" Step)</h3>
+<p>Ollama stores massive model files in <code>/usr/share/ollama</code>. We also need to remove the dedicated system user.</p>
+<pre><code class="language-bash">sudo rm -rf /usr/share/ollama
+sudo userdel ollama
+
+</code></pre>
+<blockquote>
+<p><strong>Note on Groups:</strong> If you see an error like <code>group ollama not removed because it has other members</code>, it means your own user account is likely still linked to it. You can ignore this or run <code>sudo groupdel ollama</code> to finish it off.</p>
+</blockquote>
+<h3 id="4-optional-clear-personal-configs">4. Optional: Clear Personal Configs</h3>
+<p>If you want to delete your personal chat history and local settings, remove the hidden directory in your home folder:</p>
+<pre><code class="language-bash">rm -rf ~/.ollama
+
+</code></pre>
+<hr />
+<h3 id="summary-of-commands">Summary of Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uninstall</strong></td>
+<td>Stop service  Delete binary  Wipe <code>/usr/share/ollama</code></td>
+</tr>
+<tr>
+<td><strong>Reinstall</strong></td>
+<td>`curl -fsSL https://ollama.com/install.sh</td>
+</tr>
+<tr>
+<td><strong>Check Version</strong></td>
+<td><code>ollama --version</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 
