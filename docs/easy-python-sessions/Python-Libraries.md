@@ -42,3 +42,30 @@
     frameborder="0" 
     allowfullscreen
 ></iframe>
+
+
+---
+
+### Numpy Session 2
+
+* Part 1
+
+<iframe 
+    src="https://drive.google.com/file/d/1nOPB4BFqYO8dCVU5dwCQOaj4MSlW-Mv7/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
+
+* Part 2
+
+<iframe 
+    src="https://drive.google.com/file/d/1Pz3xHDTqpbWwnLKdZN3uER2mFlenvlJG/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
