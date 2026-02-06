@@ -1,12 +1,12 @@
 Setting up Zorin OS alongside Windows 10 is a great way to experience Linux without fully committing to it. This process is called "dual-booting." Here's a simple, detailed, step-by-step guide to get you started!
 
-## Your Guide to Dual-Booting Zorin OS with Windows 10
+## Your Guide to Dual-Booting Zorin OS with Windows 11/10
 
 This guide will walk you through everything from preparing your computer to selecting your operating system at the start.
 
 ### What You'll Need (Requirements):
 
-1.  **A Computer with Windows 10 Installed:** This guide assumes you already have Windows 10 up and running.
+1.  **A Computer with Windows 11/10 Installed:** This guide assumes you already have Windows 10 up and running.
 2.  **Zorin OS Download:** We'll get the Zorin OS installation file.
     * **Zorin OS Core (Free):** This is the standard, free version and is excellent for most users. It has all the essential features.
     * **Zorin OS Pro (Paid):** This version includes more advanced features, professional software, and unique layouts. You purchase it to support the developers.
@@ -17,7 +17,7 @@ This guide will walk you through everything from preparing your computer to sele
 5.  **Reliable Internet Connection:** For downloading Zorin OS and Rufus.
 6.  **Important:** **Backup Your Important Files!** While this process is generally safe, it's always a good idea to save your precious documents, photos, and videos to an external hard drive or cloud storage (like Google Drive, OneDrive, Dropbox). Better safe than sorry!
 
-### Step 1: Prepare Windows 10
+### Step 1: Prepare Windows 11/10
 
 Before we touch Zorin OS, we need to make some space on your computer's hard drive for it.
 
@@ -40,7 +40,7 @@ Windows and Zorin OS need their own space to live on your hard drive. We'll "shr
 4.  **Observe the New Free Space:**
     * After shrinking, you'll see a new area in Disk Management labeled "Unallocated space." This is the space we just made for Zorin OS. Don't format it or do anything else with it yet!
 
-#### 1.2 Disable Fast Startup in Windows 10
+#### 1.2 Disable Fast Startup in Windows 11/10
 
 Fast Startup in Windows can sometimes cause issues with dual-booting because it doesn't fully shut down Windows.
 
