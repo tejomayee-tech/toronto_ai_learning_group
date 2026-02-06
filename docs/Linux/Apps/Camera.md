@@ -1,18 +1,45 @@
 https://flathub.org/apps/org.gnome.Snapshot
 
-flatpak install org.gnome.Snapshot.flatpakref
+## Camera & Capture Tools
 
-Install the Flatpak using the reference file: Execute the following command in the terminal:
+### GNOME Snapshot
 
-Bash
+**Purpose:** A modern and minimal camera application for taking pictures and videos.
 
-flatpak install org.gnome.Snapshot.flatpakref
-Follow the prompts: The system might ask you to confirm the installation and potentially ask for your administrator password. It will also likely show you the permissions the application will have. Review these and proceed if you're comfortable.
+**Features:**
 
-Wait for the installation to complete: The terminal will display the progress of the download and installation. Once it's finished, you should see a confirmation message.
+* **Simple Interface:** Designed for speed and ease of use on desktops, tablets, and phones.
+* **Photo & Video Support:** Easily toggle between capturing still images (JPEG) and recording videos (WebM).
+* **Countdown Timer:** Includes a configurable timer for both photos and videos.
+* **Built-in Gallery:** Browse your captures directly within the app and share them to other programs for editing.
+* **QR Code Support:** Features the ability to scan and decode QR codes.
 
-Run GNOME Snapshot: You can usually launch it from your desktop environment's application menu. Look for "Snapshot" or something similar. Alternatively, you can run it from the terminal using the command:
+**Installation:**
+The recommended way to install Snapshot is via **Flathub**. Open your terminal and run:
 
-Bash
+```bash
+# Add Flathub repository (if not already added)
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+# Install GNOME Snapshot
+flatpak install flathub org.gnome.Snapshot
+
+```
+
+**How to Run:**
+
+* **App Menu:** Look for **"Snapshot"** or **"Camera"** in your application launcher.
+* **Terminal:** Launch it directly using:
+```bash
 flatpak run org.gnome.Snapshot
+
+```
+
+
+
+**Use Cases:**
+
+* Quickly checking your webcam before a meeting.
+* Capturing quick video clips or selfies.
+* Scanning QR codes from your desktop or tablet.
+
