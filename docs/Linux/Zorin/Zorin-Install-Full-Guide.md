@@ -1,5 +1,5 @@
 
-<img src="3D-UI.png" alt="zorin-3d" width="600" style="border-radius: 8px;">
+<img src="images/3D-UI.png" alt="zorin-3d" width="600" style="border-radius: 8px;">
 
 Setting up Zorin OS alongside Windows 10 is a great way to experience Linux without fully committing to it. This process is called "dual-booting." Here's a simple, detailed, step-by-step guide to get you started!
 
@@ -217,4 +217,4 @@ After restarting, your computer should now show a menu every time it starts up.
 
 
 
-<img src="ZorinHome.png" alt="zorin-home" width="500" style="border-radius: 8px;">
+<img src="images/ZorinHome.png" alt="zorin-home" width="500" style="border-radius: 8px;">
