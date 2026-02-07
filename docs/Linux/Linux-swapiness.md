@@ -11,6 +11,7 @@ Before making changes, check your current status. Open your terminal (**Ctrl+Alt
 ```bash
 swapon --show
 
+
 ```
 
 * **If you see output:** You have an active swap file or partition.
@@ -33,6 +34,7 @@ We use `fallocate` because it’s nearly instant. Replace `32G` with your desire
 ```bash
 sudo fallocate -l 32G /swapfile
 
+
 ```
 
 **Validation:** Run `ls -lh /swapfile` to ensure it shows the correct size.
@@ -44,6 +46,7 @@ For security, only the root user should be able to read this file.
 ```bash
 sudo chmod 600 /swapfile
 
+
 ```
 
 ### 4. Format as Swap
@@ -51,12 +54,14 @@ sudo chmod 600 /swapfile
 ```bash
 sudo mkswap /swapfile
 
+
 ```
 
 ### 5. Enable the Swap
 
 ```bash
 sudo swapon /swapfile
+
 
 ```
 
@@ -70,12 +75,12 @@ If you restart now, the swap will disappear. We need to add it to the file syste
 
 1. **Backup your fstab first:** `sudo cp /etc/fstab /etc/fstab.bak`
 2. **Add the entry:**
+
 ```bash
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
+
 ```
-
-
 
 ---
 
@@ -91,11 +96,12 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```bash
 cat /proc/sys/vm/swappiness
 
+
 ```
 
 *(Default is usually 60)*
 
-### 2. Set it for AI Workloads
+### 2. Set it for AI Workloads (Runtime)
 
 For AI, we want the system to prioritize physical RAM as much as possible to maintain speed, but keep the swap ready. A value of **10** is generally the "sweet spot" for SSD users.
 
@@ -104,12 +110,15 @@ sudo sysctl vm.swappiness=10
 
 ```
 
+**Instruction:** This command updates the kernel parameter immediately without a reboot. It tells your Linux system to only use the swap file when your physical RAM is 90% full.
+
 ### 3. Make Swappiness Permanent
 
 Open the sysctl configuration file:
 
 ```bash
 sudo nano /etc/sysctl.conf
+
 
 ```
 
@@ -119,16 +128,32 @@ Scroll to the bottom and add:
 
 ---
 
-## Phase 5: Troubleshooting & Restarts
+## Phase 5: Troubleshooting, Maintenance & Restarts
+
+### 1. Flushing the Swap (Crucial Maintenance)
+
+If you notice your system is using swap even though you have free RAM, use the following command to "flush" the data from the slow SSD back into your fast physical RAM:
+
+```bash
+sudo swapoff -a && sudo swapon -a
+
+```
+
+**Instruction Details:**
+
+* **`sudo swapoff -a`**: This command disables all swap files/partitions and forces the Linux kernel to move every piece of data currently in the swap back into your physical RAM hardware.
+* **`sudo swapon -a`**: This immediately re-enables the swap files listed in your `/etc/fstab` configuration, ensuring you still have your "overflow" safety net for your next AI session.
+* **Note:** Only run this if your available RAM is larger than the used swap shown in `free -h`.
+
+### 2. Additional Troubleshooting
 
 * **Restart Needed?** Technically, no. Linux applies these changes instantly. However, a reboot is the best way to **validate** that your `/etc/fstab` edits were correct.
 * **Out of Space?** If `fallocate` fails, you don't have enough room on that SSD.
 * **Removing Old Swap:** If you have an old, small swap file you want to delete to save space:
+
 1. `sudo swapoff /swapfile_old`
 2. `sudo rm /swapfile_old`
 3. Remove the corresponding line from `/etc/fstab`.
-
-
 
 ---
 
@@ -139,12 +164,12 @@ Run this command one last time:
 ```bash
 swapon --show
 
+
 ```
 
 If you see your new file path and the correct size, you are ready to load those heavy tensors.
 
-
-# Minitoring Swap memory
+# Monitoring Swap memory
 
 To monitor your system while running AI models, you need a way to see **System RAM/Swap** and **GPU/VRAM** at the same time. Since AI models often "spill over" from VRAM to System RAM and finally to Swap, tracking this flow is crucial.
 
@@ -161,6 +186,7 @@ Here are the best tools to use on Ubuntu and Zorin.
 ```bash
 sudo apt update
 sudo apt install nvtop
+
 
 ```
 
@@ -183,6 +209,7 @@ If you want a high-tech "dashboard" feel that includes disk I/O (to see if your 
 ```bash
 sudo apt install btop
 
+
 ```
 
 ### **How to use it**
@@ -201,6 +228,7 @@ If you don't want to install anything new, you can use a "watch" loop with the b
 
 ```bash
 watch -n 1 free -h
+
 
 ```
 
@@ -221,8 +249,7 @@ If a model crashes, run this immediately to see if it was a memory issue:
 ```bash
 sudo dmesg | grep -i "oom-killer"
 
+
 ```
 
 * If you see "Out of memory: Killed process," you need to **increase your swap file size** using the steps from the previous guide.
-
----
