@@ -1,19 +1,21 @@
-<img src="images/Ubuntu.png" alt="ubuntu" width="500">
+# UBUNTU Linux
+
+<img src="../images/Ubuntu.png" alt="ubuntu" width="500">
 
 
 ## Special Notes
 
 ### 1. Linux manages all application updates centrally
 
-<img src="images/CollectiveUpdates.png" alt="ubuntu-apps-collective-update" width="400" style="border-radius: 8px;">
+<img src="../images/CollectiveUpdates.png" alt="ubuntu-apps-collective-update" width="400" style="border-radius: 8px;">
 
 ### 2. Ubuntu studio comes pre-installed with tons of free multimedia software
 
-<img src="images/Ubuntu-Studio.png" alt="ubuntu-studio" width="500" style="border-radius: 8px;">
+<img src="../images/Ubuntu-Studio.png" alt="ubuntu-studio" width="500" style="border-radius: 8px;">
 
 ### 3. Linux powers most cloud infrastructure
 
-<img src="images/Ubuntu-on-cloud.png" alt="ubuntu-on-cloud" width="500" style="border-radius: 8px;">
+<img src="../images/Ubuntu-on-cloud.png" alt="ubuntu-on-cloud" width="500" style="border-radius: 8px;">
 
 
 Setting up Ubuntu alongside Windows 11 or 10 is the best way to get the power of Linux without losing your Windows environment. This setup is called "dual-booting." Here is your updated, step-by-step guide tailored for both versions of Windows!

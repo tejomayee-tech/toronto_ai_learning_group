@@ -82,10 +82,12 @@ nav:
     - Desktop PC for 120b LLMs: ai-pc/pc-for-running-120b-llms-and-tune-as-well.md
     - Mini PC for 120b LLMs: ai-pc/Mini-PC-for-running-120B-lls.md
 
-    - Linux: 
-        - Linux Home: Linux/Linux-home.md
-        - Ubuntu Guide: Linux/Ubuntu/ubuntu-Install-modes-full-guide.md
-        - Zorin Guide: Linux/Zorin/Zorin-Install-Full-Guide.md
+  - Linux: 
+    - Linux Home: Linux/Linux-home.md
+    - Ubuntu Guide: Linux/Ubuntu/ubuntu-Install-modes-full-guide.md
+    - Zorin Guide: Linux/Zorin/Zorin-Install-Full-Guide.md
+    - Low RAM > Swap Memory : Linux/Linux-swapiness.md
+    - World of free tools: Linux/Ubuntu/Linux-Tools.md
 
   - Programming:
     - Python Easy Learn:

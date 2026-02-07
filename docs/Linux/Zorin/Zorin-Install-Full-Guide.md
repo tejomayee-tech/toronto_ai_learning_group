@@ -1,5 +1,5 @@
 
-<img src="images/3D-UI.png" alt="zorin-3d" width="600" style="border-radius: 8px;">
+<img src="../images/3D-UI.png" alt="zorin-3d" width="600" style="border-radius: 8px;">
 
 Setting up Zorin OS alongside Windows 10 is a great way to experience Linux without fully committing to it. This process is called "dual-booting." Here's a simple, detailed, step-by-step guide to get you started!
 
@@ -20,6 +20,8 @@ This guide will walk you through everything from preparing your computer to sele
 5.  **Reliable Internet Connection:** For downloading Zorin OS and Rufus.
 6.  **Important:** **Backup Your Important Files!** While this process is generally safe, it's always a good idea to save your precious documents, photos, and videos to an external hard drive or cloud storage (like Google Drive, OneDrive, Dropbox). Better safe than sorry!
 
+
+<img src="../images/ZorinHome.png" alt="zorin-home" width="500" style="border-radius: 8px;">
 
 
 ### Step 1: Prepare Windows 11/10
@@ -216,5 +218,3 @@ After restarting, your computer should now show a menu every time it starts up.
 **Congratulations!** You have successfully installed Zorin OS alongside Windows 10. You can now explore the world of Linux and switch back to Windows whenever you need to. Enjoy your dual-boot adventure!
 
 
-
-<img src="images/ZorinHome.png" alt="zorin-home" width="500" style="border-radius: 8px;">
