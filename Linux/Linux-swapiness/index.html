@@ -1413,9 +1413,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-set-it-for-ai-workloads" class="md-nav__link">
+  <a href="#2-set-it-for-ai-workloads-runtime" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Set it for AI Workloads
+      2. Set it for AI Workloads (Runtime)
     </span>
   </a>
   
@@ -1436,14 +1436,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-5-troubleshooting-restarts" class="md-nav__link">
+  <a href="#phase-5-troubleshooting-maintenance-restarts" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 5: Troubleshooting &amp; Restarts
+      Phase 5: Troubleshooting, Maintenance &amp; Restarts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Phase 5: Troubleshooting & Restarts">
+    <nav class="md-nav" aria-label="Phase 5: Troubleshooting, Maintenance & Restarts">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-flushing-the-swap-crucial-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Flushing the Swap (Crucial Maintenance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-additional-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Additional Troubleshooting
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#final-verification" class="md-nav__link">
@@ -1460,13 +1478,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#minitoring-swap-memory" class="md-nav__link">
+  <a href="#monitoring-swap-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Minitoring Swap memory
+      Monitoring Swap memory
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Minitoring Swap memory">
+    <nav class="md-nav" aria-label="Monitoring Swap memory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1871,9 +1889,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-set-it-for-ai-workloads" class="md-nav__link">
+  <a href="#2-set-it-for-ai-workloads-runtime" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Set it for AI Workloads
+      2. Set it for AI Workloads (Runtime)
     </span>
   </a>
   
@@ -1894,14 +1912,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-5-troubleshooting-restarts" class="md-nav__link">
+  <a href="#phase-5-troubleshooting-maintenance-restarts" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 5: Troubleshooting &amp; Restarts
+      Phase 5: Troubleshooting, Maintenance &amp; Restarts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Phase 5: Troubleshooting & Restarts">
+    <nav class="md-nav" aria-label="Phase 5: Troubleshooting, Maintenance & Restarts">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-flushing-the-swap-crucial-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Flushing the Swap (Crucial Maintenance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-additional-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Additional Troubleshooting
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#final-verification" class="md-nav__link">
@@ -1918,13 +1954,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#minitoring-swap-memory" class="md-nav__link">
+  <a href="#monitoring-swap-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Minitoring Swap memory
+      Monitoring Swap memory
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Minitoring Swap memory">
+    <nav class="md-nav" aria-label="Monitoring Swap memory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2038,6 +2074,7 @@
 <p>Before making changes, check your current status. Open your terminal (<strong>Ctrl+Alt+T</strong>) and run:</p>
 <pre><code class="language-bash">swapon --show
 
+
 </code></pre>
 <ul>
 <li><strong>If you see output:</strong> You have an active swap file or partition.</li>
@@ -2052,19 +2089,23 @@
 <p>We use <code>fallocate</code> because it’s nearly instant. Replace <code>32G</code> with your desired size.</p>
 <pre><code class="language-bash">sudo fallocate -l 32G /swapfile
 
+
 </code></pre>
 <p><strong>Validation:</strong> Run <code>ls -lh /swapfile</code> to ensure it shows the correct size.</p>
 <h3 id="3-set-permissions">3. Set Permissions</h3>
 <p>For security, only the root user should be able to read this file.</p>
 <pre><code class="language-bash">sudo chmod 600 /swapfile
 
+
 </code></pre>
 <h3 id="4-format-as-swap">4. Format as Swap</h3>
 <pre><code class="language-bash">sudo mkswap /swapfile
 
+
 </code></pre>
 <h3 id="5-enable-the-swap">5. Enable the Swap</h3>
 <pre><code class="language-bash">sudo swapon /swapfile
+
 
 </code></pre>
 <p><strong>Verification Point:</strong> Run <code>free -h</code>. You should see the "Swap" total increase by the amount you just created.</p>
@@ -2077,6 +2118,7 @@
 </ol>
 <pre><code class="language-bash">echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
+
 </code></pre>
 <hr>
 <h2 id="phase-4-tuning-swappiness">Phase 4: Tuning "Swappiness"</h2>
@@ -2088,28 +2130,47 @@
 <h3 id="1-check-current-swappiness">1. Check current Swappiness</h3>
 <pre><code class="language-bash">cat /proc/sys/vm/swappiness
 
+
 </code></pre>
 <p><em>(Default is usually 60)</em></p>
-<h3 id="2-set-it-for-ai-workloads">2. Set it for AI Workloads</h3>
+<h3 id="2-set-it-for-ai-workloads-runtime">2. Set it for AI Workloads (Runtime)</h3>
 <p>For AI, we want the system to prioritize physical RAM as much as possible to maintain speed, but keep the swap ready. A value of <strong>10</strong> is generally the "sweet spot" for SSD users.</p>
 <pre><code class="language-bash">sudo sysctl vm.swappiness=10
 
 </code></pre>
+<p><strong>Instruction:</strong> This command updates the kernel parameter immediately without a reboot. It tells your Linux system to only use the swap file when your physical RAM is 90% full.</p>
 <h3 id="3-make-swappiness-permanent">3. Make Swappiness Permanent</h3>
 <p>Open the sysctl configuration file:</p>
 <pre><code class="language-bash">sudo nano /etc/sysctl.conf
+
 
 </code></pre>
 <p>Scroll to the bottom and add:
 <code>vm.swappiness=10</code>
 <em>(Press </em><em>Ctrl+O</em><em>, </em><em>Enter</em><em>, then </em><em>Ctrl+X</em><em> to save and exit.)</em></p>
 <hr>
-<h2 id="phase-5-troubleshooting-restarts">Phase 5: Troubleshooting &amp; Restarts</h2>
+<h2 id="phase-5-troubleshooting-maintenance-restarts">Phase 5: Troubleshooting, Maintenance &amp; Restarts</h2>
+<h3 id="1-flushing-the-swap-crucial-maintenance">1. Flushing the Swap (Crucial Maintenance)</h3>
+<p>If you notice your system is using swap even though you have free RAM, use the following command to "flush" the data from the slow SSD back into your fast physical RAM:</p>
+<pre><code class="language-bash">sudo swapoff -a &amp;&amp; sudo swapon -a
+
+</code></pre>
+<p><strong>Instruction Details:</strong></p>
+<ul>
+<li><strong><code>sudo swapoff -a</code></strong>: This command disables all swap files/partitions and forces the Linux kernel to move every piece of data currently in the swap back into your physical RAM hardware.</li>
+<li><strong><code>sudo swapon -a</code></strong>: This immediately re-enables the swap files listed in your <code>/etc/fstab</code> configuration, ensuring you still have your "overflow" safety net for your next AI session.</li>
+<li><strong>Note:</strong> Only run this if your available RAM is larger than the used swap shown in <code>free -h</code>.</li>
+</ul>
+<h3 id="2-additional-troubleshooting">2. Additional Troubleshooting</h3>
 <ul>
 <li><strong>Restart Needed?</strong> Technically, no. Linux applies these changes instantly. However, a reboot is the best way to <strong>validate</strong> that your <code>/etc/fstab</code> edits were correct.</li>
 <li><strong>Out of Space?</strong> If <code>fallocate</code> fails, you don't have enough room on that SSD.</li>
-<li><strong>Removing Old Swap:</strong> If you have an old, small swap file you want to delete to save space:</li>
-<li><code>sudo swapoff /swapfile_old</code></li>
+<li>
+<p><strong>Removing Old Swap:</strong> If you have an old, small swap file you want to delete to save space:</p>
+</li>
+<li>
+<p><code>sudo swapoff /swapfile_old</code></p>
+</li>
 <li><code>sudo rm /swapfile_old</code></li>
 <li>Remove the corresponding line from <code>/etc/fstab</code>.</li>
 </ul>
@@ -2118,9 +2179,10 @@
 <p>Run this command one last time:</p>
 <pre><code class="language-bash">swapon --show
 
+
 </code></pre>
 <p>If you see your new file path and the correct size, you are ready to load those heavy tensors.</p>
-<h1 id="minitoring-swap-memory">Minitoring Swap memory</h1>
+<h1 id="monitoring-swap-memory">Monitoring Swap memory</h1>
 <p>To monitor your system while running AI models, you need a way to see <strong>System RAM/Swap</strong> and <strong>GPU/VRAM</strong> at the same time. Since AI models often "spill over" from VRAM to System RAM and finally to Swap, tracking this flow is crucial.</p>
 <p>Here are the best tools to use on Ubuntu and Zorin.</p>
 <hr>
@@ -2129,6 +2191,7 @@
 <h3 id="installation"><strong>Installation</strong></h3>
 <pre><code class="language-bash">sudo apt update
 sudo apt install nvtop
+
 
 </code></pre>
 <h3 id="how-to-use-it"><strong>How to use it</strong></h3>
@@ -2144,6 +2207,7 @@ sudo apt install nvtop
 <h3 id="installation_1"><strong>Installation</strong></h3>
 <pre><code class="language-bash">sudo apt install btop
 
+
 </code></pre>
 <h3 id="how-to-use-it_1"><strong>How to use it</strong></h3>
 <p>Run <code>btop</code>. It is fully mouse-interactive. You can see:</p>
@@ -2156,6 +2220,7 @@ sudo apt install nvtop
 <h2 id="3-the-no-install-quick-check">3. The "No-Install" Quick Check</h2>
 <p>If you don't want to install anything new, you can use a "watch" loop with the built-in <code>free</code> command. This will refresh every 1 second:</p>
 <pre><code class="language-bash">watch -n 1 free -h
+
 
 </code></pre>
 <p><strong>What to look for:</strong></p>
@@ -2170,11 +2235,11 @@ sudo apt install nvtop
 If a model crashes, run this immediately to see if it was a memory issue:</p>
 <pre><code class="language-bash">sudo dmesg | grep -i "oom-killer"
 
+
 </code></pre>
 <ul>
 <li>If you see "Out of memory: Killed process," you need to <strong>increase your swap file size</strong> using the steps from the previous guide.</li>
-</ul>
-<hr></div>
+</ul></div>
 
 
 
