@@ -69,3 +69,14 @@
     frameborder="0" 
     allowfullscreen
 ></iframe>
+
+### Numpy Session 3
+
+<iframe 
+    src="https://drive.google.com/file/d/1-OM_BEvoHVo_Go5T5kmREcWHTS4xJvjn/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
