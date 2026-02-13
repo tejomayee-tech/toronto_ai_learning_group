@@ -88,6 +88,7 @@ nav:
     - Zorin Guide: Linux/Zorin/Zorin-Install-Full-Guide.md
     - Low RAM > Swap Memory : Linux/Linux-swapiness.md
     - World of free tools: Linux/Ubuntu/Linux-Tools.md
+    - One Step Dev Env : Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide.md
 
   - Programming:
     - Python Easy Learn:
