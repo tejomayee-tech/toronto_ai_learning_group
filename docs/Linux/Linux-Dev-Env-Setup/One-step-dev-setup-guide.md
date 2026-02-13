@@ -1,18 +1,12 @@
-That is a great point. Relying on local links in Markdown can be frustrating if the files don't exist yet or aren't in the exact relative path. Including the file content directly in the guide makes it a **"Zero-Dependency"** manual—the user can just copy, paste, and run.
-
-Here is the updated **One-step-dev-setup-guide.md** content designed for a user to build the environment from scratch.
-
----
-
 # 🚀 Ubuntu Dev Environment Setup Guide
 
 This guide allows you to recreate the entire enterprise dev environment bootstrap system. Follow the steps below to create the necessary files and execute the setup.
 
 ## 📝 Step 1: Create the Configuration Files
 
-Create a folder named `docs` and create the following two configuration files inside it.
+Create a folder named `Setup` and create the following two configuration files inside it.
 
-### 1. `docs/repos.conf`
+### 1. `Setup/repos.conf`
 
 This file manages your Git repositories and local environment settings.
 
@@ -24,7 +18,7 @@ Sample-Repo|https://<git-user-name>:<token>github.com/example/project.git|/home/
 
 ```
 
-### 2. `docs/tools.conf`
+### 2. `Setup/tools.conf`
 
 This file lists the applications to be installed via APT, Snap, or Flatpak.
 
@@ -61,7 +55,7 @@ SNAP|dbeaver-ce|classic
 
 ## ⚙️ Step 2: Create the Bootstrap Script
 
-Create a file named `docs/ubuntu-dev-setup-git+tool.sh` and paste the following code into it:
+Create a file named `Setup/ubuntu-dev-setup-git+tool.sh` and paste the following code into it:
 
 ```bash
 #!/usr/bin/env bash
