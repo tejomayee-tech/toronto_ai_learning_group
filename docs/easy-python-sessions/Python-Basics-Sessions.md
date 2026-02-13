@@ -159,6 +159,19 @@
     allowfullscreen
 ></iframe>
 
+
+### Session 10
+
+1. Classes - OOPS
+
+<iframe 
+    src="https://drive.google.com/file/d/1kWxLa3H6oIRzWnHOztC2v1JUbBymnajG/preview" 
+    width="720" 
+    height="360" 
+    allow="autoplay" 
+    frameborder="0" 
+    allowfullscreen
+></iframe>
 ---
 
 ### Progress visualisation 
