@@ -5,6 +5,7 @@
 ### Session 1
 
 1. Deserialize json data with python class
+1. Extras - Run Claude Code with local models
 
 <iframe 
     src="https://drive.google.com/file/d/1K1PPgysA9Gr2ISVLHR7JCie9b5AllUAa/preview" 
