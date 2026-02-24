@@ -91,13 +91,15 @@ nav:
     - One Step Dev Env : Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide.md
 
   - Programming:
-    - Python Easy Learn:
-      - Python Basics: easy-python-sessions/Python-Basics-Sessions.md
-      - Python Libraries: 
-        - Python UI: easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1.md
-        - Numpy: 
-          - Sessions: easy-python-sessions/python-libraries/numpy/numpy-1.md
-          - Workbook : easy-python-sessions/numpy/numpy_intro_community.ipynb
-        - Pandas: EasyLearnPythonSessions/Pandas/PandasHandsOn.ipynb
-      - Coding Concepts : easy-python-sessions/Implement-Concepts.md
+      - Python Easy Learn:
+          - Python Basics: easy-python-sessions/python-basics/Python-Basics-Sessions.md
+          - Python Libraries: 
+              - Python UI: easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1.md
+              - Numpy: 
+                  - Sessions: easy-python-sessions/python-libraries/numpy/numpy-1.md
+                  - Workbook : easy-python-sessions/python-libraries/numpy/numpy_intro_community.ipynb
+              - Pandas:
+                  - Workbook: easy-python-sessions/python-libraries/pandas/PandasHandsOn.ipynb
+          - Coding Concepts: docs/easy-python-sessions/coding-concepts/Implement-Concepts.md
+
       
