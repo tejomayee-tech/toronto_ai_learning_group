@@ -16,7 +16,7 @@
     
     
       
-        <title>Patterns comparison - AI Learning Group</title>
+        <title>Postgresql json implementation patterns - AI Learning Group</title>
       
     
     
@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#postgresql-json-implementation-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Patterns comparison
+              Postgresql json implementation patterns
             
           </span>
         </div>
@@ -1693,6 +1698,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-relational-pattern-the-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Relational Pattern (The "Classic")
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The Relational Pattern (The "Classic")">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-working-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Working Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-document-pattern-the-nosql-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The Document Pattern (The "NoSQL" Style)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Document Pattern (The "NoSQL" Style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-working-code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Working Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-hybrid-pattern-the-modern-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. The Hybrid Pattern (The "Modern Standard")
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Hybrid Pattern (The "Modern Standard")">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-working-code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Working Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-should-you-choose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which should you choose?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1707,9 +1803,140 @@
                   
 
 
-  <h1>Patterns comparison</h1>
+<div><h1 id="postgresql-json-implementation-patterns">Postgresql json implementation patterns</h1>
+<h2 id="1-the-relational-pattern-the-classic">1. The Relational Pattern (The "Classic")</h2>
+<p>This is the traditional way databases have worked for decades. Data is broken down into specific tables with rigid columns. Every piece of information has a "home."</p>
+<h3 id="the-working-code">The Working Code</h3>
+<pre><code class="language-python">from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy.orm import relationship
 
+class Student(Base):
+    __tablename__ = "relational_students"
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    gpa = Column(Float)
+    # Relationships to other tables
+    emergency_contacts = relationship("EmergencyContact", back_populates="student")
 
+class EmergencyContact(Base):
+    __tablename__ = "contacts"
+    id = Column(Integer, primary_key=True)
+    phone = Column(String)
+    student_id = Column(Integer, ForeignKey("relational_students.id"))
+    student = relationship("Student", back_populates="emergency_contacts")
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Integrity:</strong> Database prevents "garbage" data (e.g., text in a number column).</td>
+<td><strong>Rigid:</strong> Adding a new field (like "Twitter Handle") requires a database migration.</td>
+</tr>
+<tr>
+<td><strong>Storage Efficiency:</strong> Minimizes duplicate data.</td>
+<td><strong>Complex Queries:</strong> Requires <code>JOIN</code> statements to reconstruct an object.</td>
+</tr>
+<tr>
+<td><strong>Standardized:</strong> Works with every reporting tool.</td>
+<td><strong>Development Speed:</strong> Slower to iterate during early-stage prototyping.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-the-document-pattern-the-nosql-style">2. The Document Pattern (The "NoSQL" Style)</h2>
+<p>This is what your initial code used. You store a whole Python dictionary or object into a single <code>JSONB</code> column. The database treats it like a sealed box.</p>
+<h3 id="the-working-code_1">The Working Code</h3>
+<pre><code class="language-python">class DocumentStudent(Base):
+    __tablename__ = "document_students"
+    id = Column(Integer, primary_key=True)
+    name = Column(String) 
+    # Everything else is in one big "blob"
+    data = Column(JSONB) 
+
+# Usage
+new_student = DocumentStudent(
+    name="Alex", 
+    data={"gpa": 3.8, "clubs": ["Robotics"], "phone": "555-0199"}
+)
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Extreme Flexibility:</strong> Add or remove fields without ever touching the DB schema.</td>
+<td><strong>No Validation:</strong> The DB won't stop you from saving <code>gpa: "Excellent"</code> (a string) instead of <code>3.8</code>.</td>
+</tr>
+<tr>
+<td><strong>Developer Speed:</strong> Maps 1-to-1 with Python dictionaries and JSON APIs.</td>
+<td><strong>Performance:</strong> Calculating an average GPA across 1 million rows is slower because the DB must "parse" every JSON.</td>
+</tr>
+<tr>
+<td><strong>Simplicity:</strong> No need for multiple tables or complex joins.</td>
+<td><strong>Hidden Data:</strong> It’s easy to lose track of what keys exist inside the JSON over time.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-the-hybrid-pattern-the-modern-standard">3. The Hybrid Pattern (The "Modern Standard")</h2>
+<p>This is the "Goldilocks" approach. You take the fields you query or calculate often (like <code>GPA</code> or <code>Status</code>) and give them <strong>real columns</strong>. You take the unpredictable or "extra" data and put it in a <strong>JSONB column</strong>.</p>
+<h3 id="the-working-code_2">The Working Code</h3>
+<pre><code class="language-python">class HybridStudent(Base):
+    __tablename__ = "hybrid_students"
+
+    # 1. Fixed Columns (Structured)
+    id = Column(Integer, primary_key=True)
+    name = Column(String, index=True) # Indexed for fast searching
+    gpa = Column(Float)               # Stored as Float for math operations
+
+    # 2. Flexible Column (Unstructured)
+    # Storing clubs, preferences, and social links here
+    meta_info = Column(JSONB)
+
+# Example Query: Fast math on a real column
+average = session.query(func.avg(HybridStudent.gpa)).scalar()
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best Performance:</strong> Fast math/sorting on columns, flexible storage for the rest.</td>
+<td><strong>Middle Ground:</strong> Requires a bit more thought than just dumping everything into JSON.</td>
+</tr>
+<tr>
+<td><strong>Partial Indexing:</strong> You can index specific keys inside the JSONB if needed.</td>
+<td><strong>Schema Management:</strong> You still need to manage migrations for the core columns.</td>
+</tr>
+<tr>
+<td><strong>Clean Code:</strong> Your Python code stays organized while the DB stays optimized.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="which-should-you-choose">Which should you choose?</h2>
+<ol>
+<li><strong>Use Relational</strong> if you are building a banking or medical app where data accuracy is the only thing that matters.</li>
+<li><strong>Use Document</strong> if you are in the "Move Fast and Break Things" stage or building a very simple tool where data structure changes daily.</li>
+<li><strong>Use Hybrid (Recommended)</strong> for almost every modern web or AI app. It gives you the "Search Power" of SQL with the "Freedom" of JSON.</li>
+</ol></div>
 
 
 
