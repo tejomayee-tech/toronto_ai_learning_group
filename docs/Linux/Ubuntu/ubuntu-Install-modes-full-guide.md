@@ -2,6 +2,9 @@
 
 <img src="../images/Ubuntu.png" alt="ubuntu" width="500">
 
+Why Ubuntu?
+
+Checkout : https://ubuntu.com/ai
 
 ## Special Notes
 
