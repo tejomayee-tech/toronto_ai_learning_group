@@ -97,9 +97,7 @@ nav:
               - Python UI: easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1.md
               - Numpy: 
                   - Sessions: easy-python-sessions/python-libraries/numpy/numpy-1.md
-                  - Workbook : easy-python-sessions/python-libraries/numpy/numpy_intro_community.ipynb
+                  - Workbook: easy-python-sessions/python-libraries/numpy/numpy_intro_community.ipynb
               - Pandas:
                   - Workbook: easy-python-sessions/python-libraries/pandas/PandasHandsOn.ipynb
           - Coding Concepts: easy-python-sessions/coding-concepts/Implement-Concepts.md
-
-      
