@@ -1,4 +1,5 @@
 .venv
+venv
 .obsidian
 # Ignore compiled Python files
 __pycache__/
