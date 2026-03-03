@@ -5,7 +5,7 @@ Building a DIY AI workstation is no longer just about saving money—with the up
 DIY AI workstation is essentially a three-step "Click, Plug, and Power" process: you click the GPU into the dock, plug the OCuLink to a supporting mini PC and power cables in, and then power on the dock followed by the Mini PC for an instant high-bandwidth connection.
 
 
-At **$6,200 CAD** (including tax), the **NVIDIA DGX Spark** is a beautiful machine, but for that price, you could build nearly **three** high-end DIY rigs. Here is the strategic breakdown of why a custom build with any new or used high-VRAM GPU is the superior path for AI in 2026.
+At **$6,200 CAD** (including tax), the **NVIDIA DGX Spark** is a beautiful machine, but for that price, you could build nearly **two** high-end DIY rigs with some extra bucks. Here is the strategic breakdown of why a custom build with any new or used high-VRAM GPU is the superior path for AI in 2026.
 
 ---
 
@@ -40,7 +40,7 @@ The primary reason people bought "Pro" workstations like the DGX Spark was to av
 
 #### **A. No "Proprietary" Dead Ends**
 
-The DGX Spark runs a specialized version of Ubuntu. While powerful, it can be restrictive. On a standard Ubuntu 26.04 install, you can run **everything**: NVIDIA CUDA, AMD ROCm, Intel OneAPI, and standard Python environments without the OS "guardrails" found in enterprise systems.
+The DGX Spark runs a specialized version of Ubuntu. While powerful, it can be restrictive. On a standard Ubuntu 26.04 install, you can run **everything**: NVIDIA CUDA, AMD ROCm, Intel OneAPI, and standard Python environments without the OS "guardrails" found in enterprise ecosystems.
 
 #### **B. Dedicated vs. Unified Memory**
 
