@@ -35,13 +35,12 @@ nano ~/.claude/lmstudio.settings.json
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://localhost:1234/v1",
+    "ANTHROPIC_BASE_URL": "http://localhost:1234", 
     "ANTHROPIC_AUTH_TOKEN": "lmstudio",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "ANTHROPIC_MODEL": "default_model"
   }
 }
-
 ```
 
 ### 4. Create a Launch Alias
