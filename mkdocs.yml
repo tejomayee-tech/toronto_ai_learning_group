@@ -1,6 +1,6 @@
 site_name: AI Learning Group
 site_dir: site
-docs_dir: docs/ 
+docs_dir: docs\ 
 use_directory_urls: true 
 
 theme:
@@ -38,7 +38,7 @@ markdown_extensions:
   - pymdownx.pathconverter
   - attr_list
 extra_css:
-  - css/extra.css
+  - css\extra.css
 plugins:
   - search
   - mkdocs-pdf
@@ -49,55 +49,57 @@ nav:
   - Home: README.md
 
   - Community & Value:
-    - Community Main: community-values-guidelines/Community-main.md
-    - Contributing: community-values-guidelines/ContributingGuide.md
+    - Community Main: community-values-guidelines\Community-main.md
+    - Contributing: community-values-guidelines\ContributingGuide.md
 
   - AI - Fundamentals:
-    - AI Fundamentals 1: ai-sessions/fundamentals_of_LLM/fundamentsla_LLM.md
+    - AI Fundamentals 1: ai-sessions\fundamentals_of_LLM\fundamentsla_LLM.md
 
   - AI - Prompts:
-    - Zero Shot Prompts: ai-tools-hands-on/Prompts/Zero-shot-prompting.md
-    - Save Prompt Cost: ai-tools-hands-on/Prompts/Effective-prompts-save-premium-requests-n-cost.md
+    - Zero Shot Prompts: ai-tools-hands-on\Prompts\Zero-shot-prompting.md
+    - Save Prompt Cost: ai-tools-hands-on\Prompts\Effective-prompts-save-premium-requests-n-cost.md
 
 
   - AI Learning for Bigenners:
-    - How you can learn AI today - The Easy Way: ai-learning-plans/How-To-Learn-AI-Today.md
-    - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md
+    - How you can learn AI today - The Easy Way: ai-learning-plans\How-To-Learn-AI-Today.md
+    - AI Learning Path Draft: ai-learning-plans\ai-learning-plan-draft.md
 
   - AI Tools Hands-on:
-    - Beginners - Local AI : ai-tools-hands-on/Beginners-guide-to-Local_AI.md
-    - Private Local & Free GuFF models: ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
-    - Top Local LLMs: ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs.md 
-    - 2025 - Future of Local LLMs: ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms.md
+    - Beginners - Local AI : ai-tools-hands-on\Beginners-guide-to-Local_AI.md
+    - Private Local & Free GuFF models: ai-tools-hands-on\AccessWorldOfFreeLLMs-guff\How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
+    - Top Local LLMs: ai-tools-hands-on\CuratedLocalLLMs\Top-Local-LLMs.md 
+    - 2025 - Future of Local LLMs: ai-tools-hands-on\Wide-future-of-local-llms\future-of-opensource-local-llms.md
     
   - AI Workflows:
     - n8n:
-      - Overview & features: ai-workflows/n8n/docs/n8n-overview.md
-      - Private-Secure Docker-Desktop n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
-      - Private-Secure Docker-Compose n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
+      - Overview & features: ai-workflows\n8n\docs\n8n-overview.md
+      - Private-Secure Docker-Desktop n8n + local LLM: ai-workflows\n8n\Local_N8N_setup_with_Local_AI\Step-by-step-guide-to-setup-n8n-locally-with-llm.md
+      - Private-Secure Docker-Compose n8n + local LLM: ai-workflows\n8n\Local_N8N_setup_with_Local_AI\n8n-setup-with-docker-compose.md
 
   - AI-PC:
-    - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
-    - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
-    - Desktop PC for 120b LLMs: ai-pc/pc-for-running-120b-llms-and-tune-as-well.md
-    - Mini PC for 120b LLMs: ai-pc/Mini-PC-for-running-120B-lls.md
+    - PC for Running 20b LLM: ai-pc\pc-for-running-20b-llm.md
+    - CPU GPU for heavy LLMs: ai-pc\hardware-for-running-heavy-llms.md
+    - Desktop PC for 120b LLMs: ai-pc\pc-for-running-120b-llms-and-tune-as-well.md
+    - Mini PC for 120b LLMs: ai-pc\Mini-PC-for-running-120B-lls.md
 
   - Linux: 
-    - Linux Home: Linux/Linux-home.md
-    - Ubuntu Guide: Linux/Ubuntu/ubuntu-Install-modes-full-guide.md
-    - Zorin Guide: Linux/Zorin/Zorin-Install-Full-Guide.md
-    - Low RAM > Swap Memory : Linux/Linux-swapiness.md
-    - World of free tools: Linux/Ubuntu/Linux-Tools.md
-    - One Step Dev Env : Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide.md
+    - Linux Home: Linux\Linux-home.md
+    - Ubuntu Guide: Linux\Ubuntu\ubuntu-Install-modes-full-guide.md
+    - Ubuntu AI Pro: Linux\Ubuntu\Ubuntu-26.0-AI-Redefined.md
+    - Zorin Guide: Linux\Zorin\Zorin-Install-Full-Guide.md
+    - Low RAM > Swap Memory : Linux\Linux-swapiness.md
+    - World of free tools: Linux\Ubuntu\Linux-Tools.md
+    - One Step Dev Env : Linux\Linux-Dev-Env-Setup\One-step-dev-setup-guide.md
+
 
   - Programming:
       - Python Easy Learn:
-          - Python Basics: easy-python-sessions/python-basics/Python-Basics-Sessions.md
+          - Python Basics: easy-python-sessions\python-basics\Python-Basics-Sessions.md
           - Python Libraries: 
-              - Python UI: easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1.md
+              - Python UI: easy-python-sessions\python-libraries\ttkbootstrap\ttkbootstrap-1.md
               - Numpy: 
-                  - Sessions: easy-python-sessions/python-libraries/numpy/numpy-1.md
-                  - Workbook: easy-python-sessions/python-libraries/numpy/numpy_intro_community.ipynb
+                  - Sessions: easy-python-sessions\python-libraries\numpy\numpy-1.md
+                  - Workbook: easy-python-sessions\python-libraries\numpy\numpy_intro_community.ipynb
               - Pandas:
-                  - Workbook: easy-python-sessions/python-libraries/pandas/PandasHandsOn.ipynb
-          - Coding Concepts: easy-python-sessions/coding-concepts/Implement-Concepts.md
+                  - Workbook: easy-python-sessions\python-libraries\pandas\PandasHandsOn.ipynb
+          - Coding Concepts: easy-python-sessions\coding-concepts\Implement-Concepts.md
