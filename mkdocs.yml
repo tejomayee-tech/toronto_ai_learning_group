@@ -69,6 +69,8 @@ nav:
     - Private Local & Free GuFF models: ai-tools-hands-on\AccessWorldOfFreeLLMs-guff\How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
     - Top Local LLMs: ai-tools-hands-on\CuratedLocalLLMs\Top-Local-LLMs.md 
     - 2025 - Future of Local LLMs: ai-tools-hands-on\Wide-future-of-local-llms\future-of-opensource-local-llms.md
+    - AI Tools:
+      - OpenClaw Paradigm & Risk: ai-tools-hands-on\AI-tool-guides\Open-claw-safety.md
     
   - AI Workflows:
     - n8n:
