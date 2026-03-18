@@ -865,6 +865,73 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI-tool-guides/Open-claw-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenClaw Paradigm & Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1859,13 +1926,12 @@ nano ~/.claude/lmstudio.settings.json
 <p><strong>Paste this exact JSON:</strong></p>
 <pre><code class="language-json">{
   "env": {
-    "ANTHROPIC_BASE_URL": "http://localhost:1234/v1",
+    "ANTHROPIC_BASE_URL": "http://localhost:1234", 
     "ANTHROPIC_AUTH_TOKEN": "lmstudio",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "ANTHROPIC_MODEL": "default_model"
   }
 }
-
 </code></pre>
 <h3 id="4-create-a-launch-alias">4. Create a Launch Alias</h3>
 <p>Add a shortcut to your shell profile (<code>~/.zshrc</code> or <code>~/.bashrc</code>) so you don't have to remember the flags:</p>
