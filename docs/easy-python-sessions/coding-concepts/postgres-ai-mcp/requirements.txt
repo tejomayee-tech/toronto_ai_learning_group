@@ -1,0 +1,10 @@
+sqlalchemy
+psycopg2-binary
+langchain
+langchain-community
+langchain-ollama
+mcp
+python-dotenv
+requests
+fastapi
+uvicorn
