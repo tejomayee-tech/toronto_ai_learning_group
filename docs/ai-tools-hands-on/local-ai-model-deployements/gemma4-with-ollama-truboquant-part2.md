@@ -1,11 +1,4 @@
-
-Got it — let’s make **Docker + Open WebUI** as beginner-friendly as possible, with zero assumptions.
-
-This will feel like installing an app, not doing DevOps.
-
----
-
-# 🐳 Beginner Guide: Docker + Open WebUI (Windows & Mac)
+# Lets add: Docker + Open WebUI (Windows & Mac)
 
 ## 🔰 What You’re Setting Up (Simple View)
 
