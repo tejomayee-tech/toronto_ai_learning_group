@@ -884,7 +884,7 @@
             
   
   <span class="md-ellipsis">
-    AI Tools
+    AI Local Deployements
   </span>
   
 
@@ -893,6 +893,73 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Local Deployements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ai-tools-hands-on/local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma4 with TurboQuant on Ollama
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
             <span class="md-nav__icon md-icon"></span>
             AI Tools
           </label>
@@ -2518,7 +2585,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --></head><body><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=80cf88dd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=221a8678">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2529,7 +2596,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a4899e9f">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9a34357b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2537,7 +2604,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-1">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2567,16 +2634,23 @@ import urllib.parse</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
-  from pydantic.v1.fields import FieldInfo as FieldInfoV1
-</pre>
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[1]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> langchain_community.utilities <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SQLDatabase
+<span class="ansi-green-fg">      2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> langchain_community.agent_toolkits <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> create_sql_agent
+<span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> langchain_ollama <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ChatOllama
+<span class="ansi-green-fg">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> urllib.parse
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'langchain_community'</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6a11476b">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=13955eff">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2584,7 +2658,7 @@ import urllib.parse</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-2">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2603,17 +2677,17 @@ import urllib.parse</div>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2"># 1. Database Credentials
 USER = "postgres"
-PASSWORD = "<password>"  # The '@' here needs encoding, save password in system environment variables and read.
+PASSWORD = "&lt;password&gt;"  # The '@' here needs encoding, save password in system environment variables and read.
 HOST = "localhost"
 PORT = "5432"
-DB_NAME = "postgres"</password></div>
+DB_NAME = "postgres"</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c9221b3c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9bfcce47">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2621,7 +2695,7 @@ DB_NAME = "postgres"</password></div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-3">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2640,9 +2714,28 @@ safe_password = urllib.parse.quote_plus(PASSWORD)</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[3]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># This line is CRITICAL: it converts 'Admin@123' to 'Admin%40123'</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> safe_password = urllib.parse.quote_plus(PASSWORD)
+
+<span class="ansi-red-fg">NameError</span>: name 'urllib' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=07964fd9">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=84ddea52">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2650,7 +2743,7 @@ safe_password = urllib.parse.quote_plus(PASSWORD)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-4">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2680,295 +2773,20 @@ db_obj = SQLDatabase.from_uri(db_uri)</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:143</span>, in <span class="ansi-cyan-fg">Connection.__init__</span><span class="ansi-blue-fg">(self, engine, connection, _has_events, _allow_revalidate, _allow_autobegin)</span>
-<span class="ansi-green-fg">    142</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">143</span>     <span style="color: rgb(0,135,0)">self</span>._dbapi_connection = <span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">raw_connection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    144</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> dialect.loaded_dbapi.Error <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> err:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:3317</span>, in <span class="ansi-cyan-fg">Engine.raw_connection</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">   3296</span> <span class="ansi-yellow-fg">"""Return a "raw" DBAPI connection from the connection pool.</span>
-<span class="ansi-green-fg">   3297</span> 
-<span class="ansi-green-fg">   3298</span> <span class="ansi-yellow-fg">The returned object is a proxied version of the DBAPI</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">   3315</span> 
-<span class="ansi-green-fg">   3316</span> <span class="ansi-yellow-fg">"""</span>
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3317</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:448</span>, in <span class="ansi-cyan-fg">Pool.connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    441</span> <span class="ansi-yellow-fg">"""Return a DBAPI connection from the pool.</span>
-<span class="ansi-green-fg">    442</span> 
-<span class="ansi-green-fg">    443</span> <span class="ansi-yellow-fg">The connection is instrumented such that when its</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    446</span> 
-<span class="ansi-green-fg">    447</span> <span class="ansi-yellow-fg">"""</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">448</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_ConnectionFairy</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_checkout</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:1272</span>, in <span class="ansi-cyan-fg">_ConnectionFairy._checkout</span><span class="ansi-blue-fg">(cls, pool, threadconns, fairy)</span>
-<span class="ansi-green-fg">   1271</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> fairy:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1272</span>     fairy = <span class="ansi-yellow-bg">_ConnectionRecord</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">checkout</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1274</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> threadconns <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:712</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.checkout</span><span class="ansi-blue-fg">(cls, pool)</span>
-<span class="ansi-green-fg">    711</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">712</span>     rec = <span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_do_get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    714</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\impl.py:177</span>, in <span class="ansi-cyan-fg">QueuePool._do_get</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    176</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">177</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">with</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">util</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">safe_reraise</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
-<span class="ansi-green-fg">    178</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_dec_overflow</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:121</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
-<span class="ansi-green-fg">    120</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">121</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> exc_value.with_traceback(exc_tb)
-<span class="ansi-green-fg">    122</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\impl.py:175</span>, in <span class="ansi-cyan-fg">QueuePool._do_get</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    174</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">175</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_create_connection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    176</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:389</span>, in <span class="ansi-cyan-fg">Pool._create_connection</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    387</span> <span class="ansi-yellow-fg">"""Called by subclasses to create a new ConnectionRecord."""</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">389</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_ConnectionRecord</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:674</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__init__</span><span class="ansi-blue-fg">(self, pool, connect)</span>
-<span class="ansi-green-fg">    673</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> connect:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">674</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">__connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    675</span> <span style="color: rgb(0,135,0)">self</span>.finalize_callback = deque()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:900</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    899</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">BaseException</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> e:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">900</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">with</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">util</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">safe_reraise</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
-<span class="ansi-green-fg">    901</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">logger</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">debug</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">Error on connect(): </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,95,135)">%s</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">e</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:121</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
-<span class="ansi-green-fg">    120</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">121</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> exc_value.with_traceback(exc_tb)
-<span class="ansi-green-fg">    122</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:896</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    895</span> <span style="color: rgb(0,135,0)">self</span>.starttime = time.time()
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">896</span> <span style="color: rgb(0,135,0)">self</span>.dbapi_connection = connection = <span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_invoke_creator</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    897</span> pool.logger.debug(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Created new connection </span><span class="ansi-bold" style="color: rgb(175,95,135)">%r</span><span class="ansi-yellow-fg">"</span>, connection)
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\create.py:667</span>, in <span class="ansi-cyan-fg">create_engine.&lt;locals&gt;.connect</span><span class="ansi-blue-fg">(connection_record)</span>
-<span class="ansi-green-fg">    666</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">667</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">dialect</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cargs_tup</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cparams</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\default.py:630</span>, in <span class="ansi-cyan-fg">DefaultDialect.connect</span><span class="ansi-blue-fg">(self, *cargs, **cparams)</span>
-<span class="ansi-green-fg">    628</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">connect</span>(<span style="color: rgb(0,135,0)">self</span>, *cargs: Any, **cparams: Any) -&gt; DBAPIConnection:
-<span class="ansi-green-fg">    629</span>     <span style="color: rgb(95,135,135)"># inherits the docstring from interfaces.Dialect.connect</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">630</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loaded_dbapi</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cargs</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cparams</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\psycopg2\__init__.py:135</span>, in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(dsn, connection_factory, cursor_factory, **kwargs)</span>
-<span class="ansi-green-fg">    134</span> dsn = _ext.make_dsn(dsn, **kwargs)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">135</span> conn = <span class="ansi-yellow-bg">_connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">dsn</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">connection_factory</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">connection_factory</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwasync</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    136</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> cursor_factory <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-
-<span class="ansi-red-fg">OperationalError</span>: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
-
-
-The above exception was the direct cause of the following exception:
-
-<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[4]</span><span class="ansi-green-fg">, line 3</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[4]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># 2. Build the URI using the safe_password</span>
-<span class="ansi-green-fg">      2</span> db_uri = <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">postgresql+psycopg2://</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>USER<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">:</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>safe_password<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">@</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>HOST<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">:</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>PORT<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>DB_NAME<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> db_obj = <span class="ansi-yellow-bg">SQLDatabase</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">from_uri</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">db_uri</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> db_uri = f"postgresql+psycopg2://{USER}:{safe_password}@{HOST}:{PORT}/{DB_NAME}"
+<span class="ansi-green-fg">      3</span> db_obj = SQLDatabase.from_uri(db_uri)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\langchain_community\utilities\sql_database.py:175</span>, in <span class="ansi-cyan-fg">SQLDatabase.from_uri</span><span class="ansi-blue-fg">(cls, database_uri, engine_args, **kwargs)</span>
-<span class="ansi-green-fg">    173</span> <span class="ansi-yellow-fg">"""Construct a SQLAlchemy engine from URI."""</span>
-<span class="ansi-green-fg">    174</span> _engine_args = engine_args <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> {}
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">175</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">cls</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">create_engine</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">database_uri</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">_engine_args</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\langchain_community\utilities\sql_database.py:106</span>, in <span class="ansi-cyan-fg">SQLDatabase.__init__</span><span class="ansi-blue-fg">(self, engine, schema, metadata, ignore_tables, include_tables, sample_rows_in_table_info, indexes_in_table_info, custom_table_info, view_support, max_string_length, lazy_table_reflection)</span>
-<span class="ansi-green-fg">    103</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> include_tables <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> ignore_tables:
-<span class="ansi-green-fg">    104</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Cannot specify both include_tables and ignore_tables</span><span class="ansi-yellow-fg">"</span>)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">106</span> <span style="color: rgb(0,135,0)">self</span>._inspector = <span class="ansi-yellow-bg">inspect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_engine</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    108</span> <span style="color: rgb(95,135,135)"># including view support by adding the views as well as tables to the all</span>
-<span class="ansi-green-fg">    109</span> <span style="color: rgb(95,135,135)"># tables list if view_support is True</span>
-<span class="ansi-green-fg">    110</span> <span style="color: rgb(0,135,0)">self</span>._all_tables = <span style="color: rgb(0,135,0)">set</span>(
-<span class="ansi-green-fg">    111</span>     <span style="color: rgb(0,135,0)">list</span>(<span style="color: rgb(0,135,0)">self</span>._inspector.get_table_names(schema=schema))
-<span class="ansi-green-fg">    112</span>     + (<span style="color: rgb(0,135,0)">self</span>._inspector.get_view_names(schema=schema) <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> view_support <span class="ansi-bold" style="color: rgb(0,135,0)">else</span> [])
-<span class="ansi-green-fg">    113</span> )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\inspection.py:140</span>, in <span class="ansi-cyan-fg">inspect</span><span class="ansi-blue-fg">(subject, raiseerr)</span>
-<span class="ansi-green-fg">    138</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> reg <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>:
-<span class="ansi-green-fg">    139</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> subject
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">140</span> ret = <span class="ansi-yellow-bg">reg</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">subject</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    141</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> ret <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    142</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> ret
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\reflection.py:313</span>, in <span class="ansi-cyan-fg">Inspector._engine_insp</span><span class="ansi-blue-fg">(bind)</span>
-<span class="ansi-green-fg">    311</span> <span style="color: rgb(175,0,255)">@inspection</span>._inspects(Engine)
-<span class="ansi-green-fg">    312</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">_engine_insp</span>(bind: Engine) -&gt; Inspector:  <span style="color: rgb(95,135,135)"># type: ignore[misc]</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">313</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">Inspector</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_construct</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">Inspector</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_init_engine</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bind</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\reflection.py:246</span>, in <span class="ansi-cyan-fg">Inspector._construct</span><span class="ansi-blue-fg">(cls, init, bind)</span>
-<span class="ansi-green-fg">    243</span>     <span style="color: rgb(0,135,0)">cls</span> = bind.dialect.inspector
-<span class="ansi-green-fg">    245</span> <span style="color: rgb(0,135,0)">self</span> = <span style="color: rgb(0,135,0)">cls</span>.<span class="ansi-blue-fg">__new__</span>(<span style="color: rgb(0,135,0)">cls</span>)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">246</span> <span class="ansi-yellow-bg">init</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bind</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    247</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\reflection.py:257</span>, in <span class="ansi-cyan-fg">Inspector._init_engine</span><span class="ansi-blue-fg">(self, engine)</span>
-<span class="ansi-green-fg">    255</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">_init_engine</span>(<span style="color: rgb(0,135,0)">self</span>, engine: Engine) -&gt; <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    256</span>     <span style="color: rgb(0,135,0)">self</span>.bind = <span style="color: rgb(0,135,0)">self</span>.engine = engine
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">257</span>     <span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>.close()
-<span class="ansi-green-fg">    258</span>     <span style="color: rgb(0,135,0)">self</span>._op_context_requires_connect = <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    259</span>     <span style="color: rgb(0,135,0)">self</span>.dialect = <span style="color: rgb(0,135,0)">self</span>.engine.dialect
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:3293</span>, in <span class="ansi-cyan-fg">Engine.connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">   3270</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">connect</span>(<span style="color: rgb(0,135,0)">self</span>) -&gt; Connection:
-<span class="ansi-green-fg">   3271</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">"""Return a new :class:`_engine.Connection` object.</span>
-<span class="ansi-green-fg">   3272</span> 
-<span class="ansi-green-fg">   3273</span> <span class="ansi-yellow-fg">    The :class:`_engine.Connection` acts as a Python context manager, so</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">   3290</span> 
-<span class="ansi-green-fg">   3291</span> <span class="ansi-yellow-fg">    """</span>
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3293</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_connection_cls</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:145</span>, in <span class="ansi-cyan-fg">Connection.__init__</span><span class="ansi-blue-fg">(self, engine, connection, _has_events, _allow_revalidate, _allow_autobegin)</span>
-<span class="ansi-green-fg">    143</span>         <span style="color: rgb(0,135,0)">self</span>._dbapi_connection = engine.raw_connection()
-<span class="ansi-green-fg">    144</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> dialect.loaded_dbapi.Error <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> err:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">145</span>         <span class="ansi-yellow-bg">Connection</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_handle_dbapi_exception_noconnection</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">    146</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">err</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dialect</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">engine</span>
-<span class="ansi-green-fg">    147</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    148</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span>
-<span class="ansi-green-fg">    149</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:2448</span>, in <span class="ansi-cyan-fg">Connection._handle_dbapi_exception_noconnection</span><span class="ansi-blue-fg">(cls, e, dialect, engine, is_disconnect, invalidate_pool_on_disconnect, is_pre_ping)</span>
-<span class="ansi-green-fg">   2446</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> should_wrap:
-<span class="ansi-green-fg">   2447</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> sqlalchemy_exception <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2448</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> sqlalchemy_exception.with_traceback(exc_info[<span class="ansi-green-fg">2</span>]) <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">e</span>
-<span class="ansi-green-fg">   2449</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">   2450</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> exc_info[<span class="ansi-green-fg">1</span>] <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:143</span>, in <span class="ansi-cyan-fg">Connection.__init__</span><span class="ansi-blue-fg">(self, engine, connection, _has_events, _allow_revalidate, _allow_autobegin)</span>
-<span class="ansi-green-fg">    141</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> connection <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    142</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">143</span>         <span style="color: rgb(0,135,0)">self</span>._dbapi_connection = <span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">raw_connection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    144</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> dialect.loaded_dbapi.Error <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> err:
-<span class="ansi-green-fg">    145</span>         Connection._handle_dbapi_exception_noconnection(
-<span class="ansi-green-fg">    146</span>             err, dialect, engine
-<span class="ansi-green-fg">    147</span>         )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\base.py:3317</span>, in <span class="ansi-cyan-fg">Engine.raw_connection</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">   3295</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">raw_connection</span>(<span style="color: rgb(0,135,0)">self</span>) -&gt; PoolProxiedConnection:
-<span class="ansi-green-fg">   3296</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">"""Return a "raw" DBAPI connection from the connection pool.</span>
-<span class="ansi-green-fg">   3297</span> 
-<span class="ansi-green-fg">   3298</span> <span class="ansi-yellow-fg">    The returned object is a proxied version of the DBAPI</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">   3315</span> 
-<span class="ansi-green-fg">   3316</span> <span class="ansi-yellow-fg">    """</span>
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3317</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:448</span>, in <span class="ansi-cyan-fg">Pool.connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    440</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">connect</span>(<span style="color: rgb(0,135,0)">self</span>) -&gt; PoolProxiedConnection:
-<span class="ansi-green-fg">    441</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">"""Return a DBAPI connection from the pool.</span>
-<span class="ansi-green-fg">    442</span> 
-<span class="ansi-green-fg">    443</span> <span class="ansi-yellow-fg">    The connection is instrumented such that when its</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    446</span> 
-<span class="ansi-green-fg">    447</span> <span class="ansi-yellow-fg">    """</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">448</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_ConnectionFairy</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_checkout</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:1272</span>, in <span class="ansi-cyan-fg">_ConnectionFairy._checkout</span><span class="ansi-blue-fg">(cls, pool, threadconns, fairy)</span>
-<span class="ansi-green-fg">   1264</span> <span style="color: rgb(175,0,255)">@classmethod</span>
-<span class="ansi-green-fg">   1265</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">_checkout</span>(
-<span class="ansi-green-fg">   1266</span>     <span style="color: rgb(0,135,0)">cls</span>,
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">   1269</span>     fairy: Optional[_ConnectionFairy] = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>,
-<span class="ansi-green-fg">   1270</span> ) -&gt; _ConnectionFairy:
-<span class="ansi-green-fg">   1271</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> fairy:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1272</span>         fairy = <span class="ansi-yellow-bg">_ConnectionRecord</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">checkout</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1274</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> threadconns <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">   1275</span>             threadconns.current = weakref.ref(fairy)
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:712</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.checkout</span><span class="ansi-blue-fg">(cls, pool)</span>
-<span class="ansi-green-fg">    710</span>     rec = cast(_ConnectionRecord, pool._do_get())
-<span class="ansi-green-fg">    711</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">712</span>     rec = <span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_do_get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    714</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">    715</span>     dbapi_connection = rec.get_connection()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\impl.py:177</span>, in <span class="ansi-cyan-fg">QueuePool._do_get</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    175</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._create_connection()
-<span class="ansi-green-fg">    176</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">177</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">with</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">util</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">safe_reraise</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
-<span class="ansi-green-fg">    178</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_dec_overflow</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    179</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:121</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
-<span class="ansi-green-fg">    119</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> exc_value <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">    120</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">121</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> exc_value.with_traceback(exc_tb)
-<span class="ansi-green-fg">    122</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">    123</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\impl.py:175</span>, in <span class="ansi-cyan-fg">QueuePool._do_get</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    173</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span>._inc_overflow():
-<span class="ansi-green-fg">    174</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">175</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_create_connection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    176</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span>:
-<span class="ansi-green-fg">    177</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> util.safe_reraise():
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:389</span>, in <span class="ansi-cyan-fg">Pool._create_connection</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    386</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">_create_connection</span>(<span style="color: rgb(0,135,0)">self</span>) -&gt; ConnectionPoolEntry:
-<span class="ansi-green-fg">    387</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">"""Called by subclasses to create a new ConnectionRecord."""</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">389</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_ConnectionRecord</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:674</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__init__</span><span class="ansi-blue-fg">(self, pool, connect)</span>
-<span class="ansi-green-fg">    672</span> <span style="color: rgb(0,135,0)">self</span>.__pool = pool
-<span class="ansi-green-fg">    673</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> connect:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">674</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">__connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    675</span> <span style="color: rgb(0,135,0)">self</span>.finalize_callback = deque()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:900</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    898</span>     <span style="color: rgb(0,135,0)">self</span>.fresh = <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>
-<span class="ansi-green-fg">    899</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">BaseException</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> e:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">900</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">with</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">util</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">safe_reraise</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
-<span class="ansi-green-fg">    901</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">logger</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">debug</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">Error on connect(): </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,95,135)">%s</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">e</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    902</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">    903</span>     <span style="color: rgb(95,135,135)"># in SQLAlchemy 1.4 the first_connect event is not used by</span>
-<span class="ansi-green-fg">    904</span>     <span style="color: rgb(95,135,135)"># the engine, so this will usually not be set</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py:121</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
-<span class="ansi-green-fg">    119</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> exc_value <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">    120</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">121</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> exc_value.with_traceback(exc_tb)
-<span class="ansi-green-fg">    122</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">    123</span>     <span style="color: rgb(0,135,0)">self</span>._exc_info = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>  <span style="color: rgb(95,135,135)"># remove potential circular references</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\pool\base.py:896</span>, in <span class="ansi-cyan-fg">_ConnectionRecord.__connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg">    894</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">    895</span>     <span style="color: rgb(0,135,0)">self</span>.starttime = time.time()
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">896</span>     <span style="color: rgb(0,135,0)">self</span>.dbapi_connection = connection = <span class="ansi-yellow-bg">pool</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_invoke_creator</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    897</span>     pool.logger.debug(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Created new connection </span><span class="ansi-bold" style="color: rgb(175,95,135)">%r</span><span class="ansi-yellow-fg">"</span>, connection)
-<span class="ansi-green-fg">    898</span>     <span style="color: rgb(0,135,0)">self</span>.fresh = <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\create.py:667</span>, in <span class="ansi-cyan-fg">create_engine.&lt;locals&gt;.connect</span><span class="ansi-blue-fg">(connection_record)</span>
-<span class="ansi-green-fg">    665</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> dialect.connect(*mutable_cargs, **mutable_cparams)
-<span class="ansi-green-fg">    666</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">667</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">dialect</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cargs_tup</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cparams</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\sqlalchemy\engine\default.py:630</span>, in <span class="ansi-cyan-fg">DefaultDialect.connect</span><span class="ansi-blue-fg">(self, *cargs, **cparams)</span>
-<span class="ansi-green-fg">    628</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">connect</span>(<span style="color: rgb(0,135,0)">self</span>, *cargs: Any, **cparams: Any) -&gt; DBAPIConnection:
-<span class="ansi-green-fg">    629</span>     <span style="color: rgb(95,135,135)"># inherits the docstring from interfaces.Dialect.connect</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">630</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loaded_dbapi</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cargs</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">cparams</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">D:\DATA\Develop\AI\toronto_ai_learning_group\venv\Lib\site-packages\psycopg2\__init__.py:135</span>, in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(dsn, connection_factory, cursor_factory, **kwargs)</span>
-<span class="ansi-green-fg">    132</span>     kwasync[<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">async_</span><span class="ansi-yellow-fg">'</span>] = kwargs.pop(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">async_</span><span class="ansi-yellow-fg">'</span>)
-<span class="ansi-green-fg">    134</span> dsn = _ext.make_dsn(dsn, **kwargs)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">135</span> conn = <span class="ansi-yellow-bg">_connect</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">dsn</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">connection_factory</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">connection_factory</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwasync</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    136</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> cursor_factory <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    137</span>     conn.cursor_factory = cursor_factory
-
-<span class="ansi-red-fg">OperationalError</span>: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
-
-(Background on this error at: https://sqlalche.me/e/20/e3q8)</pre>
+<span class="ansi-red-fg">NameError</span>: name 'safe_password' is not defined</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5b53a59a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=18bd7e4e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2976,7 +2794,7 @@ The above exception was the direct cause of the following exception:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2995,9 +2813,28 @@ llm = ChatOllama(model="llama3.1", temperature=0)</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[5]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># 3. Setup AI</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> llm = ChatOllama(model=<span class="ansi-yellow-fg">"llama3.1"</span>, temperature=<span class="ansi-green-fg">0</span>)
+
+<span class="ansi-red-fg">NameError</span>: name 'ChatOllama' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=23c2917c">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d9b4ad92">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3005,7 +2842,7 @@ llm = ChatOllama(model="llama3.1", temperature=0)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3036,16 +2873,16 @@ sql_agent_executor = create_sql_agent(llm, db=db_obj, verbose=True)</div>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[6]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># 4. Initialize Agent</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> sql_agent_executor = create_sql_agent(llm, db=<span class="ansi-yellow-bg">db_obj</span>, verbose=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> sql_agent_executor = create_sql_agent(llm, db=db_obj, verbose=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
 
-<span class="ansi-red-fg">NameError</span>: name 'db_obj' is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name 'create_sql_agent' is not defined</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=47e3a37b">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=09015dc8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3053,7 +2890,7 @@ sql_agent_executor = create_sql_agent(llm, db=db_obj, verbose=True)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3088,8 +2925,8 @@ response = sql_agent_executor.invoke({
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># 5. Run Query</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> response = <span class="ansi-yellow-bg">sql_agent_executor</span>.invoke({
-<span class="ansi-green-fg">      3</span>     <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">input</span><span class="ansi-yellow-fg">"</span>: <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">How many students are present in table public.student</span><span class="ansi-yellow-fg">"</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> response = sql_agent_executor.invoke({
+<span class="ansi-green-fg">      3</span>     <span class="ansi-yellow-fg">"input"</span>: <span class="ansi-yellow-fg">"How many students are present in table public.student"</span>
 <span class="ansi-green-fg">      4</span> })
 
 <span class="ansi-red-fg">NameError</span>: name 'sql_agent_executor' is not defined</pre>
@@ -3099,7 +2936,7 @@ response = sql_agent_executor.invoke({
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=21527612">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e87dbc21">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3107,7 +2944,7 @@ response = sql_agent_executor.invoke({
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3135,7 +2972,7 @@ response = sql_agent_executor.invoke({
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[8]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">response</span>[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">output</span><span class="ansi-yellow-fg">"</span>])
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> print(response[<span class="ansi-yellow-fg">"output"</span>])
 
 <span class="ansi-red-fg">NameError</span>: name 'response' is not defined</pre>
 </div>

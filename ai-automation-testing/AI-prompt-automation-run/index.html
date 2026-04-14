@@ -884,7 +884,7 @@
             
   
   <span class="md-ellipsis">
-    AI Tools
+    AI Local Deployements
   </span>
   
 
@@ -893,6 +893,73 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Local Deployements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-tools-hands-on/local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma4 with TurboQuant on Ollama
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
             <span class="md-nav__icon md-icon"></span>
             AI Tools
           </label>
@@ -2519,7 +2586,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --></head><body><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=11915ec0">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f7840231">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2527,7 +2594,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-1">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2746,7 +2813,7 @@ pip list | grep -E "(playwright|langchain|langgraph|ollama)"
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=85dd5236">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a978b971">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2754,7 +2821,7 @@ pip list | grep -E "(playwright|langchain|langgraph|ollama)"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-2">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2796,10 +2863,11 @@ from typing import Optional, Dict, Any</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 2</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">asyncio</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">playwright</span><span class="ansi-blue-intense-fg ansi-bold">.</span><span class="ansi-blue-intense-fg ansi-bold">async_api</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> async_playwright, Page
-<span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">langchain_ollama</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ChatOllama
-<span class="ansi-green-fg">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">langchain_core</span><span class="ansi-blue-intense-fg ansi-bold">.</span><span class="ansi-blue-intense-fg ansi-bold">messages</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(0,135,0)">import</span> HumanMessage, SystemMessage
+<span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> asyncio
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> playwright.async_api <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> async_playwright, Page
+<span class="ansi-green-fg">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> langchain_ollama <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ChatOllama
+<span class="ansi-green-fg">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> langchain_core.messages <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> HumanMessage, SystemMessage
+<span class="ansi-green-fg">      5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> datetime <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> datetime
 
 <span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'playwright'</pre>
 </div>
@@ -2807,8 +2875,8 @@ from typing import Optional, Dict, Any</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=624a322e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=14ec5c61">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2816,7 +2884,7 @@ from typing import Optional, Dict, Any</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-3">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3121,9 +3189,40 @@ from typing import Optional, Dict, Any</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a00cb4fd">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[3]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> LocatorRepository:
+<span class="ansi-green-fg">      2</span>     """
+<span class="ansi-green-fg">      3</span>     OBJECT REPOSITORY PATTERN
+<span class="ansi-green-fg">      4</span> 
+
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[3]</span><span class="ansi-green-fg">, line 32</span>, in <span class="ansi-cyan-fg">LocatorRepository</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">     28</span>         self.repo_dir.mkdir(exist_ok=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-fg">     29</span>         self.repo_file = self.repo_dir / f"{repo_name}.json"
+<span class="ansi-green-fg">     30</span>         self.repository = self._load_repository()
+<span class="ansi-green-fg">     31</span> 
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">32</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> _load_repository(self) -&gt; Dict:
+<span class="ansi-green-fg">     33</span>         <span class="ansi-yellow-fg">"""Load existing repository or create new one."""</span>
+<span class="ansi-green-fg">     34</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> self.repo_file.exists():
+<span class="ansi-green-fg">     35</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+
+<span class="ansi-red-fg">NameError</span>: name 'Dict' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=579abb4d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3131,7 +3230,7 @@ from typing import Optional, Dict, Any</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-4">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3372,9 +3471,40 @@ from typing import Optional, Dict, Any</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b372e6f0">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[4]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> LogManager:
+<span class="ansi-green-fg">      2</span>     """
+<span class="ansi-green-fg">      3</span>     Comprehensive logging <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> dual output:
+<span class="ansi-green-fg">      4</span>     - Console (real-time feedback)
+
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[4]</span><span class="ansi-green-fg">, line 34</span>, in <span class="ansi-cyan-fg">LogManager</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">     30</span>             f.write(f"Started: {datetime.now().strftime(<span class="ansi-yellow-fg">'%Y-%m-%d %H:%M:%S.%f'</span>)[:-<span class="ansi-green-fg">3</span>]}\n")
+<span class="ansi-green-fg">     31</span>             f.write(f"Approach: Non-Deprecated (No ReAct Loop)\n")
+<span class="ansi-green-fg">     32</span>             f.write(<span class="ansi-yellow-fg">"="</span> * <span class="ansi-green-fg">120</span> + <span class="ansi-yellow-fg">"\n\n"</span>)
+<span class="ansi-green-fg">     33</span> 
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">34</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">async</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> log(self, message: str, level: str = <span class="ansi-yellow-fg">"INFO"</span>, data: Optional[Dict[str, Any]] = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>):
+<span class="ansi-green-fg">     35</span>         timestamp = datetime.now().strftime(<span class="ansi-yellow-fg">"%Y-%m-%d %H:%M:%S.%f"</span>)[:-<span class="ansi-green-fg">3</span>]
+<span class="ansi-green-fg">     36</span>         icons = {
+<span class="ansi-green-fg">     37</span>             <span class="ansi-yellow-fg">"INFO"</span>: <span class="ansi-yellow-fg">"ℹ️"</span>,
+
+<span class="ansi-red-fg">NameError</span>: name 'Optional' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3729d02e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3382,7 +3512,7 @@ from typing import Optional, Dict, Any</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3765,9 +3895,40 @@ What is the NEXT action? Respond in ACTION_TYPE | SELECTOR | VALUE | DESCRIPTION
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[5]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> DirectLLMAutomationAgent:
+<span class="ansi-green-fg">      2</span>     """
+<span class="ansi-green-fg">      3</span>     Direct LLM-Powered Automation Agent <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> Object Repository
+<span class="ansi-green-fg">      4</span> 
+
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[5]</span><span class="ansi-green-fg">, line 16</span>, in <span class="ansi-cyan-fg">DirectLLMAutomationAgent</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">     12</span> 
+<span class="ansi-green-fg">     13</span>     OPTIMIZATION: Reuse known locators to reduce LLM calls
+<span class="ansi-green-fg">     14</span>     """
+<span class="ansi-green-fg">     15</span> 
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">16</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> __init__(self, logger: LogManager, repository: LocatorRepository, page_name: str = <span class="ansi-yellow-fg">"LoginPage"</span>):
+<span class="ansi-green-fg">     17</span>         self.logger = logger
+<span class="ansi-green-fg">     18</span>         self.repository = repository
+<span class="ansi-green-fg">     19</span>         self.page_name = page_name
+
+<span class="ansi-red-fg">NameError</span>: name 'LogManager' is not defined</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=34ff1477">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4e4e3310">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3775,7 +3936,7 @@ What is the NEXT action? Respond in ACTION_TYPE | SELECTOR | VALUE | DESCRIPTION
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -3958,7 +4119,7 @@ What is the NEXT action? Respond in ACTION_TYPE | SELECTOR | VALUE | DESCRIPTION
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7b7b09ab">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=13ba7d0d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3966,7 +4127,7 @@ What is the NEXT action? Respond in ACTION_TYPE | SELECTOR | VALUE | DESCRIPTION
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4031,14 +4192,12 @@ What is the NEXT action? Respond in ACTION_TYPE | SELECTOR | VALUE | DESCRIPTION
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>Traceback (most recent call last):
-  File "C:\Users\User\AppData\Local\Temp\ipykernel_27836\1572841525.py", line 8, in &lt;module&gt;
+  File "/tmp/ipykernel_14119/1572841525.py", line 8, in &lt;module&gt;
     asyncio.run(main())
-    ~~~~~~~~~~~^^^^^^^^
-  File "C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py", line 200, in run
+  File "/usr/lib/python3.12/asyncio/runners.py", line 190, in run
     raise RuntimeError(
-        "asyncio.run() cannot be called from a running event loop")
 RuntimeError: asyncio.run() cannot be called from a running event loop
-C:\Users\User\AppData\Local\Temp\ipykernel_27836\1572841525.py:14: RuntimeWarning: coroutine 'main' was never awaited
+/tmp/ipykernel_14119/1572841525.py:14: RuntimeWarning: coroutine 'main' was never awaited
   traceback.print_exc()
 RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 </pre>
