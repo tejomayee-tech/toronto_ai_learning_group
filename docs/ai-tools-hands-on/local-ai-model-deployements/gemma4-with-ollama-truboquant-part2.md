@@ -1,38 +1,34 @@
 # Lets add: Docker + Open WebUI (Windows & Mac)
 
-## 🔰 What You’re Setting Up (Simple View)
+## What You're Setting Up (Simple View)
 
-You’re installing:
+You're installing:
 
-* **Docker Desktop** → runs apps in containers (like mini virtual machines)
-* **Open WebUI** → ChatGPT-style interface
-* Connect it to **Ollama** → your local AI brain
+- **Docker Desktop** — runs apps in containers (like mini virtual machines)
+- **Open WebUI** — ChatGPT-style interface
+- Connect it to **Ollama** — your local AI brain
 
-👉 End result:
-You open a browser → looks like ChatGPT → runs locally
+End result:
+You open a browser — looks like ChatGPT — runs locally
 
 ---
 
-# 🪟 PART 1 — Windows (Step-by-Step)
+## PART 1 — Windows (Step-by-Step)
 
-## ✅ Step 1 — Install Docker Desktop
+### Step 1 — Install Docker Desktop
 
 1. Go to: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 2. Click **Download for Windows**
 3. Run the installer
 
----
-
-### ⚠️ IMPORTANT (Most people get stuck here)
+#### IMPORTANT (Most people get stuck here)
 
 During install, make sure:
 
-✔ “Use WSL 2 instead of Hyper-V” is enabled (default)
-✔ Accept all prompts
+- "Use WSL 2 instead of Hyper-V" is enabled (default)
+- Accept all prompts
 
----
-
-### 🧠 If install fails:
+#### If install fails:
 
 Run this in PowerShell (as Admin):
 
@@ -44,19 +40,19 @@ Then restart your PC.
 
 ---
 
-## ✅ Step 2 — Start Docker
+### Step 2 — Start Docker
 
 1. Press `Windows Key`
 2. Open **Docker Desktop**
 3. Wait until it says:
 
-👉 **“Docker is running”**
+   **"Docker is running"**
 
-⏳ First launch may take 1–3 minutes
+First launch may take 1–3 minutes
 
 ---
 
-## ✅ Step 3 — Verify Docker Works
+### Step 3 — Verify Docker Works
 
 Open PowerShell:
 
@@ -64,12 +60,12 @@ Open PowerShell:
 docker --version
 ```
 
-👉 If you see a version → good
-👉 If not → Docker isn’t running yet
+If you see a version → good  
+If not → Docker isn't running yet
 
 ---
 
-## ✅ Step 4 — Run Open WebUI
+### Step 4 — Run Open WebUI
 
 Now paste this EXACT command:
 
@@ -77,34 +73,30 @@ Now paste this EXACT command:
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
 ```
 
----
+#### What this does (simple)
 
-### 🧠 What this does (simple)
-
-* Downloads WebUI
-* Runs it locally
-* Connects it to your system
+- Downloads WebUI
+- Runs it locally
+- Connects it to your system
 
 ---
 
-## ✅ Step 5 — Open It
+### Step 5 — Open It
 
 Open your browser and go to:
 
-👉 [http://localhost:3000](http://localhost:3000)
+[http://localhost:3000](http://localhost:3000)
+
+#### First Time Setup Screen
+
+You'll see:
+
+- Create account (just local)
+- Login
 
 ---
 
-### 🎉 First Time Setup Screen
-
-You’ll see:
-
-* Create account (just local)
-* Login
-
----
-
-## ✅ Step 6 — Connect to Ollama
+### Step 6 — Connect to Ollama
 
 If Ollama is already installed:
 
@@ -120,19 +112,17 @@ If Ollama is already installed:
    http://host.docker.internal:11434
    ```
 
----
+#### Test it
 
-### 🧪 Test it
-
-* Go back to chat
-* Select model: `gemma4:e4b`
-* Send a message
+- Go back to chat
+- Select model: `gemma4:e4b`
+- Send a message
 
 ---
 
-# 🍎 PART 2 — Mac (Step-by-Step)
+## PART 2 — Mac (Step-by-Step)
 
-## ✅ Step 1 — Install Docker Desktop
+### Step 1 — Install Docker Desktop
 
 1. Download from Docker website
 2. Open `.dmg`
@@ -141,15 +131,15 @@ If Ollama is already installed:
 
 ---
 
-## ✅ Step 2 — Start Docker
+### Step 2 — Start Docker
 
 Wait until:
 
-👉 **“Docker Desktop is running”**
+**"Docker Desktop is running"**
 
 ---
 
-## ✅ Step 3 — Verify
+### Step 3 — Verify
 
 Open Terminal:
 
@@ -159,7 +149,7 @@ docker --version
 
 ---
 
-## ✅ Step 4 — Run WebUI
+### Step 4 — Run WebUI
 
 ```bash
 docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
@@ -167,13 +157,13 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghc
 
 ---
 
-## ✅ Step 5 — Open It
+### Step 5 — Open It
 
-👉 [http://localhost:3000](http://localhost:3000)
+[http://localhost:3000](http://localhost:3000)
 
 ---
 
-## ✅ Step 6 — Connect Ollama (Mac)
+### Step 6 — Connect Ollama (Mac)
 
 Set:
 
@@ -183,20 +173,20 @@ http://localhost:11434
 
 ---
 
-# 🔥 Everyday Usage (Super Simple)
+## Everyday Usage (Super Simple)
 
-## ▶️ Start everything
+### Start everything
 
 1. Open Docker Desktop
 2. Run:
 
-```bash
-docker start open-webui
-```
+   ```bash
+   docker start open-webui
+   ```
 
 ---
 
-## ⏹ Stop it
+### Stop it
 
 ```bash
 docker stop open-webui
@@ -204,7 +194,7 @@ docker stop open-webui
 
 ---
 
-## 🔄 Restart
+### Restart
 
 ```bash
 docker restart open-webui
@@ -212,12 +202,12 @@ docker restart open-webui
 
 ---
 
-# 🚨 Common Problems (Fix Fast)
+## Common Problems (Fix Fast)
 
-## ❌ “Cannot connect to localhost:3000”
+### "Cannot connect to localhost:3000"
 
-✔ Docker not running
-✔ Container not started
+- Docker not running
+- Container not started
 
 Run:
 
@@ -227,18 +217,18 @@ docker ps
 
 ---
 
-## ❌ WebUI opens but no models
+### WebUI opens but no models
 
-👉 Ollama not connected
+Ollama not connected
 
 Fix URL:
 
-* Windows:
+- Windows:
 
   ```
   http://host.docker.internal:11434
   ```
-* Mac:
+- Mac:
 
   ```
   http://localhost:11434
@@ -246,9 +236,9 @@ Fix URL:
 
 ---
 
-## ❌ “Connection refused” to Ollama
+### "Connection refused" to Ollama
 
-✔ Run:
+Run:
 
 ```bash
 ollama run gemma4:e4b
@@ -258,7 +248,7 @@ ollama run gemma4:e4b
 
 ---
 
-## ❌ Port already in use
+### Port already in use
 
 Run:
 
@@ -268,19 +258,19 @@ docker run -d -p 3001:8080 ...
 
 Then open:
 
-👉 [http://localhost:3001](http://localhost:3001)
+[http://localhost:3001](http://localhost:3001)
 
 ---
 
-## ❌ Everything is slow
+### Everything is slow
 
 Normal if:
 
-* 16GB RAM
-* CPU only
-* Large model
+- 16GB RAM
+- CPU only
+- Large model
 
-👉 Use smaller model:
+Use smaller model:
 
 ```
 gemma4:e4b
@@ -288,17 +278,17 @@ gemma4:e4b
 
 ---
 
-# 🧠 Mental Model (So You Don’t Get Lost)
+## Mental Model (So You Don't Get Lost)
 
 Think of it like this:
 
-* **Ollama** → brain
-* **Docker** → container box
-* **WebUI** → face (ChatGPT interface)
+- **Ollama** — brain
+- **Docker** — container box
+- **WebUI** — face (ChatGPT interface)
 
 ---
 
-# ✅ Minimum Working Setup (Fastest Path)
+## Minimum Working Setup (Fastest Path)
 
 If you just want it working:
 
@@ -319,9 +309,9 @@ Done.
 
 ---
 
-# What next:
+## What next:
 
-* 🔥 Adding **file upload (PDFs, images, RAG)**
-* 🧠 Running **LLaVA multimodal in WebUI**
-* ⚡ Using **GPU acceleration inside Docker**
-* 🏗 Building a **full local AI workstation (like ChatGPT Pro)**
+- Adding **file upload (PDFs, images, RAG)**
+- Running **LLaVA multimodal in WebUI**
+- Using **GPU acceleration inside Docker**
+- Building a **full local AI workstation (like ChatGPT Pro)**
