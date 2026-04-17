@@ -52,9 +52,9 @@ PARAMETER num_thread 8
 ```bash
 User@System:~/AI$ ollama create gemma4-fast -f Modelfile
 gathering model components 
-using existing layer sha256:4c27e0f5b5adf02ac956c7322bd2ee7636fe3f45a8512c9aba5385242cb6e09a 
-using existing layer sha256:7339fa418c9ad3e8e12e74ad0fd26a9cc4be8703f9c110728a992b193be85cb2 
-creating new layer sha256:dab92d0d834b17d93c51096f044e3e5ba56aec17802be45993442de4a535f6eb 
+using existing layer sha256:4c27e0f5b5adf02ac9g3584t5eut09jka0uhtj8565a8512c9aba5385242cb6e09a 
+using existing layer sha256:7339fa418c9ad3e8e12e74ad0fd26a9dsget345trgsdgw4564u5ujerh5563be85cb2 
+creating new layer sha256:dab92d47ryt4y57690708p090uph87dryt56466utrdr4602be45993442de4a535f6eb 
 writing manifest 
 success 
 
@@ -119,6 +119,4 @@ Welcome to Claude Code v2.1.112
 ```
 
 
-<img src="images/Running_Example_step3.png" alt="Image 1" width="400">
-
-
+![image](./images/Running_Example_step3.png)
