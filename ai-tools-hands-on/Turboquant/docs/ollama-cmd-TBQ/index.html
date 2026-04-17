@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../../community-values-guidelines/ContributingGuide/">
+        <link rel="prev" href="../../../local-ai-model-deployements/gemma4-with-ollama-turboquant/">
       
       
-        <link rel="next" href="../../../ai-tools-hands-on/Prompts/Zero-shot-prompting/">
+        <link rel="next" href="../../../AI-tool-guides/Open-claw-safety/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>AI Fundamentals 1 - AI Learning Group</title>
+        <title>Ollama + TQuant + Claude - AI Learning Group</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fundamentals-of-llm" class="md-skip">
+        <a href="#ollam-launch-gemma4-with-turboquant" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+    <a href="../../../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AI Fundamentals 1
+              Ollama + TQuant + Claude
             
           </span>
         </div>
@@ -175,7 +175,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -194,7 +194,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../community-values-guidelines/Community-main/" class="md-tabs__link">
+        <a href="../../../../community-values-guidelines/Community-main/" class="md-tabs__link">
           
   
   Community & Value
@@ -208,13 +208,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
           
   
   AI - Fundamentals
@@ -232,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-tools-hands-on/Prompts/Zero-shot-prompting/" class="md-tabs__link">
+        <a href="../../../Prompts/Zero-shot-prompting/" class="md-tabs__link">
           
   
   AI - Prompts
@@ -250,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-tabs__link">
+        <a href="../../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-tabs__link">
           
   
   AI Learning for Bigenners
@@ -264,11 +262,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../ai-tools-hands-on/Beginners-guide-to-Local_AI/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../Beginners-guide-to-Local_AI/" class="md-tabs__link">
           
   
   AI Tools Hands-on
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-tabs__link">
+        <a href="../../../../ai-workflows/n8n/docs/n8n-overview/" class="md-tabs__link">
           
   
   AI Workflows
@@ -313,7 +313,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-tabs__link">
+        <a href="../../../../ai-pc/pc-for-running-20b-llm/" class="md-tabs__link">
           
   
   AI-PC
@@ -331,7 +331,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Linux/Linux-home/" class="md-tabs__link">
+        <a href="../../../../Linux/Linux-home/" class="md-tabs__link">
           
   
   Linux
@@ -355,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-tabs__link">
+        <a href="../../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-tabs__link">
           
   
   Programming
@@ -391,7 +391,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+    <a href="../../../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -409,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community-values-guidelines/Community-main/" class="md-nav__link">
+      <a href="../../../../community-values-guidelines/Community-main/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community-values-guidelines/ContributingGuide/" class="md-nav__link">
+      <a href="../../../../community-values-guidelines/ContributingGuide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,28 +513,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -545,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             AI - Fundamentals
@@ -556,30 +551,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    AI Fundamentals 1
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,44 +563,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#video" class="md-nav__link">
-    <span class="md-ellipsis">
-      📹Video
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -683,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/Prompts/Zero-shot-prompting/" class="md-nav__link">
+      <a href="../../../Prompts/Zero-shot-prompting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/Prompts/Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
+      <a href="../../../Prompts/Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-nav__link">
+      <a href="../../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-learning-plans/ai-learning-plan-draft/" class="md-nav__link">
+      <a href="../../../../ai-learning-plans/ai-learning-plan-draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,23 +753,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -843,7 +785,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             AI Tools Hands-on
@@ -857,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/Beginners-guide-to-Local_AI/" class="md-nav__link">
+      <a href="../../../Beginners-guide-to-Local_AI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
+      <a href="../../../AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs/" class="md-nav__link">
+      <a href="../../../CuratedLocalLLMs/Top-Local-LLMs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms/" class="md-nav__link">
+      <a href="../../../Wide-future-of-local-llms/future-of-opensource-local-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,6 +880,8 @@
                 
   
   
+    
+  
   
   
     
@@ -947,11 +891,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" checked>
         
           
           <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
@@ -965,7 +909,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_5">
             <span class="md-nav__icon md-icon"></span>
             AI Local Deployements
@@ -979,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
+      <a href="../../../local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,10 +941,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/Turboquant/docs/ollama-cmd-TBQ/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ollama + TQuant + Claude
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1009,6 +973,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-run-the-steps-with-any-model-choose-coding-model-for-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can run the steps with any model. Choose coding model for claude code.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1067,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-tools-hands-on/AI-tool-guides/Open-claw-safety/" class="md-nav__link">
+      <a href="../../../AI-tool-guides/Open-claw-safety/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-nav__link">
+      <a href="../../../../ai-workflows/n8n/docs/n8n-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
+      <a href="../../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
+      <a href="../../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-nav__link">
+      <a href="../../../../ai-pc/pc-for-running-20b-llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-pc/hardware-for-running-heavy-llms/" class="md-nav__link">
+      <a href="../../../../ai-pc/hardware-for-running-heavy-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1337,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-pc/pc-for-running-120b-llms-and-tune-as-well/" class="md-nav__link">
+      <a href="../../../../ai-pc/pc-for-running-120b-llms-and-tune-as-well/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ai-pc/Mini-PC-for-running-120B-lls/" class="md-nav__link">
+      <a href="../../../../ai-pc/Mini-PC-for-running-120B-lls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Linux-home/" class="md-nav__link">
+      <a href="../../../../Linux/Linux-home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Ubuntu/ubuntu-Install-modes-full-guide/" class="md-nav__link">
+      <a href="../../../../Linux/Ubuntu/ubuntu-Install-modes-full-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1466,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Ubuntu/Ubuntu-26.0-AI-Redefined/" class="md-nav__link">
+      <a href="../../../../Linux/Ubuntu/Ubuntu-26.0-AI-Redefined/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1487,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Zorin/Zorin-Install-Full-Guide/" class="md-nav__link">
+      <a href="../../../../Linux/Zorin/Zorin-Install-Full-Guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1508,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Linux-swapiness/" class="md-nav__link">
+      <a href="../../../../Linux/Linux-swapiness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Ubuntu/Linux-Tools/" class="md-nav__link">
+      <a href="../../../../Linux/Ubuntu/Linux-Tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide/" class="md-nav__link">
+      <a href="../../../../Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1654,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1713,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1772,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy-1/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/python-libraries/numpy/numpy-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy_intro_community/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/python-libraries/numpy/numpy_intro_community/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1860,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/python-libraries/pandas/PandasHandsOn/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/python-libraries/pandas/PandasHandsOn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1897,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../easy-python-sessions/coding-concepts/Implement-Concepts/" class="md-nav__link">
+      <a href="../../../../easy-python-sessions/coding-concepts/Implement-Concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1953,18 +1946,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#video" class="md-nav__link">
+  <a href="#you-can-run-the-steps-with-any-model-choose-coding-model-for-claude-code" class="md-nav__link">
     <span class="md-ellipsis">
-      📹Video
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
+      You can run the steps with any model. Choose coding model for claude code.
     </span>
   </a>
   
@@ -1985,18 +1969,121 @@
                   
 
 
-<div><h1 id="fundamentals-of-llm">🤖 Fundamentals of LLM</h1>
-<h2 id="video">📹Video</h2>
-<!-- Please find the video of the session on fundamentals of LLM(6th Sep 2025) here- https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/view?usp=drive_link. -->
+<div><h1 id="ollam-launch-gemma4-with-turboquant">Ollam - launch gemma4 with turboquant</h1>
+<h2 id="you-can-run-the-steps-with-any-model-choose-coding-model-for-claude-code">You can run the steps with any model. Choose coding model for claude code.</h2>
+<pre><code class="language-bash">
+User@System:~$ ollama list
+NAME             ID              SIZE      MODIFIED     
+gemma4:latest    c6eb396dbd59    9.6 GB    11 hours ago    
 
-<iframe src="https://drive.google.com/file/d/1Q3N9WjYwNyYyz0Zx120ODoU22ZeswnYN/preview" width="720" height="360" allow="autoplay" frameborder="0" allowfullscreen></iframe>
 
-<h2 id="_1"></h2>
-<h1 id="request-for-like">👍Request for Like</h1>
-<p>If you like this app <a href="https://huggingface.co/spaces/ShreyaL/NLP_preprocessing_playground?logs=container">Text Pre-processing Playground</a> and find it useful while learning, please give a heart in the huggingface spaces using above link. Will be very grateful for your support.</p>
-<h2 id="_2"></h2>
-<p><embed alt="Alt text" src="../artifacts/Fundamentals_of_LLM.pdf" style="min-height:600px;width:100%" type="application/pdf"></embed></p>
-<h1 id="thank-you">🙏Thank You!</h1></div>
+User@System:~$ ollama show gemma4
+  Model
+    architecture        gemma4    
+    parameters          8.0B      
+    context length      131072    
+    embedding length    2560      
+    quantization        Q4_K_M    
+    requires            0.20.0    
+
+  Capabilities
+    completion    
+    vision        
+    audio         
+    tools         
+    thinking      
+
+  Parameters
+    temperature    1       
+    top_k          64      
+    top_p          0.95    
+
+  License
+    Apache License               
+    Version 2.0, January 2004    
+    ...                          
+
+User@System:~$ cd AI
+User@System:~/AI$ nano Modelfile
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> : Include the below lines into the Modelfile</p>
+</blockquote>
+<pre><code class="language-yml">FROM gemma4
+
+PARAMETER num_ctx 4096
+PARAMETER num_thread 8
+</code></pre>
+<pre><code class="language-bash">User@System:~/AI$ ollama create gemma4-fast -f Modelfile
+gathering model components 
+using existing layer sha256:4c27e0f5b5adf02ac956c7322bd2ee7636fe3f45a8512c9aba5385242cb6e09a 
+using existing layer sha256:7339fa418c9ad3e8e12e74ad0fd26a9cc4be8703f9c110728a992b193be85cb2 
+creating new layer sha256:dab92d0d834b17d93c51096f044e3e5ba56aec17802be45993442de4a535f6eb 
+writing manifest 
+success 
+
+
+User@System:~/AI$ ollama run gemma4-fast
+&gt;&gt;&gt; hi
+Thinking...
+Thinking Process:
+
+1.  **Analyze Input:** The user sent "hi". (A standard, friendly greeting).
+2.  **Determine Goal:** The goal is to respond politely, naturally, and encouragingly, maintaining a helpful and conversational tone.
+3.  **Craft Response:**
+    *   Acknowledge the greeting (e.g., "Hi there!", "Hello!").
+    *   Ask a welcoming follow-up question to initiate the interaction and prompt the user for their actual query (e.g., "How can I help you?", "What can I do for you today?").
+4.  **Select Best Option:** A combination of a friendly greeting and a functional prompt works best. (e.g., "Hello! How can I help you today?")
+...done thinking.
+
+Hi! How can I help you today? 😊
+
+&gt;&gt;&gt; /bye
+User@System:~/AI$ $ ollama launch claude --model gemma4-fast
+
+Launching Claude Code with gemma4-fast...
+Welcome to Claude Code v2.1.112
+…………………………………………………………………………………………………………………………………………………………
+
+     *                                       █████▓▓░
+                                 *         ███▓░     ░░
+            ░░░░░░                        ███▓░
+    ░░░   ░░░░░░░░░░                      ███▓░
+   ░░░░░░░░░░░░░░░░░░░    *                ██▓░░      ▓
+                                             ░▓▓███▓▓░
+ *                                 ░░░░
+                                 ░░░░░░░░
+                               ░░░░░░░░░░░░░░░░
+       █████████                                        *
+      ██▄█████▄██                        *
+       █████████      *
+…………………█ █   █ █………………………………………………………………………………………………………………
+
+ Let's get started.
+
+ Choose the text style that looks best with your terminal
+ To change this later, run /theme
+
+   1. Auto (match terminal)
+ ❯ 2. Dark mode ✔
+   3. Light mode
+   4. Dark mode (colorblind-friendly)
+   5. Light mode (colorblind-friendly)
+   6. Dark mode (ANSI colors only)
+   7. Light mode (ANSI colors only)
+
+ ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+  1  function greet() {
+  2 -  console.log("Hello, World!");                                                                                                                                                                                                          
+  2 +  console.log("Hello, Claude!");                                                                                                                                                                                                         
+  3  }
+
+
+
+</code></pre>
+<p><a href="./Running%20Example%20-%20step3.png" target="_blank">
+  <img src="./Running%20Example%20-%20step3.png" alt="Running Example - step3" width="300" style="cursor: zoom-in;">
+</a></p></div>
 
 
 
@@ -2043,10 +2130,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow", "content.action.top", "content.code.copy", "navigation.path"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "toc.follow", "content.action.top", "content.code.copy", "navigation.path"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
