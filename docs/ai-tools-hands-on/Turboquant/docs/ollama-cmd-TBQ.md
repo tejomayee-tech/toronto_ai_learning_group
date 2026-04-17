@@ -1,5 +1,6 @@
 # Ollam - launch gemma4 with turboquant
 
+## You can run the steps with any model. Choose coding model for claude code.
 
 ```bash
 
@@ -36,6 +37,19 @@ User@System:~$ ollama show gemma4
 
 User@System:~$ cd AI
 User@System:~/AI$ nano Modelfile
+```
+
+> **Note** : Include the below lines into the Modelfile
+
+```yml
+FROM gemma4
+
+PARAMETER num_ctx 4096
+PARAMETER num_thread 8
+```
+
+
+```bash
 User@System:~/AI$ ollama create gemma4-fast -f Modelfile
 gathering model components 
 using existing layer sha256:4c27e0f5b5adf02ac956c7322bd2ee7636fe3f45a8512c9aba5385242cb6e09a 
