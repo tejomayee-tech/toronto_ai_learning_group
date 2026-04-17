@@ -71,6 +71,7 @@ nav:
     - 2025 - Future of Local LLMs: ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms.md
     - AI Local Deployements:
       - Gemma4 with TurboQuant on Ollama : ai-tools-hands-on/local-ai-model-deployements/gemma4-with-ollama-turboquant.md
+      - Ollama + TQuant + Claude : ai-tools-hands-on/Turboquant/docs/ollama-cmd-TBQ.md
     - AI Tools:
       - OpenClaw Paradigm & Risk: ai-tools-hands-on/AI-tool-guides/Open-claw-safety.md
     
