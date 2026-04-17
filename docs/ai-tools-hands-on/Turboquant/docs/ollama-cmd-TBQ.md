@@ -119,6 +119,6 @@ Welcome to Claude Code v2.1.112
 ```
 
 
-<img src="./Running Example - step3.png" alt="Running Example - step3" width="500">
+<img src="images/Running_Example_step3.png" alt="Image 1" width="400">
 
 
