@@ -1,34 +1,27 @@
 site_name: AI Learning Group
 site_dir: site
 docs_dir: docs
-use_directory_urls: true 
+use_directory_urls: true
 
 theme:
   name: material
-
   palette:
-    scheme: default #slate #> dark mode
+    scheme: default
     primary: indigo
     accent: blue
-
   features:
-      # Makes the main navigation items appear as a top bar for a cleaner look
-      - navigation.tabs
-      # Keeps the table of contents visible while scrolling
-      - toc.follow
-      # Enables the "Back to top" button
-      - content.action.top
-      # Adds a copy button to code blocks (great motivation for users to try code!)
-      - content.code.copy
-      # Shows the hierarchy of the current page in the header
-      - navigation.path
-      # Expands all navigation sections by default
-      #- navigation.expand
-
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.action.top
+    - content.code.copy
+    - navigation.path
+    - search.suggest
+    - search.highlight
   font:
     text: Roboto
     code: Roboto Mono
-
 
 markdown_extensions:
   - footnotes
@@ -37,8 +30,11 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.pathconverter
   - attr_list
+  - pymdownx.highlight:
+      pygments_lang_class: true
 extra_css:
   - css/extra.css
+
 plugins:
   - search
   - mkdocs-pdf
@@ -48,63 +44,104 @@ plugins:
 nav:
   - Home: README.md
 
-  - Community & Value:
-    - Community Main: community-values-guidelines/Community-main.md
-    - Contributing: community-values-guidelines/ContributingGuide.md
+  - Learning Pathways:
+    - _learning-pathways/00-start-here.md
+    - _learning-pathways/01-ai-python-roadmap.md
 
-  - AI - Fundamentals:
-    - AI Fundamentals 1: ai-sessions/fundamentals_of_LLM/fundamentsla_LLM.md
-
-  - AI - Prompts:
-    - Zero Shot Prompts: ai-tools-hands-on/Prompts/Zero-shot-prompting.md
-    - Save Prompt Cost: ai-tools-hands-on/Prompts/Effective-prompts-save-premium-requests-n-cost.md
-
-
-  - AI Learning for Bigenners:
-    - How you can learn AI today - The Easy Way: ai-learning-plans/How-To-Learn-AI-Today.md
-    - AI Learning Path Draft: ai-learning-plans/ai-learning-plan-draft.md
-
-  - AI Tools Hands-on:
-    - Beginners - Local AI : ai-tools-hands-on/Beginners-guide-to-Local_AI.md
-    - Private Local & Free GuFF models: ai-tools-hands-on/AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits.md
-    - Top Local LLMs: ai-tools-hands-on/CuratedLocalLLMs/Top-Local-LLMs.md
-    - 2025 - Future of Local LLMs: ai-tools-hands-on/Wide-future-of-local-llms/future-of-opensource-local-llms.md
-    - AI Local Deployements:
-      - Gemma4 with TurboQuant on Ollama : ai-tools-hands-on/local-ai-model-deployements/gemma4-with-ollama-turboquant.md
-      - Ollama + TQuant + Claude : ai-tools-hands-on/Turboquant/docs/ollama-cmd-TBQ.md
-    - AI Tools:
-      - OpenClaw Paradigm & Risk: ai-tools-hands-on/AI-tool-guides/Open-claw-safety.md
+  - AI Fundamentals:
+    - LLM Basics: 4-ai-fundamentals/llm-basics/fundamentals-of-llm.md
+    - ML Concepts: 4-ai-fundamentals/ml-concepts/placeholder.md
     
-  - AI Workflows:
-    - n8n:
-      - Overview & features: ai-workflows/n8n/docs/n8n-overview.md
-      - Private-Secure Docker-Desktop n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
-      - Private-Secure Docker-Compose n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
+  - No-Code AI Path:
+    - Prompt Engineering:
+      - Prompt Basics: 1-prompt-fundamentals/getting-started.md
+      - Prompt Frameworks: 1-prompt-fundamentals/prompt-frameworks.md
+      - Zero-Shot Prompting: 1-prompt-fundamentals/zero-shot-prompting.md
+      - Save Prompt Costs: 1-prompt-fundamentals/save-cost-effective-prompting.md
+    - AI Tools:
+      - OpenClaw Safety: 2-ai-consumer-tools/ai-tools/openclaw-safety.md
+      - Opencode Setup: 2-ai-consumer-tools/ai-tools/opencode-setup.md
+      - Sarvam AI: 2-ai-consumer-tools/ai-tools/sarvam-ai.md
+      - Playwright: 2-ai-consumer-tools/ai-tools/playwright-setup.md
+    - No-Code Automation:
+      - n8n Overview: 2-ai-consumer-tools/no-code-automation/n8n-overview.md
+      - n8n Docker Setup: 2-ai-consumer-tools/no-code-automation/n8n-docker-setup.md
+      - n8n Privacy: 2-ai-consumer-tools/no-code-automation/n8n-privacy-community.md
 
-  - AI-PC:
-    - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
-    - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
-    - Desktop PC for 120b LLMs: ai-pc/pc-for-running-120b-llms-and-tune-as-well.md
-    - Mini PC for 120b LLMs: ai-pc/Mini-PC-for-running-120B-lls.md
+  - Coding Path:
+    - Python Basics:
+      - Overview: 3-python-for-ai/python-basics/sessions/overview.md
+      - Why Python for AI: 3-python-for-ai/python-basics/sessions/python-benefits.md
+    - Python Libraries:
+      - NumPy: 3-python-for-ai/python-libraries/numpy/numpy-1.md
+      - NumPy Workbook: 3-python-for-ai/python-libraries/numpy/numpy-intro.ipynb
+      - Pandas Workbook: 3-python-for-ai/python-libraries/pandas/pandas-hands-on.ipynb
+      - Visualization: 3-python-for-ai/python-libraries/visualization/ttkbootstrap-1.md
+    - Coding Concepts:
+      - Implement Concepts: 3-python-for-ai/coding-concepts/implement-concepts.md
+      - Local MCP Setup: 3-python-for-ai/coding-concepts/local-mcp-setup.md
 
-  - Linux:
-    - Linux Home: Linux/Linux-home.md
-    - Ubuntu Guide: Linux/Ubuntu/ubuntu-Install-modes-full-guide.md
-    - Ubuntu AI Pro: Linux/Ubuntu/Ubuntu-26.0-AI-Redefined.md
-    - Zorin Guide: Linux/Zorin/Zorin-Install-Full-Guide.md
-    - Low RAM > Swap Memory : Linux/Linux-swapiness.md
-    - World of free tools: Linux/Ubuntu/Linux-Tools.md
-    - One Step Dev Env : Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide.md
+  - Local AI:
+    - Getting Started:
+      - Beginners Guide: 5-local-ai/getting-started/beginners-guide-to-local-ai.md
+      - Free LLMs (GuFF): 5-local-ai/getting-started/free-llms-with-guff.md
+      - Compare Tools: 5-local-ai/getting-started/comparison-local-llm-tools.md
+    - Hardware Guides:
+      - Hardware for Heavy LLMs: 5-local-ai/getting-started/hardware-for-running-heavy-llms.md
+      - PC for 20B LLMs: 5-local-ai/getting-started/pc-for-running-20b-llm.md
+      - PC for 120B LLMs: 5-local-ai/getting-started/pc-for-running-120b-llms.md
+      - Mini PC for 120B: 5-local-ai/getting-started/mini-pc-for-running-120b-lls.md
+      - Affordable Mini PC: 5-local-ai/getting-started/affordable-mini-pc.md
+      - AI PC Tiers: 5-local-ai/getting-started/ai-pc-tiers-for-ubuntu.md
+    - Setup Guides:
+      - Ollama: 5-local-ai/setup/ollama/ollama-on-linux.md
+      - LM Studio: 5-local-ai/setup/lm-studio/lm-studio-guide.md
+      - VSCode + Local LLMs: 5-local-ai/setup/lm-studio/vscode-continue-local-llms.md
+      - Claude Code + Local: 5-local-ai/setup/lm-studio/claude-code-local-models.md
+    - GPU Models & Fine-Tuning:
+      - Top Local LLMs: 5-local-ai/gpu-models/top-local-llms.md
+      - LLMs Shortlisted: 5-local-ai/gpu-models/llms-shortlisted.md
+      - File Context & Tool Calling: 5-local-ai/gpu-models/local-file-context-tool-calling-llms.md
+      - Future of Open Source LLMs: 5-local-ai/gpu-models/future-of-opensource-local-llms.md
+      - Gemma4 + Ollama + TurboQuant: 5-local-ai/gpu-models/gemma4-ollama-turboquant.md
+      - Gemma4 TurboQuant Part 2: 5-local-ai/gpu-models/gemma4-ollama-turboquant-part2.md
+      - TurboQuant Overview: 5-local-ai/gpu-models/turboquant-overview.md
+      - TurboQuant Setup: 5-local-ai/gpu-models/turboquant-setup.md
+      - TurboQuant CMD: 5-local-ai/gpu-models/ollama-cmd-tbq.md
+      - TurboQuant Example: 5-local-ai/gpu-models/turboquant-example.md
+      - LlamaCPP Setup: 5-local-ai/gpu-models/llama-cpp-setup-guide.md
+      - Docker Model Runner (Linux): 5-local-ai/gpu-models/docker-model-runner-linux.md
+      - Docker Model Runner (Windows): 5-local-ai/gpu-models/docker-model-runner-windows.md
+      - Swap File Management: 5-local-ai/gpu-models/swap-file-management.md
 
+  - Infrastructure:
+    - Linux:
+      - Overview: 8-infrastructure/linux/overview.md
+      - Ubuntu Install Modes: 8-infrastructure/linux/ubuntu-install-modes.md
+      - Ubuntu AI Redefined: 8-infrastructure/linux/ubuntu-ai-redefined.md
+      - Ubuntu Tools: 8-infrastructure/linux/ubuntu-tools.md
+      - Minimize Apps: 8-infrastructure/linux/minimize-apps.md
+      - Swap Memory: 8-infrastructure/linux/swap-memory.md
+      - Swap Memory Linux: 8-infrastructure/linux/swap-memory-linux.md
+      - Ubuntu AI Support: 8-infrastructure/linux/ubuntu-ai-support.md
+      - LM Studio Image Config: 8-infrastructure/linux/lm-studio-image-config.md
+      - Zorin OS Guide: 8-infrastructure/linux/zorin-install-guide.md
+    - Dev Environment:
+      - One-Step Dev Setup: 8-infrastructure/bdev-env/one-step-dev-setup.md
+      - VSCode + AI: 8-infrastructure/bdev-env/vscode-ai.md
+    - Apps & Tools:
+      - VS Code: 8-infrastructure/apps-tools/vscode.md
+      - Audio/Video Editing: 8-infrastructure/apps-tools/audio-video-editing.md
+      - Automatic Backup: 8-infrastructure/apps-tools/automatic-backup.md
+      - Browsers: 8-infrastructure/apps-tools/browsers.md
+      - Camera: 8-infrastructure/apps-tools/camera.md
+      - Drawing Tools: 8-infrastructure/apps-tools/drawing.md
+      - Media Players: 8-infrastructure/apps-tools/media-players.md
+      - Postgres DB: 8-infrastructure/apps-tools/postgres-db.md
+      - Screen Recording: 8-infrastructure/apps-tools/screen-recording.md
+      - Virtual Machine Manager: 8-infrastructure/apps-tools/virtual-machine-manager.md
 
-  - Programming:
-      - Python Easy Learn:
-          - Python Basics: easy-python-sessions/python-basics/Python-Basics-Sessions.md
-          - Python Libraries:
-              - Python UI: easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1.md
-              - Numpy:
-                  - Sessions: easy-python-sessions/python-libraries/numpy/numpy-1.md
-                  - Workbook: easy-python-sessions/python-libraries/numpy/numpy_intro_community.ipynb
-              - Pandas:
-                  - Workbook: easy-python-sessions/python-libraries/pandas/PandasHandsOn.ipynb
-          - Coding Concepts: easy-python-sessions/coding-concepts/Implement-Concepts.md
+  - Community:
+    - Community Values: 7-community/getting-started/overview.md
+    - Contributing Guide: 7-community/contributing/guide.md
+    - Learn Continuously: 7-community/contributing/learn-continuously.md
