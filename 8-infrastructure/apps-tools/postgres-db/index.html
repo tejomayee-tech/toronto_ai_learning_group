@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../media-players/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../screen-recording/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>AI Learning Group</title>
+        <title>Postgres DB - AI Learning Group</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#steps-to-install-postgresql-on-an-ubuntu-system" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+    <a href="../../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Postgres DB
             
           </span>
         </div>
@@ -168,7 +177,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -187,7 +196,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/_learning-pathways/00-start-here/" class="md-tabs__link">
+        <a href="../../../_learning-pathways/00-start-here/" class="md-tabs__link">
           
   
   Learning Pathways
@@ -211,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1-prompt-fundamentals/getting-started/" class="md-tabs__link">
+        <a href="../../../1-prompt-fundamentals/getting-started/" class="md-tabs__link">
           
   
   No-Code AI Path
@@ -238,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/3-python-for-ai/python-basics/sessions/overview/" class="md-tabs__link">
+        <a href="../../../3-python-for-ai/python-basics/sessions/overview/" class="md-tabs__link">
           
   
   Coding Path
@@ -265,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/5-local-ai/getting-started/beginners-guide-to-local-ai/" class="md-tabs__link">
+        <a href="../../../5-local-ai/getting-started/beginners-guide-to-local-ai/" class="md-tabs__link">
           
   
   Local AI
@@ -286,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/4-ai-fundamentals/llm-basics/fundamentals-of-llm/" class="md-tabs__link">
+        <a href="../../../4-ai-fundamentals/llm-basics/fundamentals-of-llm/" class="md-tabs__link">
           
   
   AI Fundamentals
@@ -300,17 +309,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/8-infrastructure/linux/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../linux/overview/" class="md-tabs__link">
           
   
   Infrastructure
@@ -331,7 +344,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/7-community/getting-started/overview/" class="md-tabs__link">
+        <a href="../../../7-community/getting-started/overview/" class="md-tabs__link">
           
   
   Community
@@ -364,7 +377,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+    <a href="../../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -382,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_learning-pathways/00-start-here/" class="md-nav__link">
+      <a href="../../../_learning-pathways/00-start-here/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_learning-pathways/01-ai-python-roadmap/" class="md-nav__link">
+      <a href="../../../_learning-pathways/01-ai-python-roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-prompt-fundamentals/getting-started/" class="md-nav__link">
+      <a href="../../../1-prompt-fundamentals/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-prompt-fundamentals/prompt-frameworks/" class="md-nav__link">
+      <a href="../../../1-prompt-fundamentals/prompt-frameworks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-prompt-fundamentals/zero-shot-prompting/" class="md-nav__link">
+      <a href="../../../1-prompt-fundamentals/zero-shot-prompting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-prompt-fundamentals/save-cost-effective-prompting/" class="md-nav__link">
+      <a href="../../../1-prompt-fundamentals/save-cost-effective-prompting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/ai-tools/openclaw-safety/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/ai-tools/openclaw-safety/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/ai-tools/opencode-setup/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/ai-tools/opencode-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/ai-tools/sarvam-ai/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/ai-tools/sarvam-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/ai-tools/playwright-setup/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/ai-tools/playwright-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/no-code-automation/n8n-overview/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/no-code-automation/n8n-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/no-code-automation/n8n-docker-setup/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/no-code-automation/n8n-docker-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-ai-consumer-tools/no-code-automation/n8n-privacy-community/" class="md-nav__link">
+      <a href="../../../2-ai-consumer-tools/no-code-automation/n8n-privacy-community/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-basics/sessions/overview/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-basics/sessions/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-basics/sessions/python-benefits/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-basics/sessions/python-benefits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-libraries/numpy/numpy-1/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-libraries/numpy/numpy-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-libraries/numpy/numpy-intro/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-libraries/numpy/numpy-intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-libraries/pandas/pandas-hands-on/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-libraries/pandas/pandas-hands-on/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/python-libraries/visualization/ttkbootstrap-1/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/python-libraries/visualization/ttkbootstrap-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1215,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/coding-concepts/implement-concepts/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/coding-concepts/implement-concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-python-for-ai/coding-concepts/local-mcp-setup/" class="md-nav__link">
+      <a href="../../../3-python-for-ai/coding-concepts/local-mcp-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/beginners-guide-to-local-ai/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/beginners-guide-to-local-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1373,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/free-llms-with-guff/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/free-llms-with-guff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1394,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/comparison-local-llm-tools/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/comparison-local-llm-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/hardware-for-running-heavy-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/hardware-for-running-heavy-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/pc-for-running-20b-llm/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/pc-for-running-20b-llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/pc-for-running-120b-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/pc-for-running-120b-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/mini-pc-for-running-120b-lls/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/mini-pc-for-running-120b-lls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1547,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/affordable-mini-pc/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/affordable-mini-pc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1568,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/getting-started/ai-pc-tiers-for-ubuntu/" class="md-nav__link">
+      <a href="../../../5-local-ai/getting-started/ai-pc-tiers-for-ubuntu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/setup/ollama/ollama-on-linux/" class="md-nav__link">
+      <a href="../../../5-local-ai/setup/ollama/ollama-on-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1658,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/setup/lm-studio/lm-studio-guide/" class="md-nav__link">
+      <a href="../../../5-local-ai/setup/lm-studio/lm-studio-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1679,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/setup/lm-studio/vscode-continue-local-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/setup/lm-studio/vscode-continue-local-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1700,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/setup/lm-studio/claude-code-local-models/" class="md-nav__link">
+      <a href="../../../5-local-ai/setup/lm-studio/claude-code-local-models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/top-local-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/top-local-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1790,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/llms-shortlisted/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/llms-shortlisted/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1811,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/local-file-context-tool-calling-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/local-file-context-tool-calling-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/future-of-opensource-local-llms/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/future-of-opensource-local-llms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/gemma4-ollama-turboquant/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/gemma4-ollama-turboquant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1874,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/gemma4-ollama-turboquant-part2/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/gemma4-ollama-turboquant-part2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1895,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/turboquant-overview/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/turboquant-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/turboquant-setup/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/turboquant-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/ollama-cmd-tbq/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/ollama-cmd-tbq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1958,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/turboquant-example/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/turboquant-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1979,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/llama-cpp-setup-guide/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/llama-cpp-setup-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2000,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/docker-model-runner-linux/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/docker-model-runner-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/docker-model-runner-windows/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/docker-model-runner-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-local-ai/gpu-models/swap-file-management/" class="md-nav__link">
+      <a href="../../../5-local-ai/gpu-models/swap-file-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2118,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-ai-fundamentals/llm-basics/fundamentals-of-llm/" class="md-nav__link">
+      <a href="../../../4-ai-fundamentals/llm-basics/fundamentals-of-llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2139,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-ai-fundamentals/ml-concepts/placeholder/" class="md-nav__link">
+      <a href="../../../4-ai-fundamentals/ml-concepts/placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2164,25 +2177,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2193,7 +2211,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Infrastructure
@@ -2212,17 +2230,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2247,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/overview/" class="md-nav__link">
+      <a href="../../linux/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2268,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/ubuntu-install-modes/" class="md-nav__link">
+      <a href="../../linux/ubuntu-install-modes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2289,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/ubuntu-ai-redefined/" class="md-nav__link">
+      <a href="../../linux/ubuntu-ai-redefined/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2310,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/ubuntu-tools/" class="md-nav__link">
+      <a href="../../linux/ubuntu-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2331,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/minimize-apps/" class="md-nav__link">
+      <a href="../../linux/minimize-apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2352,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/swap-memory/" class="md-nav__link">
+      <a href="../../linux/swap-memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2373,7 +2394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/swap-memory-linux/" class="md-nav__link">
+      <a href="../../linux/swap-memory-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2394,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/ubuntu-ai-support/" class="md-nav__link">
+      <a href="../../linux/ubuntu-ai-support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2415,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/lm-studio-image-config/" class="md-nav__link">
+      <a href="../../linux/lm-studio-image-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2436,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/linux/zorin-install-guide/" class="md-nav__link">
+      <a href="../../linux/zorin-install-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2470,17 +2491,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2505,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/bdev-env/one-step-dev-setup/" class="md-nav__link">
+      <a href="../../bdev-env/one-step-dev-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2526,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/bdev-env/vscode-ai/" class="md-nav__link">
+      <a href="../../bdev-env/vscode-ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2552,25 +2576,30 @@
                 
   
   
+    
   
   
+  
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2581,7 +2610,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             Apps & Tools
@@ -2595,7 +2624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/vscode/" class="md-nav__link">
+      <a href="../vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2616,7 +2645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/audio-video-editing/" class="md-nav__link">
+      <a href="../audio-video-editing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2637,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/automatic-backup/" class="md-nav__link">
+      <a href="../automatic-backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2658,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/browsers/" class="md-nav__link">
+      <a href="../browsers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2679,7 +2708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/camera/" class="md-nav__link">
+      <a href="../camera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2700,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/drawing/" class="md-nav__link">
+      <a href="../drawing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2721,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/media-players/" class="md-nav__link">
+      <a href="../media-players/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2739,10 +2768,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/postgres-db/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Postgres DB
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2751,6 +2798,303 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-install-postgresql-on-an-ubuntu-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to install PostgreSQL on an Ubuntu system:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to install PostgreSQL on an Ubuntu system:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-update-your-package-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 1: Update Your Package List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 2: Install PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-confirm-the-service-is-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 3: Confirm the Service is Running
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-password-for-the-postgres-system-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set a password for the postgres system user:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-switch-to-the-default-postgresql-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 4: Switch to the Default PostgreSQL User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-create-a-new-database-and-user-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 5: Create a New Database and User (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-allow-password-authentication-optional-for-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 6: Allow Password Authentication (Optional for Remote Access)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-enable-remote-access-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 7: Enable Remote Access (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-pgadmin-official-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 1. pgAdmin (Official UI)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 1. pgAdmin (Official UI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-pgadmin-on-ubuntu-desktop-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install pgAdmin on Ubuntu (Desktop Version):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-using-pgadmin4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting using pgadmin4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting using pgadmin4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-set-a-database-password-for-the-postgres-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Set a Database Password for the postgres User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-pgadmin-4-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure pgAdmin 4 (Snap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-troubleshooting-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Troubleshooting Connectivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-db-and-non-superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create DB and non-superuser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create DB and non-superuser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-user-and-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the User and Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-connect-via-pgadmin-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Connect via pgAdmin 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-permissions-the-schema-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify Permissions (The Schema Test)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do this?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 2. DBeaver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 2. DBeaver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-dbeaver-community-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install DBeaver (Community Edition):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-datagrip-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 3. DataGrip (JetBrains)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 3. DataGrip (JetBrains)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-via-jetbrains-toolbox-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install via JetBrains Toolbox or:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actual-config-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actual config steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-dbadminbadmin123" class="md-nav__link">
+    <span class="md-ellipsis">
+      login with dbadmin/badmin@123
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2763,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/screen-recording/" class="md-nav__link">
+      <a href="../screen-recording/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2784,7 +3128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-infrastructure/apps-tools/virtual-machine-manager/" class="md-nav__link">
+      <a href="../virtual-machine-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2860,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-community/getting-started/overview/" class="md-nav__link">
+      <a href="../../../7-community/getting-started/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2881,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-community/contributing/guide/" class="md-nav__link">
+      <a href="../../../7-community/contributing/guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2902,7 +3246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-community/contributing/learn-continuously/" class="md-nav__link">
+      <a href="../../../7-community/contributing/learn-continuously/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2941,6 +3285,293 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-install-postgresql-on-an-ubuntu-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to install PostgreSQL on an Ubuntu system:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to install PostgreSQL on an Ubuntu system:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-update-your-package-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 1: Update Your Package List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 2: Install PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-confirm-the-service-is-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 3: Confirm the Service is Running
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-password-for-the-postgres-system-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set a password for the postgres system user:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-switch-to-the-default-postgresql-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 4: Switch to the Default PostgreSQL User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-create-a-new-database-and-user-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 5: Create a New Database and User (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-allow-password-authentication-optional-for-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 6: Allow Password Authentication (Optional for Remote Access)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-enable-remote-access-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Step 7: Enable Remote Access (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-pgadmin-official-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 1. pgAdmin (Official UI)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 1. pgAdmin (Official UI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-pgadmin-on-ubuntu-desktop-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install pgAdmin on Ubuntu (Desktop Version):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-using-pgadmin4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting using pgadmin4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting using pgadmin4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-set-a-database-password-for-the-postgres-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Set a Database Password for the postgres User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-pgadmin-4-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure pgAdmin 4 (Snap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-troubleshooting-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Troubleshooting Connectivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-db-and-non-superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create DB and non-superuser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create DB and non-superuser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-user-and-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the User and Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-connect-via-pgadmin-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Connect via pgAdmin 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-permissions-the-schema-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify Permissions (The Schema Test)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do this?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 2. DBeaver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 2. DBeaver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-dbeaver-community-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install DBeaver (Community Edition):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-datagrip-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 3. DataGrip (JetBrains)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 3. DataGrip (JetBrains)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-via-jetbrains-toolbox-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Install via JetBrains Toolbox or:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actual-config-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actual config steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-dbadminbadmin123" class="md-nav__link">
+    <span class="md-ellipsis">
+      login with dbadmin/badmin@123
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2951,8 +3582,365 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>Postgres DB</h1>
+
+<div><h2 id="steps-to-install-postgresql-on-an-ubuntu-system">Steps to install <strong>PostgreSQL</strong> on an <strong>Ubuntu</strong> system:</h2>
+<p>Also check <a href="https://dbeaver.com/docs/dbeaver/AI-Smart-Assistance/">DBeaver AI assist</a></p>
+<p>Official Doc <a href="https://www.postgresql.org/download/linux/ubuntu/">postgresql ubuntu</a></p>
+<p>install: wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb </p>
+<hr>
+<h3 id="step-1-update-your-package-list">✅ Step 1: Update Your Package List</h3>
+<p>Open a terminal and run:</p>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<hr>
+<h3 id="step-2-install-postgresql">✅ Step 2: Install PostgreSQL</h3>
+<p>Install PostgreSQL and its contrib package (which provides additional features):</p>
+<pre><code class="language-bash">sudo apt install postgresql postgresql-contrib
+</code></pre>
+<hr>
+<h3 id="step-3-confirm-the-service-is-running">✅ Step 3: Confirm the Service is Running</h3>
+<p>Check the status of the PostgreSQL service:</p>
+<pre><code class="language-bash">sudo systemctl status postgresql
+</code></pre>
+<p>You should see something like:</p>
+<pre><code>Active: active (exited)
+</code></pre>
+<p>To start/restart/stop the service, you can use:</p>
+<pre><code class="language-bash">sudo systemctl start postgresql
+sudo systemctl stop postgresql
+sudo systemctl restart postgresql
+</code></pre>
+<h3 id="set-a-password-for-the-postgres-system-user"><strong>Set a password for the <code>postgres</code> system user</strong>:</h3>
+<p><code>bash
+   sudo passwd postgres</code></p>
+<p>This will prompt you to enter a password for the <code>postgres</code> system user. You can choose any password here (it's just for <code>sudo</code> access).</p>
+<h3 id="step-4-switch-to-the-default-postgresql-user">✅ Step 4: Switch to the Default PostgreSQL User</h3>
+<p>PostgreSQL creates a default user named <code>postgres</code>. Switch to that user:</p>
+<pre><code class="language-bash">sudo -i -u postgres
+</code></pre>
+<p>Then you can access the PostgreSQL prompt using:</p>
+<pre><code class="language-bash">psql
+</code></pre>
+<p>To exit the <code>psql</code> prompt, type:</p>
+<pre><code class="language-sql">\q
+</code></pre>
+<p>To exit from the <code>postgres</code> user shell:</p>
+<pre><code class="language-bash">exit
+</code></pre>
+<hr>
+<h3 id="step-5-create-a-new-database-and-user-optional">✅ Step 5: Create a New Database and User (Optional)</h3>
+<p>Inside the <code>psql</code> shell, you can create a user and database like this:</p>
+<pre><code class="language-sql">CREATE DATABASE mydb;
+CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypassword';
+GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+</code></pre>
+<hr>
+<h3 id="step-6-allow-password-authentication-optional-for-remote-access">✅ Step 6: Allow Password Authentication (Optional for Remote Access)</h3>
+<p>Edit the config file:</p>
+<pre><code class="language-bash">sudo nano /etc/postgresql/*/main/pg_hba.conf
+</code></pre>
+<p>Change this line:</p>
+<pre><code>local   all             all                                     peer
+</code></pre>
+<p>To:</p>
+<pre><code>local   all             all                                     md5
+</code></pre>
+<p>Then restart PostgreSQL:</p>
+<pre><code class="language-bash">sudo systemctl restart postgresql
+</code></pre>
+<hr>
+<h3 id="step-7-enable-remote-access-optional">✅ Step 7: Enable Remote Access (Optional)</h3>
+<ol>
+<li>Edit <code>postgresql.conf</code>:</li>
+</ol>
+<pre><code class="language-bash">sudo nano /etc/postgresql/*/main/postgresql.conf
+</code></pre>
+<p>Uncomment and set:</p>
+<pre><code>listen_addresses = '*'
+</code></pre>
+<ol>
+<li>Then edit <code>pg_hba.conf</code> again and add:</li>
+</ol>
+<pre><code>host    all             all             0.0.0.0/0               md5
+</code></pre>
+<ol>
+<li>Restart PostgreSQL again:</li>
+</ol>
+<pre><code class="language-bash">sudo systemctl restart postgresql
+</code></pre>
+<hr>
+<p>PostgreSQL itself doesn't come with a <strong>built-in UI</strong>, but yes — you can absolutely use a <strong>graphical user interface (GUI)</strong> on Ubuntu, just like on Windows. You just need to install one separately. Here are some popular PostgreSQL GUI tools you can use on Ubuntu:</p>
+<hr>
+<h3 id="1-pgadmin-official-ui">🔹 1. <strong>pgAdmin (Official UI)</strong></h3>
+<blockquote>
+<p><strong>Note</strong>: difficult to install </p>
+</blockquote>
+<ul>
+<li>The official and most full-featured GUI for PostgreSQL</li>
+<li>Can be run as a desktop app or in the browser (web app)</li>
+</ul>
+<h4 id="install-pgadmin-on-ubuntu-desktop-version">🧰 Install pgAdmin on Ubuntu (Desktop Version):</h4>
+<p>Installs both desktop and web version and keep them up to date</p>
+<pre><code class="language-bash">sudo snap install pgadmin4
+</code></pre>
+<pre><code class="language-bash">sudo apt install pgadmin4-desktop
+</code></pre>
+<p>Or for the web version:</p>
+<pre><code class="language-bash">sudo apt install pgadmin4-web
+</code></pre>
+<p>Then configure with:</p>
+<pre><code class="language-bash">sudo /usr/pgadmin4/bin/setup-web.sh
+</code></pre>
+<h4 id="connecting-using-pgadmin4">Connecting using pgadmin4</h4>
+<p>On Ubuntu, the <strong>Snap</strong> version of pgAdmin runs in a restricted sandbox, and the default <code>postgresql</code> installation uses "Peer" authentication, which doesn't allow external apps (like a Snap) to connect without a specific database password.</p>
+<h5 id="step-1-set-a-database-password-for-the-postgres-user">Step 1: Set a Database Password for the <code>postgres</code> User</h5>
+<p>The <code>sudo passwd postgres</code> command you ran only changed the <strong>Linux system password</strong> for that user; it did not change the <strong>PostgreSQL database password</strong>.</p>
+<ol>
+<li>Open your terminal and enter the PostgreSQL prompt as the superuser:</li>
+</ol>
+<pre><code class="language-bash">sudo -u postgres psql
+
+</code></pre>
+<ol>
+<li>Now, set the database password by running this SQL command (replace <code>'your_secure_password'</code> with your actual password):</li>
+</ol>
+<pre><code class="language-sql">ALTER USER postgres PASSWORD 'your_secure_password';
+
+</code></pre>
+<ol>
+<li>Exit the prompt:</li>
+</ol>
+<pre><code class="language-sql">\q
+
+</code></pre>
+<hr>
+<h5 id="step-2-configure-pgadmin-4-snap">Step 2: Configure pgAdmin 4 (Snap)</h5>
+<p>Launch your <strong>pgAdmin 4</strong> application and follow these steps to register your local server:</p>
+<ol>
+<li><strong>Register Server:</strong> Right-click on <strong>Servers</strong> &gt; <strong>Register</strong> &gt; <strong>Server...</strong>.</li>
+<li><strong>General Tab:</strong> Give it a name (e.g., <code>Localhost</code>).</li>
+<li><strong>Connection Tab:</strong> Use the following settings:</li>
+<li><strong>Host name/address:</strong> <code>127.0.0.1</code> (using the IP is often more reliable than <code>localhost</code> for Snap apps).</li>
+<li><strong>Port:</strong> <code>5432</code> (default).</li>
+<li><strong>Maintenance database:</strong> <code>postgres</code>.</li>
+<li><strong>Username:</strong> <code>postgres</code>.</li>
+<li>
+<p><strong>Password:</strong> The one you just set in <strong>Step 1</strong>.</p>
+</li>
+<li>
+<p><strong>Save:</strong> Click the <strong>Save</strong> button.</p>
+</li>
+</ol>
+<hr>
+<h5 id="step-3-troubleshooting-connectivity">Step 3: Troubleshooting Connectivity</h5>
+<p>If pgAdmin fails to connect with a "Connection Refused" or "Peer Authentication Failed" error, check these two items:</p>
+<ol>
+<li>Snap Permissions</li>
+</ol>
+<p>Because pgAdmin is a Snap, it might need permission to talk to the local system. Run this command to ensure it can access necessary system services:</p>
+<pre><code class="language-bash">snap connect pgadmin4:password-manager-service
+
+</code></pre>
+<ol>
+<li>Check the Authentication Method</li>
+</ol>
+<p>If you still get "Password authentication failed," you may need to ensure PostgreSQL is looking for a password rather than a Linux user match:</p>
+<ol>
+<li>Open the configuration file:</li>
+</ol>
+<pre><code class="language-bash">sudo nano /etc/postgresql/$(psql --version | egrep -o '[0-9]{1,2}' | head -1)/main/pg_hba.conf
+
+</code></pre>
+<ol>
+<li>Find the line for <code>local</code> or <code>127.0.0.1</code> and ensure the method at the end is <code>scram-sha-256</code> or <code>md5</code>, <strong>not</strong> <code>peer</code>.</li>
+<li>Restart PostgreSQL if you make changes:</li>
+</ol>
+<pre><code class="language-bash">sudo systemctl restart postgresql
+
+</code></pre>
+<h4 id="create-db-and-non-superuser">Create DB and non-superuser</h4>
+<p>It is a best practice to avoid using the <code>postgres</code> superuser for daily tasks. Creating a dedicated user and database for your project adds a layer of security by limiting what that user can access.</p>
+<p>You can do this directly inside <strong>pgAdmin 4</strong> or via the <strong>Terminal</strong>. Since you just set up the connection, using the Terminal is often the fastest way to ensure permissions are set correctly.</p>
+<hr>
+<h5 id="step-1-create-the-user-and-database">Step 1: Create the User and Database</h5>
+<p>Open your terminal and enter the PostgreSQL prompt again:</p>
+<pre><code class="language-bash">sudo -u postgres psql
+
+</code></pre>
+<p>Now, run the following SQL commands (replace the placeholders with your preferred names):</p>
+<ol>
+<li><strong>Create a new user:</strong></li>
+</ol>
+<pre><code class="language-sql">CREATE USER my_app_user WITH PASSWORD 'choose_a_strong_password';
+
+</code></pre>
+<ol>
+<li><strong>Create the database:</strong></li>
+</ol>
+<pre><code class="language-sql">CREATE DATABASE my_project_db;
+
+</code></pre>
+<ol>
+<li><strong>Grant permissions:</strong>
+This gives your new user full control over the new database:</li>
+</ol>
+<pre><code class="language-sql">GRANT ALL PRIVILEGES ON DATABASE my_project_db TO my_app_user;
+
+</code></pre>
+<ol>
+<li><strong>Exit:</strong></li>
+</ol>
+<pre><code class="language-sql">\q
+
+</code></pre>
+<h5 id="step-2-connect-via-pgadmin-4">Step 2: Connect via pgAdmin 4</h5>
+<p>Now that the database and user exist, you should add a second connection in pgAdmin specifically for this user. This mimics how a real application (like a Python or Node.js app) would connect.</p>
+<ol>
+<li>Open <strong>pgAdmin 4</strong>.</li>
+<li>Right-click <strong>Servers</strong> &gt; <strong>Register</strong> &gt; <strong>Server...</strong></li>
+<li><strong>General Tab:</strong> Name it <code>My Project DB</code>.</li>
+<li><strong>Connection Tab:</strong></li>
+<li><strong>Host:</strong> <code>127.0.0.1</code></li>
+<li><strong>Port:</strong> <code>5432</code></li>
+<li><strong>Maintenance database:</strong> <code>my_project_db</code> (Type your new DB name here).</li>
+<li><strong>Username:</strong> <code>my_app_user</code></li>
+<li>
+<p><strong>Password:</strong> The password you chose in Step 1.</p>
+</li>
+<li>
+<p><strong>Save.</strong></p>
+</li>
+</ol>
+<h5 id="step-3-verify-permissions-the-schema-test">Step 3: Verify Permissions (The Schema Test)</h5>
+<p>By default, in PostgreSQL 15 and later, you may need to explicitly grant permission to create tables within the <code>public</code> schema of your new database.</p>
+<p>If you try to create a table and get a "Permission Denied" error, run this one-time fix:</p>
+<ol>
+<li>In pgAdmin, right-click your new database (<code>my_project_db</code>).</li>
+<li>Select <strong>Query Tool</strong>.</li>
+<li>Run this command:</li>
+</ol>
+<pre><code class="language-sql">GRANT ALL ON SCHEMA public TO my_app_user;
+
+</code></pre>
+<h5 id="why-do-this">Why do this?</h5>
+<ul>
+<li><strong>Safety:</strong> If you accidentally run a "Drop Table" command or a buggy script, you only risk the specific project database, not the entire PostgreSQL system.</li>
+<li><strong>Security:</strong> If your application's credentials are ever leaked, the attacker only gains access to that one database, rather than full administrative control over your server.</li>
+</ul>
+<hr>
+<h3 id="2-dbeaver">🔹 2. <strong>DBeaver</strong></h3>
+<ul>
+<li>Universal database client</li>
+<li>Works with PostgreSQL, MySQL, SQLite, and many more</li>
+<li>Nice UI and popular among developers</li>
+</ul>
+<h4 id="install-dbeaver-community-edition">🧰 Install DBeaver (Community Edition):</h4>
+<pre><code class="language-bash">sudo snap install dbeaver-ce
+</code></pre>
+<p>Or use their <code>.deb</code> package from <a href="https://dbeaver.io/download/">dbeaver.io</a></p>
+<hr>
+<h3 id="3-datagrip-jetbrains">🔹 3. <strong>DataGrip</strong> (JetBrains)</h3>
+<ul>
+<li>Powerful professional database IDE (paid)</li>
+<li>Great for advanced PostgreSQL management</li>
+<li>Supports all major databases</li>
+</ul>
+<h4 id="install-via-jetbrains-toolbox-or">🧰 Install via JetBrains Toolbox or:</h4>
+<pre><code class="language-bash">sudo snap install datagrip --classic
+</code></pre>
+<hr>
+<h3 id="summary">✅ Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pgAdmin</td>
+<td>Official</td>
+<td>Most common, browser-based or desktop</td>
+</tr>
+<tr>
+<td>DBeaver</td>
+<td>Cross-platform</td>
+<td>Very popular, open source</td>
+</tr>
+<tr>
+<td>DataGrip</td>
+<td>IDE</td>
+<td>Paid, powerful by JetBrains</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="actual-config-steps">Actual config steps</h2>
+<p>vijay@vijay-UbuntuLTS:~$ sudo snap install dbeaver-ce
+dbeaver-ce 25.0.2.202504061727 from DBeaver (dbeaver-corp) installed
+vijay@vijay-UbuntuLTS:~$ sudo -i -u postgres
+postgres@vijay-UbuntuLTS:~$ psql
+psql (16.8 (Ubuntu 16.8-1.pgdg22.04+1))
+Type "help" for help.</p>
+<p>postgres=# CREATE ROLE dbadmin WITH LOGIN PASSWORD 'dbadmin@123';
+CREATE ROLE
+postgres=# \q
+postgres@vijay-UbuntuLTS:~$ sudo nano /etc/postgresql/<em>/main/pg_hba.conf
+[sudo] password for postgres: 
+Sorry, try again.
+[sudo] password for postgres: 
+Sorry, try again.
+[sudo] password for postgres: 
+sudo: 2 incorrect password attempts
+postgres@vijay-UbuntuLTS:~$ sudo nano /etc/postgresql/</em>/main/pg_hba.conf
+[sudo] password for postgres: 
+Sorry, try again.
+[sudo] password for postgres: 
+sudo: 1 incorrect password attempt
+postgres@vijay-UbuntuLTS:~$ whoami
+postgres
+postgres@vijay-UbuntuLTS:~$ exit
+logout
+vijay@vijay-UbuntuLTS:~$ sudo passwd postgres
+New password: 
+Retype new password: 
+passwd: password updated successfully
+vijay@vijay-UbuntuLTS:~$ sudo -i -u postgres
+postgres@vijay-UbuntuLTS:~$ sudo nano /etc/postgresql/<em>/main/pg_hba.conf
+[sudo] password for postgres: 
+postgres is not in the sudoers file.
+postgres@vijay-UbuntuLTS:~$ exit
+logout
+vijay@vijay-UbuntuLTS:~$ sudo visudo
+vijay@vijay-UbuntuLTS:~$ sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+vijay@vijay-UbuntuLTS:~$ sudo -i -u postgres
+postgres@vijay-UbuntuLTS:~$ sudo nano /etc/postgresql/</em>/main/pg_hba.conf
+[sudo] password for postgres: 
+postgres@vijay-UbuntuLTS:~$ sudo systemctl restart postgresql
+Warning: The unit file, source configuration file or drop-ins of postgresql.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+postgres@vijay-UbuntuLTS:~$ systemctl daemon-reload
+postgres@vijay-UbuntuLTS:~$ </p>
+<h2 id="login-with-dbadminbadmin123">login with dbadmin/badmin@123</h2></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2992,10 +3980,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "content.action.top", "content.code.copy", "navigation.path", "search.suggest", "search.highlight"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "content.action.top", "content.code.copy", "navigation.path", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
