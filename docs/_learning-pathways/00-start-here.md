@@ -21,7 +21,7 @@ Welcome! This roadmap is designed for **absolute beginners** to **intermediate l
 | 4 | **No-Code Automation** | Build workflows with n8n, connect AI to real tools | 1-2 weeks |
 | 5 | **AI Agents** | Understand agentic AI, build simple AI assistants | 1 week |
 
-**Start here:** [Prompt Engineering Basics](../1-prompt-fundamentals/getting-started.md)
+**Start here:** [AI Consumer Tools Overview](../2-ai-consumer-tools/ai-tools/meta-harness.md)
 
 ### Path B: The Python Developer (Coding-Focused)
 **Best for:** Developers who know Python basics and want to add AI skills
@@ -39,7 +39,7 @@ Welcome! This roadmap is designed for **absolute beginners** to **intermediate l
 | 6 | **Production & MLOps** | Docker, FastAPI, CI/CD, model serving | 3 weeks |
 | 7 | **Specialization** | Pick CV, NLP, Tabular, RL, or Edge AI | 8-12 weeks |
 
-**Start here:** [AI-Python Learning Path](01-ai-python-roadmap.md)
+**Start here:** [AI-Python Learning Path](../ai-learning-plans/ai-python-learning-path.md)
 
 ### Path C: The AI Enthusiast (Local & Private AI)
 **Best for:** Privacy-conscious users, tinkerers, people with limited internet
@@ -72,38 +72,38 @@ Here's the full roadmap from absolute beginner to AI practitioner:
 │  │  Stage 1: AI Consumer (No Code)                                   │  │
 │  │  ├── Use ChatGPT/Claude daily for real tasks                      │  │
 │  │  ├── Master prompt engineering (Aim/Context/Rules)                │  │
-│  │  └── Understand what AI can and cannot do                        │  │
+│  │  └── Understand what AI can and cannot do                         │  │
 │  └───────────────────────────────────────────────────────────────────┘  │
-│                              │                                            │
-│                              ▼                                            │
-│  PHASE 2: SKILL BUILDING (Weeks 5-12)                                     │
+│                              │                                          │
+│                              ▼                                          │
+│  PHASE 2: SKILL BUILDING (Weeks 5-12)                                   │
 │  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │  Stage 2: Choose Your Path                                         │  │
+│  │  Stage 2: Choose Your Path                                        │  │
 │  │                                                                   │  │
-│  │  ┌─ Non-Technical ──────────────────────────────────────────┐    │  │
-│  │  │  ├── Creative AI tools (images, audio, video)             │    │  │
-│  │  │  ├── No-code automation (n8n, Zapier)                     │    │  │
-│  │  │  └── AI-powered workflows for your business               │    │  │
-│  │  └─ Technical ───────────────────────────────────────────┐   │  │
-│  │     ├── Python fundamentals (variables, loops, functions)  │   │  │
-│  │     ├── Data science libraries (NumPy, Pandas)             │   │  │
-│  │     └── Basic ML with scikit-learn                         │   │  │
+│  │  ┌─ Non-Technical ──────────────────────────────────────────┐     │  │
+│  │  │  ├── Creative AI tools (images, audio, video)            │     │  │
+│  │  │  ├── No-code automation (n8n, Zapier)                    │     │  │
+│  │  │  └── AI-powered workflows for your business              │     │  │
+│  │  └─ Technical ───────────────────────────────────────────┐  │     │  │
+│  │     ├── Python fundamentals (variables, loops, functions)│  │     │  │
+│  │     ├── Data science libraries (NumPy, Pandas)           │  │     │  │
+│  │     └── Basic ML with scikit-learn                       │  │     │  │
 │  └───────────────────────────────────────────────────────────────────┘  │
-│                              │                                            │
-│                              ▼                                            │
-│  PHASE 3: PRACTICAL APPLICATION (Weeks 13-20)                             │
+│                              │                                          │
+│                              ▼                                          │
+│  PHASE 3: PRACTICAL APPLICATION (Weeks 13-20)                           │
 │  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │  Stage 3: Hands-On Projects                                        │  │
+│  │  Stage 3: Hands-On Projects                                       │  │
 │  │  ├── Run AI models locally (Ollama, LM Studio)                    │  │
 │  │  ├── Build a local chatbot with RAG                               │  │
 │  │  ├── Fine-tune a model on your data                               │  │
 │  │  └── Deploy models as web APIs                                    │  │
 │  └───────────────────────────────────────────────────────────────────┘  │
-│                              │                                            │
-│                              ▼                                            │
-│  PHASE 4: SPECIALIZATION (Weeks 21-30)                                    │
+│                              │                                          │
+│                              ▼                                          │
+│  PHASE 4: SPECIALIZATION (Weeks 21-30)                                  │
 │  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │  Stage 4: Pick Your Depth                                          │  │
+│  │  Stage 4: Pick Your Depth                                         │  │
 │  │  ├── Computer Vision (object detection, image classification)     │  │
 │  │  ├── Natural Language Processing (text analysis, summarization)   │  │
 │  │  ├── Tabular AI (predictions, risk scoring)                       │  │
