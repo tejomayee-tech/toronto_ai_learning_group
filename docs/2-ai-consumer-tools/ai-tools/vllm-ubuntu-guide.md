@@ -1,32 +1,26 @@
-# 🚀 vLLM Setup Guide for i5 / i7 Laptops (16GB RAM)
-
-### Efficient Hugging Face Model Inference (No Assumptions)
+# 🚀 vLLM Setup Guide (Ubuntu • i5 / i7 • 16GB RAM)
 
 ---
 
-# 🧩 1. System Requirements (STRICT)
-
-Before starting, ensure:
+# 🧩 1. System Requirements
 
 ### 💻 Hardware
 
-* Intel i5 / i7 CPU (6+ threads recommended)
-* 16 GB RAM
-* (Optional) NVIDIA GPU (4–8GB VRAM helps but NOT required)
+* Intel i5 / i7 (6+ threads recommended)
+* 16GB RAM minimum
+* Optional GPU (improves speed, not required for small models)
 
 ---
 
 ### 🖥️ OS
 
-* Ubuntu 22.04 / 24.04 (recommended)
+* Ubuntu 22.04 / 24.04
 
 ---
 
 ### 🐍 Python
 
-* Python 3.10–3.12
-
-Check:
+* Python 3.10 – 3.12
 
 ```bash
 python3 --version
@@ -34,60 +28,25 @@ python3 --version
 
 ---
 
-# ⚠️ 2. CRITICAL RULE (MOST IMPORTANT)
-
-> ❗ ALWAYS use a virtual environment
-> ❗ NEVER use system Python
-> ❗ ALWAYS activate before running anything
-
----
-
-# 🧪 3. Create Clean Environment (MANDATORY)
+# 📁 2. Create Project Environment
 
 ```bash
-mkdir -p ~/vllm-cpu
-cd ~/vllm-cpu
+mkdir -p ~/vllm
+cd ~/vllm
 
 python3 -m venv venv
-```
-
----
-
-## ▶️ Activate environment
-
-```bash
 source venv/bin/activate
-```
 
----
-
-## ✅ Verify activation
-
-```bash
-which python
-```
-
-Expected:
-
-```bash
-/home/<user>/vllm-cpu/venv/bin/python
-```
-
----
-
-## Upgrade pip
-
-```bash
 pip install --upgrade pip
 ```
 
 ---
 
-# 📦 4. Install PyTorch (CPU or GPU)
+# 📦 3. Install PyTorch
 
 ---
 
-## 🟢 Option A — CPU ONLY (recommended baseline)
+## CPU Setup (default)
 
 ```bash
 pip install torch torchvision torchaudio
@@ -95,7 +54,7 @@ pip install torch torchvision torchaudio
 
 ---
 
-## 🟡 Option B — NVIDIA GPU (if available)
+## GPU Setup (optional)
 
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
@@ -103,7 +62,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 ---
 
-## ✅ Verify installation
+## Verify
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
@@ -111,7 +70,7 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 
 ---
 
-# 📦 5. Install vLLM
+# 📦 4. Install vLLM
 
 ```bash
 pip install vllm
@@ -119,121 +78,163 @@ pip install vllm
 
 ---
 
-## ✅ Verify
+## Verify
 
 ```bash
-python -c "import vllm; print('vLLM OK')"
+python -c "import vllm; print('vLLM installed')"
 ```
 
 ---
 
-# 🔐 6. Login to Hugging Face
+# 🔐 5. Hugging Face Login
 
 ```bash
 pip install huggingface_hub
 huggingface-cli login
 ```
 
-Paste your token.
-
 ---
 
-# 🧠 7. FIRST TEST (Minimal Model — MUST PASS)
-
-Run:
+# 💾 6. Model Cache Setup
 
 ```bash
-python - << 'EOF'
-from vllm import LLM, SamplingParams
+mkdir -p ~/vllm/models
+```
 
-llm = LLM(model="facebook/opt-125m")
+Add to `~/.bashrc`:
 
-out = llm.generate(
-    ["Hello, my name is"],
-    SamplingParams(max_tokens=20)
-)
+```bash
+export HF_HOME=~/vllm/models
+export TRANSFORMERS_CACHE=~/vllm/models
+export HUGGINGFACE_HUB_CACHE=~/vllm/models/hub
+export VLLM_CACHE_ROOT=~/vllm/models
+```
 
-print(out[0].outputs[0].text)
-EOF
+Apply:
+
+```bash
+source ~/.bashrc
 ```
 
 ---
 
-## ✅ If this works
-
-👉 Your system is correctly configured
+# 💾 7. Swap Memory Setup (16GB Systems)
 
 ---
 
-# ⚠️ 8. IMPORTANT LIMITATIONS (16GB RAM)
+## Create 16GB swap
 
-You CANNOT run large models directly.
+```bash
+sudo fallocate -l 16G /swapfile
+```
 
----
+If needed:
 
-## 🚫 Avoid:
-
-* 13B+ models (OOM)
-* FP16 large models
-* long context (>4K)
-
----
-
-## ✅ Use:
-
-* 0.5B → 3B models (best)
-* some 7B (with tuning)
-
----
-
-# 📦 9. Best Models for 16GB Systems
-
----
-
-## 🟢 Small (FASTEST)
-
-```text
-facebook/opt-125m
-TinyLlama/TinyLlama-1.1B
+```bash
+sudo dd if=/dev/zero of=/swapfile bs=1G count=16
 ```
 
 ---
 
-## 🟡 Medium (RECOMMENDED)
+## Enable swap
 
-```text
-microsoft/phi-2
-mistralai/Mistral-7B-Instruct-v0.2
+```bash
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
 ```
 
 ---
 
-## 🔴 Use carefully
+## Make permanent
 
-```text
-meta-llama/Meta-Llama-3-8B
+```bash
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-👉 Only with tuning
+---
+
+## Optimize swap usage
+
+```bash
+sudo sysctl vm.swappiness=10
+```
+
+Permanent:
+
+```bash
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+```
 
 ---
 
-# ▶️ 10. Run API Server (MAIN USAGE)
+# 🧠 8. Model Options (16GB RAM)
 
 ---
+
+## 🟢 Fast Models (recommended)
+
+* TinyLlama 1.1B
+* OPT 125M
+* Qwen 1.5B
+
+---
+
+## 🟡 Balanced Models
+
+* Qwen 3B
+* Mistral 7B (with swap)
+* Phi-3 mini (if supported)
+
+---
+
+## 🔴 Heavy Models
+
+* Llama 3 8B (swap required, slower)
+* Anything above 8B (not practical)
+
+---
+
+# ▶️ 9. Run vLLM Server
+
+---
+
+## 🟢 Small model (best performance)
 
 ```bash
 vllm serve TinyLlama/TinyLlama-1.1B \
   --max-model-len 2048 \
-  --gpu-memory-utilization 0.6
+  --max-num-seqs 2
 ```
 
 ---
 
-## 🌐 Endpoint
+## 🟡 Balanced (3B model)
+
+```bash
+vllm serve Qwen/Qwen2.5-3B \
+  --max-model-len 2048 \
+  --max-num-seqs 2
+```
+
+---
+
+## 🔴 Large (7B with swap)
+
+```bash
+vllm serve Qwen/Qwen2.5-7B \
+  --max-model-len 1024 \
+  --max-num-seqs 1
+```
+
+---
+
+# 🌐 10. API Access
+
+Open:
 
 ```text
-http://localhost:8000
+http://localhost:8000/docs
 ```
 
 ---
@@ -245,17 +246,19 @@ curl http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "TinyLlama/TinyLlama-1.1B",
-    "messages": [{"role": "user", "content": "Hello"}]
+    "messages": [
+      {"role": "user", "content": "Hello"}
+    ]
   }'
 ```
 
 ---
 
-# ⚙️ 12. CRITICAL PERFORMANCE SETTINGS (FOR LOW RAM)
+# ⚙️ 12. Performance Settings
 
 ---
 
-## 🧠 Reduce memory
+## Reduce memory usage
 
 ```bash
 --max-model-len 1024
@@ -263,71 +266,63 @@ curl http://localhost:8000/v1/chat/completions \
 
 ---
 
-## ⚡ Control batching
+## Limit concurrency
+
+```bash
+--max-num-seqs 1
+```
+
+---
+
+## General safe config
 
 ```bash
 --max-num-seqs 2
+--max-model-len 2048
 ```
 
 ---
 
-## 💾 Reduce GPU/CPU load
-
-```bash
---gpu-memory-utilization 0.5
-```
+# 🧨 13. Common Issues
 
 ---
 
-# 🧨 13. Common Errors + Fixes
-
----
-
-## ❌ OOM (out of memory)
+## Out of memory
 
 Fix:
 
-```bash
---max-model-len 1024
-```
-
-or switch to smaller model
+* reduce model size
+* reduce context length
+* reduce batch size
 
 ---
 
-## ❌ Slow inference
+## Slow performance
 
-👉 Expected on CPU
-👉 Use smaller model
+Expected on CPU systems
+Solution:
 
----
-
-## ❌ Module not found
-
-👉 Forgot venv:
-
-```bash
-source venv/bin/activate
-```
+* use smaller model
 
 ---
 
-## ❌ Hugging Face error
+## Model fails to load
 
-```bash
-huggingface-cli login
-```
+Fix:
 
----
-
-# 🔄 14. Daily Workflow (IMPORTANT)
+* activate virtual environment
+* ensure enough swap enabled
 
 ---
 
-## Start session
+# 🔄 14. Daily Workflow
+
+---
+
+## Start
 
 ```bash
-cd ~/vllm-cpu
+cd ~/vllm
 source venv/bin/activate
 ```
 
@@ -347,102 +342,43 @@ CTRL + C
 
 ---
 
-# 🚀 15. Performance Expectations
+# 🚀 15. Performance Overview
+
+| Model | CPU Speed | Quality |
+| ----- | --------- | ------- |
+| 125M  | very fast | low     |
+| 1B    | fast      | basic   |
+| 3B    | balanced  | good    |
+| 7B    | slow      | strong  |
 
 ---
 
-## CPU (i5/i7)
-
-| Model | Tokens/sec |
-| ----- | ---------- |
-| 125M  | 20–50      |
-| 1B    | 10–25      |
-| 7B    | 2–8        |
+# 🧠 16. Operating Strategy
 
 ---
 
-## With GPU
+## Recommended usage
 
-2–5× faster
-
----
-
-# 🧠 16. Strategy for Best Results
+* 1B → testing / quick responses
+* 3B → daily coding assistant
+* 7B → complex reasoning (swap required)
 
 ---
 
-## ✅ DO
+## System rule
 
-* use small models
-* reduce context
-* run API mode
-* batch requests
+* smaller model = stable system
+* larger model = slower but higher quality
 
 ---
 
-## ❌ DON’T
+# 🏁 FINAL SUMMARY
 
-* run large models blindly
-* mix environments
-* ignore memory usage
+This setup supports:
 
----
-
-# 🔥 17. Advanced Optimization (OPTIONAL)
-
----
-
-## Run multiple requests (boost throughput)
-
-vLLM shines with batching:
-
-```bash
---max-num-seqs 4
-```
-
----
-
-## Use quantized models (if available)
-
-* AWQ
-* GPTQ
-
----
-
-# 🧠 18. Architecture Insight
-
----
-
-| Layer  | Tool              |
-| ------ | ----------------- |
-| Model  | Hugging Face      |
-| Engine | vLLM              |
-| API    | OpenAI-compatible |
-
----
-
-# 🏁 FINAL CHECKLIST
-
----
-
-✅ venv activated
-✅ torch installed
-✅ vllm installed
-✅ HF login done
-✅ test model runs
-✅ API server working
-
----
-
-# 💥 FINAL TAKEAWAY
-
-Even on **i5/i7 + 16GB RAM**, you can:
-
-* run real LLMs
-* serve APIs
-* build AI apps
-
-👉 The key is:
-
-> **small models + correct tuning + vLLM efficiency**
+* local LLM inference
+* OpenAI-compatible API
+* coding assistant workflows
+* stable 1B–3B production use
+* limited 7B usage with swap
 
