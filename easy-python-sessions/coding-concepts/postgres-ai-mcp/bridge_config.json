@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "postgres-db": {
+      "command": "python3",
+      "args": ["mcp-postgres-server/server.py"],
+      "env": {
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "your_password_here",
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_NAME": "postgres"
+      }
+    }
+  },
+  "llm": {
+    "model": "llama3.1",
+    "baseUrl": "http://localhost:11434",
+    "temperature": 0.1,
+    "maxTokens": 4096
+  },
+  "logging": {
+    "level": "info",
+    "file": "bridge.log"
+  }
+}

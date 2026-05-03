@@ -1,0 +1,2394 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Lunix Swap File management - AI Learning Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comprehensive-swap-management-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Learning Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lunix Swap File management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../community-values-guidelines/Community-main/" class="md-tabs__link">
+          
+  
+  Community & Value
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
+          
+  
+  AI - Fundamentals
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Prompts/Zero-shot-prompting/" class="md-tabs__link">
+          
+  
+  AI - Prompts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-tabs__link">
+          
+  
+  AI Learning for Bigenners
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Beginners-guide-to-Local_AI/" class="md-tabs__link">
+          
+  
+  AI Tools Hands-on
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-tabs__link">
+          
+  
+  AI Workflows
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-tabs__link">
+          
+  
+  AI-PC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Linux/Linux-home/" class="md-tabs__link">
+          
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-tabs__link">
+          
+  
+  Programming
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AI Learning Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community & Value
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Community & Value
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community-values-guidelines/Community-main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community-values-guidelines/ContributingGuide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI - Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI - Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Fundamentals 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI - Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AI - Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prompts/Zero-shot-prompting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Shot Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prompts/Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Save Prompt Cost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Learning for Bigenners
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Learning for Bigenners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How you can learn AI today - The Easy Way
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-learning-plans/ai-learning-plan-draft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Learning Path Draft
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools Hands-on
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI Tools Hands-on
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beginners-guide-to-Local_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beginners - Local AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private Local & Free GuFF models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CuratedLocalLLMs/Top-Local-LLMs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top Local LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wide-future-of-local-llms/future-of-opensource-local-llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025 - Future of Local LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Local Deployements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Local Deployements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma4 with TurboQuant on Ollama
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Turboquant/docs/ollama-cmd-TBQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ollama + TQuant + Claude
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI-tool-guides/Open-claw-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenClaw Paradigm & Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            AI Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    n8n
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            n8n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview & features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private-Secure Docker-Desktop n8n + local LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private-Secure Docker-Compose n8n + local LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI-PC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            AI-PC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PC for Running 20b LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/hardware-for-running-heavy-llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPU GPU for heavy LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/pc-for-running-120b-llms-and-tune-as-well/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop PC for 120b LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/Mini-PC-for-running-120B-lls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mini PC for 120b LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/ubuntu-Install-modes-full-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/Ubuntu-26.0-AI-Redefined/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu AI Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Zorin/Zorin-Install-Full-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zorin Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-swapiness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low RAM > Swap Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/Linux-Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World of free tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Step Dev Env
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Easy Learn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python Easy Learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2" id="__nav_10_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Libraries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2_2" id="__nav_10_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Numpy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Numpy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2_3" id="__nav_10_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pandas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pandas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/pandas/PandasHandsOn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/coding-concepts/Implement-Concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-swap-management-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Swap Management Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprehensive Swap Management Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-expand-swap-space-to-40gbyou-currently-have-an-8textgb-swap-file-we-will-add-a-new-32textgb-swap-file-resulting-in-40textgb-total-swap-which-is-a-massive-safety-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Expand Swap Space to 40GBYou currently have an 8\text{GB} swap file. We will add a new 32\text{GB} swap file, resulting in 40\text{GB} total swap, which is a massive safety net.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-optimize-swappiness-the-crucial-fixthis-is-the-most-important-step-for-the-llm-it-stops-the-kernel-from-moving-your-models-60textgb-data-to-the-ssd-even-when-ram-appears-free-we-set-the-system-to-be-very-reluctant-to-use-swap-swappiness10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Optimize Swappiness (The Crucial Fix)This is the most important step for the LLM. It stops the kernel from moving your model's 60\text{GB}+ data to the SSD, even when RAM appears free. We set the system to be very reluctant to use swap (swappiness=10).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-clear-and-refresh-swapto-ensure-the-new-settings-are-working-perfectly-move-any-existing-swapped-data-like-parts-of-your-llm-back-into-the-faster-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Clear and Refresh SwapTo ensure the new settings are working perfectly, move any existing swapped data (like parts of your LLM) back into the faster RAM.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-monitor-ssd-healthuse-the-smartctl-utility-to-confirm-that-your-tuning-is-successful-by-checking-that-the-total-writes-to-your-ssd-remain-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Monitor SSD HealthUse the smartctl utility to confirm that your tuning is successful by checking that the total writes to your SSD remain minimal.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-swap-file-increase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Swap File Increase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Swap File Increase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-check-your-current-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Check your current Swap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-increase-the-swap-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Increase the Swap File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-the-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify the Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-making-it-permanent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important: Making it Permanent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjust-the-swappiness-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust the "swappiness" value
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjust the "swappiness" value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-current-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your current value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-change-it-temporarily-test-it-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Change it Temporarily (Test it out)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-change-it-permanently" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Change it Permanently
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Trade-off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-10-is-the-sweet-spot-for-64gb-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why "10" is the sweet spot for 64GB RAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Lunix Swap File management</h1>
+
+<div><h2 id="comprehensive-swap-management-guide">Comprehensive Swap Management Guide</h2>
+<blockquote>
+<p><strong>Note:</strong> Though this document uses one Mini PC as base example, it can be used for any computer running Linux/Ubuntu.</p>
+</blockquote>
+<p>Created using <strong>K11 GMKtec Mini PC (Ryzen 9, Radeon 780 GPU, 64GB DDR5, 1TB SSD)</strong> This guide is suggests optimizing &amp; running the large <strong>GPT-OSS:120B</strong> model. </p>
+<p>While this Mini PC is able to run such large models with some delay, the goal is to establish a 40 GB memory buffer using swap while configuring the kernel to use it only when strictly necessary, preventing performance degradation and minimizing SSD wear.</p>
+<h3 id="part-1-expand-swap-space-to-40gbyou-currently-have-an-8textgb-swap-file-we-will-add-a-new-32textgb-swap-file-resulting-in-40textgb-total-swap-which-is-a-massive-safety-net">Part 1: Expand Swap Space to 40GBYou currently have an 8\text{GB} swap file. We will add a new 32\text{GB} swap file, resulting in 40\text{GB} total swap, which is a massive safety net.</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.</strong></td>
+<td><strong>Create 32\text{GB} File</strong></td>
+<td><code>sudo fallocate -l 32G /swapfile</code></td>
+<td>Creates the large file that will serve as the new swap area.</td>
+</tr>
+<tr>
+<td><strong>2.</strong></td>
+<td><strong>Set Permissions</strong></td>
+<td><code>sudo chmod 600 /swapfile</code></td>
+<td>Secures the file so only the system can access it.</td>
+</tr>
+<tr>
+<td><strong>3.</strong></td>
+<td><strong>Format as Swap</strong></td>
+<td><code>sudo mkswap /swapfile</code></td>
+<td>Marks the file as ready for use as swap space.</td>
+</tr>
+<tr>
+<td><strong>4.</strong></td>
+<td><strong>Activate Swap</strong></td>
+<td><code>sudo swapon /swapfile</code></td>
+<td>Immediately turns on the new 32\text{GB} swap area.</td>
+</tr>
+<tr>
+<td><strong>5.</strong></td>
+<td><strong>Verify Total Size</strong></td>
+<td><code>free -h</code></td>
+<td>Checks that the <strong>Swap</strong> row now shows approximately 40\text{GB}.</td>
+</tr>
+<tr>
+<td><strong>6.</strong></td>
+<td><strong>Make Persistent</strong></td>
+<td><code>echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-2-optimize-swappiness-the-crucial-fixthis-is-the-most-important-step-for-the-llm-it-stops-the-kernel-from-moving-your-models-60textgb-data-to-the-ssd-even-when-ram-appears-free-we-set-the-system-to-be-very-reluctant-to-use-swap-swappiness10">Part 2: Optimize Swappiness (The Crucial Fix)This is the most important step for the LLM. It stops the kernel from moving your model's 60\text{GB}+ data to the SSD, even when RAM appears free. We set the system to be <strong>very reluctant to use swap</strong> (<code>swappiness=10</code>).</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.</strong></td>
+<td><strong>Set Value (Temporary)</strong></td>
+<td><code>sudo sysctl vm.swappiness=10</code></td>
+<td>Applies the setting immediately to prioritize your 64\text{GB} RAM.</td>
+</tr>
+<tr>
+<td><strong>2.</strong></td>
+<td><strong>Make Permanent</strong></td>
+<td><code>sudo nano /etc/sysctl.conf</code></td>
+<td>Opens the configuration file to save the setting.</td>
+</tr>
+<tr>
+<td><strong>3.</strong></td>
+<td><strong>Add/Edit Line</strong></td>
+<td>Add the line: <code>vm.swappiness = 10</code></td>
+<td>This ensures the setting survives reboot.</td>
+</tr>
+<tr>
+<td><strong>4.</strong></td>
+<td><strong>Apply Permanent Change</strong></td>
+<td><code>sudo sysctl -p</code></td>
+<td>Loads the new setting without requiring a reboot.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-3-clear-and-refresh-swapto-ensure-the-new-settings-are-working-perfectly-move-any-existing-swapped-data-like-parts-of-your-llm-back-into-the-faster-ram">Part 3: Clear and Refresh SwapTo ensure the new settings are working perfectly, move any existing swapped data (like parts of your LLM) back into the faster RAM.</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.</strong></td>
+<td><strong>Disable All Swap</strong></td>
+<td><code>sudo swapoff -a</code></td>
+<td>Moves all data from your 40\text{GB} swap back into RAM.</td>
+</tr>
+<tr>
+<td><strong>2.</strong></td>
+<td><strong>Re-enable All Swap</strong></td>
+<td><code>sudo swapon -a</code></td>
+<td>Turns both 8\text{GB} and 32\text{GB} swap files back on, now using the <strong><code>swappiness=10</code></strong> rule.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-4-monitor-ssd-healthuse-the-smartctl-utility-to-confirm-that-your-tuning-is-successful-by-checking-that-the-total-writes-to-your-ssd-remain-minimal">Part 4: Monitor SSD HealthUse the <strong><code>smartctl</code></strong> utility to confirm that your tuning is successful by checking that the total writes to your SSD remain minimal.</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.</strong></td>
+<td><strong>Install Tool</strong></td>
+<td><code>sudo apt install smartmontools</code></td>
+<td>Installs the utility needed to read drive health data.</td>
+</tr>
+<tr>
+<td><strong>2.</strong></td>
+<td><strong>Identify Drive</strong></td>
+<td><code>lsblk</code></td>
+<td>Look for your SSD's name (e.g., <code>/dev/nvme0n1</code>).</td>
+</tr>
+<tr>
+<td><strong>3.</strong></td>
+<td><strong>Check Health</strong></td>
+<td><code>sudo smartctl -a /dev/nvme0n1</code></td>
+<td>Provides a full health report. Look for <strong>Data Units Written</strong> to track wear.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linux-swap-file-increase">Linux Swap File Increase</h2>
+<p>To increase the swap memory on Zorin OS, the easiest method is to resize the existing <strong>swap file</strong>. Most modern Zorin installations (Zorin 15, 16, and 17) use a file located at <code>/swapfile</code> rather than a dedicated partition.</p>
+<h3 id="step-1-check-your-current-swap">Step 1: Check your current Swap</h3>
+<p>Open the <strong>Terminal</strong> (Ctrl+Alt+T) and run:</p>
+<pre><code class="language-bash">swapon --show
+
+</code></pre>
+<ul>
+<li>If the <strong>TYPE</strong> is <code>file</code>, follow the steps below.</li>
+<li>If the <strong>TYPE</strong> is <code>partition</code>, you would typically need to use a tool like <strong>GParted</strong> to resize it, which is more complex. I recommend simply adding a swap file in addition to your partition if you need a quick fix.</li>
+</ul>
+<hr>
+<h3 id="step-2-increase-the-swap-file">Step 2: Increase the Swap File</h3>
+<p>This process involves turning off the current swap, deleting it, and recreating a larger one.</p>
+<ol>
+<li><strong>Turn off the swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo swapoff /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Create a new swap file:</strong> Decide on the size. For example, to set it to <strong>8GB</strong>, use <code>8G</code>. (Common advice is to match your RAM or double it if you have less than 4GB).</li>
+</ol>
+<pre><code class="language-bash">sudo fallocate -l 8G /swapfile
+
+</code></pre>
+<p><em>Note: If <code>fallocate</code> fails, you can use: <code>sudo dd if=/dev/zero of=/swapfile bs=1M count=8192*</code>
+3. </em><em>Set the correct permissions:</em>*</p>
+<pre><code class="language-bash">sudo chmod 600 /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Format the file as swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo mkswap /swapfile
+
+</code></pre>
+<ol>
+<li><strong>Enable the swap:</strong></li>
+</ol>
+<pre><code class="language-bash">sudo swapon /swapfile
+
+</code></pre>
+<hr>
+<h3 id="step-3-verify-the-change">Step 3: Verify the Change</h3>
+<p>Check the new size to ensure it is active:</p>
+<pre><code class="language-bash">free -h
+
+</code></pre>
+<p>You should see the "Swap" row reflecting your new size (e.g., 8.0Gi).</p>
+<h3 id="important-making-it-permanent">Important: Making it Permanent</h3>
+<p>Since Zorin usually already has an entry for <code>/swapfile</code> in its configuration, it should persist after a reboot. You can double-check this by running:</p>
+<pre><code class="language-bash">cat /etc/fstab
+
+</code></pre>
+<p>Look for a line that says: <code>/swapfile none swap sw 0 0</code>. If it's there, you are all set!</p>
+<h2 id="adjust-the-swappiness-value">Adjust the <strong>"swappiness"</strong> value</h2>
+<h3 id="1-check-your-current-value">1. Check your current value</h3>
+<p>Open your terminal and run:</p>
+<pre><code class="language-bash">cat /proc/sys/vm/swappiness
+
+</code></pre>
+<ul>
+<li><strong>Default (60):</strong> The system starts swapping when RAM is about 40% full.</li>
+<li><strong>Higher (100):</strong> Aggressively moves inactive data to swap.</li>
+<li><strong>Lower (1-10):</strong> Only uses swap when RAM is nearly maxed out.</li>
+</ul>
+<h3 id="2-change-it-temporarily-test-it-out">2. Change it Temporarily (Test it out)</h3>
+<p>To see if a lower value helps your LM Studio performance without rebooting, run:</p>
+<pre><code class="language-bash">sudo sysctl vm.swappiness=10
+
+</code></pre>
+<p><em>I recommend </em><em>10</em><em> for your 64GB setup. This ensures the system uses almost all your physical RAM before touching the slower SSD swap.</em></p>
+<hr>
+<h3 id="3-change-it-permanently">3. Change it Permanently</h3>
+<p>Once you've tested it and are happy, make it stick across reboots:</p>
+<ol>
+<li>Open the system config file:</li>
+</ol>
+<pre><code class="language-bash">sudo nano /etc/sysctl.conf
+
+</code></pre>
+<ol>
+<li>Scroll to the very bottom and add this line:</li>
+</ol>
+<pre><code class="language-text">vm.swappiness=10
+
+</code></pre>
+<ol>
+<li>Press <strong>Ctrl+O</strong>, <strong>Enter</strong>, then <strong>Ctrl+X</strong> to save and exit.</li>
+<li>Apply the change immediately:</li>
+</ol>
+<pre><code class="language-bash">sudo sysctl -p
+
+</code></pre>
+<hr>
+<h3 id="understanding-the-trade-off">Understanding the Trade-off</h3>
+<table>
+<thead>
+<tr>
+<th>Swappiness Value</th>
+<th>Behavior on your K11</th>
+<th>Best For...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vm.swappiness=100</strong></td>
+<td>Uses swap almost immediately to keep RAM "empty."</td>
+<td>Systems with very slow RAM or tiny RAM.</td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=60</strong></td>
+<td>Balance; swaps out "cold" background apps (like a browser tab you haven't clicked in an hour).</td>
+<td>General office/web use.</td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=10</strong></td>
+<td><strong>(Recommended)</strong> Keeps everything in RAM until it's ~90% full.</td>
+<td><strong>High-RAM AI workloads (LM Studio).</strong></td>
+</tr>
+<tr>
+<td><strong>vm.swappiness=1</strong></td>
+<td>Avoids swap until the very last possible megabyte.</td>
+<td>Extreme performance tuning; prevents any SSD wear.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-10-is-the-sweet-spot-for-64gb-ram">Why "10" is the sweet spot for 64GB RAM</h3>
+<p>With a 30B model (17GB) and your OS overhead, you're using maybe 22-25GB of your 64GB. At a swappiness of 60, Linux might try to move some of that 17GB model into swap <em>just in case</em>, which can cause a slight stutter. At 10, it will keep the entire model in the fast DDR5 RAM of your K11, providing the fastest possible inference.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow", "content.action.top", "content.code.copy", "navigation.path"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
