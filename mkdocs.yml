@@ -80,7 +80,8 @@ nav:
       - Overview & features: ai-workflows/n8n/docs/n8n-overview.md
       - Private-Secure Docker-Desktop n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm.md
       - Private-Secure Docker-Compose n8n + local LLM: ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose.md
-
+    - Containerize AI:
+      - Docker ollama: ai-workflows/containerize-ai/docker-run-ollama.md
   - AI-PC:
     - PC for Running 20b LLM: ai-pc/pc-for-running-20b-llm.md
     - CPU GPU for heavy LLMs: ai-pc/hardware-for-running-heavy-llms.md
