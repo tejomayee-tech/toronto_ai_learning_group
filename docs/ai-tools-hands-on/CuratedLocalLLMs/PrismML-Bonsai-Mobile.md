@@ -1,3 +1,199 @@
+# **PrismML Bonsai 27B** (1-bit binary variant) on your **Dell Latitude (i5 CPU, 16GB RAM)** laptop, with the goal of integrating it into Claude-based tools.
+
+---
+
+# Post-Incident & Setup Documentation
+
+**Target Model:** `PrismML Bonsai 27B` (1-Bit Binary GGUF)
+
+**Target Hardware:** Dell Latitude Laptop (Intel Core i5 CPU, 16GB RAM)
+
+**Primary Goal:** Local execution with API compatibility for Claude-based IDE/developer agents.
+
+---
+
+## 1. The Core Issues Faced
+
+### Issue A: Ollama Fails to Load Experimental 1-Bit / Ternary Quants
+
+* **Symptom:** Running the default `ollama run hf.co/prism-ml/Bonsai-27B-gguf:Q1_0` successfully downloaded the layers but crashed immediately upon initialization with an `Error: 500 Internal Server Error: unable to load model`.
+* **Symptom 2:** Trying to bypass the Hugging Face manifest wrapper using a custom `Modelfile` built locally resulted in the same `500 Internal Server Error: model failed to load`.
+* **Root Cause:** Mainline Ollama releases package a version of `llama.cpp` that lacks support for PrismML’s custom, newly-released 1-bit (`Q1_0_g128` format) and 1.58-bit ternary layouts. Ollama's model runner panics when trying to map these non-standard quantized layers into RAM.
+
+### Issue B: RAM and Swap Saturation
+
+* **Symptom:** The system froze, and resource monitors showed Physical Memory pinned at **12.2 GB (73%) of 16.6 GB** alongside a completely saturated swap space of **12.4 GB (98.6%) of 12.6 GB**.
+* **Root Cause 1 (Desktop Overhead):** Your Dell Latitude’s host operating system and background applications were already occupying roughly 6 to 8 GB of RAM.
+* **Root Cause 2 (Bundle Overhead):** PrismML's default `./setup.sh` script automatically downloaded and loaded a highly bloated target footprint (reaching over **7.15 GB** of files). This bundle loaded the 3.8 GB core language model alongside the **1.79 GB DSpark speculative decoder** and a **629 MB Vision tower (mmproj)**. Loading both the core and speculative models concurrently pushed the required execution RAM past the system's limits, forcing heavy swap usage and freezing the system.
+
+### Issue C: Invalid CLI Arguments in Setup Modelfile
+
+* **Symptom:** Copy-pasting the `Modelfile` contents directly into the bash terminal triggered `command not found: FROM` and `command not found: PARAMETER` errors.
+* **Root Cause:** The syntax inside a `Modelfile` consists of local instructions meant only for `ollama create` parsing, not direct execution in a Unix Shell.
+
+---
+
+## 2. Workarounds Attempted
+
+### Workaround 1: Creating a Local `Modelfile` for Ollama
+
+* **Steps Taken:** We wrote a shell heredoc (`cat << 'EOF' > Modelfile`) to properly write a file pointing to the offline `.gguf` weight format.
+* **Result:** Successfully bypassed the bash syntax errors and built the model locally, but the target `ollama run` still failed with a 500 error due to Ollama's internal compiler limitation (Issue A).
+
+### Workaround 2: Using the Official CLI (`Bonsai-demo`)
+
+* **Steps Taken:** Switched to the official `PrismML-Eng/Bonsai-demo` repository which bundles a tailored fork of `llama.cpp` natively supporting 1-bit and ternary mathematical structures.
+* **Result:** The script initially defaulted to downloading the heavier **Ternary (~10.7 GB total bundle)** format. We aborted this to protect your system's resources.
+
+### Workaround 3: Forcing the 1-Bit "Bonsai" Family Configuration
+
+* **Steps Taken:** We modified the environment variables to force the script to select the lightweight 1-bit binary weights:
+```bash
+export BONSAI_FAMILY=bonsai
+export BONSAI_MODEL=27B
+./setup.sh
+
+```
+
+
+*(Note: The family value had to be mapped to `bonsai` instead of `binary` as the script rejected `binary` as an unrecognized tag).*
+* **Result:** Successfully downloaded the ~3.8 GB core language file.
+
+### Workaround 4: Disabling Speculative Decoding (`DSpark`)
+
+* **Steps Taken:** To stop the 1.79 GB speculative decoder from exhausting your remaining RAM, we configured the execution to run in a strict text-only, single-model mode:
+```bash
+BONSAI_MODEL=27B ./scripts/run_llama.sh --no-draft -p "Prompt here"
+
+```
+
+
+* **Result:** Successfully reduced the memory pressure, keeping the execution layer to under **4.5 GB of active RAM** and preventing your laptop's swap space from overflowing.
+
+---
+
+## 3. Final Architecture for Claude / IDE Tooling
+
+Since Ollama is currently a dead-end for this specific model, the recommended production route is to bypass Ollama entirely and point your developer tools (like Cline, Roo Code, or Continue) to the custom, optimized API server:
+
+1. **Spin up the Prism-supported server:**
+```bash
+# In the llama.cpp repository cloned from the PrismML fork:
+./build/bin/llama-server \
+  -m /path/to/Bonsai-27B-Q1_0.gguf \
+  --port 8080 \
+  --host 0.0.0.0 \
+  -c 8192
+
+```
+
+
+2. **Configure your Claude Tooling:**
+Set the provider in your extension settings to `OpenAI-Compatible`, pointing the Base URL to `http://localhost:8080/v1`. This allows you to leverage the model’s built-in tool calling capabilities directly through the optimized local server.
+
+
+
+Here is a complete, consolidated documentation of the issues we faced and the workarounds we tried while attempting to run the newly released **PrismML Bonsai 27B** (1-bit binary variant) on your **Dell Latitude (i5 CPU, 16GB RAM)** laptop, with the goal of integrating it into Claude-based tools.
+
+---
+
+# Post-Incident & Setup Documentation
+
+**Target Model:** `PrismML Bonsai 27B` (1-Bit Binary GGUF)
+
+**Target Hardware:** Dell Latitude Laptop (Intel Core i5 CPU, 16GB RAM)
+
+**Primary Goal:** Local execution with API compatibility for Claude-based IDE/developer agents.
+
+---
+
+## 1. The Core Issues Faced
+
+### Issue A: Ollama Fails to Load Experimental 1-Bit / Ternary Quants
+
+* **Symptom:** Running the default `ollama run hf.co/prism-ml/Bonsai-27B-gguf:Q1_0` successfully downloaded the layers but crashed immediately upon initialization with an `Error: 500 Internal Server Error: unable to load model`.
+* **Symptom 2:** Trying to bypass the Hugging Face manifest wrapper using a custom `Modelfile` built locally resulted in the same `500 Internal Server Error: model failed to load`.
+* **Root Cause:** Mainline Ollama releases package a version of `llama.cpp` that lacks support for PrismML’s custom, newly-released 1-bit (`Q1_0_g128` format) and 1.58-bit ternary layouts. Ollama's model runner panics when trying to map these non-standard quantized layers into RAM.
+
+### Issue B: RAM and Swap Saturation
+
+* **Symptom:** The system froze, and resource monitors showed Physical Memory pinned at **12.2 GB (73%) of 16.6 GB** alongside a completely saturated swap space of **12.4 GB (98.6%) of 12.6 GB**.
+* **Root Cause 1 (Desktop Overhead):** Your Dell Latitude’s host operating system and background applications were already occupying roughly 6 to 8 GB of RAM.
+* **Root Cause 2 (Bundle Overhead):** PrismML's default `./setup.sh` script automatically downloaded and loaded a highly bloated target footprint (reaching over **7.15 GB** of files). This bundle loaded the 3.8 GB core language model alongside the **1.79 GB DSpark speculative decoder** and a **629 MB Vision tower (mmproj)**. Loading both the core and speculative models concurrently pushed the required execution RAM past the system's limits, forcing heavy swap usage and freezing the system.
+
+### Issue C: Invalid CLI Arguments in Setup Modelfile
+
+* **Symptom:** Copy-pasting the `Modelfile` contents directly into the bash terminal triggered `command not found: FROM` and `command not found: PARAMETER` errors.
+* **Root Cause:** The syntax inside a `Modelfile` consists of local instructions meant only for `ollama create` parsing, not direct execution in a Unix Shell.
+
+---
+
+## 2. Workarounds Attempted
+
+### Workaround 1: Creating a Local `Modelfile` for Ollama
+
+* **Steps Taken:** We wrote a shell heredoc (`cat << 'EOF' > Modelfile`) to properly write a file pointing to the offline `.gguf` weight format.
+* **Result:** Successfully bypassed the bash syntax errors and built the model locally, but the target `ollama run` still failed with a 500 error due to Ollama's internal compiler limitation (Issue A).
+
+### Workaround 2: Using the Official CLI (`Bonsai-demo`)
+
+* **Steps Taken:** Switched to the official `PrismML-Eng/Bonsai-demo` repository which bundles a tailored fork of `llama.cpp` natively supporting 1-bit and ternary mathematical structures.
+* **Result:** The script initially defaulted to downloading the heavier **Ternary (~10.7 GB total bundle)** format. We aborted this to protect your system's resources.
+
+### Workaround 3: Forcing the 1-Bit "Bonsai" Family Configuration
+
+* **Steps Taken:** We modified the environment variables to force the script to select the lightweight 1-bit binary weights:
+```bash
+export BONSAI_FAMILY=bonsai
+export BONSAI_MODEL=27B
+./setup.sh
+
+```
+
+
+*(Note: The family value had to be mapped to `bonsai` instead of `binary` as the script rejected `binary` as an unrecognized tag).*
+* **Result:** Successfully downloaded the ~3.8 GB core language file.
+
+### Workaround 4: Disabling Speculative Decoding (`DSpark`)
+
+* **Steps Taken:** To stop the 1.79 GB speculative decoder from exhausting your remaining RAM, we configured the execution to run in a strict text-only, single-model mode:
+```bash
+BONSAI_MODEL=27B ./scripts/run_llama.sh --no-draft -p "Prompt here"
+
+```
+
+
+* **Result:** Successfully reduced the memory pressure, keeping the execution layer to under **4.5 GB of active RAM** and preventing your laptop's swap space from overflowing.
+
+---
+
+## 3. Final Architecture for Claude / IDE Tooling
+
+Since Ollama is currently a dead-end for this specific model, the recommended production route is to bypass Ollama entirely and point your developer tools (like Cline, Roo Code, or Continue) to the custom, optimized API server:
+
+1. **Spin up the Prism-supported server:**
+```bash
+# In the llama.cpp repository cloned from the PrismML fork:
+./build/bin/llama-server \
+  -m /path/to/Bonsai-27B-Q1_0.gguf \
+  --port 8080 \
+  --host 0.0.0.0 \
+  -c 8192
+
+```
+
+
+2. **Configure your Claude Tooling:**
+Set the provider in your extension settings to `OpenAI-Compatible`, pointing the Base URL to `http://localhost:8080/v1`. This allows you to leverage the model’s built-in tool calling capabilities directly through the optimized local server.
+
+
+
+
+
+
+
+
+
 For your Dell Latitude (i5 CPU, 16GB RAM), you should definitely start with the **1-Bit Binary Variant (3.9 GB)**.
 
 Here is why this is the best fit for your specific laptop:
