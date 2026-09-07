@@ -1,0 +1,2986 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>End-to-End PrismML Bonsai Setup and Understanding Guide for NVIDIA DGX Spark - AI Learning Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#end-to-end-prismml-bonsai-setup-and-understanding-guide-for-nvidia-dgx-spark" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI Learning Group" class="md-header__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Learning Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              End-to-End PrismML Bonsai Setup and Understanding Guide for NVIDIA DGX Spark
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../community-values-guidelines/Community-main/" class="md-tabs__link">
+          
+  
+  Community & Value
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-tabs__link">
+          
+  
+  AI - Fundamentals
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Prompts/Zero-shot-prompting/" class="md-tabs__link">
+          
+  
+  AI - Prompts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-tabs__link">
+          
+  
+  AI Learning for Bigenners
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Beginners-guide-to-Local_AI/" class="md-tabs__link">
+          
+  
+  AI Tools Hands-on
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-tabs__link">
+          
+  
+  AI Workflows
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-tabs__link">
+          
+  
+  AI-PC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Linux/Linux-home/" class="md-tabs__link">
+          
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-tabs__link">
+          
+  
+  Programming
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI Learning Group" class="md-nav__button md-logo" aria-label="AI Learning Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AI Learning Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community & Value
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Community & Value
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community-values-guidelines/Community-main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community-values-guidelines/ContributingGuide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI - Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI - Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-sessions/fundamentals_of_LLM/fundamentsla_LLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Fundamentals 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI - Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AI - Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prompts/Zero-shot-prompting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Shot Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Prompts/Effective-prompts-save-premium-requests-n-cost/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Save Prompt Cost
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Learning for Bigenners
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Learning for Bigenners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-learning-plans/How-To-Learn-AI-Today/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How you can learn AI today - The Easy Way
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-learning-plans/ai-learning-plan-draft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Learning Path Draft
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools Hands-on
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI Tools Hands-on
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Beginners-guide-to-Local_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beginners - Local AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AccessWorldOfFreeLLMs-guff/How-to-freely-access-use-LLMs-locally-securely-with-no-limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private Local & Free GuFF models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Top-Local-LLMs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top Local LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wide-future-of-local-llms/future-of-opensource-local-llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025 - Future of Local LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Local Deployements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            AI Local Deployements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-ai-model-deployements/gemma4-with-ollama-turboquant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma4 with TurboQuant on Ollama
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Turboquant/docs/ollama-cmd-TBQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ollama + TQuant + Claude
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            AI Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI-tool-guides/Open-claw-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenClaw Paradigm & Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Governance & Risk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            AI Governance & Risk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI-Governance-And-Risk/AI-Risk-Frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI-Risk-Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            AI Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    n8n
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            n8n
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/docs/n8n-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview & features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/Step-by-step-guide-to-setup-n8n-locally-with-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private-Secure Docker-Desktop n8n + local LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/n8n/Local_N8N_setup_with_Local_AI/n8n-setup-with-docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Private-Secure Docker-Compose n8n + local LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerize AI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Containerize AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-workflows/containerize-ai/docker-run-ollama/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker ollama
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI-PC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            AI-PC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/pc-for-running-20b-llm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PC for Running 20b LLM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/hardware-for-running-heavy-llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPU GPU for heavy LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/pc-for-running-120b-llms-and-tune-as-well/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop PC for 120b LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-pc/Mini-PC-for-running-120B-lls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mini PC for 120b LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/ubuntu-Install-modes-full-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/Ubuntu-26.0-AI-Redefined/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu AI Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Zorin/Zorin-Install-Full-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zorin Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-swapiness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low RAM > Swap Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Ubuntu/Linux-Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World of free tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Linux-Dev-Env-Setup/One-step-dev-setup-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Step Dev Env
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Easy Learn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python Easy Learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-basics/Python-Basics-Sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2" id="__nav_10_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Libraries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/ttkbootstrap/ttkbootstrap-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2_2" id="__nav_10_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Numpy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Numpy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/numpy/numpy_intro_community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 NumPy Complete Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_2_3" id="__nav_10_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pandas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pandas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/python-libraries/pandas/PandasHandsOn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../easy-python-sessions/coding-concepts/Implement-Concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-setup-achieved" class="md-nav__link">
+    <span class="md-ellipsis">
+      What this setup achieved
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-families-and-likely-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model families and likely use cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model families and likely use cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical interpretation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-options-clarified-during-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture options clarified during setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture options clarified during setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verified-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-was-not-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      What was not verified
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure-that-was-actually-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository structure that was actually found
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository structure that was actually found">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verified-file-layout-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified file layout highlights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-setup-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-step setup flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step setup flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-the-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clone the repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-understand-the-model-selection-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Understand the model-selection variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Run setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inspect-what-was-downloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inspect what was downloaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-inspect-the-server-script-before-making-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Inspect the server script before making assumptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-build-the-cuda-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Build the CUDA backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verify-the-host-build-toolchain-instead-of-guessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verify the host build toolchain instead of guessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-clean-stale-build-directories-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Clean stale build directories only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-confirm-successful-cuda-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Confirm successful CUDA output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-the-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting the local server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting the local server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-the-server-script-is-expected-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the server script is expected to do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      API path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-model-routing-and-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying model routing and connectivity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-and-cuda-backends-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU and CUDA backends together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throughput-expectations-and-speculative-decoding-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throughput expectations and speculative decoding notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Throughput expectations and speculative decoding notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-was-verified-about-dflash-and-dspark-in-this-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      What was verified about DFlash and DSpark in this setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-integration-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client integration guidance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client integration guidance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clients-that-can-use-the-current-setup-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clients that can use the current setup directly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-code-caveat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude Code caveat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-and-initialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone and initialize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-repo-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect repo contents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-server-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect server logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-old-build-dirs-and-build-cuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean old build dirs and build CUDA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-cuda-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm CUDA runtime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probe-the-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probe the API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-misunderstandings-resolved-during-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common misunderstandings resolved during setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common misunderstandings resolved during setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#there-is-no-gpu-support-because-find-llama-returned-nothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      “There is no GPU support because find *llama* returned nothing”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cpu-backend-should-be-removed-after-cuda-is-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      “The CPU backend should be removed after CUDA is built”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-code-can-be-pointed-directly-at-this-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      “Claude Code can be pointed directly at this server”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dflash-or-dspark-can-be-turned-on-in-the-current-server-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      “DFlash or DSpark can be turned on in the current server script”
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final understanding
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="end-to-end-prismml-bonsai-setup-and-understanding-guide-for-nvidia-dgx-spark">End-to-End PrismML Bonsai Setup and Understanding Guide for NVIDIA DGX Spark</h1>
+<h2 id="overview">Overview</h2>
+<p>This guide documents an end-to-end local setup flow for running PrismML Bonsai models on an NVIDIA DGX Spark system using the <code>Bonsai-demo</code> repository, based only on the verified repository structure, scripts, commands, and outputs observed during the setup session. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<p>The documented setup reached a working CUDA-backed <code>llama.cpp</code> runtime under <code>bin/cuda/</code>, confirmed the presence of <code>llama-server</code> and CUDA shared libraries, and established that the repository exposes an OpenAI-compatible API server through <code>scripts/start_llama_server.sh</code> rather than an Anthropic Messages API endpoint. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<p>This guide avoids assumptions where repository behavior, model IDs, or framework compatibility were not directly confirmed during the setup. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h2 id="what-this-setup-achieved">What this setup achieved</h2>
+<p>The completed setup established the following:</p>
+<ul>
+<li>The <code>Bonsai-demo</code> repository was cloned and inspected. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></li>
+<li>The repo contained CPU binaries under <code>bin/cpu/</code> after setup, plus model files under <code>models/ternary-gguf/27B/</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>CUDA binaries were successfully built into <code>bin/cuda/</code>, including <code>llama-server</code>, <code>llama-cli</code>, and <code>libggml-cuda.so</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+<li>The server entrypoint <code>scripts/start_llama_server.sh</code> was verified to expose an OpenAI-compatible API at <code>http://localhost:8080/v1/chat/completions</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></li>
+<li>The script logic was verified to prefer <code>bin/cuda/llama-server</code> over <code>bin/cpu/llama-server</code> once the CUDA backend exists. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+</ul>
+<h2 id="model-families-and-likely-use-cases">Model families and likely use cases</h2>
+<p>The repository supports at least two model families through environment variables: <code>bonsai</code> and <code>ternary</code>, with size values such as <code>27B</code>, <code>8B</code>, <code>4B</code>, and <code>1.7B</code> documented in the shared scripts. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>The observed local setup specifically downloaded and exposed <strong>Ternary Bonsai 27B</strong> GGUF model files under <code>models/ternary-gguf/27B/</code>, including a main quantized model, multimodal projector files, and a DSpark-related file. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="model-comparison">Model comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Model family / size</th>
+<th>What was directly observed</th>
+<th>Likely role in local setup</th>
+<th>Use cases that fit the evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ternary Bonsai 27B</td>
+<td><code>models/ternary-gguf/27B/Ternary-Bonsai-27B-Q2_0.gguf</code>, <code>...Q4_1.gguf</code>, <code>...mmproj...</code>, <code>...dspark...</code> were present locally. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Primary verified model in this setup. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Coding, reasoning, multimodal/vision experiments, local agent backends where a large local model is acceptable. <a href="https://docs.prismml.com/models/bonsai-27b">docs.prismml</a></td>
+</tr>
+<tr>
+<td>Bonsai 27B</td>
+<td>Supported by <code>BONSAI_MODEL=27B</code> and <code>BONSAI_FAMILY=bonsai</code> in repo scripts, but not downloaded or run in this setup. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Alternate family option, not verified locally here. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Similar large-model use cases, but no local evidence in this session beyond repo support. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+</tr>
+<tr>
+<td>Smaller sizes: 8B / 4B / 1.7B</td>
+<td>Enumerated as valid values in <code>scripts/common.sh</code>, but not downloaded or tested here. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Lower-memory and likely lower-latency options, not validated in this run. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+<td>Faster local iteration, lighter coding assistant scenarios, experimentation on constrained hardware; this is an architectural interpretation of size tiers rather than a measured result from this session. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="practical-interpretation">Practical interpretation</h3>
+<p>For this setup, <strong>Ternary Bonsai 27B</strong> is the only model family and size directly confirmed by local file listings, so it should be treated as the reference target for the DGX Spark guide. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>The presence of <code>mmproj</code> files indicates that the 27B path includes multimodal support in the repository flow, and the server script explicitly searches for an <code>mmproj</code> file when <code>BONSAI_MODEL=27B</code>. <a href="https://docs.prismml.com/models/bonsai-27b">docs.prismml</a></p>
+<p>The presence of a <code>dspark</code>-named GGUF file indicates that DSpark-related artifacts may be downloaded into the model directory, but this session did not verify that DSpark or DFlash can be enabled directly inside the current <code>llama-server</code> path. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<h2 id="architecture-options-clarified-during-setup">Architecture options clarified during setup</h2>
+<p>Two possible client architectures were discussed during the session: direct Anthropic-compatible routing for Claude Code, and OpenAI-compatible local serving for tools that can use <code>/v1/chat/completions</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>The verified repository evidence supports the second path, not the first: <code>scripts/start_llama_server.sh</code> explicitly describes itself as an OpenAI-compatible chat server and prints the API path <code>http://localhost:8080/v1/chat/completions</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="verified-architecture">Verified architecture</h3>
+<pre><code class="language-text">Coding tool or client
+        |
+        |
+OpenAI-compatible HTTP API
+http://localhost:8080/v1/chat/completions
+        |
+        |
+PrismML Bonsai-demo -&gt; llama-server
+        |
+        |
+Ternary Bonsai 27B GGUF
+        |
+        |
+DGX Spark CUDA backend
+</code></pre>
+<p>This architecture is directly supported by the repository scripts and observed file layout. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h3 id="what-was-not-verified">What was not verified</h3>
+<p>The setup did <strong>not</strong> verify that the local server exposes Anthropic <code>/v1/messages</code>, so a direct <code>ANTHROPIC_BASE_URL=http://localhost:8080</code> integration for Claude Code should not be assumed from this guide. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>If Claude Code must be used against this server, an adapter layer such as LiteLLM or another Anthropic-to-OpenAI gateway would still need separate validation. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h2 id="repository-structure-that-was-actually-found">Repository structure that was actually found</h2>
+<p>The repository did not contain a <code>llama.cpp</code> directory immediately after clone, which initially caused confusion when searching for directories named <code>*llama*</code>. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<p>That was expected behavior for this repo: PrismML documents <code>Bonsai-demo</code> as a wrapper/demo repository that downloads binaries into backend folders such as <code>bin/cpu/</code>, <code>bin/cuda/</code>, and similar locations, rather than embedding the full <code>llama.cpp</code> source tree by default. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<h3 id="verified-file-layout-highlights">Verified file layout highlights</h3>
+<ul>
+<li><code>bin/cpu/...</code> contained the CPU runtime and tools, including <code>llama-server</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>models/ternary-gguf/27B/...</code> contained the downloaded Ternary Bonsai 27B GGUF weights. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>scripts/</code> contained <code>build_cuda_linux.sh</code>, <code>run_llama.sh</code>, <code>start_llama_server.sh</code>, and related helper scripts. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>llama.cpp</code> was cloned later by <code>./scripts/build_cuda_linux.sh</code> when the CUDA build was requested. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+</ul>
+<h2 id="step-by-step-setup-flow">Step-by-step setup flow</h2>
+<h3 id="1-clone-the-repo">1. Clone the repo</h3>
+<p>The repository was cloned into a local models workspace. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<pre><code class="language-bash">cd ~/models
+git clone https://github.com/PrismML-Eng/Bonsai-demo.git
+cd Bonsai-demo
+</code></pre>
+<p>This repository is the operational wrapper used throughout the guide. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<h3 id="2-understand-the-model-selection-variables">2. Understand the model-selection variables</h3>
+<p>The scripts use environment variables to select the model family and size, including <code>BONSAI_FAMILY</code> and <code>BONSAI_MODEL</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>The shared script content showed:</p>
+<ul>
+<li>valid size values include <code>27B</code>, <code>8B</code>, <code>4B</code>, <code>1.7B</code>, and <code>all</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>BONSAI_MODEL</code> defaults to <code>27B</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>the model family controls whether paths resolve to <code>models/gguf/...</code> or <code>models/ternary-gguf/...</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+</ul>
+<p>Example environment selection:</p>
+<pre><code class="language-bash">export BONSAI_FAMILY=ternary
+export BONSAI_MODEL=27B
+</code></pre>
+<p>This exact combination matched the verified local model directory contents in this setup. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="3-run-setup">3. Run setup</h3>
+<p>The setup path described by PrismML quickstart is to run the repository setup command so it can download model assets and binaries. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<pre><code class="language-bash">./setup.sh
+</code></pre>
+<p>The setup behavior documented by PrismML is that it downloads prebuilt inference binaries when available, rather than requiring a source build in every case. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="4-inspect-what-was-downloaded">4. Inspect what was downloaded</h3>
+<p>The first important verification step was to inspect the repo contents rather than assume CUDA support was already present.</p>
+<p>Commands used:</p>
+<pre><code class="language-bash">find bin -maxdepth 3 -type f | sort
+find models -maxdepth 4 -type f | sort | head -n 50
+ls -R scripts | head -n 100
+</code></pre>
+<p>This showed that the initial setup had produced a <strong>CPU-only backend</strong> under <code>bin/cpu/</code>, while the model files under <code>models/ternary-gguf/27B/</code> were already present. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>Key observed files included:</p>
+<ul>
+<li><code>bin/cpu/llama-server</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>models/ternary-gguf/27B/Ternary-Bonsai-27B-Q2_0.gguf</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>models/ternary-gguf/27B/Ternary-Bonsai-27B-Q4_1.gguf</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>models/ternary-gguf/27B/Ternary-Bonsai-27B-mmproj-Q8_0.gguf</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>scripts/build_cuda_linux.sh</code> and <code>scripts/start_llama_server.sh</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+</ul>
+<h3 id="5-inspect-the-server-script-before-making-assumptions">5. Inspect the server script before making assumptions</h3>
+<p>The next step was to read the actual <code>scripts/start_llama_server.sh</code> and inspect its environment variable references in <code>scripts/common.sh</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>Commands used:</p>
+<pre><code class="language-bash">head -n 80 scripts/start_llama_server.sh
+grep -n BONSAI_BACKEND scripts/common.sh scripts/start_llama_server.sh
+grep -n BONSAI_MODEL scripts/common.sh scripts/start_llama_server.sh
+</code></pre>
+<p>Important verified findings:</p>
+<ul>
+<li>The server identifies itself as an <strong>OpenAI-compatible chat server</strong>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>It binds to <code>127.0.0.1</code> by default, with <code>BONSAI_HOST=0.0.0.0</code> as an override. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>It searches for <code>llama-server</code> in <code>bin/mac</code>, <code>bin/cuda</code>, <code>bin/rocm</code>, <code>bin/hip</code>, <code>bin/vulkan</code>, <code>bin/cpu</code>, and several <code>llama.cpp/build*</code> paths. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>It selects the first backend that exists, which means CUDA will be preferred over CPU once built. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>For <code>BONSAI_MODEL=27B</code>, it separately searches for an <code>mmproj</code> file and warns if none is found. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>It advertises the API endpoint <code>http://localhost:8080/v1/chat/completions</code>. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+</ul>
+<h3 id="6-build-the-cuda-backend">6. Build the CUDA backend</h3>
+<p>Because only <code>bin/cpu/</code> existed initially, the CUDA backend had to be built manually using the provided repository script. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<p>Command used:</p>
+<pre><code class="language-bash">./scripts/build_cuda_linux.sh
+</code></pre>
+<p>On first run, the script cloned <code>./llama.cpp</code> from PrismML and attempted a CUDA 13.0 multi-architecture build. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<p>The initial build attempt failed with CMake messages indicating problems with Ninja and compiler detection. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<h3 id="7-verify-the-host-build-toolchain-instead-of-guessing">7. Verify the host build toolchain instead of guessing</h3>
+<p>To avoid assuming a missing dependency, the system toolchain was checked directly.</p>
+<p>Commands used:</p>
+<pre><code class="language-bash">which gcc g++ cmake ninja
+gcc --version
+g++ --version
+cmake --version
+ninja --version
+nvcc --version
+</code></pre>
+<p>The environment was confirmed to have:</p>
+<ul>
+<li><code>/usr/bin/gcc</code> and <code>/usr/bin/g++</code>. <a href="https://oneuptime.com/blog/post/2026-03-02-how-to-compile-software-from-source-on-ubuntu/view">oneuptime</a></li>
+<li><code>/usr/bin/cmake</code> and <code>/usr/bin/ninja</code>. <a href="https://oneuptime.com/blog/post/2026-03-02-how-to-compile-software-from-source-on-ubuntu/view">oneuptime</a></li>
+<li>GCC 13.3.0, CMake 3.28.3, Ninja 1.11.1, and CUDA <code>nvcc</code> 13.0.88. <a href="https://oneuptime.com/blog/post/2026-03-02-how-to-compile-software-from-source-on-ubuntu/view">oneuptime</a></li>
+</ul>
+<p>This established that the DGX Spark host already had a valid compile toolchain and CUDA compiler available at that point in the session. <a href="https://oneuptime.com/blog/post/2026-03-02-how-to-compile-software-from-source-on-ubuntu/view">oneuptime</a></p>
+<h3 id="8-clean-stale-build-directories-only">8. Clean stale build directories only</h3>
+<p>The recommended cleanup did <strong>not</strong> include deleting CPU binaries, because the repo is designed to support multiple backends side by side. <a href="https://docs.prismml.com/download/formats">docs.prismml</a></p>
+<p>Only previous build directories were cleaned:</p>
+<pre><code class="language-bash">cd ~/models/Bonsai-demo
+rm -rf llama.cpp/build llama.cpp/build-cuda
+./scripts/build_cuda_linux.sh
+</code></pre>
+<p>This was the correct cleanup scope because <code>start_llama_server.sh</code> is written to select <code>bin/cuda</code> before <code>bin/cpu</code>, making the CPU backend a harmless fallback rather than a conflict. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="9-confirm-successful-cuda-output">9. Confirm successful CUDA output</h3>
+<p>After rerunning the build, the CUDA runtime appeared under <code>bin/cuda/</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<p>Verification command:</p>
+<pre><code class="language-bash">find bin/cuda -maxdepth 2 -type f | sort | head -n 50
+</code></pre>
+<p>Verified outputs included:</p>
+<ul>
+<li><code>bin/cuda/libggml-cuda.so.0.13.1</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+<li><code>bin/cuda/llama-server</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+<li><code>bin/cuda/llama-cli</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+<li><code>bin/cuda/llama-speculative</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+</ul>
+<p>This was the key evidence that the DGX Spark environment now had a working CUDA-enabled <code>llama.cpp</code> runtime for PrismML Bonsai models. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<h2 id="starting-the-local-server">Starting the local server</h2>
+<p>Once the CUDA backend existed, the documented run path was to launch the server script with explicit family and size variables matching the downloaded model layout. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<pre><code class="language-bash">cd ~/models/Bonsai-demo
+export BONSAI_FAMILY=ternary
+export BONSAI_MODEL=27B
+BONSAI_BACKEND=llama ./scripts/start_llama_server.sh
+</code></pre>
+<p>This command is consistent with the verified script logic and local file layout from the session. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<h3 id="what-the-server-script-is-expected-to-do">What the server script is expected to do</h3>
+<p>Based on the script content, the run sequence is:</p>
+<ol>
+<li>Validate the family and model values. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Resolve the demo directory and confirm the GGUF model is present. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Select the correct quantized model file while skipping <code>mmproj</code>, <code>dspark</code>, and <code>kv-bias</code> files for the main model. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Locate the multimodal projector when present for the 27B path. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Search backend locations and prefer CUDA if available. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Set <code>LD_LIBRARY_PATH</code> to the chosen binary directory. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>Expose a server on port <code>8080</code> with an OpenAI-compatible API. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+</ol>
+<h3 id="api-path">API path</h3>
+<p>The documented API path from the script is:</p>
+<pre><code class="language-text">http://localhost:8080/v1/chat/completions
+</code></pre>
+<p>That API contract was directly verified from the script output text and PrismML server documentation. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h2 id="verifying-model-routing-and-connectivity">Verifying model routing and connectivity</h2>
+<p>The first validation step after the server starts is to inspect the models endpoint. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<pre><code class="language-bash">curl http://localhost:8080/v1/models
+</code></pre>
+<p>The exact returned model ID was not captured in the session, so this guide does not assume the final value. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>A generic chat-completions probe can then be used:</p>
+<pre><code class="language-bash">curl http://localhost:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "&lt;model-id-from-v1-models&gt;",
+    "messages": [
+      {"role": "user", "content": "Explain SOLID principles in C# test automation."}
+    ]
+  }'
+</code></pre>
+<p>Using the model ID returned by <code>/v1/models</code> is safer than hardcoding a guessed value. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h2 id="cpu-and-cuda-backends-together">CPU and CUDA backends together</h2>
+<p>The CPU artifacts should be kept in place unless disk cleanup is explicitly required, because the repository’s backend selection logic is intentionally multi-backend. <a href="https://docs.prismml.com/download/formats">docs.prismml</a></p>
+<p>This means:</p>
+<ul>
+<li><code>bin/cpu</code> is not a problem after <code>bin/cuda</code> exists. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li><code>bin/cuda</code> will be preferred automatically by the server script. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></li>
+<li>deleting CPU binaries is unnecessary for correctness and removes a fallback path. <a href="https://docs.prismml.com/download/formats">docs.prismml</a></li>
+</ul>
+<h2 id="throughput-expectations-and-speculative-decoding-notes">Throughput expectations and speculative decoding notes</h2>
+<p>After CUDA was enabled, the observed practical result was that tokens-per-second did <strong>not</strong> increase dramatically.</p>
+<p>That led to a comparison between DFlash and DSpark, but the key architectural conclusion for this setup was narrower: the current <code>Bonsai-demo</code> path is based on <code>llama.cpp</code> tooling, and the repository evidence only confirmed standard <code>llama-server</code> plus local speculative binaries such as <code>llama-speculative</code>. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<h3 id="what-was-verified-about-dflash-and-dspark-in-this-setup">What was verified about DFlash and DSpark in this setup</h3>
+<ul>
+<li>DFlash is documented externally as a block-diffusion speculative decoding method integrated into frameworks such as vLLM and SGLang rather than the basic <code>Bonsai-demo</code> server flow. <a href="https://arxiv.org/html/2602.06036v2">arxiv</a></li>
+<li>DSpark is described externally as a more advanced speculative decoding approach focused on accuracy and dynamic scheduling, again associated with dedicated speculative-serving stacks rather than the plain <code>llama-server</code> path verified here. <a href="https://webscraft.org/blog/dspark-vid-deepseek-v4-shvidshe-na-6085-bez-novogo-zaliza?lang=en">webscraft</a></li>
+<li>The local repository build did produce <code>bin/cuda/llama-speculative</code>, but this session did not verify that DFlash or DSpark can be enabled directly inside the current <code>scripts/start_llama_server.sh</code> path. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+</ul>
+<h3 id="safe-conclusion">Safe conclusion</h3>
+<p>Within the limits of this setup, it is safe to say that:</p>
+<ul>
+<li>CUDA acceleration is enabled and working at the binary level. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></li>
+<li>advanced speculative systems such as DFlash or DSpark were <strong>not</strong> validated as part of the working <code>llama-server</code> flow in this guide. <a href="https://docs.vllm.ai/projects/speculators/en/latest/user_guide/algorithms/dflash/">docs.vllm</a></li>
+<li>further work would be required to move Bonsai models into a framework that explicitly supports those speculative engines. <a href="https://arxiv.org/html/2602.06036v2">arxiv</a></li>
+</ul>
+<h2 id="client-integration-guidance">Client integration guidance</h2>
+<h3 id="clients-that-can-use-the-current-setup-directly">Clients that can use the current setup directly</h3>
+<p>Any local tool that can talk to an OpenAI-compatible endpoint should be able to use this server after the model ID is confirmed from <code>/v1/models</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>Examples include local coding tools or adapters that accept:</p>
+<ul>
+<li>Base URL: <code>http://localhost:8080/v1</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></li>
+<li>Chat endpoint: <code>/chat/completions</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></li>
+</ul>
+<h3 id="claude-code-caveat">Claude Code caveat</h3>
+<p>The verified repo and script evidence does <strong>not</strong> show Anthropic Messages API support at <code>/v1/messages</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>Because of that, a direct Claude Code integration using only <code>ANTHROPIC_BASE_URL=http://localhost:8080</code> should not be treated as part of this verified setup. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>If Claude Code must be connected, an adapter such as LiteLLM would need separate setup and validation outside this guide. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h2 id="command-reference">Command reference</h2>
+<h3 id="clone-and-initialize">Clone and initialize</h3>
+<pre><code class="language-bash">cd ~/models
+git clone https://github.com/PrismML-Eng/Bonsai-demo.git
+cd Bonsai-demo
+./setup.sh
+</code></pre>
+<h3 id="inspect-repo-contents">Inspect repo contents</h3>
+<pre><code class="language-bash">find bin -maxdepth 3 -type f | sort
+find models -maxdepth 4 -type f | sort | head -n 50
+ls -R scripts | head -n 100
+</code></pre>
+<h3 id="inspect-server-logic">Inspect server logic</h3>
+<pre><code class="language-bash">head -n 80 scripts/start_llama_server.sh
+grep -n BONSAI_BACKEND scripts/common.sh scripts/start_llama_server.sh
+grep -n BONSAI_MODEL scripts/common.sh scripts/start_llama_server.sh
+</code></pre>
+<h3 id="check-toolchain">Check toolchain</h3>
+<pre><code class="language-bash">which gcc g++ cmake ninja
+gcc --version
+g++ --version
+cmake --version
+ninja --version
+nvcc --version
+</code></pre>
+<h3 id="clean-old-build-dirs-and-build-cuda">Clean old build dirs and build CUDA</h3>
+<pre><code class="language-bash">cd ~/models/Bonsai-demo
+rm -rf llama.cpp/build llama.cpp/build-cuda
+./scripts/build_cuda_linux.sh
+</code></pre>
+<h3 id="confirm-cuda-runtime">Confirm CUDA runtime</h3>
+<pre><code class="language-bash">find bin/cuda -maxdepth 2 -type f | sort | head -n 50
+</code></pre>
+<h3 id="start-the-server">Start the server</h3>
+<pre><code class="language-bash">cd ~/models/Bonsai-demo
+export BONSAI_FAMILY=ternary
+export BONSAI_MODEL=27B
+BONSAI_BACKEND=llama ./scripts/start_llama_server.sh
+</code></pre>
+<h3 id="probe-the-api">Probe the API</h3>
+<pre><code class="language-bash">curl http://localhost:8080/v1/models
+</code></pre>
+<pre><code class="language-bash">curl http://localhost:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "&lt;model-id-from-v1-models&gt;",
+    "messages": [
+      {"role": "user", "content": "Explain SOLID principles in C# test automation."}
+    ]
+  }'
+</code></pre>
+<h2 id="common-misunderstandings-resolved-during-setup">Common misunderstandings resolved during setup</h2>
+<h3 id="there-is-no-gpu-support-because-find-llama-returned-nothing">“There is no GPU support because <code>find *llama*</code> returned nothing”</h3>
+<p>That result did not indicate missing GPU support; it only showed that the wrapper repo did not contain a <code>llama.cpp</code> source directory at that time. <a href="https://github.com/PrismML-Eng/Bonsai-demo/">github</a></p>
+<p>GPU support in this repository is expressed through backend binaries in directories like <code>bin/cuda/</code>, and <code>build_cuda_linux.sh</code> clones and builds <code>llama.cpp</code> when required. <a href="https://docs.prismml.com/run/llamacpp">docs.prismml</a></p>
+<h3 id="the-cpu-backend-should-be-removed-after-cuda-is-built">“The CPU backend should be removed after CUDA is built”</h3>
+<p>That is unnecessary and not supported by the script design, because backend selection is already ordered to prefer CUDA over CPU. <a href="https://docs.prismml.com/download/formats">docs.prismml</a></p>
+<h3 id="claude-code-can-be-pointed-directly-at-this-server">“Claude Code can be pointed directly at this server”</h3>
+<p>That was not verified by the repository evidence in this setup; the local server path that was confirmed is OpenAI-compatible, not Anthropic-compatible. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h3 id="dflash-or-dspark-can-be-turned-on-in-the-current-server-script">“DFlash or DSpark can be turned on in the current server script”</h3>
+<p>That was not verified in this setup. External sources describe DFlash and DSpark in other serving stacks, and this guide should not assume those features are available in <code>scripts/start_llama_server.sh</code> without further integration work. <a href="https://we0.ai/articles-v2/deepseek-dspark-apple-silicon-mlx-dflash">we0</a></p>
+<h2 id="final-understanding">Final understanding</h2>
+<p>The DGX Spark setup successfully moved from a CPU-only PrismML demo checkout to a CUDA-backed local Bonsai runtime by inspecting the repository structure, reading the actual launch scripts, confirming the host toolchain, and building the CUDA backend with the repository’s provided build script. <a href="https://oneuptime.com/blog/post/2026-03-02-how-to-compile-software-from-source-on-ubuntu/view">oneuptime</a></p>
+<p>The verified, end-to-end outcome is a local OpenAI-compatible <code>llama-server</code> running PrismML Bonsai GGUF models from the <code>Bonsai-demo</code> repository with CUDA artifacts under <code>bin/cuda/</code> and model artifacts under <code>models/ternary-gguf/27B/</code>. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<p>The most important operational rule from this guide is to trust the repository’s actual scripts and discovered file layout over generic assumptions: inspect <code>scripts/common.sh</code>, inspect <code>scripts/start_llama_server.sh</code>, confirm the exact backend path in <code>bin/</code>, and use <code>/v1/models</code> to discover the live model ID before wiring clients. <a href="https://docs.prismml.com/run/server">docs.prismml</a></p>
+<h1 id="network-access-prism-models">Network access Prism Models:</h1>
+<p>Yes — the clean way is to put a small gateway on your <strong>laptop</strong> that speaks Anthropic Messages API to Claude Code and forwards requests to your PrismML server’s OpenAI-compatible endpoint at <code>http://localhost:8080/v1</code>. Claude Code expects an Anthropic-style <code>/v1/messages</code> interface, while your PrismML <code>start_llama_server.sh</code> exposes <code>/v1/chat/completions</code>, so a direct <code>ANTHROPIC_BASE_URL=http://localhost:8080</code> setup is not the verified path. <a href="https://code.claude.com/docs/en/llm-gateway">code.claude</a></p>
+<h2 id="architecture">Architecture</h2>
+<p>Use this flow:</p>
+<pre><code class="language-text">Claude Code on laptop
+        |
+ANTHROPIC_BASE_URL=http://localhost:4000
+        |
+Anthropic-compatible gateway on laptop
+        |
+OpenAI-compatible upstream
+http://&lt;DGX-SPARK-IP&gt;:8080/v1
+        |
+PrismML llama-server on DGX Spark
+</code></pre>
+<p>Claude Code’s docs explicitly support pointing the CLI at an LLM gateway using <code>ANTHROPIC_BASE_URL</code>, as long as that gateway exposes the Anthropic Messages API that Claude Code expects. <a href="https://code.claude.com/docs/id/llm-gateway">code.claude</a></p>
+<h2 id="network-step">Network step</h2>
+<p>First, make sure your DGX Spark server is reachable from your laptop, because <code>localhost:8080</code> on the DGX is only local to the DGX itself. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>On DGX Spark, start the PrismML server bound to all interfaces:</p>
+<pre><code class="language-bash">cd ~/models/Bonsai-demo
+export BONSAI_FAMILY=ternary
+export BONSAI_MODEL=27B
+BONSAI_HOST=0.0.0.0 BONSAI_BACKEND=llama ./scripts/start_llama_server.sh
+</code></pre>
+<p>The script defaults to <code>127.0.0.1</code>, and it explicitly says <code>BONSAI_HOST=0.0.0.0</code> is the override for LAN or remote access. <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+<p>Then, from your laptop, test connectivity:</p>
+<pre><code class="language-bash">curl http://&lt;DGX-SPARK-IP&gt;:8080/v1/models
+</code></pre>
+<p>If that fails, you need to fix firewall/routing before touching Claude Code.</p>
+<h2 id="gateway-choice">Gateway choice</h2>
+<p>A practical option is <strong>agentgateway</strong>, because its Claude Code integration docs explicitly show routing Claude Code to an OpenAI-compatible backend through an Anthropic-facing gateway. It is a better fit here than trying to point Claude Code directly at LiteLLM, because the Claude Code docs and gateway examples are centered on Anthropic <code>/v1/messages</code> semantics. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+<h2 id="laptop-setup">Laptop setup</h2>
+<p>Install Claude Code if needed:</p>
+<pre><code class="language-bash">npm install -g @anthropic-ai/claude-code
+</code></pre>
+<p>Then install or obtain <code>agentgateway</code> on your laptop, following its platform-specific install method from the project docs. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+<p>Create a config file on your laptop, for example <code>config.yaml</code>:</p>
+<pre><code class="language-yaml">llm:
+  models:
+    - name: "*"
+      provider: openAI
+      params:
+        baseURL: "http://&lt;DGX-SPARK-IP&gt;:8080/v1"
+        apiKey: "mock-key"
+</code></pre>
+<p>This is the documented pattern for routing Claude Code through agentgateway to any OpenAI-compatible local provider such as vLLM or similar backends; your PrismML server fits that same upstream shape because it exposes <code>/v1/chat/completions</code> under <code>/v1</code>. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+<p>Start the gateway on your laptop:</p>
+<pre><code class="language-bash">agentgateway -f config.yaml
+</code></pre>
+<p>The docs show using the gateway locally and then pointing Claude Code to it with <code>ANTHROPIC_BASE_URL</code>. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+<h2 id="claude-code-configuration">Claude Code configuration</h2>
+<p>In the same laptop shell:</p>
+<pre><code class="language-bash">export ANTHROPIC_BASE_URL="http://localhost:4000"
+export ANTHROPIC_AUTH_TOKEN="local"
+</code></pre>
+<p>Claude Code’s gateway docs state that it reads endpoint and auth from environment variables, including <code>ANTHROPIC_BASE_URL</code>, and custom gateways commonly use <code>ANTHROPIC_AUTH_TOKEN</code> for local auth plumbing. <a href="https://fazm.ai/t/claude-code-llm-gateway-anthropic-base-url-official-docs">fazm</a></p>
+<p>Then launch Claude Code:</p>
+<pre><code class="language-bash">claude
+</code></pre>
+<p>Or do a quick non-interactive test:</p>
+<pre><code class="language-bash">claude -p "Say hello in one sentence."
+</code></pre>
+<p>If the gateway is working, Claude Code should route through the laptop gateway to the DGX Spark PrismML endpoint. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+<h2 id="persisting-config">Persisting config</h2>
+<p>You can persist the gateway settings in <code>~/.claude/settings.json</code> on your laptop, because Claude Code supports storing env overrides there. <a href="https://www.morphllm.com/use-different-llm-claude-code">morphllm</a></p>
+<p>Example:</p>
+<pre><code class="language-json">{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:4000",
+    "ANTHROPIC_AUTH_TOKEN": "local"
+  }
+}
+</code></pre>
+<p>That keeps the Claude-specific settings scoped to Claude Code instead of exporting them globally in your shell. <a href="https://abliteration.ai/docs/claude-code">abliteration</a></p>
+<h2 id="troubleshooting-sequence">Troubleshooting sequence</h2>
+<p>Use this order so you only debug one layer at a time:</p>
+<ol>
+<li><strong>DGX server</strong></li>
+<li>From DGX: <code>curl http://localhost:8080/v1/models</code></li>
+<li>
+<p>From laptop: <code>curl http://&lt;DGX-SPARK-IP&gt;:8080/v1/models</code> <a href="https://docs.prismml.com/get-started/quickstart">docs.prismml</a></p>
+</li>
+<li>
+<p><strong>Gateway</strong></p>
+</li>
+<li>Start <code>agentgateway -f config.yaml</code></li>
+<li>
+<p>Confirm the process is listening on laptop port 4000 according to its default runtime behavior and logs. <a href="https://agentgateway.dev/docs/standalone/main/integrations/llm-clients/claude-code/">agentgateway</a></p>
+</li>
+<li>
+<p><strong>Claude Code</strong></p>
+</li>
+<li><code>echo $ANTHROPIC_BASE_URL</code></li>
+<li><code>claude -p "ping"</code></li>
+</ol>
+<p>If Claude Code fails but the laptop can hit the DGX server, the issue is almost certainly the gateway config rather than PrismML itself. <a href="https://code.claude.com/docs/en/llm-gateway">code.claude</a></p>
+<h2 id="important-limitation">Important limitation</h2>
+<p>This setup gives Claude Code a path to use your PrismML model, but it does <strong>not</strong> mean the model behaves like Claude in tool use quality, planning depth, or coding-agent reliability. It only means Claude Code can be wired to a non-Anthropic backend through a compatible gateway interface. <a href="https://fazm.ai/t/claude-code-llm-gateway-anthropic-base-url-official-docs">fazm</a></p>
+<p>If you want, I can generate:
+- a laptop-side <code>config.yaml</code> for agentgateway with your DGX IP placeholder, and
+- a matching <code>~/.claude/settings.json</code> example for a persistent setup.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow", "content.action.top", "content.code.copy", "navigation.path"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

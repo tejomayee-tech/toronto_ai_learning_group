@@ -1015,6 +1015,73 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI Governance & Risk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            AI Governance & Risk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../ai-tools-hands-on/AI-Governance-And-Risk/AI-Risk-Frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI-Risk-Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2674,7 +2741,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --></head><body><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=019c23a5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7f9da868">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2728,7 +2795,7 @@ from mcp.types import CallToolRequest</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b7d351ac">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7be2acdd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2829,7 +2896,7 @@ from mcp.types import CallToolRequest</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=66e497b7">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=19038349">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2870,18 +2937,18 @@ from mcp.types import CallToolRequest</div>
 <span class="ansi-green-fg">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> __name__ == <span class="ansi-yellow-fg">"__main__"</span>:
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span>     asyncio.run(main())
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">/usr/lib/python3.12/asyncio/runners.py:190</span>, in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(main, debug, loop_factory)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/miniconda3/lib/python3.13/asyncio/runners.py:191</span>, in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(main, debug, loop_factory)</span>
 <span class="ansi-green-fg">    161</span> <span class="ansi-yellow-fg">"""Execute the coroutine and return the result.</span>
 <span class="ansi-green-fg">    162</span> 
 <span class="ansi-green-fg">    163</span> <span class="ansi-yellow-fg">This function runs the passed coroutine, taking care of</span>
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    186</span> <span class="ansi-yellow-fg">    asyncio.run(main())</span>
-<span class="ansi-green-fg">    187</span> <span class="ansi-yellow-fg">"""</span>
-<span class="ansi-green-fg">    188</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> events._get_running_loop() <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    189</span>     <span style="color: rgb(95,135,135)"># fail fast with short traceback</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">190</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">RuntimeError</span>(
-<span class="ansi-green-fg">    191</span>         <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">asyncio.run() cannot be called from a running event loop</span><span class="ansi-yellow-fg">"</span>)
-<span class="ansi-green-fg">    193</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> Runner(debug=debug, loop_factory=loop_factory) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> runner:
-<span class="ansi-green-fg">    194</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> runner.run(main)
+<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    187</span> <span class="ansi-yellow-fg">    asyncio.run(main())</span>
+<span class="ansi-green-fg">    188</span> <span class="ansi-yellow-fg">"""</span>
+<span class="ansi-green-fg">    189</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> events._get_running_loop() <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">    190</span>     <span style="color: rgb(95,135,135)"># fail fast with short traceback</span>
+<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">191</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">RuntimeError</span>(
+<span class="ansi-green-fg">    192</span>         <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">asyncio.run() cannot be called from a running event loop</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-green-fg">    194</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> Runner(debug=debug, loop_factory=loop_factory) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> runner:
+<span class="ansi-green-fg">    195</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> runner.run(main)
 
 <span class="ansi-red-fg">RuntimeError</span>: asyncio.run() cannot be called from a running event loop</pre>
 </div>
