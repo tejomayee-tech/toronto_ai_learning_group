@@ -74,6 +74,8 @@ nav:
       - Ollama + TQuant + Claude : ai-tools-hands-on/Turboquant/docs/ollama-cmd-TBQ.md
     - AI Tools:
       - OpenClaw Paradigm & Risk: ai-tools-hands-on/AI-tool-guides/Open-claw-safety.md
+    - AI Governance & Risk:
+      - AI-Risk-Frameworks: ai-tools-hands-on/AI-Governance-And-Risk/AI-Risk-Frameworks.md
     
   - AI Workflows:
     - n8n:
